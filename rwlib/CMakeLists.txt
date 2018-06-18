@@ -18,6 +18,7 @@ SET(RWLIB_SOURCES
     source/rw/abort.cpp
     source/rw/bit_cast.cpp
     source/rw/filesystem.hpp
+    source/rw/optional.hpp
     source/rw/forward.hpp
     source/rw/types.hpp
     source/rw/defines.hpp
