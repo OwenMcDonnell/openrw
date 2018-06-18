@@ -11,7 +11,10 @@
 #include <engine/GameWorld.hpp>
 #include <glm/gtx/string_cast.hpp>
 
+#include <rw/filesystem.hpp>
+
 std::ostream& operator<<(std::ostream& stream, glm::vec3 const& v);
+std::ostream& operator<<(std::ostream& stream, rwfs::path const& p);
 
 // Boost moved the print_log_value struct in version 1.59
 // TODO: use another testing library

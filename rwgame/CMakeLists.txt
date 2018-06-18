@@ -10,9 +10,12 @@ set(RWGAME_SOURCES
 
     GameBase.hpp
     GameBase.cpp
+    RWGame.hpp
     RWGame.cpp
 
+    GameConfig.hpp
     GameConfig.cpp
+    GameWindow.hpp
     GameWindow.cpp
 
     StateManager.hpp

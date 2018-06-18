@@ -6,3 +6,8 @@ std::ostream& operator<<(std::ostream& stream, const glm::vec3& v) {
     stream << v.x << " " << v.y << " " << v.z;
     return stream;
 }
+
+std::ostream& operator<<(std::ostream& stream, const rwfs::path &p) {
+    stream << p.string();
+    return stream;
+}

@@ -41,24 +41,18 @@ constexpr float kMaxPhysicsSubSteps = 2;
 
 #define MOUSE_SENSITIVITY_SCALE 2.5f
 
-RWGame::RWGame(Logger& log, int argc, char* argv[])
-    : GameBase(log, argc, argv)
-    , data(&log, config.getGameDataPath())
+RWGame::RWGame(Logger& log, const RWConfig &config)
+    : GameBase(log, config)
+    , data(&log, config.gameDataPath.getValueOrDefault())
     , renderer(&log, &data)
     , lastDraws(0) {
-    bool newgame = options.count("newgame");
-    bool test = options.count("test");
-    std::string startSave(
-        options.count("load") ? options["load"].as<std::string>() : "");
-    std::string benchFile(options.count("benchmark")
-                              ? options["benchmark"].as<std::string>()
-                              : "");
 
-    log.info("Game", "Game directory: " + config.getGameDataPath().string());
+    const auto gameDataPath = config.gameDataPath.getValueOrDefault();
+    log.info("Game", "Game directory: " + gameDataPath.string());
 
-    if (!GameData::isValidGameDirectory(config.getGameDataPath())) {
+    if (!GameData::isValidGameDirectory(gameDataPath)) {
         throw std::runtime_error("Invalid game directory path: " +
-                                 config.getGameDataPath().string());
+                                 gameDataPath.string());
     }
 
     data.load();
@@ -78,10 +72,9 @@ RWGame::RWGame(Logger& log, int argc, char* argv[])
                        btIDebugDraw::DBG_DrawConstraintLimits);
     debug.setShaderProgram(renderer.worldProg.get());
 
-    data.loadDynamicObjects((config.getGameDataPath() / "data/object.dat")
-                                .string());  // FIXME: use path
+    data.loadDynamicObjects((gameDataPath / "data/object.dat").string());  // FIXME: use path
 
-    data.loadGXT("text/" + config.getGameLanguage() + ".gxt");
+    data.loadGXT("text/" + config.gameLanguage.getValueOrDefault() + ".gxt");
 
     getRenderer().water.setWaterTable(data.waterHeights, 48, data.realWater,
                                       128 * 128);
@@ -93,14 +86,14 @@ RWGame::RWGame(Logger& log, int argc, char* argv[])
     }
 
     StateManager::get().enter<LoadingState>(this, [=]() {
-        if (!benchFile.empty()) {
-            StateManager::get().enter<BenchmarkState>(this, benchFile);
-        } else if (test) {
+        if (config.startBenchmark.hasValue()) {
+            StateManager::get().enter<BenchmarkState>(this, config.startBenchmark.value.value().string());
+        } else if (config.startTestGame) {
             StateManager::get().enter<IngameState>(this, true, "test");
-        } else if (newgame) {
+        } else if (config.startNewGame) {
             StateManager::get().enter<IngameState>(this, true);
-        } else if (!startSave.empty()) {
-            StateManager::get().enter<IngameState>(this, true, startSave);
+        } else if (config.startSaveGame.hasValue()) {
+            StateManager::get().enter<IngameState>(this, true, config.startSaveGame.value.value().string());
         } else {
             StateManager::get().enter<MenuState>(this);
         }

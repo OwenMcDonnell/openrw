@@ -6,10 +6,17 @@
 #include <boost/property_tree/ptree.hpp>
 
 #include <fstream>
+
+#include <iostream>
 #include <map>
 
 #include <rw/defines.hpp>
 #include <rw/filesystem.hpp>
+
+template<class T, size_t N>
+constexpr size_t array_size(T(&)[N]) {
+    return N;
+}
 
 namespace pt = boost::property_tree;
 
@@ -270,78 +277,67 @@ BOOST_AUTO_TEST_CASE(test_TempFile) {
 
 BOOST_AUTO_TEST_CASE(test_config_initial) {
     // Test an initial config
-    GameConfig cfg;
-    BOOST_CHECK(!cfg.isValid());
+    RWConfig cfg;
 }
 
 BOOST_AUTO_TEST_CASE(test_config_valid) {
     // Test reading a valid configuration file
-    auto cfg = getValidConfig();
-
     TempFile tempFile;
-    tempFile.append(cfg);
+    {
+        auto cfg = getValidConfig();
+        tempFile.append(cfg);
+    }
 
-    GameConfig config;
-    config.loadFile(tempFile.path());
+    RWConfig config;
+    config.readConfigFile(tempFile.path());
 
-    BOOST_CHECK(config.isValid());
-    BOOST_CHECK_EQUAL(config.getParseResult().type(),
-                      GameConfig::ParseResult::ErrorType::GOOD);
-    BOOST_CHECK_EQUAL(config.getParseResult().getKeysRequiredMissing().size(),
-                      0);
-    BOOST_CHECK_EQUAL(config.getParseResult().getKeysInvalidData().size(), 0);
-
-    BOOST_CHECK_EQUAL(config.getGameDataPath().string(), "/dev/test");
-    BOOST_CHECK_EQUAL(config.getGameLanguage(), "american");
-    BOOST_CHECK(config.getInputInvertY());
+    BOOST_CHECK_EQUAL(config.gameDataPath.value.value().string(), "/dev/test");
+    BOOST_CHECK_EQUAL(config.gameLanguage.value.value(), "american");
+    BOOST_CHECK(config.inputInvertY.value.value());
 }
 
 BOOST_AUTO_TEST_CASE(test_config_valid_modified) {
     // Test reading a valid modified configuration file
-    auto cfg = getValidConfig();
-    cfg["game"]["path"] = "Liberty City";
-    cfg["input"]["invert_y"] = "0";
-
     TempFile tempFile;
-    tempFile.append(cfg);
+    {
+        auto cfg = getValidConfig();
+        cfg["game"]["path"] = "Liberty City";
+        cfg["input"]["invert_y"] = "0";
 
-    GameConfig config;
-    config.loadFile(tempFile.path());
+        tempFile.append(cfg);
+    }
 
-    BOOST_CHECK(config.isValid());
-    BOOST_CHECK_EQUAL(config.getParseResult().type(),
-                      GameConfig::ParseResult::ErrorType::GOOD);
-    BOOST_CHECK_EQUAL(config.getParseResult().getKeysRequiredMissing().size(),
-                      0);
-    BOOST_CHECK_EQUAL(config.getParseResult().getKeysInvalidData().size(), 0);
+    RWConfig config;
+    config.readConfigFile(tempFile.path());
 
-    BOOST_CHECK(!config.getInputInvertY());
-    BOOST_CHECK_EQUAL(config.getGameDataPath().string(), "Liberty City");
+    BOOST_CHECK(!config.inputInvertY.value.value());
+    BOOST_CHECK_EQUAL(config.gameDataPath.value.value().string(), "Liberty City");
 }
 
 BOOST_AUTO_TEST_CASE(test_config_save) {
     // Test saving a configuration file
-    auto cfg = getValidConfig();
-    cfg["game"]["path"] = "Liberty City";
-
     TempFile tempFile;
-    tempFile.append(cfg);
+    {
+        auto cfg = getValidConfig();
+        cfg["game"]["path"] = "Liberty City";
 
-    GameConfig config;
-    config.loadFile(tempFile.path());
+        tempFile.append(cfg);
+    }
 
-    BOOST_CHECK(config.isValid());
+    RWConfig config;
+    config.readConfigFile(tempFile.path());
 
     tempFile.remove();
     BOOST_CHECK(!tempFile.exists());
 
-    auto writeResult = config.saveConfig();
-    BOOST_CHECK(writeResult.isValid());
+    config.writeConfigFile(tempFile.path());
+
     BOOST_CHECK(tempFile.exists());
 
-    GameConfig config2;
-    config2.loadFile(tempFile.path());
-    BOOST_CHECK_EQUAL(config2.getGameDataPath().string(), "Liberty City");
+    RWConfig config2;
+    config2.readConfigFile(tempFile.path());
+
+    BOOST_CHECK_EQUAL(config2.gameDataPath.value.value().string(), "Liberty City");
 
     simpleConfig_t cfg2 = readConfig(tempFile.path());
     BOOST_CHECK_EQUAL(cfg2["game"]["path"], "Liberty City");
@@ -356,43 +352,38 @@ BOOST_AUTO_TEST_CASE(test_config_valid_unknown_keys) {
     TempFile tempFile;
     tempFile.append(cfg);
 
-    GameConfig config;
-    config.loadFile(tempFile.path());
+    RWConfig config;
+    config.readConfigFile(tempFile.path());
 
-    BOOST_CHECK(config.isValid());
+    BOOST_CHECK_GT(config.allConfigData.size(), 2);
 
-    const auto &unknownData = config.getParseResult().getUnknownData();
-
-    BOOST_CHECK_EQUAL(unknownData.size(), 2);
-
-    BOOST_CHECK_EQUAL(unknownData.count("game.unknownkey"), 1);
-    BOOST_CHECK_EQUAL(unknownData.at("game.unknownkey"),
+    BOOST_CHECK_EQUAL(config.allConfigData.count("game.unknownkey"), 1);
+    BOOST_CHECK_EQUAL(config.allConfigData.at("game.unknownkey"),
                       stripWhitespace(cfg["game"]["unknownkey"]));
 
-    BOOST_CHECK_EQUAL(unknownData.count("dontknow.dontcare"), 1);
-    BOOST_CHECK_EQUAL(unknownData.at("dontknow.dontcare"),
+    BOOST_CHECK_EQUAL(config.allConfigData.count("dontknow.dontcare"), 1);
+    BOOST_CHECK_EQUAL(config.allConfigData.at("dontknow.dontcare"),
                       stripWhitespace(cfg["dontknow"]["dontcare"]));
 
-    BOOST_CHECK_EQUAL(unknownData.count("game.path"), 0);
+    BOOST_CHECK_EQUAL(config.allConfigData.count("game.path"), 1);
 
     tempFile.remove();
-    config.saveConfig();
+    config.writeConfigFile(tempFile.path());
 
-    GameConfig config2;
-    config2.loadFile(tempFile.path());
-    const auto &unknownData2 = config2.getParseResult().getUnknownData();
+    RWConfig config2;
+    config2.readConfigFile(tempFile.path());
 
-    BOOST_CHECK_EQUAL(unknownData2.size(), 2);
+    BOOST_CHECK_GT(config2.allConfigData.size(), 2);
 
-    BOOST_CHECK_EQUAL(unknownData2.count("game.unknownkey"), 1);
-    BOOST_CHECK_EQUAL(unknownData2.at("game.unknownkey"),
+    BOOST_CHECK_EQUAL(config2.allConfigData.count("game.unknownkey"), 1);
+    BOOST_CHECK_EQUAL(config2.allConfigData.at("game.unknownkey"),
                       stripWhitespace(cfg["game"]["unknownkey"]));
 
-    BOOST_CHECK_EQUAL(unknownData2.count("dontknow.dontcare"), 1);
-    BOOST_CHECK_EQUAL(unknownData2.at("dontknow.dontcare"),
+    BOOST_CHECK_EQUAL(config2.allConfigData.count("dontknow.dontcare"), 1);
+    BOOST_CHECK_EQUAL(config2.allConfigData.at("dontknow.dontcare"),
                       stripWhitespace(cfg["dontknow"]["dontcare"]));
 
-    BOOST_CHECK_EQUAL(unknownData2.count("game.path"), 0);
+    BOOST_CHECK_EQUAL(config2.allConfigData.count("game.path"), 1);
 }
 
 BOOST_AUTO_TEST_CASE(test_config_save_readonly) {
@@ -403,14 +394,10 @@ BOOST_AUTO_TEST_CASE(test_config_save_readonly) {
     tempFile.append(cfg);
     tempFile.change_perms_readonly();
 
-    GameConfig config;
-    config.loadFile(tempFile.path());
-    BOOST_CHECK(config.isValid());
+    RWConfig config;
+    config.readConfigFile(tempFile.path());
 
-    auto writeResult = config.saveConfig();
-    BOOST_CHECK(!writeResult.isValid());
-    BOOST_CHECK_EQUAL(writeResult.type(),
-                      GameConfig::ParseResult::ErrorType::INVALIDOUTPUTFILE);
+    BOOST_CHECK_THROW(config.writeConfigFile(tempFile.path()), std::runtime_error);
 }
 
 BOOST_AUTO_TEST_CASE(test_config_valid_default) {
@@ -418,16 +405,78 @@ BOOST_AUTO_TEST_CASE(test_config_valid_default) {
     TempFile tempFile;
     BOOST_CHECK(!tempFile.exists());
 
-    GameConfig config;
-    config.loadFile(tempFile.path());
-    BOOST_CHECK(!config.isValid());
+    RWConfig config;
+    BOOST_CHECK_THROW(config.readConfigFile(tempFile.path()), std::runtime_error);
 
     auto defaultINI = config.getDefaultINIString();
     tempFile.append(defaultINI);
     BOOST_CHECK(tempFile.exists());
 
-    config.loadFile(tempFile.path());
-    BOOST_CHECK(config.isValid());
+    config.readConfigFile(tempFile.path());
+}
+
+BOOST_AUTO_TEST_CASE(test_config_valid_alternative_bool_true) {
+    // Test wrong data type
+    auto cfg = getValidConfig();
+    cfg["input"]["invert_y"] = "true";
+
+    TempFile tempFile;
+    tempFile.append(cfg);
+
+    RWConfig config;
+    BOOST_CHECK(!config.inputInvertY.hasValue());
+    config.readConfigFile(tempFile.path());
+
+    BOOST_CHECK(config.inputInvertY.hasValue());
+    BOOST_CHECK(config.inputInvertY.value.value());
+}
+
+BOOST_AUTO_TEST_CASE(test_config_valid_alternative_bool_false) {
+    // Test wrong data type
+    auto cfg = getValidConfig();
+    cfg["input"]["invert_y"] = "false";
+
+    TempFile tempFile;
+    tempFile.append(cfg);
+
+    RWConfig config;
+    BOOST_CHECK(!config.inputInvertY.hasValue());
+    config.readConfigFile(tempFile.path());
+
+    BOOST_CHECK(config.inputInvertY.hasValue());
+    BOOST_CHECK(!config.inputInvertY.value.value());
+}
+
+BOOST_AUTO_TEST_CASE(test_config_valid_alternative_bool_on) {
+    // Test wrong data type
+    auto cfg = getValidConfig();
+    cfg["input"]["invert_y"] = "on";
+
+    TempFile tempFile;
+    tempFile.append(cfg);
+
+    RWConfig config;
+    BOOST_CHECK(!config.inputInvertY.hasValue());
+    config.readConfigFile(tempFile.path());
+
+    BOOST_CHECK(config.inputInvertY.hasValue());
+    BOOST_CHECK(config.inputInvertY.value.value());
+}
+
+BOOST_AUTO_TEST_CASE(test_config_valid_alternative_bool_off) {
+    // Test wrong data type
+    auto cfg = getValidConfig();
+    cfg["input"]["invert_y"] = "off";
+
+    TempFile tempFile;
+    tempFile.append(cfg);
+
+    RWConfig config;
+    BOOST_CHECK(!config.inputInvertY.hasValue());
+    config.readConfigFile(tempFile.path());
+
+    BOOST_CHECK(config.inputInvertY.hasValue());
+    BOOST_CHECK(!config.inputInvertY.value.value());
 }
 
 BOOST_AUTO_TEST_CASE(test_config_invalid_emptykey) {
@@ -438,13 +487,8 @@ BOOST_AUTO_TEST_CASE(test_config_invalid_emptykey) {
     TempFile tempFile;
     tempFile.append(cfg);
 
-    GameConfig config;
-    config.loadFile(tempFile.path());
-
-    BOOST_CHECK(!config.isValid());
-    const auto &parseResult = config.getParseResult();
-    BOOST_CHECK_EQUAL(parseResult.type(),
-                      GameConfig::ParseResult::ErrorType::INVALIDINPUTFILE);
+    RWConfig config;
+    BOOST_CHECK_THROW(config.readConfigFile(tempFile.path()), std::runtime_error);
 }
 
 BOOST_AUTO_TEST_CASE(test_config_invalid_duplicate) {
@@ -455,13 +499,8 @@ BOOST_AUTO_TEST_CASE(test_config_invalid_duplicate) {
     TempFile tempFile;
     tempFile.append(cfg);
 
-    GameConfig config;
-    config.loadFile(tempFile.path());
-
-    BOOST_CHECK(!config.isValid());
-    const auto &parseResult = config.getParseResult();
-    BOOST_CHECK_EQUAL(parseResult.type(),
-                      GameConfig::ParseResult::ErrorType::INVALIDINPUTFILE);
+    RWConfig config;
+    BOOST_CHECK_THROW(config.readConfigFile(tempFile.path()), std::runtime_error);
 }
 
 BOOST_AUTO_TEST_CASE(test_config_invalid_required_missing) {
@@ -472,19 +511,10 @@ BOOST_AUTO_TEST_CASE(test_config_invalid_required_missing) {
     TempFile tempFile;
     tempFile.append(cfg);
 
-    GameConfig config;
-    config.loadFile(tempFile.path());
+    RWConfig config;
+    BOOST_CHECK_THROW(config.readConfigFile(tempFile.path()), std::runtime_error);
 
-    BOOST_CHECK(!config.isValid());
-
-    const auto &parseResult = config.getParseResult();
-    BOOST_CHECK_EQUAL(parseResult.type(),
-                      GameConfig::ParseResult::ErrorType::INVALIDCONTENT);
-
-    BOOST_CHECK_EQUAL(parseResult.getKeysRequiredMissing().size(), 1);
-    BOOST_CHECK_EQUAL(parseResult.getKeysInvalidData().size(), 0);
-
-    BOOST_CHECK_EQUAL(parseResult.getKeysRequiredMissing()[0], "game.path");
+    BOOST_CHECK(!config.gameDataPath.hasValue());
 }
 
 BOOST_AUTO_TEST_CASE(test_config_invalid_wrong_type) {
@@ -495,19 +525,10 @@ BOOST_AUTO_TEST_CASE(test_config_invalid_wrong_type) {
     TempFile tempFile;
     tempFile.append(cfg);
 
-    GameConfig config;
-    config.loadFile(tempFile.path());
+    RWConfig config;
 
-    BOOST_CHECK(!config.isValid());
-
-    const auto &parseResult = config.getParseResult();
-    BOOST_CHECK_EQUAL(parseResult.type(),
-                      GameConfig::ParseResult::ErrorType::INVALIDCONTENT);
-
-    BOOST_CHECK_EQUAL(parseResult.getKeysRequiredMissing().size(), 0);
-    BOOST_CHECK_EQUAL(parseResult.getKeysInvalidData().size(), 1);
-
-    BOOST_CHECK_EQUAL(parseResult.getKeysInvalidData()[0], "input.invert_y");
+    BOOST_CHECK_THROW(config.readConfigFile(tempFile.path()),
+                      std::runtime_error);
 }
 
 BOOST_AUTO_TEST_CASE(test_config_invalid_empty) {
@@ -518,15 +539,8 @@ BOOST_AUTO_TEST_CASE(test_config_invalid_empty) {
     tempFile.touch();
     BOOST_CHECK(tempFile.exists());
 
-    GameConfig config;
-    config.loadFile(tempFile.path());
-
-    BOOST_CHECK(!config.isValid());
-
-    const auto &parseResult = config.getParseResult();
-    BOOST_CHECK_EQUAL(parseResult.type(),
-                      GameConfig::ParseResult::ErrorType::INVALIDCONTENT);
-    BOOST_CHECK_GE(parseResult.getKeysRequiredMissing().size(), 1);
+    RWConfig config;
+    BOOST_CHECK_THROW(config.readConfigFile(tempFile.path()), std::runtime_error);
 }
 
 BOOST_AUTO_TEST_CASE(test_config_invalid_nodir) {
@@ -537,14 +551,8 @@ BOOST_AUTO_TEST_CASE(test_config_invalid_nodir) {
     BOOST_CHECK(!tempDir.exists());
     BOOST_CHECK(!tempFile.exists());
 
-    GameConfig config;
-    config.loadFile(tempFile.path());
-
-    BOOST_CHECK(!config.isValid());
-
-    const auto &parseResult = config.getParseResult();
-    BOOST_CHECK_EQUAL(parseResult.type(),
-                      GameConfig::ParseResult::ErrorType::INVALIDINPUTFILE);
+    RWConfig config;
+    BOOST_CHECK_THROW(config.readConfigFile(tempFile.path()), std::runtime_error);
 }
 
 BOOST_AUTO_TEST_CASE(test_config_invalid_nonexisting) {
@@ -552,14 +560,78 @@ BOOST_AUTO_TEST_CASE(test_config_invalid_nonexisting) {
     TempFile tempFile;
 
     BOOST_CHECK(!tempFile.exists());
-    GameConfig config;
-    config.loadFile(tempFile.path());
+    RWConfig config;
+    BOOST_CHECK_THROW(config.readConfigFile(tempFile.path()), std::runtime_error);
+}
 
-    BOOST_CHECK(!config.isValid());
+BOOST_AUTO_TEST_CASE(test_arguments_nullptr) {
+    RWConfig config;
+    config.parseArguments(0, nullptr);
+}
 
-    const auto &parseResult = config.getParseResult();
-    BOOST_CHECK_EQUAL(parseResult.type(),
-                      GameConfig::ParseResult::ErrorType::INVALIDINPUTFILE);
+BOOST_AUTO_TEST_CASE(test_arguments_one) {
+    RWConfig config;
+    const char *args[] = {""};
+    config.parseArguments(array_size(args), args);
+}
+
+BOOST_AUTO_TEST_CASE(test_arguments_notexisting) {
+    RWConfig config;
+    const char *args[] = {"", "--nonexistingprop"};
+    BOOST_CHECK_THROW(config.parseArguments(array_size(args), args), std::runtime_error);
+}
+
+BOOST_AUTO_TEST_CASE(test_arguments_positional) {
+    RWConfig config;
+    const char *args[] = {"", "positional"};
+    BOOST_CHECK_THROW(config.parseArguments(array_size(args), args), std::runtime_error);
+}
+
+BOOST_AUTO_TEST_CASE(test_arguments_bool) {
+    RWConfig config;
+    BOOST_CHECK(!config.displayHelp);
+
+    const char *args[] = {"", "--help"};
+    config.parseArguments(array_size(args), args);
+
+    BOOST_CHECK(config.displayHelp);
+}
+
+BOOST_AUTO_TEST_CASE(test_arguments_path) {
+    RWConfig config;
+    BOOST_CHECK(!config.configPath.hasValue());
+
+    auto path = rwfs::path("/some/path");
+    const char *args[] = {"", "-c", path.string().c_str()};
+    config.parseArguments(array_size(args), args);
+
+    BOOST_CHECK(config.configPath.hasValue());
+    BOOST_CHECK_EQUAL(path, config.configPath.value.value());
+}
+
+BOOST_AUTO_TEST_CASE(test_arguments_int) {
+    RWConfig config;
+    BOOST_CHECK(!config.windowWidth.hasValue());
+
+    const size_t width = 1920;
+    auto widthStr = std::to_string(width);
+    const char *args[] = {"", "-w", widthStr.c_str()};
+    config.parseArguments(array_size(args), args);
+
+    BOOST_CHECK(config.windowWidth.hasValue());
+    BOOST_CHECK_EQUAL(width, config.windowWidth.value.value());
+}
+
+BOOST_AUTO_TEST_CASE(test_arguments_int_invalid) {
+    RWConfig config;
+    BOOST_CHECK(!config.windowWidth.hasValue());
+
+    const std::string widthStr = "1920d";
+    const char *args[] = {"", "-w", widthStr.c_str()};
+
+    BOOST_CHECK_THROW(config.parseArguments(array_size(args), args), std::runtime_error);
+
+    BOOST_CHECK(!config.windowWidth.hasValue());
 }
 
 BOOST_AUTO_TEST_SUITE_END()

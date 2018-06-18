@@ -1,277 +1,266 @@
 #ifndef RWGAME_GAMECONFIG_HPP
 #define RWGAME_GAMECONFIG_HPP
+#include <rw/filesystem.hpp>
+#include <rw/optional.hpp>
+
+#include <cctype>
 #include <map>
 #include <string>
 #include <vector>
 
-#include <rw/filesystem.hpp>
+template<typename T>
+struct TypeTranslator;
 
-class GameConfig {
-private:
-    enum ParseType { DEFAULT, CONFIG, FILE, STRING };
-
-    /**
-     * @brief extractFilenameParseTypeData Get a human readable filename string
-     * @return file path or a description of the data type
-     */
-    static std::string extractFilenameParseTypeData(ParseType type,
-                                                    const std::string &data);
-
+class BaseRWConfigField {
 public:
-    class ParseResult {
-    public:
-        enum ErrorType {
-            /// UNINITIALIZED: The config was not initialized
-            UNINITIALIZED,
-            /// GOOD: Input file/string was good
-            GOOD,
-            /// INVALIDINPUTFILE: There was some error while reading from a file
-            /// or string or the input was ambiguous (e.g. duplicate keys)
-            INVALIDINPUTFILE,
-            /// INVALIDARGUMENT: The parser received impossible arguments
-            INVALIDARGUMENT,
-            /// INVALIDCONTENT: Some required keys were missing or some values
-            /// were of incorrect type
-            INVALIDCONTENT,
-            /// INVALIDOUTPUTFILE: There was some error while writing to a file
-            /// or string
-            INVALIDOUTPUTFILE
-        };
-
-    private:
-        /**
-         * @brief ParseResult Holds the issues occurred while parsing of a
-         * config file.
-         * @param srcType Type of the source
-         * @param source The source of the parser
-         * @param destType Type of the destination
-         * @param destination The destination
-         */
-        ParseResult(ParseType srcType, const std::string &source,
-                    ParseType destType, const std::string &destination);
-
-        /**
-         * @brief ParseResult Create empty ParseResult
-         */
-        ParseResult();
-
-    public:
-        /**
-         * @brief type Get the type of error
-         * @return Type of error or GOOD if there was no error
-         */
-        ErrorType type() const;
-
-        /**
-         * @brief getKeysRequiredMissing Get the keys that were missing
-         * @return A vector with all the keys
-         */
-        const std::vector<std::string> &getKeysRequiredMissing() const;
-
-        /**
-         * @brief getKeysInvalidData Get the keys that contained invalid data
-         * @return A vector with all the keys
-         */
-        const std::vector<std::string> &getKeysInvalidData() const;
-
-        /**
-         * @brief Mark this result as valid
-         */
-        void markGood();
-
-        /**
-         * @brief failInputFile Fail because the input file was invalid
-         * @param line Line number where the error is located
-         * @param message Description of the error
-         */
-        void failInputFile(size_t line, const std::string &message);
-
-        /**
-         * @brief failArgument Fail because an argument was invalid
-         * @param srcType type of the source
-         * @param destType type of the destination
-         */
-        void failArgument();
-
-        /**
-         * @brief failRequiredMissing Fail because a required key is missing
-         * @param key The key that is missing
-         */
-        void failRequiredMissing(const std::string &key);
-
-        /**
-         * @brief failInvalidData Fail because a key contains invalid data
-         * @param key The key that contains invalid data
-         */
-        void failInvalidData(const std::string &key);
-
-        /**
-         * @brief failOutputFile Fail because an error occurred while while
-         * writing to the output
-         * @param line Line number where the error is located
-         * @param message Description of the error
-         */
-        void failOutputFile(size_t line, const std::string &message);
-
-        /**
-         * @brief isValid
-         * @return True if the loaded configuration is valid
-         */
-        bool isValid() const;
-
-        /**
-         * @brief what Get a string representing the error
-         * @return String with the error description
-         */
-        std::string what() const;
-
-        /**
-         * @brief addUnknownData Add unknown key value pairs
-         * @param key The unknown key
-         * @param value The associated data
-         */
-        void addUnknownData(const std::string &key, const std::string &value);
-
-        /**
-         * @brief addUnknownData Get all the unknown key value pairs
-         * @return Mapping of the unknown keys with associated data
-         */
-        const std::map<std::string, std::string> &getUnknownData() const;
-
-    private:
-        /// Type of the failure
-        ErrorType m_result;
-
-        /// Filename of the input file
-        std::string m_inputfilename;
-
-        /// Filename of the output file
-        std::string m_outputfilename;
-
-        /// Line number where the failure occurred (on invalid input or output
-        /// file)
-        size_t m_line;
-
-        /// Description of the failure (on invalid input or output file)
-        std::string m_message;
-
-        /// All required keys that are missing
-        std::vector<std::string> m_keys_requiredMissing;
-
-        /// All keys that contain invalid data
-        std::vector<std::string> m_keys_invalidData;
-
-        // Mapping of unknown keys and associated data
-        std::map<std::string, std::string> m_unknownData;
-
-        /**
-         * @brief setUnknownData Replace the the unknown key value pairs
-         */
-        void setUnknownData(
-            const std::map<std::string, std::string> &unknownData);
-
-        friend class GameConfig;
+    enum field_t {
+        /// DEFAULT: represents the default value
+        DEFAULT,
+        /// VALUE: represents the value
+        VALUE,
     };
-
-    /**
-     * @brief GameConfig Create a game configuration (initially invalid)
-     */
-    GameConfig();
-
-    /**
-     * @brief Initialize this object using the config file at path
-     * @param path Path of the configuration file
-     */
-    void loadFile(const rwfs::path &path);
-
-    /**
-     * @brief getConfigPath Returns the path for the configuration
-     */
-    rwfs::path getConfigPath() const;
-
-    /**
-     * @brief writeConfig Save the game configuration
-     */
-    ParseResult saveConfig();
-
-    /**
-     * @brief isValid
-     * @return True if the loaded configuration is valid
-     */
-    bool isValid() const;
-
-    /**
-     * @brief getParseResult Get more information on parsing failures
-     * @return A ParseResult object  containing more information
-     */
-    const ParseResult &getParseResult() const;
-
-    /**
-     * @brief getConfigString Returns the content of the default INI
-     * configuration.
-     * @return INI string
-     */
-    std::string getDefaultINIString();
-
-    const rwfs::path &getGameDataPath() const {
-        return m_gamePath;
+    BaseRWConfigField(const std::string &key, bool required)
+        : key(key)
+        , required(required) {
     }
-    const std::string &getGameLanguage() const {
-        return m_gameLanguage;
+    BaseRWConfigField(const BaseRWConfigField &) = default;
+    BaseRWConfigField(BaseRWConfigField &&) = default;
+    std::string key;
+    bool required = false;
+    virtual bool fromString(const std::string &s) = 0;
+    virtual std::string toString(field_t field=VALUE) const = 0;
+    virtual bool hasValue() const = 0;
+};
+
+template<typename T>
+class RWConfigField : public virtual BaseRWConfigField {
+public:
+    /**
+     * @brief Create a new RWConfigField. This class represents an optional configuration parameter with a default that should be saved to a file.
+     * @param key Location of this config in the configuration file
+     * @param default Default value of this configuration parameter
+     * @param required Whether this parameter **MUST** be present
+     * @param value Optional initial value of this configuration paramter
+     */
+    RWConfigField(const std::string &key, const T &default_,
+                  bool required=false, rwopt::optional<T> value={})
+        : BaseRWConfigField{key, required}
+        , default_(default_)
+        , value(value) {
     }
-    bool getInputInvertY() const {
-        return m_inputInvertY;
-    }
-    int getWindowWidth() const {
-        return m_windowWidth;
-    }
-    int getWindowHeight() const {
-        return m_windowHeight;
-    }
-    bool getWindowFullscreen() const {
-        return m_windowFullscreen;
+    T default_;
+    rwopt::optional<T> value = {};
+
+    /**
+     * @brief Set the value of this configuration parameter to the value of the argument string.
+     * @param s String representation of the value to set this parameter to
+     * @return true if succesful, else false.
+     */
+    virtual bool fromString(const std::string &s) override {
+        auto optValue = TypeTranslator<T>::fromString(s);
+        if (optValue) {
+            value = optValue;
+        }
+        return !!optValue;
     }
 
-    static rwfs::path getDefaultConfigPath();
-private:
-
     /**
-     * @brief parseConfig Load data from source and write it to destination.
-     * Whitespace will be stripped from unknown data.
-     * @param srcType Can be DEFAULT | CONFIG | FILE | STRING
-     * @param source don't care if srcType == (DEFAULT | CONFIG),
-     *               path of INI file if srcType == FILE
-     *               INI string if srcType == STRING
-     * @param destType Can be CONFIG | FILE | STRING (DEFAULT is invalid)
-     * @param destination don't care if srcType == CONFIG
-     *                    path of INI file if destType == FILE
-     *                    INI string if srcType == STRING
-     * @return True if the parsing succeeded
+     * @brief Return the string representation of this configuration parameter value.
+     * @param field Select whether to return the actual value or the default value
+     * @return String representation
      */
-    ParseResult parseConfig(ParseType srcType, const std::string &source,
-                            ParseType destType, std::string &destination);
+    virtual std::string toString(field_t field) const override {
+        switch(field) {
+        case VALUE:
+            if (value) {
+                return TypeTranslator<T>::toString(value.value());
+            }
+            return "";
+        case DEFAULT:
+            return TypeTranslator<T>::toString(default_);
+        default:
+            return "";
+        }
+    }
+    /**
+     * @brief Check wheter this configuration parameter has an actual value
+     * @return true if it has a value, else false
+     */
+    virtual bool hasValue() const override {
+        return !!value;
+    }
+    /**
+     * @brief Get the actual value of this configuration parameter if it exists. Else, return the default value.
+     * @return The actual value of this configuration parameter if it exists. Else, the default value.
+     */
+    const T &getValueOrDefault() const {
+        if (hasValue())
+            return value.value();
+        return default_;
+    }
+};
 
-    /* Config State */
-    rwfs::path m_configPath;
-    ParseResult m_parseResult;
-
+class RWConfig {
+public:
     /* Actual Configuration */
 
     /// Path to the game data
-    rwfs::path m_gamePath;
+    RWConfigField<rwfs::path> gameDataPath = {"game.path", "/path/to/gta3", true};
 
     /// Language for game
-    std::string m_gameLanguage = "american";
+    RWConfigField<std::string> gameLanguage{"game.language", "american", true};
 
     /// Invert the y axis for camera control.
-    bool m_inputInvertY;
+    RWConfigField<bool> inputInvertY{"input.invert_y", false};
 
     /// Size of the window
-    int m_windowWidth;
-    int m_windowHeight;
-    
+    RWConfigField<std::size_t> windowWidth{"window.width", 800};
+    RWConfigField<std::size_t> windowHeight{"window.height", 600};
+
     /// Set the window to fullscreen
-    bool m_windowFullscreen;
+    RWConfigField<bool> windowFullscreen{"window.fullscreen", false};
+
+    /// Options for start game
+    bool startNewGame = false;
+    RWConfigField<rwfs::path> startSaveGame{"", {}};
+    bool startTestGame = false;
+    RWConfigField<rwfs::path> startBenchmark{"", {}};
+
+    /// Config file path
+    RWConfigField<rwfs::path> configPath{"", RWConfig::defaultConfigPath()};
+
+    /// Display help
+    bool displayHelp = false;
+
+    /// All data from the configuration file
+    std::map<std::string, std::string> allConfigData;
+private:
+    std::vector<const BaseRWConfigField *> iterConfigFileFields() const {
+        return {
+            &gameDataPath,
+            &gameLanguage,
+            &inputInvertY,
+            &windowWidth,
+            &windowHeight,
+            &windowFullscreen,
+        };
+    }
+    std::vector<BaseRWConfigField *> iterConfigFileFields() {
+        return {
+            &gameDataPath,
+            &gameLanguage,
+            &inputInvertY,
+            &windowWidth,
+            &windowHeight,
+            &windowFullscreen,
+        };
+    }
+public:
+    /**
+     * @brief Create a new configuration. All settings are undefined or have default values.
+     */
+    RWConfig() = default;
+    /**
+     * @brief Read the configuration file at path.
+     * Whitespace will be stripped from unknown data.
+     * @param path Location of the configuration file.
+     * @throws std::runtime_error if a problem occurs while reading the configuration file.
+     */
+    void readConfigFile(const rwfs::path &path);
+    /**
+     * @brief Write the configuration to a file at path.
+     * @param path Location of the configuration file.
+     * @throws std::runtime_error if a problem occurs while writing the configuration file.
+     */
+    void writeConfigFile(const rwfs::path &);
+    /**
+     * @brief Returns the content of the default INI
+     * configuration.
+     * @return INI string
+     */
+    std::string getDefaultINIString() const;
+
+    /**
+     * @brief Parse the command line arguments
+     * @param argc Number of arguments
+     * @param argv Arguments as an array of C strings.
+     * @throws std::runtime_Error if an incorrect argument is passed
+     */
+    void parseArguments(int argc, const char *argv[]);
+    /**
+     * @brief Write the help for the arguments to a stream
+     * @param os Output stream to write the help to
+     * @param argv Arguments as an array of C strings.
+     * @throws std::runtime_Error if an incorrect argument is passed
+     */
+    std::ostream &printArgumentsHelpText(std::ostream &os);
+    /**
+     * @brief Returns the path for the configuration file.
+     */
+    static rwfs::path defaultConfigPath();
+};
+
+
+template<>
+struct TypeTranslator<std::string> {
+    static rwopt::optional<std::string> fromString(const std::string &s) {
+        return s;
+    }
+    static std::string toString(std::string s) {
+        return s;
+    }
+};
+
+template<>
+struct TypeTranslator<bool> {
+    static rwopt::optional<bool> fromString(const std::string &s) {
+        std::string c = s;
+        std::transform(c.begin(), c.end(), c.begin(), ::tolower);
+        rwopt::optional<bool> res;
+        try {
+            int value = std::stoi(c);
+            return value != 0;
+        } catch (...) {
+        }
+        if (!c.compare("true") || !c.compare("on")) {
+            return true;
+        }
+        if (!c.compare("false") || !c.compare("off")) {
+            return false;
+        }
+        return res;
+    }
+    static std::string toString(const bool b) {
+        return b ? "1" : "0";
+    }
+};
+
+template<>
+struct TypeTranslator<std::size_t> {
+    static rwopt::optional<std::size_t> fromString(const std::string &s) {
+        auto c = s;
+        std::transform(c.begin(), c.end(), c.begin(), ::tolower);
+        rwopt::optional<std::size_t> res;
+        try {
+            auto value = std::stoll(c, nullptr, 0);
+            return static_cast<std::size_t>(value);
+        } catch (...) {
+        }
+        return res;
+    }
+    static std::string toString(std::size_t s) {
+        return std::to_string(s);
+    }
+};
+
+template<>
+struct TypeTranslator<rwfs::path> {
+    static rwopt::optional<rwfs::path> fromString(const std::string &s) {
+        return rwfs::path(s);
+    }
+    static std::string toString(const rwfs::path &path) {
+        return path.string();
+    }
 };
 
 #endif

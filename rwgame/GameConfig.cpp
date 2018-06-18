@@ -1,5 +1,4 @@
 #include "GameConfig.hpp"
-#include <algorithm>
 
 #include <rw/defines.hpp>
 #include <rw/filesystem.hpp>
@@ -8,50 +7,104 @@
 #include <boost/property_tree/ptree.hpp>
 namespace pt = boost::property_tree;
 
+#include <boost/program_options.hpp>
+namespace po = boost::program_options;
+
+#include <algorithm>
+#include <iostream>
+#include <stdexcept>
+
 const std::string kConfigDirectoryName("OpenRW");
 
-GameConfig::GameConfig()
-    : m_configPath()
-    , m_parseResult()
-    , m_inputInvertY(false) {
+static std::string stripConfigString(const std::string &str) {
+    auto s = std::string(str, str.find_first_not_of(" \t"), str.find_first_of(";#"));
+    return s.erase(s.find_last_not_of(" \n\r\t") + 1);
 }
 
-void GameConfig::loadFile(const rwfs::path &path) {
-    m_configPath = path;
-    std::string dummy;
-    m_parseResult =
-        parseConfig(ParseType::FILE, path.string(), ParseType::CONFIG, dummy);
+void RWConfig::readConfigFile(const rwfs::path &path) {
+    pt::ptree ptree;
+    try {
+        pt::read_ini(path.string(), ptree);
+    } catch (const pt::ini_parser_error &e) {
+        throw std::runtime_error(e.what());
+    }
+
+    for (auto &field : iterConfigFileFields()) {
+        if (field->hasValue()) {
+            // If the field is already initialized, don't read config.
+            continue;
+        }
+        auto data = ptree.get_optional<std::string>(field->key);
+        if (field->required && !data) {
+            throw std::runtime_error(std::string("Required key \"") + field->key + "\" missing.");
+        }
+        if (data) {
+            bool result = field->fromString(stripConfigString(data.get()));
+            if (!result) {
+                throw std::runtime_error(std::string("Key \"") + field->key + "\" is of invalid type.");
+            }
+        }
+    }
+
+    for (const auto &section : ptree) {
+        for (const auto &SectionItem : section.second) {
+            std::string key = section.first + "." + SectionItem.first;
+            allConfigData[key] = SectionItem.second.data();
+        }
+    }
 }
 
-rwfs::path GameConfig::getConfigPath() const {
-    return m_configPath;
+void RWConfig::writeConfigFile(const rwfs::path &path) {
+    pt::ptree ptree;
+
+    for (const auto &configItem : allConfigData) {
+        ptree.add(configItem.first, configItem.second);
+    }
+
+    for (auto &field : iterConfigFileFields()) {
+        if (!field->hasValue()) {
+            continue;
+        }
+        auto data = field->toString(BaseRWConfigField::VALUE);
+        ptree.put(field->key, data);
+    }
+    try {
+        pt::write_ini(path.string(), ptree);
+    } catch (const pt::ini_parser_error &e) {
+        throw std::runtime_error(e.what());
+    }
 }
 
-bool GameConfig::isValid() const {
-    return m_parseResult.isValid();
+std::string RWConfig::getDefaultINIString() const {
+    pt::ptree ptree;
+
+    for (auto &field : iterConfigFileFields()) {
+        auto data = field->toString(BaseRWConfigField::DEFAULT);
+        ptree.put(field->key, data);
+    }
+    std::ostringstream oss;
+    pt::write_ini(oss, ptree);
+    return oss.str();
 }
 
-const GameConfig::ParseResult &GameConfig::getParseResult() const {
-    return m_parseResult;
-}
+static const auto DEFAULT_CONFIG_FILE_NAME = "openrw.ini";
 
-rwfs::path GameConfig::getDefaultConfigPath() {
+rwfs::path RWConfig::defaultConfigPath() {
 #if defined(RW_LINUX) || defined(RW_FREEBSD) || defined(RW_NETBSD) || \
     defined(RW_OPENBSD)
     char *config_home = getenv("XDG_CONFIG_HOME");
     if (config_home != nullptr) {
-        return rwfs::path(config_home) / kConfigDirectoryName;
+        return rwfs::path(config_home) / kConfigDirectoryName / DEFAULT_CONFIG_FILE_NAME;
     }
     char *home = getenv("HOME");
     if (home != nullptr) {
-        return rwfs::path(home) / ".config/" / kConfigDirectoryName;
+        return rwfs::path(home) / ".config/" / kConfigDirectoryName / DEFAULT_CONFIG_FILE_NAME;
     }
 
 #elif defined(RW_OSX)
     char *home = getenv("HOME");
     if (home)
-        return rwfs::path(home) / "Library/Preferences/" /
-               kConfigDirectoryName;
+        return rwfs::path(home) / "Library/Preferences/" / kConfigDirectoryName / DEFAULT_CONFIG_FILE_NAME;
 
 #else
     return rwfs::path();
@@ -59,392 +112,73 @@ rwfs::path GameConfig::getDefaultConfigPath() {
 
     // Well now we're stuck.
     RW_ERROR("No default config path found.");
-    return rwfs::path();
+    return rwfs::path() / DEFAULT_CONFIG_FILE_NAME;
 }
 
-std::string stripComments(const std::string &str) {
-    auto s = std::string(str, 0, str.find_first_of(";#"));
-    return s.erase(s.find_last_not_of(" \n\r\t") + 1);
+static po::options_description getOptionDescription() {
+    po::options_description desc_window("Window options");
+    desc_window.add_options()(
+        "width,w", po::value<size_t>()->value_name("WIDTH"), "Game resolution width in pixel")(
+        "height,h", po::value<size_t>()->value_name("HEIGHT"), "Game resolution height in pixel")(
+        "fullscreen,f", "Enable fullscreen mode");
+    po::options_description desc_game("Game options");
+    desc_game.add_options()(
+        "newgame,n", "Start a new game")(
+        "load,l", po::value<std::string>()->value_name("PATH"), "Load save file");
+    po::options_description desc_devel("Developer options");
+    desc_devel.add_options()(
+        "test,t", "Starts a new game in a test location")(
+        "benchmark,b", po::value<std::string>()->value_name("PATH"), "Run benchmark from file");
+    po::options_description desc("Generic options");
+    desc.add_options()(
+        "config,c", po::value<rwfs::path>()->value_name("PATH"), "Path of configuration file")(
+        "help", "Show this help message");
+    desc.add(desc_window).add(desc_game).add(desc_devel);
+    return desc;
 }
 
-struct PathTranslator {
-    typedef std::string internal_type;
-    typedef rwfs::path external_type;
-    boost::optional<external_type> get_value(const internal_type &str) {
-        return rwfs::path(str);
-    }
-    boost::optional<internal_type> put_value(const external_type &path) {
-        return path.string();
-    }
-};
-
-struct StringTranslator {
-    typedef std::string internal_type;
-    typedef std::string external_type;
-    boost::optional<external_type> get_value(const internal_type &str) {
-        return stripComments(str);
-    }
-    boost::optional<internal_type> put_value(const external_type &str) {
-        return str;
-    }
-};
-
-struct BoolTranslator {
-    typedef std::string internal_type;
-    typedef bool external_type;
-    boost::optional<external_type> get_value(const internal_type &str) {
-        boost::optional<external_type> res;
-        try {
-            res = std::stoi(stripComments(str)) != 0;
-        } catch (std::invalid_argument &e) {
-        }
-        return res;
-    }
-    boost::optional<internal_type> put_value(const external_type &b) {
-        return internal_type(b ? "1" : "0");
-    }
-};
-
-struct IntTranslator {
-    typedef std::string internal_type;
-    typedef int external_type;
-    boost::optional<external_type> get_value(const internal_type &str) {
-        boost::optional<external_type> res;
-        try {
-            res = std::stoi(stripComments(str));
-        } catch (std::invalid_argument &e) {
-        }
-        return res;
-    }
-    boost::optional<internal_type> put_value(const external_type &i) {
-        return std::to_string(i);
-    }
-};
-
-GameConfig::ParseResult GameConfig::saveConfig() {
-    auto configPath = getConfigPath().string();
-    return parseConfig(ParseType::CONFIG, "", ParseType::FILE, configPath);
-}
-
-std::string GameConfig::getDefaultINIString() {
-    std::string result;
-    parseConfig(ParseType::DEFAULT, "", ParseType::STRING, result);
-    return result;
-}
-
-GameConfig::ParseResult GameConfig::parseConfig(GameConfig::ParseType srcType,
-                                                const std::string &source,
-                                                ParseType destType,
-                                                std::string &destination) {
-    // srcTree: holds all key/value pairs
-    pt::ptree srcTree;
-    ParseResult parseResult(srcType, source, destType, destination);
+void RWConfig::parseArguments(int argc, const char *argv[]) {
+    auto desc = getOptionDescription();
+    po::variables_map vm;
 
     try {
-        if (srcType == ParseType::STRING) {
-            std::istringstream iss(source);
-            pt::read_ini(iss, srcTree);
-        } else if (srcType == ParseType::FILE) {
-            pt::read_ini(source, srcTree);
+        auto parsedOptions = po::parse_command_line(argc, argv, desc);
+        po::store(parsedOptions, vm);
+        auto additional = po::collect_unrecognized(parsedOptions.options, po::include_positional);
+        if (additional.size()) {
+            throw std::runtime_error(std::string("Unrecognized option: \"") + additional[0] + "\"");
         }
-    } catch (pt::ini_parser_error &e) {
-        // Catches illegal input files (nonsensical input, duplicate keys)
-        parseResult.failInputFile(e.line(), e.message());
-        RW_MESSAGE(e.what());
-        return parseResult;
+        po::notify(vm);
+    } catch (po::error &e) {
+       throw std::runtime_error(e.what());
     }
 
-    if (destType == ParseType::DEFAULT) {
-        parseResult.failArgument();
-        RW_ERROR("Target cannot be DEFAULT.");
-        return parseResult;
+    displayHelp = vm.count("help");
+
+    if (vm.count("width")) {
+       windowWidth.value = vm["width"].as<size_t>();
+    }
+    if (vm.count("height")) {
+       windowHeight.value = vm["height"].as<size_t>();
+    }
+    if (vm.count("fullscreen")) {
+       windowFullscreen.value = true;
     }
 
-    // knownKeys: holds all known keys
-    std::vector<std::string> knownKeys;
-
-    auto read_config = [&](const std::string &key, auto &target,
-                           const auto &defaultValue, auto &translator,
-                           bool optional = true) {
-        typedef typename std::remove_reference<decltype(target)>::type config_t;
-
-        config_t sourceValue;
-        knownKeys.push_back(key);
-
-        switch (srcType) {
-            case ParseType::DEFAULT:
-                sourceValue = defaultValue;
-                break;
-            case ParseType::CONFIG:
-                sourceValue = target;
-                break;
-            case ParseType::FILE:
-            case ParseType::STRING:
-                try {
-                    sourceValue = srcTree.get<config_t>(key, translator);
-                } catch (pt::ptree_bad_path &e) {
-                    // Catches missing key-value pairs: fail when required
-                    if (!optional) {
-                        parseResult.failRequiredMissing(key);
-                        RW_MESSAGE(e.what());
-                        return;
-                    }
-                    sourceValue = defaultValue;
-                } catch (pt::ptree_bad_data &e) {
-                    // Catches illegal value data: always fail
-                    parseResult.failInvalidData(key);
-                    RW_MESSAGE(e.what());
-                    return;
-                }
-                break;
-        }
-        srcTree.put(key, sourceValue, translator);
-
-        switch (destType) {
-            case ParseType::DEFAULT:
-                // Target cannot be DEFAULT (case already handled)
-                parseResult.failArgument();
-                break;
-            case ParseType::CONFIG:
-                // Don't care if success == false
-                target = sourceValue;
-                break;
-            case ParseType::FILE:
-            case ParseType::STRING:
-                break;
-        }
-    };
-
-    auto deft = StringTranslator();
-    auto boolt = BoolTranslator();
-    auto patht = PathTranslator();
-    auto intt = IntTranslator();
-
-    // Add new configuration parameters here.
-    // Additionally, add them to the unit test.
-
-    // @todo Don't allow path separators and relative directories
-    read_config("game.path", this->m_gamePath, "/opt/games/Grand Theft Auto 3",
-                patht, false);
-    read_config("game.language", this->m_gameLanguage, "american", deft);
-
-    read_config("input.invert_y", this->m_inputInvertY, false, boolt);
-
-    read_config("window.width", this->m_windowWidth, 800, intt);
-    read_config("window.height", this->m_windowHeight, 600, intt);
-    read_config("window.fullscreen", this->m_windowFullscreen, false, boolt);
-
-    // Build the unknown key/value map from the correct source
-    switch (srcType) {
-        case ParseType::FILE:
-        case ParseType::STRING:
-            for (const auto &section : srcTree) {
-                for (const auto &subKey : section.second) {
-                    std::string key = section.first + "." + subKey.first;
-                    if (std::find(knownKeys.begin(), knownKeys.end(), key) ==
-                        knownKeys.end()) {
-                        RW_MESSAGE("Unknown configuration key: " << key);
-                        parseResult.addUnknownData(key, subKey.second.data());
-                    }
-                }
-            }
-            break;
-        case ParseType::CONFIG:
-            parseResult.setUnknownData(m_parseResult.getUnknownData());
-            break;
-        case ParseType::DEFAULT:
-            break;
+    startNewGame = vm.count("newgame");
+    if (vm.count("load")) {
+        startSaveGame.value = vm["load"].as<rwfs::path>();
+    }
+    startTestGame = vm.count("test");
+    if (vm.count("benchmark")) {
+        startBenchmark.value = vm["benchmark"].as<rwfs::path>();
     }
 
-    // Store the unknown key/value map to the correct destination
-    switch (destType) {
-        case ParseType::CONFIG:
-            m_parseResult.setUnknownData(parseResult.getUnknownData());
-            break;
-        case ParseType::STRING:
-        case ParseType::FILE:
-            for (const auto &keyvalue : parseResult.getUnknownData()) {
-                srcTree.put(keyvalue.first, keyvalue.second);
-            }
-            break;
-        default:
-            break;
-    }
-
-    if (!parseResult.isValid()) return parseResult;
-
-    try {
-        if (destType == ParseType::STRING) {
-            std::ostringstream ostream;
-            pt::write_ini(ostream, srcTree);
-            destination = ostream.str();
-        } else if (destType == ParseType::FILE) {
-            pt::write_ini(destination, srcTree);
-        }
-    } catch (pt::ini_parser_error &e) {
-        parseResult.failOutputFile(e.line(), e.message());
-        RW_MESSAGE(e.what());
-    }
-
-    if (parseResult.type() == ParseResult::ErrorType::UNINITIALIZED) {
-        parseResult.markGood();
-    }
-
-    return parseResult;
-}
-
-std::string GameConfig::extractFilenameParseTypeData(ParseType type,
-                                                     const std::string &data) {
-    switch (type) {
-        case ParseType::CONFIG:
-            return "<configuration>";
-        case ParseType::FILE:
-            return data;
-        case ParseType::STRING:
-            return "<string>";
-        case ParseType::DEFAULT:
-        default:
-            return "<default>";
+    if (vm.count("config")) {
+       configPath.value = vm["config"].as<rwfs::path>();
     }
 }
 
-GameConfig::ParseResult::ParseResult(GameConfig::ParseType srcType,
-                                     const std::string &source,
-                                     GameConfig::ParseType destType,
-                                     const std::string &destination)
-    : m_result(ErrorType::GOOD)
-    , m_inputfilename(GameConfig::extractFilenameParseTypeData(srcType, source))
-    , m_outputfilename(
-          GameConfig::extractFilenameParseTypeData(destType, destination))
-    , m_line(0)
-    , m_message()
-    , m_keys_requiredMissing()
-    , m_keys_invalidData()
-    , m_unknownData() {
-}
-
-GameConfig::ParseResult::ParseResult()
-    : m_result(ErrorType::UNINITIALIZED)
-    , m_inputfilename()
-    , m_outputfilename()
-    , m_line(0)
-    , m_message()
-    , m_keys_requiredMissing()
-    , m_keys_invalidData() {
-}
-
-GameConfig::ParseResult::ErrorType GameConfig::ParseResult::type() const {
-    return this->m_result;
-}
-
-bool GameConfig::ParseResult::isValid() const {
-    return this->type() == ErrorType::GOOD;
-}
-
-void GameConfig::ParseResult::failInputFile(size_t line,
-                                            const std::string &message) {
-    this->m_result = ParseResult::ErrorType::INVALIDINPUTFILE;
-    this->m_line = line;
-    this->m_message = message;
-}
-
-void GameConfig::ParseResult::markGood() {
-    this-> m_result = ParseResult::ErrorType::GOOD;
-}
-
-void GameConfig::ParseResult::failArgument() {
-    this->m_result = ParseResult::ErrorType::INVALIDARGUMENT;
-}
-
-void GameConfig::ParseResult::failRequiredMissing(const std::string &key) {
-    this->m_result = ParseResult::ErrorType::INVALIDCONTENT;
-    this->m_keys_requiredMissing.push_back(key);
-}
-
-void GameConfig::ParseResult::failInvalidData(const std::string &key) {
-    this->m_result = ParseResult::ErrorType::INVALIDCONTENT;
-    this->m_keys_invalidData.push_back(key);
-}
-
-void GameConfig::ParseResult::failOutputFile(size_t line,
-                                             const std::string &message) {
-    this->m_result = ParseResult::ErrorType::INVALIDOUTPUTFILE;
-    this->m_line = line;
-    this->m_message = message;
-}
-
-const std::vector<std::string>
-    &GameConfig::ParseResult::getKeysRequiredMissing() const {
-    return this->m_keys_requiredMissing;
-}
-
-const std::vector<std::string> &GameConfig::ParseResult::getKeysInvalidData()
-    const {
-    return this->m_keys_invalidData;
-}
-
-std::string GameConfig::ParseResult::what() const {
-    std::ostringstream oss;
-    switch (this->m_result) {
-        case ErrorType::UNINITIALIZED:
-            oss << "Parsing was skipped or did not finish.";
-            break;
-        case ErrorType::GOOD:
-            oss << "Parsing completed without errors.";
-            break;
-        case ErrorType::INVALIDARGUMENT:
-            oss << "Invalid argument: destination cannot be the default "
-                   "config.";
-            break;
-        case ErrorType::INVALIDINPUTFILE:
-            oss << "Error while reading \"" << this->m_inputfilename
-                << "\":" << this->m_line << ":\n"
-                << this->m_message << ".";
-            break;
-        case ErrorType::INVALIDOUTPUTFILE:
-            oss << "Error while writing \"" << this->m_inputfilename
-                << "\":" << this->m_line << ":\n"
-                << this->m_message << ".";
-            break;
-        case ErrorType::INVALIDCONTENT:
-            oss << "Error while parsing \"" << this->m_inputfilename << "\".";
-            if (!this->m_keys_requiredMissing.empty()) {
-                oss << "\nRequired keys that are missing:";
-                for (auto &key : this->m_keys_requiredMissing) {
-                    oss << "\n - " << key;
-                }
-            }
-            if (!this->m_keys_invalidData.empty()) {
-                oss << "\nKeys that contain invalid data:";
-                for (auto &key : this->m_keys_invalidData) {
-                    oss << "\n - " << key;
-                }
-            }
-            break;
-        default:
-            oss << "Unknown error.";
-            break;
-    }
-    if (!this->m_unknownData.empty()) {
-        oss << "\nUnknown configuration keys:";
-        for (const auto &keyvalue : m_unknownData) {
-            oss << "\n - " << keyvalue.first;
-        }
-    }
-    return oss.str();
-}
-
-void GameConfig::ParseResult::addUnknownData(const std::string &key,
-                                             const std::string &value) {
-    this->m_unknownData[key] = value;
-}
-
-const std::map<std::string, std::string>
-    &GameConfig::ParseResult::getUnknownData() const {
-    return this->m_unknownData;
-}
-
-void GameConfig::ParseResult::setUnknownData(
-    const std::map<std::string, std::string> &unknownData) {
-    this->m_unknownData = unknownData;
+std::ostream &RWConfig::printArgumentsHelpText(std::ostream &os) {
+    return os << getOptionDescription();
 }

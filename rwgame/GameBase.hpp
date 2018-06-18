@@ -1,5 +1,6 @@
 #ifndef RWGAME_GAMEBASE_HPP
 #define RWGAME_GAMEBASE_HPP
+#include "RWArguments.hpp"
 #include "GameConfig.hpp"
 #include "GameWindow.hpp"
 
@@ -12,7 +13,7 @@
  */
 class GameBase {
 public:
-    GameBase(Logger& inlog, int argc, char* argv[]);
+    GameBase(Logger& inlog, const RWConfig &conf);
 
     virtual ~GameBase() = 0;
 
@@ -20,15 +21,14 @@ public:
         return window;
     }
 
-    const GameConfig& getConfig() const {
+    const RWConfig& getConfig() const {
         return config;
     }
 
 protected:
     Logger& log;
-    GameConfig config;
     GameWindow window;
-    boost::program_options::variables_map options;
+    RWConfig config;
 };
 
 #endif

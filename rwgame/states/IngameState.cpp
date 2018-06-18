@@ -38,7 +38,7 @@ IngameState::IngameState(RWGame* game, bool newgame, const std::string& save)
     , newgame(newgame)
     , autolookTimer(0.f)
     , camMode(IngameState::CAMERA_NORMAL)
-    , m_invertedY(game->getConfig().getInputInvertY())
+    , m_invertedY(game->getConfig().inputInvertY.getValueOrDefault())
     , m_vehicleFreeLook(true) {
 }
 

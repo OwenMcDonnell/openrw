@@ -338,7 +338,7 @@ std::shared_ptr<Menu> DebugState::createMissionsMenu() {
 }
 
 DebugState::DebugState(RWGame* game, const glm::vec3& vp, const glm::quat& vd)
-    : State(game), _invertedY(game->getConfig().getInputInvertY()) {
+    : State(game), _invertedY(game->getConfig().inputInvertY.getValueOrDefault()) {
     this->enterMenu(createDebugMenu());
 
     _debugCam.position = vp;

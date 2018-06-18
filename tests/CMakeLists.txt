@@ -2,7 +2,7 @@
 #    Unit Tests
 ##############################################################################
 
-find_package(Boost COMPONENTS filesystem unit_test_framework system REQUIRED)
+find_package(Boost COMPONENTS filesystem unit_test_framework system program_options REQUIRED)
 
 set(TESTS
     Animation
@@ -89,6 +89,7 @@ target_link_libraries(rwtests
         rwengine
         SDL2::SDL2
         ${Boost_FILESYSTEM_LIBRARY}
+        ${Boost_PROGRAM_OPTIONS_LIBRARY}
         ${Boost_UNIT_TEST_FRAMEWORK_LIBRARY}
         ${Boost_SYSTEM_LIBRARY}
     )

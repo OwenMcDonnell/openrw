@@ -48,7 +48,7 @@ class RWGame : public GameBase {
     std::string cheatInputWindow = std::string(32, ' ');
 
 public:
-    RWGame(Logger& log, int argc, char* argv[]);
+    RWGame(Logger& log, const RWConfig &config);
     ~RWGame() override;
 
     int run();
