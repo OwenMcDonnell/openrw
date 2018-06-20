@@ -5,7 +5,7 @@
 #include <string>
 
 struct WeaponData {
-    enum FireType { MELEE, INSTANT_HIT, PROJECTILE };
+    enum FireType { MELEE, INSTANT_HIT, PROJECTILE, AREA_EFFECT };
 
     std::string name;
     FireType fireType;

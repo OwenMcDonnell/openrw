@@ -94,6 +94,8 @@ void GenericDATLoader::loadWeapons(const std::string& name,
                 data->fireType = WeaponData::INSTANT_HIT;
             } else if (firetype == "PROJECTILE") {
                 data->fireType = WeaponData::PROJECTILE;
+            } else if (firetype == "AREA_EFFECT") {
+                data->fireType = WeaponData::AREA_EFFECT;
             }
 
             ss >> data->hitRange;
