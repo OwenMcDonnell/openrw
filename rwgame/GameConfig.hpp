@@ -25,6 +25,7 @@ public:
     }
     BaseRWConfigField(const BaseRWConfigField &) = default;
     BaseRWConfigField(BaseRWConfigField &&) = default;
+    BaseRWConfigField &operator=(const BaseRWConfigField &) = default;
     std::string key;
     bool required = false;
     virtual bool fromString(const std::string &s) = 0;
@@ -48,6 +49,7 @@ public:
         , default_(default_)
         , value(value) {
     }
+    RWConfigField &operator=(const RWConfigField<T> &) = default;
     T default_;
     rwopt::optional<T> value = {};
 

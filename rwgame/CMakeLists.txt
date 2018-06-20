@@ -6,8 +6,6 @@ set(RWGAME_SOURCES
     GitSHA1.h
     "${CMAKE_CURRENT_BINARY_DIR}/GitSHA1.cpp"
 
-    main.cpp
-
     GameBase.hpp
     GameBase.cpp
     RWGame.hpp
@@ -20,6 +18,7 @@ set(RWGAME_SOURCES
 
     StateManager.hpp
     StateManager.cpp
+    State.hpp
     State.cpp
 
     MenuSystem.hpp
@@ -41,11 +40,13 @@ set(RWGAME_SOURCES
     states/BenchmarkState.hpp
     states/BenchmarkState.cpp
 
+    DrawUI.hpp
     DrawUI.cpp
     )
 
 add_executable(rwgame
     ${RWGAME_SOURCES}
+    main.cpp
     )
 
 target_include_directories(rwgame
@@ -71,3 +72,26 @@ openrw_target_apply_options(TARGET rwgame)
 install(TARGETS rwgame
     RUNTIME DESTINATION "${CMAKE_INSTALL_BINDIR}"
     )
+
+set(Python_ADDITIONAL_VERSIONS 3.4 3.5 3.6)
+find_package(PythonInterp REQUIRED)
+find_package(PythonLibs REQUIRED)
+find_package(pybind11 REQUIRED)
+
+pybind11_add_module(pyrw
+    ${RWGAME_SOURCES}
+    pymain.cpp
+    )
+
+target_link_libraries(pyrw
+    PUBLIC
+        rwengine
+        ${Boost_PROGRAM_OPTIONS_LIBRARY}
+        SDL2::SDL2
+    )
+
+target_include_directories(pyrw
+    PUBLIC
+        "${CMAKE_SOURCE_DIR}/rwgame"
+    )
+openrw_target_apply_options(TARGET pyrw)

@@ -132,6 +132,8 @@ static po::options_description getOptionDescription() {
     po::options_description desc("Generic options");
     desc.add_options()(
         "config,c", po::value<rwfs::path>()->value_name("PATH"), "Path of configuration file")(
+        "gamedata,g", po::value<rwfs::path>()->value_name("PATH"), "Path of game data")(
+        "language", po::value<std::string>()->value_name("LANG"), "Language")(
         "help", "Show this help message");
     desc.add(desc_window).add(desc_game).add(desc_devel);
     return desc;
@@ -176,6 +178,12 @@ void RWConfig::parseArguments(int argc, const char *argv[]) {
 
     if (vm.count("config")) {
        configPath.value = vm["config"].as<rwfs::path>();
+    }
+    if (vm.count("gamedata")) {
+       gameDataPath.value = vm["gamedata"].as<rwfs::path>();
+    }
+    if (vm.count("language")) {
+       gameLanguage.value = vm["language"].as<std::string>();
     }
 }
 

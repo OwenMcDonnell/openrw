@@ -104,10 +104,7 @@ public:
     void draw(GameRenderer* r) {
         glm::vec2 basis(offset);
         for (size_t i = 0; i < entries.size(); ++i) {
-            bool active = false;
-            if (activeEntry >= 0 && i == (unsigned)activeEntry) {
-                active = true;
-            }
+            bool active = i == (unsigned)activeEntry;
             entries[i].draw(font, size, active, r, basis);
         }
     }

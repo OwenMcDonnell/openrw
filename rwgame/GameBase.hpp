@@ -26,6 +26,7 @@ public:
     }
 
 protected:
+    void createWindow(std::size_t w, std::size_t h, bool fullscreen);
     Logger& log;
     GameWindow window;
     RWConfig config;

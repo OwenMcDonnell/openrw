@@ -5,8 +5,6 @@
 #include <string>
 #include <SDL.h>
 
-#include <render/GameRenderer.hpp>
-
 class GameWindow {
     SDL_Window* window;
     SDL_GLContext glcontext;

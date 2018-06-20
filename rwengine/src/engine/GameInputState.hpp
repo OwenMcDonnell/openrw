@@ -63,7 +63,7 @@ struct GameInputState {
     }
 
     /**
-     * @return if cotrol is held down
+     * @return if control is held down
      */
     bool pressed(Control c) const {
         return levels[c] > kButtonOnThreshold;

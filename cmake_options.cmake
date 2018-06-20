@@ -11,7 +11,7 @@ option(TESTS_NODATA "Build tests for no-data testing")
 set(FAILED_CHECK_ACTION "IGNORE" CACHE STRING "What action to perform on a failed RW_CHECK (in debug mode)")
 set_property(CACHE FAILED_CHECK_ACTION PROPERTY STRINGS "IGNORE" "ABORT" "BREAKPOINT")
 
-set(FILESYSTEM_LIBRARY "BOOST" CACHE STRING "Which filesystem library to use")
+set(FILESYSTEM_LIBRARY "BOOST" CACHE STRING "What library to use for coming cxx features")
 set_property(CACHE FILESYSTEM_LIBRARY PROPERTY STRINGS "CXX17" "CXXTS" "BOOST")
 
 if(NOT CMAKE_BUILD_TYPE)

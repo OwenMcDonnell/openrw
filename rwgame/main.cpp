@@ -22,7 +22,7 @@ static rwopt::optional<RWConfig> createConfig(int argc, const char *argv[]) {
         conf.printArgumentsHelpText(std::cout);
         return {};
     }
-    const auto configPath = conf.configPath.getValueOrDefault();
+    const rwfs::path configPath = conf.configPath.getValueOrDefault();
     try {
         conf.readConfigFile(configPath);
     } catch (const std::runtime_error &e) {

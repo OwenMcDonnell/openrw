@@ -47,7 +47,26 @@ RWGame::RWGame(Logger& log, const RWConfig &config)
     , renderer(&log, &data)
     , lastDraws(0) {
 
-    const auto gameDataPath = config.gameDataPath.getValueOrDefault();
+    loadData(config.gameDataPath.getValueOrDefault(), config.gameLanguage.getValueOrDefault());
+
+    StateManager::get().enter<LoadingState>(this, [=]() {
+        if (config.startBenchmark.hasValue()) {
+            StateManager::get().enter<BenchmarkState>(this, config.startBenchmark.value.value().string());
+        } else if (config.startTestGame) {
+            StateManager::get().enter<IngameState>(this, true, "test");
+        } else if (config.startNewGame) {
+            StateManager::get().enter<IngameState>(this, true);
+        } else if (config.startSaveGame.hasValue()) {
+            StateManager::get().enter<IngameState>(this, true, config.startSaveGame.value.value().string());
+        } else {
+            StateManager::get().enter<MenuState>(this);
+        }
+    });
+
+    log.info("Game", "Started");
+}
+
+void RWGame::loadData(const rwfs::path &gameDataPath, const std::string &gameLanguage) {
     log.info("Game", "Game directory: " + gameDataPath.string());
 
     if (!GameData::isValidGameDirectory(gameDataPath)) {
@@ -74,7 +93,7 @@ RWGame::RWGame(Logger& log, const RWConfig &config)
 
     data.loadDynamicObjects((gameDataPath / "data/object.dat").string());  // FIXME: use path
 
-    data.loadGXT("text/" + config.gameLanguage.getValueOrDefault() + ".gxt");
+    data.loadGXT("text/" + gameLanguage + ".gxt");
 
     getRenderer().water.setWaterTable(data.waterHeights, 48, data.realWater,
                                       128 * 128);
@@ -84,22 +103,6 @@ RWGame::RWGame(Logger& log, const RWConfig &config)
         oss << "radar" << std::setw(2) << std::setfill('0') << m << ".txd";
         data.loadTXD(oss.str());
     }
-
-    StateManager::get().enter<LoadingState>(this, [=]() {
-        if (config.startBenchmark.hasValue()) {
-            StateManager::get().enter<BenchmarkState>(this, config.startBenchmark.value.value().string());
-        } else if (config.startTestGame) {
-            StateManager::get().enter<IngameState>(this, true, "test");
-        } else if (config.startNewGame) {
-            StateManager::get().enter<IngameState>(this, true);
-        } else if (config.startSaveGame.hasValue()) {
-            StateManager::get().enter<IngameState>(this, true, config.startSaveGame.value.value().string());
-        } else {
-            StateManager::get().enter<MenuState>(this);
-        }
-    });
-
-    log.info("Game", "Started");
 }
 
 RWGame::~RWGame() {

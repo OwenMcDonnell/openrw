@@ -53,6 +53,8 @@ public:
 
     int run();
 
+    void loadData(const rwfs::path &gameDataPath, const std::string &gameLanguage);
+
     /**
      * Initalizes a new game
      */

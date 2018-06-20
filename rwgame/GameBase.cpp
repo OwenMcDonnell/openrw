@@ -18,16 +18,19 @@ const std::string kWindowTitle = "RWGame";
 
 GameBase::GameBase(Logger &inlog, const RWConfig &config) :
         log(inlog),
-        window(),
-        config(config) {
+        window() {
     log.info("Game", "Build: " + kBuildStr);
-
-    std::size_t w = config.windowWidth.getValueOrDefault();
-    std::size_t h = config.windowHeight.getValueOrDefault();
-    bool fullscreen = config.windowFullscreen.getValueOrDefault();
 
     if (SDL_Init(SDL_INIT_VIDEO) < 0)
         throw std::runtime_error("Failed to initialize SDL2!");
+
+    const std::size_t w = config.windowWidth.getValueOrDefault();
+    const std::size_t h = config.windowHeight.getValueOrDefault();
+    const bool fullscreen = config.windowFullscreen.getValueOrDefault();
+    createWindow(w, h, fullscreen);
+}
+
+void GameBase::createWindow(std::size_t w, std::size_t h, bool fullscreen) {
 
     window.create(kWindowTitle + " [" + kBuildStr + "]", w, h, fullscreen);
 

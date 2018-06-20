@@ -1,5 +1,8 @@
 #include "GameWindow.hpp"
+
 #include <core/Logger.hpp>
+
+#include <stdexcept>
 
 GameWindow::GameWindow() : window(nullptr), glcontext(nullptr) {
 }
@@ -16,6 +19,8 @@ void GameWindow::create(const std::string& title, size_t w, size_t h,
     SDL_GL_SetAttribute(SDL_GL_DOUBLEBUFFER, 1);
     SDL_GL_SetAttribute(SDL_GL_DEPTH_SIZE, 24);
     SDL_GL_SetAttribute(SDL_GL_STENCIL_SIZE, 8);
+
+    close();
 
     window = SDL_CreateWindow(title.c_str(), SDL_WINDOWPOS_CENTERED,
                               SDL_WINDOWPOS_CENTERED, w, h, style);
@@ -38,6 +43,7 @@ void GameWindow::close() {
     SDL_GL_DeleteContext(glcontext);
     SDL_DestroyWindow(window);
 
+    glcontext = nullptr;
     window = nullptr;
 }
 

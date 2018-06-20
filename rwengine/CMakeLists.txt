@@ -57,6 +57,7 @@ set(RWENGINE_SOURCES
     src/engine/Animator.hpp
     src/engine/GameData.cpp
     src/engine/GameData.hpp
+    src/engine/GameInputState.hpp
     src/engine/GameState.cpp
     src/engine/GameState.hpp
     src/engine/GameWorld.cpp
