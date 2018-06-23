@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.2.2)
+cmake_minimum_required(VERSION 3.8)
 
 project(OpenRW)
 
@@ -27,15 +27,6 @@ if(USE_CONAN)
 
     rwdep_wrap_conan_targets()
 else()
-    find_package(Boost REQUIRED)
-    find_package(Boost COMPONENTS program_options system REQUIRED)
-    if(FILESYSTEM_LIBRARY STREQUAL "BOOST")
-        find_package(Boost COMPONENTS filesystem system REQUIRED)
-    endif()
-    if(BUILD_TESTS)
-        find_package(Boost COMPONENTS unit_test_framework REQUIRED)
-    endif()
-
     # Do not link to SDL2main library
     set(SDL2_BUILDING_LIBRARY True)
 
@@ -46,6 +37,15 @@ else()
     find_package(SDL2 REQUIRED)
 
     rwdep_wrap_find_packages()
+endif()
+
+find_package(Boost REQUIRED)
+find_package(Boost COMPONENTS program_options system REQUIRED)
+if(FILESYSTEM_LIBRARY STREQUAL "BOOST")
+    find_package(Boost COMPONENTS filesystem system REQUIRED)
+endif()
+if(BUILD_TESTS)
+    find_package(Boost COMPONENTS unit_test_framework REQUIRED)
 endif()
 
 if(CHECK_INCLUDES)

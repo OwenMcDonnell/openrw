@@ -51,8 +51,8 @@ target_include_directories(rwgame
 target_link_libraries(rwgame
     PRIVATE
         rwengine
-        rwdep::boost_program_options
-        rwdep::SDL2
+        Boost::program_options
+        SDL2::SDL2
     )
 
 openrw_target_apply_options(TARGET rwgame)

@@ -1,7 +1,3 @@
-##############################################################################
-#    Unit Tests
-##############################################################################
-
 set(TESTS
     Animation
     Archive
@@ -64,16 +60,16 @@ target_compile_definitions(rwtests
 
 target_include_directories(rwtests
     PRIVATE
-        "${CMAKE_SOURCE_DIR}/tests"
+        "${CMA4KE_SOURCE_DIR}/tests"
         "${CMAKE_SOURCE_DIR}/rwgame"
     )
 
 target_link_libraries(rwtests
     PRIVATE
         rwengine
-        rwdep::SDL2
-        rwdep::boost_filesystem
-        rwdep::boost_unit_test_framework
+        SDL2::SDL2
+        Boost::filesystem
+        Boost::unit_test_framework
     )
 
 openrw_target_apply_options(TARGET rwtests)

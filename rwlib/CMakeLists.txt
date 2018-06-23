@@ -1,8 +1,4 @@
-###########################################################
-##      RWLIB
-###########################################################
-
-SET(RWLIB_SOURCES
+set(RWLIB_SOURCES
     # GL stuff is only here temporarily, hoping to move it back to rwengine
     source/gl/gl_core_3_3.c
     source/gl/gl_core_3_3.h
@@ -49,8 +45,8 @@ target_include_directories(rwlib
 
 target_link_libraries(rwlib
     PUBLIC
-        rwdep::boost
-        rwdep::glm
+        Boost::boost
+        glm::glm
         openrw::interface
     PRIVATE
         OpenGL::GL
