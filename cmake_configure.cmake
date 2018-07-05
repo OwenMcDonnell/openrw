@@ -188,6 +188,12 @@ function(openrw_target_apply_options)
         )
     endif()
 
+    if(CHECK_CLANGFORMAT)
+        clang_format_target(
+            TARGET "${OPENRW_APPLY_TARGET}"
+            )
+    endif()
+
     if(CHECK_CLANGTIDY)
         clang_tidy_check_target(
             TARGET "${OPENRW_APPLY_TARGET}"
