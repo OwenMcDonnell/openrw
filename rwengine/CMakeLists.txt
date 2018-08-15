@@ -136,6 +136,7 @@ set(RWENGINE_SOURCES
     src/script/ScriptTypes.hpp
     src/script/modules/GTA3Module.cpp
     src/script/modules/GTA3Module.hpp
+    src/script/modules/GTA3ModuleImpl.inl
     )
 
 add_library(rwengine
