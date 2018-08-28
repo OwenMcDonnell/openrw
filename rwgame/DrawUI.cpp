@@ -135,7 +135,8 @@ void drawPlayerInfo(PlayerController* player, GameWorld* world,
         ss << std::setw(8) << std::setfill('0')
            << world->state->playerInfo.displayedMoney;
 
-        ti.text = GameSymbols::Money + GameStringUtil::fromString(ss.str(), ti.font);
+        ti.text =
+            GameSymbols::Money + GameStringUtil::fromString(ss.str(), ti.font);
     }
 
     ti.baseColour = ui_shadowColour;
@@ -157,7 +158,8 @@ void drawPlayerInfo(PlayerController* player, GameWorld* world,
         ss << std::setw(3) << std::setfill('0')
            << static_cast<int>(
                   player->getCharacter()->getCurrentState().health);
-        ti.text = GameSymbols::Heart + GameStringUtil::fromString(ss.str(), ti.font);
+        ti.text =
+            GameSymbols::Heart + GameStringUtil::fromString(ss.str(), ti.font);
 
         ti.baseColour = ui_shadowColour;
         ti.screenPosition = glm::vec2(infoTextX + 1.f, infoTextY + 1.f);
@@ -174,7 +176,8 @@ void drawPlayerInfo(PlayerController* player, GameWorld* world,
         ss << std::setw(3) << std::setfill('0')
            << static_cast<int>(
                   player->getCharacter()->getCurrentState().armour);
-        ti.text = GameSymbols::Armour + GameStringUtil::fromString(ss.str(), ti.font);
+        ti.text =
+            GameSymbols::Armour + GameStringUtil::fromString(ss.str(), ti.font);
 
         ti.baseColour = ui_shadowColour;
         ti.screenPosition =
@@ -248,8 +251,8 @@ void drawPlayerInfo(PlayerController* player, GameWorld* world,
             // The clip is actually there, but it holds just one shot/charge
             displayBulletsTotal += slotInfo.bulletsClip;
 
-            ti.text =
-                GameStringUtil::fromString(std::to_string(displayBulletsTotal), ti.font);
+            ti.text = GameStringUtil::fromString(
+                std::to_string(displayBulletsTotal), ti.font);
         } else {
             // Limit the maximal displayed length for the total bullet count
             if (slotInfo.bulletsTotal > 9999) {
@@ -258,7 +261,8 @@ void drawPlayerInfo(PlayerController* player, GameWorld* world,
 
             ti.text = GameStringUtil::fromString(
                 std::to_string(displayBulletsTotal) + "-" +
-                std::to_string(slotInfo.bulletsClip), ti.font);
+                    std::to_string(slotInfo.bulletsClip),
+                ti.font);
         }
 
         ti.baseColour = ui_shadowColour;

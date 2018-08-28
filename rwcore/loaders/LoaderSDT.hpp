@@ -52,7 +52,7 @@ public:
     enum Version {
         GTA2,
         GTAIIIVC  ///< GTA III and GTA VC archives -- only this one is
-                  ///implemented
+                  /// implemented
     };
 
     /// Construct
@@ -83,9 +83,10 @@ public:
 
     Version getVersion() const;
     LoaderSDTFile assetInfo{};
+
 private:
-    Version m_version{GTAIIIVC};      ///< Version of this SDT archive
-    uint32_t m_assetCount{0};  ///< Number of assets in the current archive
+    Version m_version{GTAIIIVC};  ///< Version of this SDT archive
+    uint32_t m_assetCount{0};     ///< Number of assets in the current archive
     std::string m_archive;  ///< Path to the archive being used (no extension)
     std::vector<LoaderSDTFile> m_assets;  ///< Asset info of the archive
 };

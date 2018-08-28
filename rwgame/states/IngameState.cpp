@@ -103,7 +103,9 @@ void IngameState::startGame() {
     game->startScript("data/main.scm");
     game->getScriptVM()->startThread(0);
     auto audioCityPath = getWorld()->data->index.findFilePath("audio/City.wav");
-    getWorld()->sound.playBackground(audioCityPath.string()); //FIXME: playBackground should just accept "audio/City.wav"
+    getWorld()->sound.playBackground(
+        audioCityPath.string());  // FIXME: playBackground should just accept
+                                  // "audio/City.wav"
 }
 
 void IngameState::enter() {

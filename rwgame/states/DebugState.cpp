@@ -451,7 +451,8 @@ void DebugState::handleEvent(const SDL_Event& event) {
                     event.motion.xrel / static_cast<float>(screenSize.x),
                     event.motion.yrel / static_cast<float>(screenSize.y));
 
-                if (!_invertedY) mouseMove.y = -mouseMove.y;
+                if (!_invertedY)
+                    mouseMove.y = -mouseMove.y;
 
                 _debugLook.x -= mouseMove.x;
 
@@ -475,7 +476,8 @@ void DebugState::printCameraDetails() {
 
 void DebugState::spawnVehicle(unsigned int id) {
     auto ch = game->getWorld()->getPlayer()->getCharacter();
-    if (!ch) return;
+    if (!ch)
+        return;
 
     auto playerRot = ch->getRotation();
     auto spawnPos = ch->getPosition();
@@ -487,7 +489,8 @@ void DebugState::spawnVehicle(unsigned int id) {
 
 void DebugState::spawnFollower(unsigned int id) {
     auto ch = game->getWorld()->getPlayer()->getCharacter();
-    if (!ch) return;
+    if (!ch)
+        return;
 
     glm::vec3 fwd = ch->rotation * glm::vec3(0.f, 1.f, 0.f);
 

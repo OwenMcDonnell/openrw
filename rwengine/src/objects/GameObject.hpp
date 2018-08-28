@@ -4,8 +4,8 @@
 #include <limits>
 
 #include <glm/glm.hpp>
-#include <glm/gtc/quaternion.hpp>
 #include <glm/gtc/matrix_transform.hpp>
+#include <glm/gtc/quaternion.hpp>
 
 #include <rw/debug.hpp>
 #include <rw/forward.hpp>
@@ -88,7 +88,7 @@ public:
         return getGameObjectID();
     }
 
-    template <class T>
+    template<class T>
     T* getModelInfo() const {
         return static_cast<T*>(modelinfo_);
     }

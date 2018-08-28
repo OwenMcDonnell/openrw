@@ -44,7 +44,8 @@ SoundManager::~SoundManager() {
         alcDestroyContext(alContext);
     }
 
-    if (alDevice) alcCloseDevice(alDevice);
+    if (alDevice)
+        alcCloseDevice(alDevice);
 }
 
 bool SoundManager::initializeOpenAL() {
@@ -126,7 +127,7 @@ size_t SoundManager::createSfxInstance(size_t index) {
     Sound* sound = nullptr;
     auto soundRef = sfx.find(index);
 
-    if(soundRef == sfx.end()) {
+    if (soundRef == sfx.end()) {
         // Sound source is not loaded yet
         loadSound(index);
         soundRef = sfx.find(index);

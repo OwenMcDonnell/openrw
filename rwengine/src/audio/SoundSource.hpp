@@ -1,8 +1,8 @@
 #ifndef _RWENGINE_SOUND_SOURCE_HPP_
 #define _RWENGINE_SOUND_SOURCE_HPP_
 
-#include <rw/filesystem.hpp>
 #include <loaders/LoaderSDT.hpp>
+#include <rw/filesystem.hpp>
 
 /// Opaque for raw sound,
 /// cooperate with ffmpeg

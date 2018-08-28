@@ -25,8 +25,7 @@
 #endif
 
 TrafficDirector::TrafficDirector(AIGraph* g, GameWorld* w)
-    : graph(g)
-    , world(w) {
+    : graph(g), world(w) {
 }
 
 std::vector<AIGraphNode*> TrafficDirector::findAvailableNodes(
@@ -40,9 +39,8 @@ std::vector<AIGraphNode*> TrafficDirector::findAvailableNodes(
     float minDist = (15.f / density) * (15.f / density);
     float halfRadius2 = std::pow(radius / 2.f, 2.f);
 
-    // Check if any of the nearby nodes are blocked by a pedestrian or vehicle standing on
-    // it
-    // or because it's inside the view frustum
+    // Check if any of the nearby nodes are blocked by a pedestrian or vehicle
+    // standing on it or because it's inside the view frustum
     for (auto it = available.begin(); it != available.end();) {
         bool blocked = false;
         float dist2 = glm::distance2(camera.position, (*it)->position);
@@ -93,15 +91,13 @@ void TrafficDirector::setDensity(AIGraphNode::NodeType type, float density) {
 
 std::vector<GameObject*> TrafficDirector::populateNearby(
     const ViewCamera& camera, float radius, int maxSpawn) {
-
     auto& random = world->randomEngine;
     std::vector<GameObject*> created;
 
     int availablePeds =
         maximumPedestrians - world->pedestrianPool.objects.size();
 
-    int availableCars =
-        maximumCars - world->vehiclePool.objects.size();
+    int availableCars = maximumCars - world->vehiclePool.objects.size();
 
     /// @todo Check how "in player view" should be determined.
 
@@ -148,10 +144,13 @@ std::vector<GameObject*> TrafficDirector::populateNearby(
     peds.insert(peds.end(), group.cbegin(), group.cend());
 
     // Vehicles for normal traffic @todo create correct vehicle list
-    static constexpr std::array<uint16_t, 32> cars = {90, 91, 92, 94, 95, 97, 98, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 
-                                    111, 112, 116, 119, 128, 129, 130, 134, 135, 136, 138, 139, 144, 146};    
+    static constexpr std::array<uint16_t, 32> cars = {
+        90,  91,  92,  94,  95,  97,  98,  100, 101, 102, 103,
+        104, 105, 106, 107, 108, 109, 110, 111, 112, 116, 119,
+        128, 129, 130, 134, 135, 136, 138, 139, 144, 146};
 
-    auto availablePedsNodes = findAvailableNodes(AIGraphNode::Pedestrian, camera, radius);
+    auto availablePedsNodes =
+        findAvailableNodes(AIGraphNode::Pedestrian, camera, radius);
 
     // We have not reached the limit of spawned pedestrians
     if (availablePeds > 0) {
@@ -178,15 +177,16 @@ std::vector<GameObject*> TrafficDirector::populateNearby(
             // Spawn a pedestrian from the available pool
             const uint16_t pedId = peds[std::uniform_int_distribution<>(
                 0, peds.size() - 1)(random)];
-            auto ped = world->createPedestrian(pedId,
-                                           spawn->position + kSpawnOffset);
+            auto ped =
+                world->createPedestrian(pedId, spawn->position + kSpawnOffset);
             ped->setLifetime(GameObject::TrafficLifetime);
             ped->controller->setGoal(CharacterController::TrafficWander);
             created.push_back(ped);
         }
     }
 
-    auto availableVehicleNodes = findAvailableNodes(AIGraphNode::Vehicle, camera, radius);
+    auto availableVehicleNodes =
+        findAvailableNodes(AIGraphNode::Vehicle, camera, radius);
 
     // We have not reached the limit of spawned vehicles
     if (availableCars > 0) {
@@ -218,7 +218,8 @@ std::vector<GameObject*> TrafficDirector::populateNearby(
             const glm::vec3 diff = (spawn->position - next->position) / 2.f;
 
             // Calculate the orientation of the vehicle
-            glm::mat4 rotMat = glm::lookAt(next->position, spawn->position, glm::vec3(0,0,1));
+            glm::mat4 rotMat = glm::lookAt(next->position, spawn->position,
+                                           glm::vec3(0, 0, 1));
             const glm::mat4 rotate =
                 glm::rotate(glm::radians(90.f), glm::vec3(1, 0, 0));
             rotMat = rotate * rotMat;
@@ -232,11 +233,14 @@ std::vector<GameObject*> TrafficDirector::populateNearby(
             // Calculate the strafe vector
             const glm::vec3 strafe = glm::cross(up, dir);
 
-            // @todo we don't know the direction of the street, so for now, choose the smaller value
-            int maxLanes = spawn->rightLanes < spawn->leftLanes ? spawn->rightLanes : spawn->leftLanes;
-	
+            // @todo we don't know the direction of the street, so for now,
+            // choose the smaller value
+            int maxLanes = spawn->rightLanes < spawn->leftLanes
+                               ? spawn->rightLanes
+                               : spawn->leftLanes;
+
             // This street has no lanes, continue
-            if( maxLanes <= 0 ) {
+            if (maxLanes <= 0) {
                 continue;
             }
 
@@ -249,13 +253,17 @@ std::vector<GameObject*> TrafficDirector::populateNearby(
             // Spawn a vehicle from the available pool
             const uint16_t carId = cars[std::uniform_int_distribution<>(
                 0, cars.size() - 1)(random)];
-            auto vehicle = world->createVehicle(carId, next->position + kSpawnOffset + diff + laneOffset, orientation);
+            auto vehicle = world->createVehicle(
+                carId, next->position + kSpawnOffset + diff + laneOffset,
+                orientation);
             vehicle->setLifetime(GameObject::TrafficLifetime);
             vehicle->setHandbraking(false);
 
             // Spawn a pedestrian and put it into the vehicle
-            int pedId = peds[std::uniform_int_distribution<>(0, peds.size() - 1)(random)];
-            CharacterObject* character = world->createPedestrian(pedId, vehicle->getPosition());
+            int pedId = peds[std::uniform_int_distribution<>(
+                0, peds.size() - 1)(random)];
+            CharacterObject* character =
+                world->createPedestrian(pedId, vehicle->getPosition());
             character->setLifetime(GameObject::TrafficLifetime);
             character->setCurrentVehicle(vehicle, 0);
             character->controller->setGoal(CharacterController::TrafficDriver);

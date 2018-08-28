@@ -92,7 +92,7 @@ public:
     bool resprayDone = false;
 
     Garage(GameWorld* engine_, const int id_, const glm::vec3 coord0,
-               const glm::vec3 coord1, const Type type_);
+           const glm::vec3 coord1, const Type type_);
     ~Garage() = default;
 
     void makeDoorSwing();

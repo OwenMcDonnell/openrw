@@ -377,9 +377,10 @@ PickupObject* GameWorld::createPickup(const glm::vec3& pos, int id, int type) {
         pickup = new AdrenalinePickup(this, pos, modelInfo, pickuptype);
     } else if (modelInfo->name == "Money") {
         pickup = new MoneyPickup(this, pos, modelInfo, pickuptype, 0);
-     } else if (modelInfo->name == "donkeymag") {
+    } else if (modelInfo->name == "donkeymag") {
         pickup = new BigNVeinyPickup(this, pos, modelInfo, pickuptype);
-        pickup->setBehaviourFlags(PickupObject::BehaviourFlags::PickupInVehicle);
+        pickup->setBehaviourFlags(
+            PickupObject::BehaviourFlags::PickupInVehicle);
     } else {
         RW_UNIMPLEMENTED("Non-weapon pickups");
         pickup = new PickupObject(this, pos, modelInfo, pickuptype);
@@ -394,7 +395,8 @@ PickupObject* GameWorld::createPickup(const glm::vec3& pos, int id, int type) {
 Garage* GameWorld::createGarage(const glm::vec3 coord0, const glm::vec3 coord1,
                                 Garage::Type type) {
     const int id = garages.size();
-    garages.emplace_back(std::make_unique<Garage>(this, id, coord0, coord1, type));
+    garages.emplace_back(
+        std::make_unique<Garage>(this, id, coord0, coord1, type));
     return garages.back().get();
 }
 
@@ -409,7 +411,8 @@ void GameWorld::ObjectPool::insert(GameObject* object) {
         // Find the lowest free GameObjectID.
         GameObjectID availID = 1;
         for (auto& p : objects) {
-            if (p.first == availID) availID++;
+            if (p.first == availID)
+                availID++;
         }
 
         object->setGameObjectID(availID);
@@ -487,7 +490,8 @@ void GameWorld::destroyObject(GameObject* object) {
 
 void GameWorld::destroyObjectQueued(GameObject* object) {
     RW_CHECK(object != nullptr, "destroying a null object?");
-    if (object) deletionQueue.insert(object);
+    if (object)
+        deletionQueue.insert(object);
 }
 
 void GameWorld::destroyQueuedObjects() {
@@ -610,8 +614,10 @@ float GameWorld::getGameTime() const {
 namespace {
 void handleVehicleResponse(GameObject* object, btManifoldPoint& mp, bool isA) {
     bool isVehicle = object->type() == GameObject::Vehicle;
-    if (!isVehicle) return;
-    if (mp.getAppliedImpulse() <= 100.f) return;
+    if (!isVehicle)
+        return;
+    if (mp.getAppliedImpulse() <= 100.f)
+        return;
 
     btVector3 src, dmg;
     if (isA) {
@@ -681,8 +687,10 @@ bool GameWorld::ContactProcessedCallback(btManifoldPoint& mp, void* body0,
     }
 
     // Handle vehicles
-    if (a) handleVehicleResponse(a, mp, true);
-    if (b) handleVehicleResponse(b, mp, false);
+    if (a)
+        handleVehicleResponse(a, mp, true);
+    if (b)
+        handleVehicleResponse(b, mp, false);
 
     return true;
 }
@@ -853,7 +861,8 @@ void GameWorld::updateEffects() {
         auto& effect = effects[i];
         if (effect->getType() == Particle) {
             auto particle = static_cast<ParticleFX*>(effect.get());
-            if (particle->lifetime < 0.f) continue;
+            if (particle->lifetime < 0.f)
+                continue;
             if (getGameTime() >= particle->starttime + particle->lifetime) {
                 destroyEffect(*particle);
                 --i;

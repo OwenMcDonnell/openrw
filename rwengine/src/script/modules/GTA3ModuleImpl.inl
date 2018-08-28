@@ -46,7 +46,7 @@ void opcode_0001(const ScriptArguments& args, const ScriptInt time) {
     @brief goto %1p%
 
     opcode 0002
-    @arg arg1 
+    @arg arg1
 */
 void opcode_0002(const ScriptArguments& args, const ScriptLabel arg1) {
     auto thread = args.getThread();
@@ -69,10 +69,11 @@ void opcode_0003(const ScriptArguments& args, const ScriptInt time) {
     @brief %1d% = %2d%
 
     opcode 0004
-    @arg arg1G 
-    @arg arg2 
+    @arg arg1G
+    @arg arg2
 */
-void opcode_0004(const ScriptArguments& args, ScriptInt& arg1G, const ScriptInt arg2) {
+void opcode_0004(const ScriptArguments& args, ScriptInt& arg1G,
+                 const ScriptInt arg2) {
     RW_UNUSED(args);
     arg1G = arg2;
 }
@@ -81,10 +82,11 @@ void opcode_0004(const ScriptArguments& args, ScriptInt& arg1G, const ScriptInt 
     @brief %1d% = %2d%
 
     opcode 0005
-    @arg arg1G 
-    @arg arg2 
+    @arg arg1G
+    @arg arg2
 */
-void opcode_0005(const ScriptArguments& args, ScriptFloat& arg1G, const ScriptFloat arg2) {
+void opcode_0005(const ScriptArguments& args, ScriptFloat& arg1G,
+                 const ScriptFloat arg2) {
     RW_UNUSED(args);
     arg1G = arg2;
 }
@@ -93,10 +95,11 @@ void opcode_0005(const ScriptArguments& args, ScriptFloat& arg1G, const ScriptFl
     @brief %1d% = %2d%
 
     opcode 0006
-    @arg arg1L 
-    @arg arg2 
+    @arg arg1L
+    @arg arg2
 */
-void opcode_0006(const ScriptArguments& args, ScriptInt& arg1L, const ScriptInt arg2) {
+void opcode_0006(const ScriptArguments& args, ScriptInt& arg1L,
+                 const ScriptInt arg2) {
     RW_UNUSED(args);
     arg1L = arg2;
 }
@@ -105,10 +108,11 @@ void opcode_0006(const ScriptArguments& args, ScriptInt& arg1L, const ScriptInt 
     @brief %1d% = %2d%
 
     opcode 0007
-    @arg arg1L 
-    @arg arg2 
+    @arg arg1L
+    @arg arg2
 */
-void opcode_0007(const ScriptArguments& args, ScriptFloat& arg1L, const ScriptFloat arg2) {
+void opcode_0007(const ScriptArguments& args, ScriptFloat& arg1L,
+                 const ScriptFloat arg2) {
     RW_UNUSED(args);
     arg1L = arg2;
 }
@@ -117,10 +121,11 @@ void opcode_0007(const ScriptArguments& args, ScriptFloat& arg1L, const ScriptFl
     @brief %1d% += %2d%
 
     opcode 0008
-    @arg arg1G 
-    @arg arg2 
+    @arg arg1G
+    @arg arg2
 */
-void opcode_0008(const ScriptArguments& args, ScriptInt& arg1G, const ScriptInt arg2) {
+void opcode_0008(const ScriptArguments& args, ScriptInt& arg1G,
+                 const ScriptInt arg2) {
     RW_UNUSED(args);
     arg1G += arg2;
 }
@@ -129,10 +134,11 @@ void opcode_0008(const ScriptArguments& args, ScriptInt& arg1G, const ScriptInt 
     @brief %1d% += %2d%
 
     opcode 0009
-    @arg arg1G 
-    @arg arg2 
+    @arg arg1G
+    @arg arg2
 */
-void opcode_0009(const ScriptArguments& args, ScriptFloat& arg1G, const ScriptFloat arg2) {
+void opcode_0009(const ScriptArguments& args, ScriptFloat& arg1G,
+                 const ScriptFloat arg2) {
     RW_UNUSED(args);
     arg1G += arg2;
 }
@@ -141,10 +147,11 @@ void opcode_0009(const ScriptArguments& args, ScriptFloat& arg1G, const ScriptFl
     @brief %1d% += %2h%
 
     opcode 000a
-    @arg arg1L 
-    @arg arg2 
+    @arg arg1L
+    @arg arg2
 */
-void opcode_000a(const ScriptArguments& args, ScriptInt& arg1L, const ScriptInt arg2) {
+void opcode_000a(const ScriptArguments& args, ScriptInt& arg1L,
+                 const ScriptInt arg2) {
     RW_UNUSED(args);
     arg1L += arg2;
 }
@@ -153,10 +160,11 @@ void opcode_000a(const ScriptArguments& args, ScriptInt& arg1L, const ScriptInt 
     @brief %1d% += %2d%
 
     opcode 000b
-    @arg arg1L 
-    @arg arg2 
+    @arg arg1L
+    @arg arg2
 */
-void opcode_000b(const ScriptArguments& args, ScriptFloat& arg1L, const ScriptFloat arg2) {
+void opcode_000b(const ScriptArguments& args, ScriptFloat& arg1L,
+                 const ScriptFloat arg2) {
     RW_UNUSED(args);
     arg1L += arg2;
 }
@@ -165,10 +173,11 @@ void opcode_000b(const ScriptArguments& args, ScriptFloat& arg1L, const ScriptFl
     @brief %1d% -= %2d%
 
     opcode 000c
-    @arg arg1G 
-    @arg arg2 
+    @arg arg1G
+    @arg arg2
 */
-void opcode_000c(const ScriptArguments& args, ScriptInt& arg1G, const ScriptInt arg2) {
+void opcode_000c(const ScriptArguments& args, ScriptInt& arg1G,
+                 const ScriptInt arg2) {
     RW_UNUSED(args);
     arg1G -= arg2;
 }
@@ -177,10 +186,11 @@ void opcode_000c(const ScriptArguments& args, ScriptInt& arg1G, const ScriptInt 
     @brief %1d% -= %2d%
 
     opcode 000d
-    @arg arg1G 
-    @arg arg2 
+    @arg arg1G
+    @arg arg2
 */
-void opcode_000d(const ScriptArguments& args, ScriptFloat& arg1G, const ScriptFloat arg2) {
+void opcode_000d(const ScriptArguments& args, ScriptFloat& arg1G,
+                 const ScriptFloat arg2) {
     RW_UNUSED(args);
     arg1G -= arg2;
 }
@@ -189,10 +199,11 @@ void opcode_000d(const ScriptArguments& args, ScriptFloat& arg1G, const ScriptFl
     @brief %1d% -= %2h%
 
     opcode 000e
-    @arg arg1L 
-    @arg arg2 
+    @arg arg1L
+    @arg arg2
 */
-void opcode_000e(const ScriptArguments& args, ScriptInt& arg1L, const ScriptInt arg2) {
+void opcode_000e(const ScriptArguments& args, ScriptInt& arg1L,
+                 const ScriptInt arg2) {
     RW_UNUSED(args);
     arg1L -= arg2;
 }
@@ -201,10 +212,11 @@ void opcode_000e(const ScriptArguments& args, ScriptInt& arg1L, const ScriptInt 
     @brief %1d% -= %2d%
 
     opcode 000f
-    @arg arg1L 
-    @arg arg2 
+    @arg arg1L
+    @arg arg2
 */
-void opcode_000f(const ScriptArguments& args, ScriptFloat& arg1L, const ScriptFloat arg2) {
+void opcode_000f(const ScriptArguments& args, ScriptFloat& arg1L,
+                 const ScriptFloat arg2) {
     RW_UNUSED(args);
     arg1L -= arg2;
 }
@@ -213,10 +225,11 @@ void opcode_000f(const ScriptArguments& args, ScriptFloat& arg1L, const ScriptFl
     @brief %1d% *= %2d%
 
     opcode 0010
-    @arg arg1G 
-    @arg arg2 
+    @arg arg1G
+    @arg arg2
 */
-void opcode_0010(const ScriptArguments& args, ScriptInt& arg1G, const ScriptInt arg2) {
+void opcode_0010(const ScriptArguments& args, ScriptInt& arg1G,
+                 const ScriptInt arg2) {
     RW_UNUSED(args);
     arg1G *= arg2;
 }
@@ -225,10 +238,11 @@ void opcode_0010(const ScriptArguments& args, ScriptInt& arg1G, const ScriptInt 
     @brief %1d% *= %2d%
 
     opcode 0011
-    @arg arg1G 
-    @arg arg2 
+    @arg arg1G
+    @arg arg2
 */
-void opcode_0011(const ScriptArguments& args, ScriptFloat& arg1G, const ScriptFloat arg2) {
+void opcode_0011(const ScriptArguments& args, ScriptFloat& arg1G,
+                 const ScriptFloat arg2) {
     RW_UNUSED(args);
     arg1G *= arg2;
 }
@@ -237,10 +251,11 @@ void opcode_0011(const ScriptArguments& args, ScriptFloat& arg1G, const ScriptFl
     @brief %1d% *= %2d%
 
     opcode 0012
-    @arg arg1L 
-    @arg arg2 
+    @arg arg1L
+    @arg arg2
 */
-void opcode_0012(const ScriptArguments& args, ScriptInt& arg1L, const ScriptInt arg2) {
+void opcode_0012(const ScriptArguments& args, ScriptInt& arg1L,
+                 const ScriptInt arg2) {
     RW_UNUSED(args);
     arg1L *= arg2;
 }
@@ -249,10 +264,11 @@ void opcode_0012(const ScriptArguments& args, ScriptInt& arg1L, const ScriptInt 
     @brief %1d% *= %2d%
 
     opcode 0013
-    @arg arg1L 
-    @arg arg2 
+    @arg arg1L
+    @arg arg2
 */
-void opcode_0013(const ScriptArguments& args, ScriptFloat& arg1L, const ScriptFloat arg2) {
+void opcode_0013(const ScriptArguments& args, ScriptFloat& arg1L,
+                 const ScriptFloat arg2) {
     RW_UNUSED(args);
     arg1L *= arg2;
 }
@@ -261,10 +277,11 @@ void opcode_0013(const ScriptArguments& args, ScriptFloat& arg1L, const ScriptFl
     @brief %1d% /= %2d%
 
     opcode 0014
-    @arg arg1G 
-    @arg arg2 
+    @arg arg1G
+    @arg arg2
 */
-void opcode_0014(const ScriptArguments& args, ScriptInt& arg1G, const ScriptInt arg2) {
+void opcode_0014(const ScriptArguments& args, ScriptInt& arg1G,
+                 const ScriptInt arg2) {
     RW_UNUSED(args);
     arg1G /= arg2;
 }
@@ -273,10 +290,11 @@ void opcode_0014(const ScriptArguments& args, ScriptInt& arg1G, const ScriptInt 
     @brief %1d% /= %2d%
 
     opcode 0015
-    @arg arg1G 
-    @arg arg2 
+    @arg arg1G
+    @arg arg2
 */
-void opcode_0015(const ScriptArguments& args, ScriptFloat& arg1G, const ScriptFloat arg2) {
+void opcode_0015(const ScriptArguments& args, ScriptFloat& arg1G,
+                 const ScriptFloat arg2) {
     RW_UNUSED(args);
     arg1G /= arg2;
 }
@@ -285,10 +303,11 @@ void opcode_0015(const ScriptArguments& args, ScriptFloat& arg1G, const ScriptFl
     @brief %1d% /= %2d%
 
     opcode 0016
-    @arg arg1L 
-    @arg arg2 
+    @arg arg1L
+    @arg arg2
 */
-void opcode_0016(const ScriptArguments& args, ScriptInt& arg1L, const ScriptInt arg2) {
+void opcode_0016(const ScriptArguments& args, ScriptInt& arg1L,
+                 const ScriptInt arg2) {
     RW_UNUSED(args);
     arg1L /= arg2;
 }
@@ -297,10 +316,11 @@ void opcode_0016(const ScriptArguments& args, ScriptInt& arg1L, const ScriptInt 
     @brief %1d% /= %2d%
 
     opcode 0017
-    @arg arg1L 
-    @arg arg2 
+    @arg arg1L
+    @arg arg2
 */
-void opcode_0017(const ScriptArguments& args, ScriptFloat& arg1L, const ScriptFloat arg2) {
+void opcode_0017(const ScriptArguments& args, ScriptFloat& arg1L,
+                 const ScriptFloat arg2) {
     RW_UNUSED(args);
     arg1L /= arg2;
 }
@@ -309,10 +329,11 @@ void opcode_0017(const ScriptArguments& args, ScriptFloat& arg1L, const ScriptFl
     @brief   %1d% > %2d%
 
     opcode 0018
-    @arg arg1G 
-    @arg arg2 
+    @arg arg1G
+    @arg arg2
 */
-bool opcode_0018(const ScriptArguments& args, ScriptInt& arg1G, const ScriptInt arg2) {
+bool opcode_0018(const ScriptArguments& args, ScriptInt& arg1G,
+                 const ScriptInt arg2) {
     RW_UNUSED(args);
     return arg1G > arg2;
 }
@@ -321,10 +342,11 @@ bool opcode_0018(const ScriptArguments& args, ScriptInt& arg1G, const ScriptInt 
     @brief   %1d% > %2d%
 
     opcode 0019
-    @arg arg1L 
-    @arg arg2 
+    @arg arg1L
+    @arg arg2
 */
-bool opcode_0019(const ScriptArguments& args, ScriptInt& arg1L, const ScriptInt arg2) {
+bool opcode_0019(const ScriptArguments& args, ScriptInt& arg1L,
+                 const ScriptInt arg2) {
     RW_UNUSED(args);
     return arg1L > arg2;
 }
@@ -333,10 +355,11 @@ bool opcode_0019(const ScriptArguments& args, ScriptInt& arg1L, const ScriptInt 
     @brief   %1d% > %2d%
 
     opcode 001a
-    @arg arg1 
-    @arg arg2G 
+    @arg arg1
+    @arg arg2G
 */
-bool opcode_001a(const ScriptArguments& args, const ScriptInt arg1, ScriptInt& arg2G) {
+bool opcode_001a(const ScriptArguments& args, const ScriptInt arg1,
+                 ScriptInt& arg2G) {
     RW_UNUSED(args);
     return arg1 > arg2G;
 }
@@ -345,10 +368,11 @@ bool opcode_001a(const ScriptArguments& args, const ScriptInt arg1, ScriptInt& a
     @brief   %1d% > %2d%
 
     opcode 001b
-    @arg arg1 
-    @arg arg2L 
+    @arg arg1
+    @arg arg2L
 */
-bool opcode_001b(const ScriptArguments& args, const ScriptInt arg1, ScriptInt& arg2L) {
+bool opcode_001b(const ScriptArguments& args, const ScriptInt arg1,
+                 ScriptInt& arg2L) {
     RW_UNUSED(args);
     return arg1 > arg2L;
 }
@@ -357,10 +381,11 @@ bool opcode_001b(const ScriptArguments& args, const ScriptInt arg1, ScriptInt& a
     @brief   %1d% > %2d%
 
     opcode 001c
-    @arg arg1G 
-    @arg arg2G 
+    @arg arg1G
+    @arg arg2G
 */
-bool opcode_001c(const ScriptArguments& args, ScriptInt& arg1G, ScriptInt& arg2G) {
+bool opcode_001c(const ScriptArguments& args, ScriptInt& arg1G,
+                 ScriptInt& arg2G) {
     RW_UNUSED(args);
     return arg1G > arg2G;
 }
@@ -369,10 +394,11 @@ bool opcode_001c(const ScriptArguments& args, ScriptInt& arg1G, ScriptInt& arg2G
     @brief   %1d% > %2d%
 
     opcode 001d
-    @arg arg1L 
-    @arg arg2L 
+    @arg arg1L
+    @arg arg2L
 */
-bool opcode_001d(const ScriptArguments& args, ScriptInt& arg1L, ScriptInt& arg2L) {
+bool opcode_001d(const ScriptArguments& args, ScriptInt& arg1L,
+                 ScriptInt& arg2L) {
     RW_UNUSED(args);
     return arg1L > arg2L;
 }
@@ -381,10 +407,11 @@ bool opcode_001d(const ScriptArguments& args, ScriptInt& arg1L, ScriptInt& arg2L
     @brief   %1d% > %2d%
 
     opcode 001e
-    @arg arg1G 
-    @arg arg2L 
+    @arg arg1G
+    @arg arg2L
 */
-bool opcode_001e(const ScriptArguments& args, ScriptInt& arg1G, ScriptInt& arg2L) {
+bool opcode_001e(const ScriptArguments& args, ScriptInt& arg1G,
+                 ScriptInt& arg2L) {
     RW_UNUSED(args);
     return arg1G > arg2L;
 }
@@ -393,10 +420,11 @@ bool opcode_001e(const ScriptArguments& args, ScriptInt& arg1G, ScriptInt& arg2L
     @brief   %1d% > %2d%
 
     opcode 001f
-    @arg arg1L 
-    @arg arg2G 
+    @arg arg1L
+    @arg arg2G
 */
-bool opcode_001f(const ScriptArguments& args, ScriptInt& arg1L, ScriptInt& arg2G) {
+bool opcode_001f(const ScriptArguments& args, ScriptInt& arg1L,
+                 ScriptInt& arg2G) {
     RW_UNUSED(args);
     return arg1L > arg2G;
 }
@@ -405,10 +433,11 @@ bool opcode_001f(const ScriptArguments& args, ScriptInt& arg1L, ScriptInt& arg2G
     @brief   %1d% > %2d%
 
     opcode 0020
-    @arg arg1G 
-    @arg arg2 
+    @arg arg1G
+    @arg arg2
 */
-bool opcode_0020(const ScriptArguments& args, ScriptFloat& arg1G, const ScriptFloat arg2) {
+bool opcode_0020(const ScriptArguments& args, ScriptFloat& arg1G,
+                 const ScriptFloat arg2) {
     RW_UNUSED(args);
     return arg1G > arg2;
 }
@@ -417,10 +446,11 @@ bool opcode_0020(const ScriptArguments& args, ScriptFloat& arg1G, const ScriptFl
     @brief   %1d% > %2d%
 
     opcode 0021
-    @arg arg1L 
-    @arg arg2 
+    @arg arg1L
+    @arg arg2
 */
-bool opcode_0021(const ScriptArguments& args, ScriptFloat& arg1L, const ScriptFloat arg2) {
+bool opcode_0021(const ScriptArguments& args, ScriptFloat& arg1L,
+                 const ScriptFloat arg2) {
     RW_UNUSED(args);
     return arg1L > arg2;
 }
@@ -429,10 +459,11 @@ bool opcode_0021(const ScriptArguments& args, ScriptFloat& arg1L, const ScriptFl
     @brief   %1d% > %2d%
 
     opcode 0022
-    @arg arg1 
-    @arg arg2G 
+    @arg arg1
+    @arg arg2G
 */
-bool opcode_0022(const ScriptArguments& args, const ScriptFloat arg1, ScriptFloat& arg2G) {
+bool opcode_0022(const ScriptArguments& args, const ScriptFloat arg1,
+                 ScriptFloat& arg2G) {
     RW_UNUSED(args);
     return arg1 > arg2G;
 }
@@ -441,10 +472,11 @@ bool opcode_0022(const ScriptArguments& args, const ScriptFloat arg1, ScriptFloa
     @brief   %1d% > %2d%
 
     opcode 0023
-    @arg arg1 
-    @arg arg2L 
+    @arg arg1
+    @arg arg2L
 */
-bool opcode_0023(const ScriptArguments& args, const ScriptFloat arg1, ScriptFloat& arg2L) {
+bool opcode_0023(const ScriptArguments& args, const ScriptFloat arg1,
+                 ScriptFloat& arg2L) {
     RW_UNUSED(args);
     return arg1 > arg2L;
 }
@@ -453,10 +485,11 @@ bool opcode_0023(const ScriptArguments& args, const ScriptFloat arg1, ScriptFloa
     @brief   %1d% > %2d%
 
     opcode 0024
-    @arg arg1G 
-    @arg arg2G 
+    @arg arg1G
+    @arg arg2G
 */
-bool opcode_0024(const ScriptArguments& args, ScriptFloat& arg1G, ScriptFloat& arg2G) {
+bool opcode_0024(const ScriptArguments& args, ScriptFloat& arg1G,
+                 ScriptFloat& arg2G) {
     RW_UNUSED(args);
     return arg1G > arg2G;
 }
@@ -465,10 +498,11 @@ bool opcode_0024(const ScriptArguments& args, ScriptFloat& arg1G, ScriptFloat& a
     @brief   %1d% > %2d%
 
     opcode 0025
-    @arg arg1L 
-    @arg arg2L 
+    @arg arg1L
+    @arg arg2L
 */
-bool opcode_0025(const ScriptArguments& args, ScriptFloat& arg1L, ScriptFloat& arg2L) {
+bool opcode_0025(const ScriptArguments& args, ScriptFloat& arg1L,
+                 ScriptFloat& arg2L) {
     RW_UNUSED(args);
     return arg1L > arg2L;
 }
@@ -477,10 +511,11 @@ bool opcode_0025(const ScriptArguments& args, ScriptFloat& arg1L, ScriptFloat& a
     @brief   %1d% > %2d%
 
     opcode 0026
-    @arg arg1G 
-    @arg arg2L 
+    @arg arg1G
+    @arg arg2L
 */
-bool opcode_0026(const ScriptArguments& args, ScriptFloat& arg1G, ScriptFloat& arg2L) {
+bool opcode_0026(const ScriptArguments& args, ScriptFloat& arg1G,
+                 ScriptFloat& arg2L) {
     RW_UNUSED(args);
     return arg1G > arg2L;
 }
@@ -489,10 +524,11 @@ bool opcode_0026(const ScriptArguments& args, ScriptFloat& arg1G, ScriptFloat& a
     @brief   %1d% > %2d%
 
     opcode 0027
-    @arg arg1L 
-    @arg arg2G 
+    @arg arg1L
+    @arg arg2G
 */
-bool opcode_0027(const ScriptArguments& args, ScriptFloat& arg1L, ScriptFloat& arg2G) {
+bool opcode_0027(const ScriptArguments& args, ScriptFloat& arg1L,
+                 ScriptFloat& arg2G) {
     RW_UNUSED(args);
     return arg1L > arg2G;
 }
@@ -501,10 +537,11 @@ bool opcode_0027(const ScriptArguments& args, ScriptFloat& arg1L, ScriptFloat& a
     @brief   %1d% >= %2d%
 
     opcode 0028
-    @arg arg1G 
-    @arg arg2 
+    @arg arg1G
+    @arg arg2
 */
-bool opcode_0028(const ScriptArguments& args, ScriptInt& arg1G, const ScriptInt arg2) {
+bool opcode_0028(const ScriptArguments& args, ScriptInt& arg1G,
+                 const ScriptInt arg2) {
     RW_UNUSED(args);
     return arg1G >= arg2;
 }
@@ -513,10 +550,11 @@ bool opcode_0028(const ScriptArguments& args, ScriptInt& arg1G, const ScriptInt 
     @brief   %1d% >= %2d%
 
     opcode 0029
-    @arg arg1L 
-    @arg arg2 
+    @arg arg1L
+    @arg arg2
 */
-bool opcode_0029(const ScriptArguments& args, ScriptInt& arg1L, const ScriptInt arg2) {
+bool opcode_0029(const ScriptArguments& args, ScriptInt& arg1L,
+                 const ScriptInt arg2) {
     RW_UNUSED(args);
     return arg1L >= arg2;
 }
@@ -525,10 +563,11 @@ bool opcode_0029(const ScriptArguments& args, ScriptInt& arg1L, const ScriptInt 
     @brief   %1d% >= %2d%
 
     opcode 002a
-    @arg arg1 
-    @arg arg2G 
+    @arg arg1
+    @arg arg2G
 */
-bool opcode_002a(const ScriptArguments& args, const ScriptInt arg1, ScriptInt& arg2G) {
+bool opcode_002a(const ScriptArguments& args, const ScriptInt arg1,
+                 ScriptInt& arg2G) {
     RW_UNUSED(args);
     return arg1 >= arg2G;
 }
@@ -537,10 +576,11 @@ bool opcode_002a(const ScriptArguments& args, const ScriptInt arg1, ScriptInt& a
     @brief   %1d% >= %2d%
 
     opcode 002b
-    @arg arg1 
-    @arg arg2L 
+    @arg arg1
+    @arg arg2L
 */
-bool opcode_002b(const ScriptArguments& args, const ScriptInt arg1, ScriptInt& arg2L) {
+bool opcode_002b(const ScriptArguments& args, const ScriptInt arg1,
+                 ScriptInt& arg2L) {
     RW_UNUSED(args);
     return arg1 >= arg2L;
 }
@@ -549,10 +589,11 @@ bool opcode_002b(const ScriptArguments& args, const ScriptInt arg1, ScriptInt& a
     @brief   %1d% >= %2d%
 
     opcode 002c
-    @arg arg1G 
-    @arg arg2G 
+    @arg arg1G
+    @arg arg2G
 */
-bool opcode_002c(const ScriptArguments& args, ScriptInt& arg1G, ScriptInt& arg2G) {
+bool opcode_002c(const ScriptArguments& args, ScriptInt& arg1G,
+                 ScriptInt& arg2G) {
     RW_UNUSED(args);
     return arg1G >= arg2G;
 }
@@ -561,10 +602,11 @@ bool opcode_002c(const ScriptArguments& args, ScriptInt& arg1G, ScriptInt& arg2G
     @brief   %1d% >= %2d%
 
     opcode 002d
-    @arg arg1L 
-    @arg arg2L 
+    @arg arg1L
+    @arg arg2L
 */
-bool opcode_002d(const ScriptArguments& args, ScriptInt& arg1L, ScriptInt& arg2L) {
+bool opcode_002d(const ScriptArguments& args, ScriptInt& arg1L,
+                 ScriptInt& arg2L) {
     RW_UNUSED(args);
     return arg1L >= arg2L;
 }
@@ -573,10 +615,11 @@ bool opcode_002d(const ScriptArguments& args, ScriptInt& arg1L, ScriptInt& arg2L
     @brief   %1d% >= %2d%
 
     opcode 002e
-    @arg arg1G 
-    @arg arg2L 
+    @arg arg1G
+    @arg arg2L
 */
-bool opcode_002e(const ScriptArguments& args, ScriptInt& arg1G, ScriptInt& arg2L) {
+bool opcode_002e(const ScriptArguments& args, ScriptInt& arg1G,
+                 ScriptInt& arg2L) {
     RW_UNUSED(args);
     return arg1G >= arg2L;
 }
@@ -585,10 +628,11 @@ bool opcode_002e(const ScriptArguments& args, ScriptInt& arg1G, ScriptInt& arg2L
     @brief   %1d% >= %2d%
 
     opcode 002f
-    @arg arg1L 
-    @arg arg2G 
+    @arg arg1L
+    @arg arg2G
 */
-bool opcode_002f(const ScriptArguments& args, ScriptInt& arg1L, ScriptInt& arg2G) {
+bool opcode_002f(const ScriptArguments& args, ScriptInt& arg1L,
+                 ScriptInt& arg2G) {
     RW_UNUSED(args);
     return arg1L >= arg2G;
 }
@@ -597,10 +641,11 @@ bool opcode_002f(const ScriptArguments& args, ScriptInt& arg1L, ScriptInt& arg2G
     @brief   %1d% >= %2d%
 
     opcode 0030
-    @arg arg1G 
-    @arg arg2 
+    @arg arg1G
+    @arg arg2
 */
-bool opcode_0030(const ScriptArguments& args, ScriptFloat& arg1G, const ScriptFloat arg2) {
+bool opcode_0030(const ScriptArguments& args, ScriptFloat& arg1G,
+                 const ScriptFloat arg2) {
     RW_UNUSED(args);
     return arg1G >= arg2;
 }
@@ -609,10 +654,11 @@ bool opcode_0030(const ScriptArguments& args, ScriptFloat& arg1G, const ScriptFl
     @brief   %1d% >= %2d%
 
     opcode 0031
-    @arg arg1L 
-    @arg arg2 
+    @arg arg1L
+    @arg arg2
 */
-bool opcode_0031(const ScriptArguments& args, ScriptFloat& arg1L, const ScriptFloat arg2) {
+bool opcode_0031(const ScriptArguments& args, ScriptFloat& arg1L,
+                 const ScriptFloat arg2) {
     RW_UNUSED(args);
     return arg1L >= arg2;
 }
@@ -621,10 +667,11 @@ bool opcode_0031(const ScriptArguments& args, ScriptFloat& arg1L, const ScriptFl
     @brief   %1d% >= %2d%
 
     opcode 0032
-    @arg arg1 
-    @arg arg2G 
+    @arg arg1
+    @arg arg2G
 */
-bool opcode_0032(const ScriptArguments& args, const ScriptFloat arg1, ScriptFloat& arg2G) {
+bool opcode_0032(const ScriptArguments& args, const ScriptFloat arg1,
+                 ScriptFloat& arg2G) {
     RW_UNUSED(args);
     return arg1 >= arg2G;
 }
@@ -633,10 +680,11 @@ bool opcode_0032(const ScriptArguments& args, const ScriptFloat arg1, ScriptFloa
     @brief   %1d% >= %2d%
 
     opcode 0033
-    @arg arg1 
-    @arg arg2L 
+    @arg arg1
+    @arg arg2L
 */
-bool opcode_0033(const ScriptArguments& args, const ScriptFloat arg1, ScriptFloat& arg2L) {
+bool opcode_0033(const ScriptArguments& args, const ScriptFloat arg1,
+                 ScriptFloat& arg2L) {
     RW_UNUSED(args);
     return arg1 >= arg2L;
 }
@@ -645,10 +693,11 @@ bool opcode_0033(const ScriptArguments& args, const ScriptFloat arg1, ScriptFloa
     @brief   %1d% >= %2d%
 
     opcode 0034
-    @arg arg1G 
-    @arg arg2G 
+    @arg arg1G
+    @arg arg2G
 */
-bool opcode_0034(const ScriptArguments& args, ScriptFloat& arg1G, ScriptFloat& arg2G) {
+bool opcode_0034(const ScriptArguments& args, ScriptFloat& arg1G,
+                 ScriptFloat& arg2G) {
     RW_UNUSED(args);
     return arg1G >= arg2G;
 }
@@ -657,10 +706,11 @@ bool opcode_0034(const ScriptArguments& args, ScriptFloat& arg1G, ScriptFloat& a
     @brief   %1d% >= %2d%
 
     opcode 0035
-    @arg arg1L 
-    @arg arg2L 
+    @arg arg1L
+    @arg arg2L
 */
-bool opcode_0035(const ScriptArguments& args, ScriptFloat& arg1L, ScriptFloat& arg2L) {
+bool opcode_0035(const ScriptArguments& args, ScriptFloat& arg1L,
+                 ScriptFloat& arg2L) {
     RW_UNUSED(args);
     return arg1L >= arg2L;
 }
@@ -669,10 +719,11 @@ bool opcode_0035(const ScriptArguments& args, ScriptFloat& arg1L, ScriptFloat& a
     @brief   %1d% >= %2d%
 
     opcode 0036
-    @arg arg1G 
-    @arg arg2L 
+    @arg arg1G
+    @arg arg2L
 */
-bool opcode_0036(const ScriptArguments& args, ScriptFloat& arg1G, ScriptFloat& arg2L) {
+bool opcode_0036(const ScriptArguments& args, ScriptFloat& arg1G,
+                 ScriptFloat& arg2L) {
     RW_UNUSED(args);
     return arg1G >= arg2L;
 }
@@ -681,10 +732,11 @@ bool opcode_0036(const ScriptArguments& args, ScriptFloat& arg1G, ScriptFloat& a
     @brief   %1d% >= %2d%
 
     opcode 0037
-    @arg arg1L 
-    @arg arg2G 
+    @arg arg1L
+    @arg arg2G
 */
-bool opcode_0037(const ScriptArguments& args, ScriptFloat& arg1L, ScriptFloat& arg2G) {
+bool opcode_0037(const ScriptArguments& args, ScriptFloat& arg1L,
+                 ScriptFloat& arg2G) {
     RW_UNUSED(args);
     return arg1L >= arg2G;
 }
@@ -693,10 +745,11 @@ bool opcode_0037(const ScriptArguments& args, ScriptFloat& arg1L, ScriptFloat& a
     @brief   %1d% == %2d%
 
     opcode 0038
-    @arg arg1G 
-    @arg arg2 
+    @arg arg1G
+    @arg arg2
 */
-bool opcode_0038(const ScriptArguments& args, ScriptInt& arg1G, const ScriptInt arg2) {
+bool opcode_0038(const ScriptArguments& args, ScriptInt& arg1G,
+                 const ScriptInt arg2) {
     RW_UNUSED(args);
     return arg1G == arg2;
 }
@@ -705,10 +758,11 @@ bool opcode_0038(const ScriptArguments& args, ScriptInt& arg1G, const ScriptInt 
     @brief   %1d% == %2d%
 
     opcode 0039
-    @arg arg1L 
-    @arg arg2 
+    @arg arg1L
+    @arg arg2
 */
-bool opcode_0039(const ScriptArguments& args, ScriptInt& arg1L, const ScriptInt arg2) {
+bool opcode_0039(const ScriptArguments& args, ScriptInt& arg1L,
+                 const ScriptInt arg2) {
     RW_UNUSED(args);
     return arg1L == arg2;
 }
@@ -717,10 +771,11 @@ bool opcode_0039(const ScriptArguments& args, ScriptInt& arg1L, const ScriptInt 
     @brief   %1d% == %2d%
 
     opcode 003a
-    @arg arg1G 
-    @arg arg2G 
+    @arg arg1G
+    @arg arg2G
 */
-bool opcode_003a(const ScriptArguments& args, ScriptInt& arg1G, ScriptInt& arg2G) {
+bool opcode_003a(const ScriptArguments& args, ScriptInt& arg1G,
+                 ScriptInt& arg2G) {
     RW_UNUSED(args);
     return arg1G == arg2G;
 }
@@ -729,10 +784,11 @@ bool opcode_003a(const ScriptArguments& args, ScriptInt& arg1G, ScriptInt& arg2G
     @brief   %1d% == %2d%
 
     opcode 003b
-    @arg arg1L 
-    @arg arg2L 
+    @arg arg1L
+    @arg arg2L
 */
-bool opcode_003b(const ScriptArguments& args, ScriptInt& arg1L, ScriptInt& arg2L) {
+bool opcode_003b(const ScriptArguments& args, ScriptInt& arg1L,
+                 ScriptInt& arg2L) {
     RW_UNUSED(args);
     return arg1L == arg2L;
 }
@@ -741,10 +797,11 @@ bool opcode_003b(const ScriptArguments& args, ScriptInt& arg1L, ScriptInt& arg2L
     @brief   %1d% == %2d%
 
     opcode 003c
-    @arg arg1G 
-    @arg arg2L 
+    @arg arg1G
+    @arg arg2L
 */
-bool opcode_003c(const ScriptArguments& args, ScriptInt& arg1G, ScriptInt& arg2L) {
+bool opcode_003c(const ScriptArguments& args, ScriptInt& arg1G,
+                 ScriptInt& arg2L) {
     RW_UNUSED(args);
     return arg1G == arg2L;
 }
@@ -753,10 +810,11 @@ bool opcode_003c(const ScriptArguments& args, ScriptInt& arg1G, ScriptInt& arg2L
     @brief   %1d% == %2d%
 
     opcode 0042
-    @arg arg1G 
-    @arg arg2 
+    @arg arg1G
+    @arg arg2
 */
-bool opcode_0042(const ScriptArguments& args, ScriptFloat& arg1G, const ScriptFloat arg2) {
+bool opcode_0042(const ScriptArguments& args, ScriptFloat& arg1G,
+                 const ScriptFloat arg2) {
     RW_UNUSED(args);
     return arg1G == arg2;
 }
@@ -765,10 +823,11 @@ bool opcode_0042(const ScriptArguments& args, ScriptFloat& arg1G, const ScriptFl
     @brief   %1d% == %2d%
 
     opcode 0043
-    @arg arg1L 
-    @arg arg2 
+    @arg arg1L
+    @arg arg2
 */
-bool opcode_0043(const ScriptArguments& args, ScriptFloat& arg1L, const ScriptFloat arg2) {
+bool opcode_0043(const ScriptArguments& args, ScriptFloat& arg1L,
+                 const ScriptFloat arg2) {
     RW_UNUSED(args);
     return arg1L == arg2;
 }
@@ -777,10 +836,11 @@ bool opcode_0043(const ScriptArguments& args, ScriptFloat& arg1L, const ScriptFl
     @brief   %1d% == %2d%
 
     opcode 0044
-    @arg arg1G 
-    @arg arg2G 
+    @arg arg1G
+    @arg arg2G
 */
-bool opcode_0044(const ScriptArguments& args, ScriptFloat& arg1G, ScriptFloat& arg2G) {
+bool opcode_0044(const ScriptArguments& args, ScriptFloat& arg1G,
+                 ScriptFloat& arg2G) {
     RW_UNUSED(args);
     return arg1G == arg2G;
 }
@@ -789,10 +849,11 @@ bool opcode_0044(const ScriptArguments& args, ScriptFloat& arg1G, ScriptFloat& a
     @brief   %1d% == %2d%
 
     opcode 0045
-    @arg arg1L 
-    @arg arg2L 
+    @arg arg1L
+    @arg arg2L
 */
-bool opcode_0045(const ScriptArguments& args, ScriptFloat& arg1L, ScriptFloat& arg2L) {
+bool opcode_0045(const ScriptArguments& args, ScriptFloat& arg1L,
+                 ScriptFloat& arg2L) {
     RW_UNUSED(args);
     return arg1L == arg2L;
 }
@@ -801,10 +862,11 @@ bool opcode_0045(const ScriptArguments& args, ScriptFloat& arg1L, ScriptFloat& a
     @brief   %1d% == %2d%
 
     opcode 0046
-    @arg arg1G 
-    @arg arg2L 
+    @arg arg1G
+    @arg arg2L
 */
-bool opcode_0046(const ScriptArguments& args, ScriptFloat& arg1G, ScriptFloat& arg2L) {
+bool opcode_0046(const ScriptArguments& args, ScriptFloat& arg1G,
+                 ScriptFloat& arg2L) {
     RW_UNUSED(args);
     return arg1G == arg2L;
 }
@@ -813,12 +875,12 @@ bool opcode_0046(const ScriptArguments& args, ScriptFloat& arg1G, ScriptFloat& a
     @brief goto_if_true %1p%
 
     opcode 004c
-    @arg arg1 
+    @arg arg1
 */
 void opcode_004c(const ScriptArguments& args, const ScriptLabel arg1) {
     auto thread = args.getThread();
     if (thread->conditionResult) {
-    	thread->programCounter = arg1 < 0 ? thread->baseAddress - arg1 : arg1;
+        thread->programCounter = arg1 < 0 ? thread->baseAddress - arg1 : arg1;
     }
 }
 
@@ -826,12 +888,12 @@ void opcode_004c(const ScriptArguments& args, const ScriptLabel arg1) {
     @brief goto_if_false %1p%
 
     opcode 004d
-    @arg arg1 
+    @arg arg1
 */
 void opcode_004d(const ScriptArguments& args, const ScriptLabel arg1) {
     auto thread = args.getThread();
-    if (! thread->conditionResult) {
-    	thread->programCounter = arg1 < 0 ? thread->baseAddress - arg1 : arg1;
+    if (!thread->conditionResult) {
+        thread->programCounter = arg1 < 0 ? thread->baseAddress - arg1 : arg1;
     }
 }
 
@@ -850,8 +912,8 @@ void opcode_004e(const ScriptArguments& args) {
     @brief create_thread %1p%
 
     opcode 004f
-    @arg arg1 
-    @arg arg2 
+    @arg arg1
+    @arg arg2
 */
 void opcode_004f(const ScriptArguments& args, const ScriptLabel arg1) {
     args.getVM()->startThread(arg1, false);
@@ -861,11 +923,11 @@ void opcode_004f(const ScriptArguments& args, const ScriptLabel arg1) {
     /// @todo prevent overflow
     /// @todo don't do pointer casting
     for (auto i = 1u; i < args.getParameters().size(); ++i) {
-    	if (args[i].type == EndOfArgList)
-    		break;
-    	*reinterpret_cast<ScriptInt*>(thread.locals.data() +
-    	                        sizeof(ScriptInt) * (i - 1)) =
-    	    args[i].integerValue();
+        if (args[i].type == EndOfArgList)
+            break;
+        *reinterpret_cast<ScriptInt*>(thread.locals.data() +
+                                      sizeof(ScriptInt) * (i - 1)) =
+            args[i].integerValue();
     }
 }
 
@@ -873,7 +935,7 @@ void opcode_004f(const ScriptArguments& args, const ScriptLabel arg1) {
     @brief gosub %1p%
 
     opcode 0050
-    @arg arg1 
+    @arg arg1
 */
 void opcode_0050(const ScriptArguments& args, const ScriptLabel arg1) {
     auto thread = args.getThread();
@@ -905,13 +967,15 @@ void opcode_0051(const ScriptArguments& args) {
     @arg z Z coordinate
     @arg outPlayerHandle Created player
 */
-void opcode_0053(const ScriptArguments& args, const ScriptInt index, ScriptVec3 coord, ScriptPlayer& player) {
+void opcode_0053(const ScriptArguments& args, const ScriptInt index,
+                 ScriptVec3 coord, ScriptPlayer& player) {
     // index used for PlayerInfo
     RW_UNUSED(index);
 
     coord = script::getGround(args, coord);
     /// @todo fix the API interfaces that are now totally incoherent
-    auto character = args.getWorld()->createPlayer(coord + script::kSpawnOffset);
+    auto character =
+        args.getWorld()->createPlayer(coord + script::kSpawnOffset);
     player = static_cast<PlayerController*>(character->controller);
     args.getState()->playerObject = character->getGameObjectID();
 }
@@ -925,7 +989,9 @@ void opcode_0053(const ScriptArguments& args, const ScriptInt index, ScriptVec3 
     @arg yCoord Y Coord
     @arg zCoord Z Coord
 */
-void opcode_0054(const ScriptArguments& args, const ScriptPlayer player, ScriptFloat& xCoord, ScriptFloat& yCoord, ScriptFloat& zCoord) {
+void opcode_0054(const ScriptArguments& args, const ScriptPlayer player,
+                 ScriptFloat& xCoord, ScriptFloat& yCoord,
+                 ScriptFloat& zCoord) {
     RW_UNUSED(args);
     script::getObjectPosition(player->getCharacter(), xCoord, yCoord, zCoord);
 }
@@ -937,7 +1003,8 @@ void opcode_0054(const ScriptArguments& args, const ScriptPlayer player, ScriptF
     @arg player Player
     @arg coord Coordinates
 */
-void opcode_0055(const ScriptArguments& args, const ScriptPlayer player, ScriptVec3 coord) {
+void opcode_0055(const ScriptArguments& args, const ScriptPlayer player,
+                 ScriptVec3 coord) {
     RW_UNUSED(args);
     player->getCharacter()->setPosition(coord + script::kSpawnOffset);
 }
@@ -951,12 +1018,16 @@ void opcode_0055(const ScriptArguments& args, const ScriptPlayer player, ScriptV
     @arg coord1 Coordinates
     @arg arg6 Boolean true/false
 */
-bool opcode_0056(const ScriptArguments& args, const ScriptPlayer player, ScriptVec2 coord0, ScriptVec2 coord1, const ScriptBoolean arg6) {
-    return script::objectInArea(args, player->getCharacter(), coord0, coord1, arg6);
+bool opcode_0056(const ScriptArguments& args, const ScriptPlayer player,
+                 ScriptVec2 coord0, ScriptVec2 coord1,
+                 const ScriptBoolean arg6) {
+    return script::objectInArea(args, player->getCharacter(), coord0, coord1,
+                                arg6);
 }
 
 /**
-    @brief   is_player_in_area_3d %1d% coords %2d% %3d% %4d% to %5d% %6d% %7d% sphere %8b%
+    @brief   is_player_in_area_3d %1d% coords %2d% %3d% %4d% to %5d% %6d% %7d%
+   sphere %8b%
 
     opcode 0057
     @arg player Player
@@ -964,18 +1035,22 @@ bool opcode_0056(const ScriptArguments& args, const ScriptPlayer player, ScriptV
     @arg coord1 Coordinates
     @arg arg8 Boolean true/false
 */
-bool opcode_0057(const ScriptArguments& args, const ScriptPlayer player, ScriptVec3 coord0, ScriptVec3 coord1, const ScriptBoolean arg8) {
-    return script::objectInArea(args, player->getCharacter(), coord0, coord1, arg8);
+bool opcode_0057(const ScriptArguments& args, const ScriptPlayer player,
+                 ScriptVec3 coord0, ScriptVec3 coord1,
+                 const ScriptBoolean arg8) {
+    return script::objectInArea(args, player->getCharacter(), coord0, coord1,
+                                arg8);
 }
 
 /**
     @brief %1d% += %2d%
 
     opcode 0058
-    @arg arg1G 
-    @arg arg2G 
+    @arg arg1G
+    @arg arg2G
 */
-void opcode_0058(const ScriptArguments& args, ScriptInt& arg1G, ScriptInt& arg2G) {
+void opcode_0058(const ScriptArguments& args, ScriptInt& arg1G,
+                 ScriptInt& arg2G) {
     arg1G += arg2G;
     RW_UNUSED(args);
 }
@@ -984,34 +1059,37 @@ void opcode_0058(const ScriptArguments& args, ScriptInt& arg1G, ScriptInt& arg2G
     @brief %1d% += %2d%
 
     opcode 0059
-    @arg arg1G 
-    @arg arg2G 
+    @arg arg1G
+    @arg arg2G
 */
-void opcode_0059(const ScriptArguments& args, ScriptFloat& arg1G, ScriptFloat& arg2G) {
+void opcode_0059(const ScriptArguments& args, ScriptFloat& arg1G,
+                 ScriptFloat& arg2G) {
     arg1G += arg2G;
     RW_UNUSED(args);
 }
 
 /**
-    @brief %1d% += %2d% 
+    @brief %1d% += %2d%
 
     opcode 005a
-    @arg arg1L 
-    @arg arg2L 
+    @arg arg1L
+    @arg arg2L
 */
-void opcode_005a(const ScriptArguments& args, ScriptInt& arg1L, ScriptInt& arg2L) {
+void opcode_005a(const ScriptArguments& args, ScriptInt& arg1L,
+                 ScriptInt& arg2L) {
     arg1L += arg2L;
     RW_UNUSED(args);
 }
 
 /**
-    @brief %1d% += %2d% 
+    @brief %1d% += %2d%
 
     opcode 005b
-    @arg arg1L 
-    @arg arg2L 
+    @arg arg1L
+    @arg arg2L
 */
-void opcode_005b(const ScriptArguments& args, ScriptFloat& arg1L, ScriptFloat& arg2L) {
+void opcode_005b(const ScriptArguments& args, ScriptFloat& arg1L,
+                 ScriptFloat& arg2L) {
     arg1L += arg2L;
     RW_UNUSED(args);
 }
@@ -1020,70 +1098,76 @@ void opcode_005b(const ScriptArguments& args, ScriptFloat& arg1L, ScriptFloat& a
     @brief %1d% += %2d%
 
     opcode 005c
-    @arg arg1L 
-    @arg arg2G 
+    @arg arg1L
+    @arg arg2G
 */
-void opcode_005c(const ScriptArguments& args, ScriptInt& arg1L, ScriptInt& arg2G) {
+void opcode_005c(const ScriptArguments& args, ScriptInt& arg1L,
+                 ScriptInt& arg2G) {
     arg1L += arg2G;
     RW_UNUSED(args);
 }
 
 /**
-    @brief %1d% += %2d% 
+    @brief %1d% += %2d%
 
     opcode 005d
-    @arg arg1L 
-    @arg arg2G 
+    @arg arg1L
+    @arg arg2G
 */
-void opcode_005d(const ScriptArguments& args, ScriptFloat& arg1L, ScriptFloat& arg2G) {
+void opcode_005d(const ScriptArguments& args, ScriptFloat& arg1L,
+                 ScriptFloat& arg2G) {
     arg1L += arg2G;
     RW_UNUSED(args);
 }
 
 /**
-    @brief %1d% += %2d%  
+    @brief %1d% += %2d%
 
     opcode 005e
-    @arg arg1G 
-    @arg arg2L 
+    @arg arg1G
+    @arg arg2L
 */
-void opcode_005e(const ScriptArguments& args, ScriptInt& arg1G, ScriptInt& arg2L) {
+void opcode_005e(const ScriptArguments& args, ScriptInt& arg1G,
+                 ScriptInt& arg2L) {
     arg1G += arg2L;
     RW_UNUSED(args);
 }
 
 /**
-    @brief %1d% += %2d% 
+    @brief %1d% += %2d%
 
     opcode 005f
-    @arg arg1G 
-    @arg arg2L 
+    @arg arg1G
+    @arg arg2L
 */
-void opcode_005f(const ScriptArguments& args, ScriptFloat& arg1G, ScriptFloat& arg2L) {
+void opcode_005f(const ScriptArguments& args, ScriptFloat& arg1G,
+                 ScriptFloat& arg2L) {
     arg1G += arg2L;
     RW_UNUSED(args);
 }
 
 /**
-    @brief %1d% -= %2d% 
+    @brief %1d% -= %2d%
 
     opcode 0060
-    @arg arg1G 
-    @arg arg2G 
+    @arg arg1G
+    @arg arg2G
 */
-void opcode_0060(const ScriptArguments& args, ScriptInt& arg1G, ScriptInt& arg2G) {
+void opcode_0060(const ScriptArguments& args, ScriptInt& arg1G,
+                 ScriptInt& arg2G) {
     arg1G -= arg2G;
     RW_UNUSED(args);
 }
 
 /**
-    @brief %1d% -= %2d% 
+    @brief %1d% -= %2d%
 
     opcode 0061
-    @arg arg1G 
-    @arg arg2G 
+    @arg arg1G
+    @arg arg2G
 */
-void opcode_0061(const ScriptArguments& args, ScriptFloat& arg1G, ScriptFloat& arg2G) {
+void opcode_0061(const ScriptArguments& args, ScriptFloat& arg1G,
+                 ScriptFloat& arg2G) {
     arg1G -= arg2G;
     RW_UNUSED(args);
 }
@@ -1092,46 +1176,50 @@ void opcode_0061(const ScriptArguments& args, ScriptFloat& arg1G, ScriptFloat& a
     @brief %1d% -= %2d%
 
     opcode 0062
-    @arg arg1L 
-    @arg arg2L 
+    @arg arg1L
+    @arg arg2L
 */
-void opcode_0062(const ScriptArguments& args, ScriptInt& arg1L, ScriptInt& arg2L) {
+void opcode_0062(const ScriptArguments& args, ScriptInt& arg1L,
+                 ScriptInt& arg2L) {
     arg1L -= arg2L;
     RW_UNUSED(args);
 }
 
 /**
-    @brief %1d% -= %2d% 
+    @brief %1d% -= %2d%
 
     opcode 0063
-    @arg arg1L 
-    @arg arg2L 
+    @arg arg1L
+    @arg arg2L
 */
-void opcode_0063(const ScriptArguments& args, ScriptFloat& arg1L, ScriptFloat& arg2L) {
+void opcode_0063(const ScriptArguments& args, ScriptFloat& arg1L,
+                 ScriptFloat& arg2L) {
     arg1L -= arg2L;
     RW_UNUSED(args);
 }
 
 /**
-    @brief %1d% -= %2d%  
+    @brief %1d% -= %2d%
 
     opcode 0064
-    @arg arg1L 
-    @arg arg2G 
+    @arg arg1L
+    @arg arg2G
 */
-void opcode_0064(const ScriptArguments& args, ScriptInt& arg1L, ScriptInt& arg2G) {
+void opcode_0064(const ScriptArguments& args, ScriptInt& arg1L,
+                 ScriptInt& arg2G) {
     arg1L -= arg2G;
     RW_UNUSED(args);
 }
 
 /**
-    @brief %1d% -= %2d% 
+    @brief %1d% -= %2d%
 
     opcode 0065
-    @arg arg1L 
-    @arg arg2G 
+    @arg arg1L
+    @arg arg2G
 */
-void opcode_0065(const ScriptArguments& args, ScriptFloat& arg1L, ScriptFloat& arg2G) {
+void opcode_0065(const ScriptArguments& args, ScriptFloat& arg1L,
+                 ScriptFloat& arg2G) {
     arg1L -= arg2G;
     RW_UNUSED(args);
 }
@@ -1140,34 +1228,37 @@ void opcode_0065(const ScriptArguments& args, ScriptFloat& arg1L, ScriptFloat& a
     @brief %1d% -= %2d%
 
     opcode 0066
-    @arg arg1G 
-    @arg arg2L 
+    @arg arg1G
+    @arg arg2L
 */
-void opcode_0066(const ScriptArguments& args, ScriptInt& arg1G, ScriptInt& arg2L) {
+void opcode_0066(const ScriptArguments& args, ScriptInt& arg1G,
+                 ScriptInt& arg2L) {
     arg1G -= arg2L;
     RW_UNUSED(args);
 }
 
 /**
-    @brief %1d% -= %2d% 
+    @brief %1d% -= %2d%
 
     opcode 0067
-    @arg arg1G 
-    @arg arg2L 
+    @arg arg1G
+    @arg arg2L
 */
-void opcode_0067(const ScriptArguments& args, ScriptFloat& arg1G, ScriptFloat& arg2L) {
+void opcode_0067(const ScriptArguments& args, ScriptFloat& arg1G,
+                 ScriptFloat& arg2L) {
     arg1G -= arg2L;
     RW_UNUSED(args);
 }
 
 /**
-    @brief %1d% *= %2d%  
+    @brief %1d% *= %2d%
 
     opcode 0068
-    @arg arg1G 
-    @arg arg2G 
+    @arg arg1G
+    @arg arg2G
 */
-void opcode_0068(const ScriptArguments& args, ScriptInt& arg1G, ScriptInt& arg2G) {
+void opcode_0068(const ScriptArguments& args, ScriptInt& arg1G,
+                 ScriptInt& arg2G) {
     arg1G *= arg2G;
     RW_UNUSED(args);
 }
@@ -1176,166 +1267,180 @@ void opcode_0068(const ScriptArguments& args, ScriptInt& arg1G, ScriptInt& arg2G
     @brief %1d% *= %2d%
 
     opcode 0069
-    @arg arg1G 
-    @arg arg2G 
+    @arg arg1G
+    @arg arg2G
 */
-void opcode_0069(const ScriptArguments& args, ScriptFloat& arg1G, ScriptFloat& arg2G) {
+void opcode_0069(const ScriptArguments& args, ScriptFloat& arg1G,
+                 ScriptFloat& arg2G) {
     arg1G *= arg2G;
     RW_UNUSED(args);
 }
 
 /**
-    @brief %1d% *= %2d% 
+    @brief %1d% *= %2d%
 
     opcode 006a
-    @arg arg1L 
-    @arg arg2L 
+    @arg arg1L
+    @arg arg2L
 */
-void opcode_006a(const ScriptArguments& args, ScriptInt& arg1L, ScriptInt& arg2L) {
+void opcode_006a(const ScriptArguments& args, ScriptInt& arg1L,
+                 ScriptInt& arg2L) {
     arg1L *= arg2L;
     RW_UNUSED(args);
 }
 
 /**
-    @brief %1d% *= %2d% 
+    @brief %1d% *= %2d%
 
     opcode 006b
-    @arg arg1L 
-    @arg arg2L 
+    @arg arg1L
+    @arg arg2L
 */
-void opcode_006b(const ScriptArguments& args, ScriptFloat& arg1L, ScriptFloat& arg2L) {
+void opcode_006b(const ScriptArguments& args, ScriptFloat& arg1L,
+                 ScriptFloat& arg2L) {
     arg1L *= arg2L;
     RW_UNUSED(args);
 }
 
 /**
-    @brief %1d% *= %2d%  
+    @brief %1d% *= %2d%
 
     opcode 006c
-    @arg arg1G 
-    @arg arg2L 
+    @arg arg1G
+    @arg arg2L
 */
-void opcode_006c(const ScriptArguments& args, ScriptInt& arg1G, ScriptInt& arg2L) {
+void opcode_006c(const ScriptArguments& args, ScriptInt& arg1G,
+                 ScriptInt& arg2L) {
     arg1G *= arg2L;
     RW_UNUSED(args);
 }
 
 /**
-    @brief %1d% *= %2d%  
+    @brief %1d% *= %2d%
 
     opcode 006d
-    @arg arg1G 
-    @arg arg2L 
+    @arg arg1G
+    @arg arg2L
 */
-void opcode_006d(const ScriptArguments& args, ScriptFloat& arg1G, ScriptFloat& arg2L) {
+void opcode_006d(const ScriptArguments& args, ScriptFloat& arg1G,
+                 ScriptFloat& arg2L) {
     arg1G *= arg2L;
     RW_UNUSED(args);
 }
 
 /**
-    @brief %1d% *= %2d%  
+    @brief %1d% *= %2d%
 
     opcode 006e
-    @arg arg1L 
-    @arg arg2G 
+    @arg arg1L
+    @arg arg2G
 */
-void opcode_006e(const ScriptArguments& args, ScriptInt& arg1L, ScriptInt& arg2G) {
+void opcode_006e(const ScriptArguments& args, ScriptInt& arg1L,
+                 ScriptInt& arg2G) {
     arg1L *= arg2G;
     RW_UNUSED(args);
 }
 
 /**
-    @brief %1d% *= %2d%  
+    @brief %1d% *= %2d%
 
     opcode 006f
-    @arg arg1L 
-    @arg arg2G 
+    @arg arg1L
+    @arg arg2G
 */
-void opcode_006f(const ScriptArguments& args, ScriptFloat& arg1L, ScriptFloat& arg2G) {
+void opcode_006f(const ScriptArguments& args, ScriptFloat& arg1L,
+                 ScriptFloat& arg2G) {
     arg1L *= arg2G;
     RW_UNUSED(args);
 }
 
 /**
-    @brief %1d% /= %2d%  
+    @brief %1d% /= %2d%
 
     opcode 0070
-    @arg arg1G 
-    @arg arg2G 
+    @arg arg1G
+    @arg arg2G
 */
-void opcode_0070(const ScriptArguments& args, ScriptInt& arg1G, ScriptInt& arg2G) {
+void opcode_0070(const ScriptArguments& args, ScriptInt& arg1G,
+                 ScriptInt& arg2G) {
     arg1G /= arg2G;
     RW_UNUSED(args);
 }
 
 /**
-    @brief %1d% /= %2d% 
+    @brief %1d% /= %2d%
 
     opcode 0071
-    @arg arg1G 
-    @arg arg2G 
+    @arg arg1G
+    @arg arg2G
 */
-void opcode_0071(const ScriptArguments& args, ScriptFloat& arg1G, ScriptFloat& arg2G) {
+void opcode_0071(const ScriptArguments& args, ScriptFloat& arg1G,
+                 ScriptFloat& arg2G) {
     arg1G /= arg2G;
     RW_UNUSED(args);
 }
 
 /**
-    @brief %1d% /= %2d%  
+    @brief %1d% /= %2d%
 
     opcode 0072
-    @arg arg1L 
-    @arg arg2L 
+    @arg arg1L
+    @arg arg2L
 */
-void opcode_0072(const ScriptArguments& args, ScriptInt& arg1L, ScriptInt& arg2L) {
+void opcode_0072(const ScriptArguments& args, ScriptInt& arg1L,
+                 ScriptInt& arg2L) {
     arg1L /= arg2L;
     RW_UNUSED(args);
 }
 
 /**
-    @brief %1d% /= %2d% 
+    @brief %1d% /= %2d%
 
     opcode 0073
-    @arg arg1L 
-    @arg arg2L 
+    @arg arg1L
+    @arg arg2L
 */
-void opcode_0073(const ScriptArguments& args, ScriptFloat& arg1L, ScriptFloat& arg2L) {
+void opcode_0073(const ScriptArguments& args, ScriptFloat& arg1L,
+                 ScriptFloat& arg2L) {
     arg1L /= arg2L;
     RW_UNUSED(args);
 }
 
 /**
-    @brief %1d% /= %2d% 
+    @brief %1d% /= %2d%
 
     opcode 0074
-    @arg arg1G 
-    @arg arg2L 
+    @arg arg1G
+    @arg arg2L
 */
-void opcode_0074(const ScriptArguments& args, ScriptInt& arg1G, ScriptInt& arg2L) {
+void opcode_0074(const ScriptArguments& args, ScriptInt& arg1G,
+                 ScriptInt& arg2L) {
     arg1G /= arg2L;
     RW_UNUSED(args);
 }
 
 /**
-    @brief %1d% /= %2d% 
+    @brief %1d% /= %2d%
 
     opcode 0075
-    @arg arg1G 
-    @arg arg2L 
+    @arg arg1G
+    @arg arg2L
 */
-void opcode_0075(const ScriptArguments& args, ScriptFloat& arg1G, ScriptFloat& arg2L) {
+void opcode_0075(const ScriptArguments& args, ScriptFloat& arg1G,
+                 ScriptFloat& arg2L) {
     arg1G /= arg2L;
     RW_UNUSED(args);
 }
 
 /**
-    @brief %1d% /= %2d% 
+    @brief %1d% /= %2d%
 
     opcode 0076
-    @arg arg1L 
-    @arg arg2G 
+    @arg arg1L
+    @arg arg2G
 */
-void opcode_0076(const ScriptArguments& args, ScriptInt& arg1L, ScriptInt& arg2G) {
+void opcode_0076(const ScriptArguments& args, ScriptInt& arg1L,
+                 ScriptInt& arg2G) {
     arg1L /= arg2G;
     RW_UNUSED(args);
 }
@@ -1344,10 +1449,11 @@ void opcode_0076(const ScriptArguments& args, ScriptInt& arg1L, ScriptInt& arg2G
     @brief %1d% /= %2d%
 
     opcode 0077
-    @arg arg1L 
-    @arg arg2G 
+    @arg arg1L
+    @arg arg2G
 */
-void opcode_0077(const ScriptArguments& args, ScriptFloat& arg1L, ScriptFloat& arg2G) {
+void opcode_0077(const ScriptArguments& args, ScriptFloat& arg1L,
+                 ScriptFloat& arg2G) {
     arg1L /= arg2G;
     RW_UNUSED(args);
 }
@@ -1356,10 +1462,11 @@ void opcode_0077(const ScriptArguments& args, ScriptFloat& arg1L, ScriptFloat& a
     @brief %1d% += frame_delta_time * %2d%
 
     opcode 0078
-    @arg arg1G 
-    @arg arg2 
+    @arg arg1G
+    @arg arg2
 */
-void opcode_0078(const ScriptArguments& args, ScriptFloat& arg1G, const ScriptFloat arg2) {
+void opcode_0078(const ScriptArguments& args, ScriptFloat& arg1G,
+                 const ScriptFloat arg2) {
     RW_UNIMPLEMENTED_OPCODE(0x0078);
     RW_UNUSED(arg1G);
     RW_UNUSED(arg2);
@@ -1370,10 +1477,11 @@ void opcode_0078(const ScriptArguments& args, ScriptFloat& arg1G, const ScriptFl
     @brief %1d% += frame_delta_time * %2d%
 
     opcode 0079
-    @arg arg1L 
-    @arg arg2 
+    @arg arg1L
+    @arg arg2
 */
-void opcode_0079(const ScriptArguments& args, ScriptFloat& arg1L, const ScriptFloat arg2) {
+void opcode_0079(const ScriptArguments& args, ScriptFloat& arg1L,
+                 const ScriptFloat arg2) {
     RW_UNIMPLEMENTED_OPCODE(0x0079);
     RW_UNUSED(arg1L);
     RW_UNUSED(arg2);
@@ -1384,10 +1492,11 @@ void opcode_0079(const ScriptArguments& args, ScriptFloat& arg1L, const ScriptFl
     @brief %1d% += frame_delta_time * %2d%
 
     opcode 007a
-    @arg arg1G 
-    @arg arg2G 
+    @arg arg1G
+    @arg arg2G
 */
-void opcode_007a(const ScriptArguments& args, ScriptFloat& arg1G, ScriptFloat& arg2G) {
+void opcode_007a(const ScriptArguments& args, ScriptFloat& arg1G,
+                 ScriptFloat& arg2G) {
     RW_UNIMPLEMENTED_OPCODE(0x007a);
     RW_UNUSED(arg1G);
     RW_UNUSED(arg2G);
@@ -1398,10 +1507,11 @@ void opcode_007a(const ScriptArguments& args, ScriptFloat& arg1G, ScriptFloat& a
     @brief %1d% += frame_delta_time * %2d%
 
     opcode 007b
-    @arg arg1L 
-    @arg arg2L 
+    @arg arg1L
+    @arg arg2L
 */
-void opcode_007b(const ScriptArguments& args, ScriptFloat& arg1L, ScriptFloat& arg2L) {
+void opcode_007b(const ScriptArguments& args, ScriptFloat& arg1L,
+                 ScriptFloat& arg2L) {
     RW_UNIMPLEMENTED_OPCODE(0x007b);
     RW_UNUSED(arg1L);
     RW_UNUSED(arg2L);
@@ -1412,10 +1522,11 @@ void opcode_007b(const ScriptArguments& args, ScriptFloat& arg1L, ScriptFloat& a
     @brief %1d% += frame_delta_time * %2d%
 
     opcode 007c
-    @arg arg1G 
-    @arg arg2L 
+    @arg arg1G
+    @arg arg2L
 */
-void opcode_007c(const ScriptArguments& args, ScriptFloat& arg1G, ScriptFloat& arg2L) {
+void opcode_007c(const ScriptArguments& args, ScriptFloat& arg1G,
+                 ScriptFloat& arg2L) {
     RW_UNIMPLEMENTED_OPCODE(0x007c);
     RW_UNUSED(arg1G);
     RW_UNUSED(arg2L);
@@ -1426,10 +1537,11 @@ void opcode_007c(const ScriptArguments& args, ScriptFloat& arg1G, ScriptFloat& a
     @brief %1d% += frame_delta_time * %2d%
 
     opcode 007d
-    @arg arg1L 
-    @arg arg2G 
+    @arg arg1L
+    @arg arg2G
 */
-void opcode_007d(const ScriptArguments& args, ScriptFloat& arg1L, ScriptFloat& arg2G) {
+void opcode_007d(const ScriptArguments& args, ScriptFloat& arg1L,
+                 ScriptFloat& arg2G) {
     RW_UNIMPLEMENTED_OPCODE(0x007d);
     RW_UNUSED(arg1L);
     RW_UNUSED(arg2G);
@@ -1440,10 +1552,11 @@ void opcode_007d(const ScriptArguments& args, ScriptFloat& arg1L, ScriptFloat& a
     @brief %1d% -= frame_delta_time * %2d%
 
     opcode 007e
-    @arg arg1G 
-    @arg arg2 
+    @arg arg1G
+    @arg arg2
 */
-void opcode_007e(const ScriptArguments& args, ScriptFloat& arg1G, const ScriptFloat arg2) {
+void opcode_007e(const ScriptArguments& args, ScriptFloat& arg1G,
+                 const ScriptFloat arg2) {
     RW_UNIMPLEMENTED_OPCODE(0x007e);
     RW_UNUSED(arg1G);
     RW_UNUSED(arg2);
@@ -1454,10 +1567,11 @@ void opcode_007e(const ScriptArguments& args, ScriptFloat& arg1G, const ScriptFl
     @brief %1d% -= frame_delta_time * %2d%
 
     opcode 007f
-    @arg arg1L 
-    @arg arg2 
+    @arg arg1L
+    @arg arg2
 */
-void opcode_007f(const ScriptArguments& args, ScriptFloat& arg1L, const ScriptFloat arg2) {
+void opcode_007f(const ScriptArguments& args, ScriptFloat& arg1L,
+                 const ScriptFloat arg2) {
     RW_UNIMPLEMENTED_OPCODE(0x007f);
     RW_UNUSED(arg1L);
     RW_UNUSED(arg2);
@@ -1468,10 +1582,11 @@ void opcode_007f(const ScriptArguments& args, ScriptFloat& arg1L, const ScriptFl
     @brief %1d% -= frame_delta_time * %2d%
 
     opcode 0080
-    @arg arg1G 
-    @arg arg2G 
+    @arg arg1G
+    @arg arg2G
 */
-void opcode_0080(const ScriptArguments& args, ScriptFloat& arg1G, ScriptFloat& arg2G) {
+void opcode_0080(const ScriptArguments& args, ScriptFloat& arg1G,
+                 ScriptFloat& arg2G) {
     RW_UNIMPLEMENTED_OPCODE(0x0080);
     RW_UNUSED(arg1G);
     RW_UNUSED(arg2G);
@@ -1482,10 +1597,11 @@ void opcode_0080(const ScriptArguments& args, ScriptFloat& arg1G, ScriptFloat& a
     @brief %1d% -= frame_delta_time * %2d%
 
     opcode 0081
-    @arg arg1L 
-    @arg arg2L 
+    @arg arg1L
+    @arg arg2L
 */
-void opcode_0081(const ScriptArguments& args, ScriptFloat& arg1L, ScriptFloat& arg2L) {
+void opcode_0081(const ScriptArguments& args, ScriptFloat& arg1L,
+                 ScriptFloat& arg2L) {
     RW_UNIMPLEMENTED_OPCODE(0x0081);
     RW_UNUSED(arg1L);
     RW_UNUSED(arg2L);
@@ -1493,13 +1609,14 @@ void opcode_0081(const ScriptArguments& args, ScriptFloat& arg1L, ScriptFloat& a
 }
 
 /**
-    @brief %1d% -= frame_delta_time * %2d% 
+    @brief %1d% -= frame_delta_time * %2d%
 
     opcode 0082
-    @arg arg1G 
-    @arg arg2L 
+    @arg arg1G
+    @arg arg2L
 */
-void opcode_0082(const ScriptArguments& args, ScriptFloat& arg1G, ScriptFloat& arg2L) {
+void opcode_0082(const ScriptArguments& args, ScriptFloat& arg1G,
+                 ScriptFloat& arg2L) {
     RW_UNIMPLEMENTED_OPCODE(0x0082);
     RW_UNUSED(arg1G);
     RW_UNUSED(arg2L);
@@ -1510,10 +1627,11 @@ void opcode_0082(const ScriptArguments& args, ScriptFloat& arg1G, ScriptFloat& a
     @brief %1d% -= frame_delta_time * %2d%
 
     opcode 0083
-    @arg arg1L 
-    @arg arg2G 
+    @arg arg1L
+    @arg arg2G
 */
-void opcode_0083(const ScriptArguments& args, ScriptFloat& arg1L, ScriptFloat& arg2G) {
+void opcode_0083(const ScriptArguments& args, ScriptFloat& arg1L,
+                 ScriptFloat& arg2G) {
     RW_UNIMPLEMENTED_OPCODE(0x0083);
     RW_UNUSED(arg1L);
     RW_UNUSED(arg2G);
@@ -1521,25 +1639,27 @@ void opcode_0083(const ScriptArguments& args, ScriptFloat& arg1L, ScriptFloat& a
 }
 
 /**
-    @brief %1d% = %2d% 
+    @brief %1d% = %2d%
 
     opcode 0084
-    @arg arg1G 
-    @arg arg2G 
+    @arg arg1G
+    @arg arg2G
 */
-void opcode_0084(const ScriptArguments& args, ScriptInt& arg1G, ScriptInt& arg2G) {
+void opcode_0084(const ScriptArguments& args, ScriptInt& arg1G,
+                 ScriptInt& arg2G) {
     arg1G = arg2G;
     RW_UNUSED(args);
 }
 
 /**
-    @brief %1d% = %2d% 
+    @brief %1d% = %2d%
 
     opcode 0085
-    @arg arg1L 
-    @arg arg2L 
+    @arg arg1L
+    @arg arg2L
 */
-void opcode_0085(const ScriptArguments& args, ScriptInt& arg1L, ScriptInt& arg2L) {
+void opcode_0085(const ScriptArguments& args, ScriptInt& arg1L,
+                 ScriptInt& arg2L) {
     arg1L = arg2L;
     RW_UNUSED(args);
 }
@@ -1548,70 +1668,76 @@ void opcode_0085(const ScriptArguments& args, ScriptInt& arg1L, ScriptInt& arg2L
     @brief %1d% = %2d%
 
     opcode 0086
-    @arg arg1G 
-    @arg arg2G 
+    @arg arg1G
+    @arg arg2G
 */
-void opcode_0086(const ScriptArguments& args, ScriptFloat& arg1G, ScriptFloat& arg2G) {
+void opcode_0086(const ScriptArguments& args, ScriptFloat& arg1G,
+                 ScriptFloat& arg2G) {
     arg1G = arg2G;
     RW_UNUSED(args);
 }
 
 /**
-    @brief %1d% = %2d% 
+    @brief %1d% = %2d%
 
     opcode 0087
-    @arg arg1L 
-    @arg arg2L 
+    @arg arg1L
+    @arg arg2L
 */
-void opcode_0087(const ScriptArguments& args, ScriptFloat& arg1L, ScriptFloat& arg2L) {
+void opcode_0087(const ScriptArguments& args, ScriptFloat& arg1L,
+                 ScriptFloat& arg2L) {
     arg1L = arg2L;
     RW_UNUSED(args);
 }
 
 /**
-    @brief %1d% = %2d% 
+    @brief %1d% = %2d%
 
     opcode 0088
-    @arg arg1G 
-    @arg arg2L 
+    @arg arg1G
+    @arg arg2L
 */
-void opcode_0088(const ScriptArguments& args, ScriptFloat& arg1G, ScriptFloat& arg2L) {
+void opcode_0088(const ScriptArguments& args, ScriptFloat& arg1G,
+                 ScriptFloat& arg2L) {
     arg1G = arg2L;
     RW_UNUSED(args);
 }
 
 /**
-    @brief %1d% = %2d%  
+    @brief %1d% = %2d%
 
     opcode 0089
-    @arg arg1L 
-    @arg arg2G 
+    @arg arg1L
+    @arg arg2G
 */
-void opcode_0089(const ScriptArguments& args, ScriptFloat& arg1L, ScriptFloat& arg2G) {
+void opcode_0089(const ScriptArguments& args, ScriptFloat& arg1L,
+                 ScriptFloat& arg2G) {
     arg1L = arg2G;
     RW_UNUSED(args);
 }
 
 /**
-    @brief %1d% = %2d% 
+    @brief %1d% = %2d%
 
     opcode 008a
-    @arg arg1G 
-    @arg arg2L 
+    @arg arg1G
+    @arg arg2L
 */
-void opcode_008a(const ScriptArguments& args, ScriptInt& arg1G, ScriptInt& arg2L) {
+void opcode_008a(const ScriptArguments& args, ScriptInt& arg1G,
+                 ScriptInt& arg2L) {
     arg1G = arg2L;
     RW_UNUSED(args);
 }
 
 /**
-    @brief %1d% = %2d%  
+    @brief %1d% = %2d%
 
     opcode 008b
-    @arg arg1L 
-    @arg arg2G 
+    @arg arg1L
+    @arg arg2G
 */
-void opcode_008b(const ScriptArguments& args, ScriptInt& arg1L, ScriptInt& arg2G) {
+void opcode_008b(const ScriptArguments& args, ScriptInt& arg1L,
+                 ScriptInt& arg2G) {
     arg1L = arg2G;
     RW_UNUSED(args);
 }
@@ -1620,10 +1746,11 @@ void opcode_008b(const ScriptArguments& args, ScriptInt& arg1L, ScriptInt& arg2G
     @brief %1d% = float_to_integer %2d%
 
     opcode 008c
-    @arg arg1G 
-    @arg arg2G 
+    @arg arg1G
+    @arg arg2G
 */
-void opcode_008c(const ScriptArguments& args, ScriptInt& arg1G, ScriptFloat& arg2G) {
+void opcode_008c(const ScriptArguments& args, ScriptInt& arg1G,
+                 ScriptFloat& arg2G) {
     arg1G = static_cast<ScriptInt>(arg2G);
     RW_UNUSED(args);
 }
@@ -1632,10 +1759,11 @@ void opcode_008c(const ScriptArguments& args, ScriptInt& arg1G, ScriptFloat& arg
     @brief %1d% = integer_to_float %2d%
 
     opcode 008d
-    @arg arg1G 
-    @arg arg2G 
+    @arg arg1G
+    @arg arg2G
 */
-void opcode_008d(const ScriptArguments& args, ScriptFloat& arg1G, ScriptInt& arg2G) {
+void opcode_008d(const ScriptArguments& args, ScriptFloat& arg1G,
+                 ScriptInt& arg2G) {
     arg1G = static_cast<ScriptFloat>(arg2G);
     RW_UNUSED(args);
 }
@@ -1644,10 +1772,11 @@ void opcode_008d(const ScriptArguments& args, ScriptFloat& arg1G, ScriptInt& arg
     @brief %1d% = float_to_integer %2d%
 
     opcode 008e
-    @arg arg1L 
-    @arg arg2G 
+    @arg arg1L
+    @arg arg2G
 */
-void opcode_008e(const ScriptArguments& args, ScriptInt& arg1L, ScriptFloat& arg2G) {
+void opcode_008e(const ScriptArguments& args, ScriptInt& arg1L,
+                 ScriptFloat& arg2G) {
     arg1L = static_cast<ScriptInt>(arg2G);
     RW_UNUSED(args);
 }
@@ -1656,10 +1785,11 @@ void opcode_008e(const ScriptArguments& args, ScriptInt& arg1L, ScriptFloat& arg
     @brief %1d% = integer_to_float %2d%
 
     opcode 008f
-    @arg arg1L 
-    @arg arg2G 
+    @arg arg1L
+    @arg arg2G
 */
-void opcode_008f(const ScriptArguments& args, ScriptFloat& arg1L, ScriptInt& arg2G) {
+void opcode_008f(const ScriptArguments& args, ScriptFloat& arg1L,
+                 ScriptInt& arg2G) {
     arg1L = static_cast<ScriptFloat>(arg2G);
     RW_UNUSED(args);
 }
@@ -1668,10 +1798,11 @@ void opcode_008f(const ScriptArguments& args, ScriptFloat& arg1L, ScriptInt& arg
     @brief %1d% = float_to_int %2d%
 
     opcode 0090
-    @arg arg1G 
-    @arg arg2L 
+    @arg arg1G
+    @arg arg2L
 */
-void opcode_0090(const ScriptArguments& args, ScriptInt& arg1G, ScriptFloat& arg2L) {
+void opcode_0090(const ScriptArguments& args, ScriptInt& arg1G,
+                 ScriptFloat& arg2L) {
     arg1G = static_cast<ScriptInt>(arg2L);
     RW_UNUSED(args);
 }
@@ -1680,10 +1811,11 @@ void opcode_0090(const ScriptArguments& args, ScriptInt& arg1G, ScriptFloat& arg
     @brief %1d% = int_to_float %2d%
 
     opcode 0091
-    @arg arg1G 
-    @arg arg2L 
+    @arg arg1G
+    @arg arg2L
 */
-void opcode_0091(const ScriptArguments& args, ScriptFloat& arg1G, ScriptInt& arg2L) {
+void opcode_0091(const ScriptArguments& args, ScriptFloat& arg1G,
+                 ScriptInt& arg2L) {
     arg1G = static_cast<ScriptFloat>(arg2L);
     RW_UNUSED(args);
 }
@@ -1692,10 +1824,11 @@ void opcode_0091(const ScriptArguments& args, ScriptFloat& arg1G, ScriptInt& arg
     @brief %1d% = float_to_int %2d%
 
     opcode 0092
-    @arg arg1L 
-    @arg arg2L 
+    @arg arg1L
+    @arg arg2L
 */
-void opcode_0092(const ScriptArguments& args, ScriptInt& arg1L, ScriptFloat& arg2L) {
+void opcode_0092(const ScriptArguments& args, ScriptInt& arg1L,
+                 ScriptFloat& arg2L) {
     arg1L = static_cast<ScriptInt>(arg2L);
     RW_UNUSED(args);
 }
@@ -1704,10 +1837,11 @@ void opcode_0092(const ScriptArguments& args, ScriptInt& arg1L, ScriptFloat& arg
     @brief %1d% = int_to_float %2d%
 
     opcode 0093
-    @arg arg1L 
-    @arg arg2L 
+    @arg arg1L
+    @arg arg2L
 */
-void opcode_0093(const ScriptArguments& args, ScriptFloat& arg1L, ScriptInt& arg2L) {
+void opcode_0093(const ScriptArguments& args, ScriptFloat& arg1L,
+                 ScriptInt& arg2L) {
     arg1L = static_cast<ScriptFloat>(arg2L);
     RW_UNUSED(args);
 }
@@ -1716,7 +1850,7 @@ void opcode_0093(const ScriptArguments& args, ScriptFloat& arg1L, ScriptInt& arg
     @brief abs_var_int %1d%
 
     opcode 0094
-    @arg arg1G 
+    @arg arg1G
 */
 void opcode_0094(const ScriptArguments& args, ScriptInt& arg1G) {
     arg1G = std::abs(arg1G);
@@ -1727,7 +1861,7 @@ void opcode_0094(const ScriptArguments& args, ScriptInt& arg1G) {
     @brief abs_lvar_int %1d%
 
     opcode 0095
-    @arg arg1L 
+    @arg arg1L
 */
 void opcode_0095(const ScriptArguments& args, ScriptInt& arg1L) {
     arg1L = std::abs(arg1L);
@@ -1738,7 +1872,7 @@ void opcode_0095(const ScriptArguments& args, ScriptInt& arg1L) {
     @brief abs_var_float %1d%
 
     opcode 0096
-    @arg arg1G 
+    @arg arg1G
 */
 void opcode_0096(const ScriptArguments& args, ScriptFloat& arg1G) {
     arg1G = std::abs(arg1G);
@@ -1749,7 +1883,7 @@ void opcode_0096(const ScriptArguments& args, ScriptFloat& arg1G) {
     @brief abs_lvar_float %1d%
 
     opcode 0097
-    @arg arg1L 
+    @arg arg1L
 */
 void opcode_0097(const ScriptArguments& args, ScriptFloat& arg1L) {
     arg1L = std::abs(arg1L);
@@ -1760,7 +1894,7 @@ void opcode_0097(const ScriptArguments& args, ScriptFloat& arg1L) {
     @brief generate_random_float %1d%
 
     opcode 0098
-    @arg arg1G 
+    @arg arg1G
 */
 void opcode_0098(const ScriptArguments& args, ScriptFloat& arg1G) {
     arg1G = args.getVM()->getRandomNumber(0.f, 1.f);
@@ -1770,7 +1904,7 @@ void opcode_0098(const ScriptArguments& args, ScriptFloat& arg1G) {
     @brief generate_random_int %1d%
 
     opcode 0099
-    @arg arg1G 
+    @arg arg1G
 */
 void opcode_0099(const ScriptArguments& args, ScriptInt& arg1G) {
     // TODO: For GTA III and VC, the range is 0-65535, for GTA: SA it is 0-32767
@@ -1786,11 +1920,14 @@ void opcode_0099(const ScriptArguments& args, ScriptInt& arg1G) {
     @arg coord Coordinates
     @arg character Character/ped
 */
-void opcode_009a(const ScriptArguments& args, const ScriptPedType pedType, const ScriptModelID model, ScriptVec3 coord, ScriptCharacter& character) {
+void opcode_009a(const ScriptArguments& args, const ScriptPedType pedType,
+                 const ScriptModelID model, ScriptVec3 coord,
+                 ScriptCharacter& character) {
     RW_UNUSED(pedType);
 
     coord = script::getGround(args, coord);
-    character = args.getWorld()->createPedestrian(model, coord + script::kSpawnOffset);
+    character =
+        args.getWorld()->createPedestrian(model, coord + script::kSpawnOffset);
     character->setLifetime(GameObject::MissionLifetime);
 
     if (args.getThread()->isMission) {
@@ -1814,10 +1951,11 @@ void opcode_009b(const ScriptArguments& args, const ScriptCharacter character) {
     @brief char_wander_dir %1d% to %2d%
 
     opcode 009c
-    @arg character 
-    @arg arg2 
+    @arg character
+    @arg arg2
 */
-void opcode_009c(const ScriptArguments& args, const ScriptCharacter character, const ScriptInt arg2) {
+void opcode_009c(const ScriptArguments& args, const ScriptCharacter character,
+                 const ScriptInt arg2) {
     RW_UNIMPLEMENTED_OPCODE(0x009c);
     RW_UNUSED(character);
     RW_UNUSED(arg2);
@@ -1828,7 +1966,7 @@ void opcode_009c(const ScriptArguments& args, const ScriptCharacter character, c
     @brief char_wander_range
 
     opcode 009d
-    @arg character 
+    @arg character
 */
 void opcode_009d(const ScriptArguments& args, const ScriptCharacter character) {
     RW_UNIMPLEMENTED_OPCODE(0x009d);
@@ -1840,10 +1978,11 @@ void opcode_009d(const ScriptArguments& args, const ScriptCharacter character) {
     @brief char_follow_path %1d% path %2d% %3d% %4d%
 
     opcode 009e
-    @arg character 
+    @arg character
     @arg coord Coordinates
 */
-void opcode_009e(const ScriptArguments& args, const ScriptCharacter character, ScriptVec3 coord) {
+void opcode_009e(const ScriptArguments& args, const ScriptCharacter character,
+                 ScriptVec3 coord) {
     RW_UNIMPLEMENTED_OPCODE(0x009e);
     RW_UNUSED(character);
     RW_UNUSED(coord);
@@ -1854,7 +1993,7 @@ void opcode_009e(const ScriptArguments& args, const ScriptCharacter character, S
     @brief char_set_idle %1d%
 
     opcode 009f
-    @arg character 
+    @arg character
 */
 void opcode_009f(const ScriptArguments& args, const ScriptCharacter character) {
     RW_UNIMPLEMENTED_OPCODE(0x009f);
@@ -1871,7 +2010,9 @@ void opcode_009f(const ScriptArguments& args, const ScriptCharacter character) {
     @arg yCoord Y Coord
     @arg zCoord Z Coord
 */
-void opcode_00a0(const ScriptArguments& args, const ScriptCharacter character, ScriptFloat& xCoord, ScriptFloat& yCoord, ScriptFloat& zCoord) {
+void opcode_00a0(const ScriptArguments& args, const ScriptCharacter character,
+                 ScriptFloat& xCoord, ScriptFloat& yCoord,
+                 ScriptFloat& zCoord) {
     script::getObjectPosition(character, xCoord, yCoord, zCoord);
     RW_UNUSED(args);
 }
@@ -1883,7 +2024,8 @@ void opcode_00a0(const ScriptArguments& args, const ScriptCharacter character, S
     @arg character Character/ped
     @arg coord Coordinates
 */
-void opcode_00a1(const ScriptArguments& args, const ScriptCharacter character, ScriptVec3 coord) {
+void opcode_00a1(const ScriptArguments& args, const ScriptCharacter character,
+                 ScriptVec3 coord) {
     script::setObjectPosition(character, coord);
     RW_UNUSED(args);
 }
@@ -1892,12 +2034,12 @@ void opcode_00a1(const ScriptArguments& args, const ScriptCharacter character, S
     @brief   is_char_still_alive %1d%
 
     opcode 00a2
-    @arg character 
+    @arg character
 */
 bool opcode_00a2(const ScriptArguments& args, const ScriptCharacter character) {
     RW_UNUSED(args);
     if (character) {
-    	return character->isAlive();
+        return character->isAlive();
     }
     return false;
 }
@@ -1911,12 +2053,15 @@ bool opcode_00a2(const ScriptArguments& args, const ScriptCharacter character) {
     @arg coord1 Coordinates
     @arg arg6 Boolean true/false
 */
-bool opcode_00a3(const ScriptArguments& args, const ScriptCharacter character, const ScriptVec2 coord0, const ScriptVec2 coord1, const ScriptBoolean arg6) {
+bool opcode_00a3(const ScriptArguments& args, const ScriptCharacter character,
+                 const ScriptVec2 coord0, const ScriptVec2 coord1,
+                 const ScriptBoolean arg6) {
     return script::objectInArea(args, character, coord0, coord1, arg6);
 }
 
 /**
-    @brief   is_char_in_area_3d %1d% from %2d% %3d% %4d% to %5d% %6d% %7d% sphere %8d%
+    @brief   is_char_in_area_3d %1d% from %2d% %3d% %4d% to %5d% %6d% %7d%
+   sphere %8d%
 
     opcode 00a4
     @arg character Character/ped
@@ -1924,7 +2069,9 @@ bool opcode_00a3(const ScriptArguments& args, const ScriptCharacter character, c
     @arg coord1 Coordinates
     @arg arg8 Boolean true/false
 */
-bool opcode_00a4(const ScriptArguments& args, const ScriptCharacter character, const ScriptVec3 coord0, const ScriptVec3 coord1, const ScriptBoolean arg8) {
+bool opcode_00a4(const ScriptArguments& args, const ScriptCharacter character,
+                 const ScriptVec3 coord0, const ScriptVec3 coord1,
+                 const ScriptBoolean arg8) {
     return script::objectInArea(args, character, coord0, coord1, arg8);
 }
 
@@ -1936,10 +2083,13 @@ bool opcode_00a4(const ScriptArguments& args, const ScriptCharacter character, c
     @arg coord Coordinates
     @arg vehicle Car/vehicle
 */
-void opcode_00a5(const ScriptArguments& args, const ScriptModelID model, ScriptVec3 coord, ScriptVehicle& vehicle) {
-    // @todo calculate distance from centre of mass to base of model and apply it as spawnOffset
+void opcode_00a5(const ScriptArguments& args, const ScriptModelID model,
+                 ScriptVec3 coord, ScriptVehicle& vehicle) {
+    // @todo calculate distance from centre of mass to base of model and apply
+    // it as spawnOffset
     coord = script::getGround(args, coord);
-    vehicle = args.getWorld()->createVehicle(model, coord + script::kSpawnOffset);
+    vehicle =
+        args.getWorld()->createVehicle(model, coord + script::kSpawnOffset);
     vehicle->setLifetime(GameObject::MissionLifetime);
 
     if (args.getThread()->isMission) {
@@ -1964,7 +2114,8 @@ void opcode_00a6(const ScriptArguments& args, const ScriptVehicle vehicle) {
     @arg vehicle Car/vehicle
     @arg coord Coordinates
 */
-void opcode_00a7(const ScriptArguments& args, const ScriptVehicle vehicle, ScriptVec3 coord) {
+void opcode_00a7(const ScriptArguments& args, const ScriptVehicle vehicle,
+                 ScriptVec3 coord) {
     RW_UNIMPLEMENTED_OPCODE(0x00a7);
     RW_UNUSED(vehicle);
     RW_UNUSED(coord);
@@ -2004,7 +2155,9 @@ void opcode_00a9(const ScriptArguments& args, const ScriptVehicle vehicle) {
     @arg yCoord Y Coord
     @arg zCoord Z Coord
 */
-void opcode_00aa(const ScriptArguments& args, const ScriptVehicle vehicle, ScriptFloat& xCoord, ScriptFloat& yCoord, ScriptFloat& zCoord) {
+void opcode_00aa(const ScriptArguments& args, const ScriptVehicle vehicle,
+                 ScriptFloat& xCoord, ScriptFloat& yCoord,
+                 ScriptFloat& zCoord) {
     script::getObjectPosition(vehicle, xCoord, yCoord, zCoord);
     RW_UNUSED(args);
 }
@@ -2016,7 +2169,8 @@ void opcode_00aa(const ScriptArguments& args, const ScriptVehicle vehicle, Scrip
     @arg vehicle Car/vehicle
     @arg coord Coordinates
 */
-void opcode_00ab(const ScriptArguments& args, const ScriptVehicle vehicle, ScriptVec3 coord) {
+void opcode_00ab(const ScriptArguments& args, const ScriptVehicle vehicle,
+                 ScriptVec3 coord) {
     RW_UNUSED(args);
     script::setObjectPosition(vehicle, coord);
 }
@@ -2025,12 +2179,12 @@ void opcode_00ab(const ScriptArguments& args, const ScriptVehicle vehicle, Scrip
     @brief   is_car_still_alive %1d%
 
     opcode 00ac
-    @arg vehicle 
+    @arg vehicle
 */
 bool opcode_00ac(const ScriptArguments& args, const ScriptVehicle vehicle) {
     RW_UNUSED(args);
     if (vehicle) {
-    	return !vehicle->isWrecked();
+        return !vehicle->isWrecked();
     }
     return false;
 }
@@ -2040,9 +2194,10 @@ bool opcode_00ac(const ScriptArguments& args, const ScriptVehicle vehicle) {
 
     opcode 00ad
     @arg vehicle Car/vehicle
-    @arg arg2 
+    @arg arg2
 */
-void opcode_00ad(const ScriptArguments& args, const ScriptVehicle vehicle, const ScriptFloat arg2) {
+void opcode_00ad(const ScriptArguments& args, const ScriptVehicle vehicle,
+                 const ScriptFloat arg2) {
     RW_UNIMPLEMENTED_OPCODE(0x00ad);
     RW_UNUSED(vehicle);
     RW_UNUSED(arg2);
@@ -2054,18 +2209,19 @@ void opcode_00ad(const ScriptArguments& args, const ScriptVehicle vehicle, const
 
     opcode 00ae
     @arg vehicle Car/vehicle
-    @arg arg2 
+    @arg arg2
 */
-void opcode_00ae(const ScriptArguments& args, const ScriptVehicle vehicle, const ScriptDrivingMode arg2) {
+void opcode_00ae(const ScriptArguments& args, const ScriptVehicle vehicle,
+                 const ScriptDrivingMode arg2) {
     RW_UNIMPLEMENTED_OPCODE(0x00ae);
     RW_UNUSED(arg2);
     RW_UNUSED(args);
 
     // Check whether we have a driver
-    if (vehicle->getDriver() != nullptr)
-    {
+    if (vehicle->getDriver() != nullptr) {
         // @todo set the right driving style and lane
-        vehicle->getDriver()->controller->setGoal(CharacterController::TrafficDriver);
+        vehicle->getDriver()->controller->setGoal(
+            CharacterController::TrafficDriver);
         vehicle->getDriver()->controller->setLane(1);
     }
 }
@@ -2075,9 +2231,10 @@ void opcode_00ae(const ScriptArguments& args, const ScriptVehicle vehicle, const
 
     opcode 00af
     @arg vehicle Character/ped
-    @arg arg2 
+    @arg arg2
 */
-void opcode_00af(const ScriptArguments& args, const ScriptVehicle vehicle, const ScriptMission arg2) {
+void opcode_00af(const ScriptArguments& args, const ScriptVehicle vehicle,
+                 const ScriptMission arg2) {
     RW_UNIMPLEMENTED_OPCODE(0x00af);
     RW_UNUSED(vehicle);
     RW_UNUSED(arg2);
@@ -2093,12 +2250,15 @@ void opcode_00af(const ScriptArguments& args, const ScriptVehicle vehicle, const
     @arg coord1 Coordinates
     @arg arg6 Boolean true/false
 */
-bool opcode_00b0(const ScriptArguments& args, const ScriptVehicle vehicle, const ScriptVec2 coord0, const ScriptVec2 coord1, const ScriptBoolean arg6) {
+bool opcode_00b0(const ScriptArguments& args, const ScriptVehicle vehicle,
+                 const ScriptVec2 coord0, const ScriptVec2 coord1,
+                 const ScriptBoolean arg6) {
     return script::objectInArea(args, vehicle, coord0, coord1, arg6);
 }
 
 /**
-    @brief   is_car_in_area_3d %1d% from %2d% %3d% %4d% to %5d% %6d% %7d% sphere %8d%
+    @brief   is_car_in_area_3d %1d% from %2d% %3d% %4d% to %5d% %6d% %7d% sphere
+   %8d%
 
     opcode 00b1
     @arg vehicle Car/vehicle
@@ -2106,7 +2266,9 @@ bool opcode_00b0(const ScriptArguments& args, const ScriptVehicle vehicle, const
     @arg coord1 Coordinates
     @arg arg8 Boolean true/false
 */
-bool opcode_00b1(const ScriptArguments& args, const ScriptVehicle vehicle, const ScriptVec3 coord0, const ScriptVec3 coord1, const ScriptBoolean arg8) {
+bool opcode_00b1(const ScriptArguments& args, const ScriptVehicle vehicle,
+                 const ScriptVec3 coord0, const ScriptVec3 coord1,
+                 const ScriptBoolean arg8) {
     return script::objectInArea(args, vehicle, coord0, coord1, arg8);
 }
 
@@ -2118,12 +2280,11 @@ bool opcode_00b1(const ScriptArguments& args, const ScriptVehicle vehicle, const
     @arg time Time (ms)
     @arg style
 */
-void opcode_00ba(const ScriptArguments& args, const ScriptString gxtEntry, const ScriptInt time, const ScriptInt style) {
+void opcode_00ba(const ScriptArguments& args, const ScriptString gxtEntry,
+                 const ScriptInt time, const ScriptInt style) {
     const auto& text = script::gxt(args, gxtEntry);
     args.getWorld()->state->text.addText<ScreenTextType::Big>(
-    			ScreenTextEntry::makeBig(
-    				gxtEntry, text, style, time
-    				));
+        ScreenTextEntry::makeBig(gxtEntry, text, style, time));
 }
 
 /**
@@ -2132,15 +2293,14 @@ void opcode_00ba(const ScriptArguments& args, const ScriptString gxtEntry, const
     opcode 00bb
     @arg gxtEntry GXT entry
     @arg time Time (ms)
-    @arg flags 
+    @arg flags
 */
-void opcode_00bb(const ScriptArguments& args, const ScriptString gxtEntry, const ScriptInt time, const ScriptInt flags) {
+void opcode_00bb(const ScriptArguments& args, const ScriptString gxtEntry,
+                 const ScriptInt time, const ScriptInt flags) {
     const auto& text = script::gxt(args, gxtEntry);
     RW_UNUSED(flags);
     args.getWorld()->state->text.addText<ScreenTextType::HighPriority>(
-    			ScreenTextEntry::makeHighPriority(
-    				gxtEntry, text, time
-    				));
+        ScreenTextEntry::makeHighPriority(gxtEntry, text, time));
 }
 
 /**
@@ -2149,17 +2309,16 @@ void opcode_00bb(const ScriptArguments& args, const ScriptString gxtEntry, const
     opcode 00bc
     @arg gxtEntry GXT entry
     @arg time Time (ms)
-    @arg arg3 
+    @arg arg3
 */
-void opcode_00bc(const ScriptArguments& args, const ScriptString gxtEntry, const ScriptInt time, const ScriptInt arg3) {
+void opcode_00bc(const ScriptArguments& args, const ScriptString gxtEntry,
+                 const ScriptInt time, const ScriptInt arg3) {
     const auto& text = script::gxt(args, gxtEntry);
     RW_UNUSED(arg3);
     RW_UNIMPLEMENTED("Unclear what style should be used");
     args.getWorld()->state->text.clear<ScreenTextType::HighPriority>();
     args.getWorld()->state->text.addText<ScreenTextType::HighPriority>(
-    			ScreenTextEntry::makeHighPriority(
-    				gxtEntry, text, time
-    				));
+        ScreenTextEntry::makeHighPriority(gxtEntry, text, time));
 }
 
 /**
@@ -2168,9 +2327,10 @@ void opcode_00bc(const ScriptArguments& args, const ScriptString gxtEntry, const
     opcode 00bd
     @arg gxtEntry
     @arg time
-    @arg arg3 
+    @arg arg3
 */
-void opcode_00bd(const ScriptArguments& args, const ScriptString gxtEntry, const ScriptInt time, const ScriptInt arg3) {
+void opcode_00bd(const ScriptArguments& args, const ScriptString gxtEntry,
+                 const ScriptInt time, const ScriptInt arg3) {
     const auto& text = script::gxt(args, gxtEntry);
     RW_UNUSED(arg3);
     args.getWorld()->state->text.addText<ScreenTextType::BigLowPriority>(
@@ -2193,7 +2353,8 @@ void opcode_00be(const ScriptArguments& args) {
     @arg hour
     @arg minute
 */
-void opcode_00bf(const ScriptArguments& args, ScriptInt& hour, ScriptInt& minute) {
+void opcode_00bf(const ScriptArguments& args, ScriptInt& hour,
+                 ScriptInt& minute) {
     hour = args.getWorld()->getHour();
     minute = args.getWorld()->getMinute();
 }
@@ -2205,7 +2366,8 @@ void opcode_00bf(const ScriptArguments& args, ScriptInt& hour, ScriptInt& minute
     @arg hour
     @arg minute
 */
-void opcode_00c0(const ScriptArguments& args, const ScriptInt hour, const ScriptInt minute) {
+void opcode_00c0(const ScriptArguments& args, const ScriptInt hour,
+                 const ScriptInt minute) {
     /// @todo game set time
     args.getWorld()->state->basic.gameHour = hour;
     args.getWorld()->state->basic.gameMinute = minute;
@@ -2215,13 +2377,15 @@ void opcode_00c0(const ScriptArguments& args, const ScriptInt hour, const Script
     @brief %3d% = get_minutes_until_time_of_day %1d% %2d%
 
     opcode 00C1
-    @arg hour 
-    @arg minute 
-    @arg minutesUntil 
+    @arg hour
+    @arg minute
+    @arg minutesUntil
 */
-void opcode_00c1(const ScriptArguments& args, const ScriptInt hour, const ScriptInt minute, ScriptInt& minutesUntil) {
+void opcode_00c1(const ScriptArguments& args, const ScriptInt hour,
+                 const ScriptInt minute, ScriptInt& minutesUntil) {
     int targetTime = hour * 60 + minute;
-    int currentTime = args.getWorld()->getHour() * 60 + args.getWorld()->getMinute();
+    int currentTime =
+        args.getWorld()->getHour() * 60 + args.getWorld()->getMinute();
 
     if (targetTime < currentTime) {
         targetTime += 1440;
@@ -2237,7 +2401,8 @@ void opcode_00c1(const ScriptArguments& args, const ScriptInt hour, const Script
     @arg coord Coordinates
     @arg radius Radius
 */
-bool opcode_00c2(const ScriptArguments& args, ScriptVec3 coord, const ScriptFloat radius) {
+bool opcode_00c2(const ScriptArguments& args, ScriptVec3 coord,
+                 const ScriptFloat radius) {
     RW_UNIMPLEMENTED_OPCODE(0x00c2);
     RW_UNUSED(coord);
     RW_UNUSED(radius);
@@ -2252,7 +2417,6 @@ bool opcode_00c2(const ScriptArguments& args, ScriptVec3 coord, const ScriptFloa
 */
 void opcode_00c3(const ScriptArguments& args) {
     args.getVM()->setDebugFlag(true);
-
 }
 
 /**
@@ -2288,18 +2452,17 @@ bool opcode_00c6(const ScriptArguments& args) {
     @brief if %1d%
 
     opcode 00d6
-    @arg arg1 
+    @arg arg1
 */
 void opcode_00d6(const ScriptArguments& args, const ScriptInt arg1) {
     if (arg1 <= 7) {
-    	args.getThread()->conditionCount = arg1+1;
-    	args.getThread()->conditionMask = 0xFF;
-    	args.getThread()->conditionAND = true;
-    }
-    else {
-    	args.getThread()->conditionCount = arg1-19;
-    	args.getThread()->conditionMask = 0x00;
-    	args.getThread()->conditionAND = false;
+        args.getThread()->conditionCount = arg1 + 1;
+        args.getThread()->conditionMask = 0xFF;
+        args.getThread()->conditionAND = true;
+    } else {
+        args.getThread()->conditionCount = arg1 - 19;
+        args.getThread()->conditionMask = 0x00;
+        args.getThread()->conditionAND = false;
     }
 }
 
@@ -2307,7 +2470,7 @@ void opcode_00d6(const ScriptArguments& args, const ScriptInt arg1) {
     @brief create_thread_without_extra_params %1p%
 
     opcode 00d7
-    @arg arg1 
+    @arg arg1
 */
 void opcode_00d7(const ScriptArguments& args, const ScriptLabel arg1) {
     args.getVM()->startThread(arg1, true);
@@ -2322,7 +2485,8 @@ void opcode_00d8(const ScriptArguments& args) {
     if (args.getThread()->isMission) {
         auto& missionObjects = args.getState()->missionObjects;
         for (auto object : missionObjects) {
-            /// @todo: there's more logic than only changing life time, or maybe it should be done in cleanUpTraffic
+            /// @todo: there's more logic than only changing life time, or maybe
+            /// it should be done in cleanUpTraffic
             object->setLifetime(GameObject::TrafficLifetime);
         }
         missionObjects.clear();
@@ -2339,7 +2503,8 @@ void opcode_00d8(const ScriptArguments& args) {
     @arg character Character/ped
     @arg vehicle Car/vehicle
 */
-void opcode_00d9(const ScriptArguments& args, const ScriptCharacter character, ScriptVehicle& vehicle) {
+void opcode_00d9(const ScriptArguments& args, const ScriptCharacter character,
+                 ScriptVehicle& vehicle) {
     vehicle = script::getCharacterVehicle(character);
     RW_UNUSED(args);
 }
@@ -2348,10 +2513,11 @@ void opcode_00d9(const ScriptArguments& args, const ScriptCharacter character, S
     @brief %2d% = store_car_player_is_in %1d%
 
     opcode 00da
-    @arg player 
-    @arg vehicle 
+    @arg player
+    @arg vehicle
 */
-void opcode_00da(const ScriptArguments& args, const ScriptPlayer player, ScriptVehicle& vehicle) {
+void opcode_00da(const ScriptArguments& args, const ScriptPlayer player,
+                 ScriptVehicle& vehicle) {
     vehicle = script::getCharacterVehicle(player->getCharacter());
     RW_UNUSED(args);
 }
@@ -2363,7 +2529,8 @@ void opcode_00da(const ScriptArguments& args, const ScriptPlayer player, ScriptV
     @arg character Character/ped
     @arg vehicle Car/vehicle
 */
-bool opcode_00db(const ScriptArguments& args, const ScriptCharacter character, const ScriptVehicle vehicle) {
+bool opcode_00db(const ScriptArguments& args, const ScriptCharacter character,
+                 const ScriptVehicle vehicle) {
     RW_UNUSED(args);
     return (script::getCharacterVehicle(character) == vehicle);
 }
@@ -2372,10 +2539,11 @@ bool opcode_00db(const ScriptArguments& args, const ScriptCharacter character, c
     @brief   is_player_in_car %1d% car %2d%
 
     opcode 00dc
-    @arg player 
-    @arg vehicle 
+    @arg player
+    @arg vehicle
 */
-bool opcode_00dc(const ScriptArguments& args, const ScriptPlayer player, const ScriptVehicle vehicle) {
+bool opcode_00dc(const ScriptArguments& args, const ScriptPlayer player,
+                 const ScriptVehicle vehicle) {
     RW_UNUSED(args);
     return (script::getCharacterVehicle(player->getCharacter()) == vehicle);
 }
@@ -2387,7 +2555,8 @@ bool opcode_00dc(const ScriptArguments& args, const ScriptPlayer player, const S
     @arg character Character/ped
     @arg model Model ID
 */
-bool opcode_00dd(const ScriptArguments& args, const ScriptCharacter character, const ScriptModelID model) {
+bool opcode_00dd(const ScriptArguments& args, const ScriptCharacter character,
+                 const ScriptModelID model) {
     RW_UNUSED(args);
     return script::isInModel(args, character, model);
 }
@@ -2396,10 +2565,11 @@ bool opcode_00dd(const ScriptArguments& args, const ScriptCharacter character, c
     @brief   is_player_in_model %1d% model %2t%
 
     opcode 00de
-    @arg player 
-    @arg model 
+    @arg player
+    @arg model
 */
-bool opcode_00de(const ScriptArguments& args, const ScriptPlayer player, const ScriptModelID model) {
+bool opcode_00de(const ScriptArguments& args, const ScriptPlayer player,
+                 const ScriptModelID model) {
     return script::isInModel(args, player->getCharacter(), model);
 }
 
@@ -2418,7 +2588,7 @@ bool opcode_00df(const ScriptArguments& args, const ScriptCharacter character) {
     @brief   is_player_in_any_car %1d%
 
     opcode 00e0
-    @arg player 
+    @arg player
 */
 bool opcode_00e0(const ScriptArguments& args, const ScriptPlayer player) {
     RW_UNUSED(args);
@@ -2438,12 +2608,10 @@ bool opcode_00e1(const ScriptArguments& args, const ScriptPad player,
     // Hack: not implemented correctly.
     if (player == 0) {
         if (buttonID == 12) {  // not implemented correctly
-            return args.getState()->input[0].pressed(
-                GameInputState::Jump);
+            return args.getState()->input[0].pressed(GameInputState::Jump);
         }
         if (buttonID == 16) {  // not implemented correctly
-            return args.getState()->input[0].pressed(
-                GameInputState::Jump);
+            return args.getState()->input[0].pressed(GameInputState::Jump);
         }
         if (buttonID == 19) {  // Look behind / sub mission
             return args.getState()->input[0].pressed(
@@ -2459,9 +2627,10 @@ bool opcode_00e1(const ScriptArguments& args, const ScriptPad player,
     opcode 00e2
     @arg padID Pad ID
     @arg buttonID Button ID
-    @arg arg3 
+    @arg arg3
 */
-void opcode_00e2(const ScriptArguments& args, const ScriptPad padID, const ScriptButton buttonID, ScriptInt& arg3) {
+void opcode_00e2(const ScriptArguments& args, const ScriptPad padID,
+                 const ScriptButton buttonID, ScriptInt& arg3) {
     RW_UNIMPLEMENTED_OPCODE(0x00e2);
     RW_UNUSED(padID);
     RW_UNUSED(buttonID);
@@ -2475,16 +2644,19 @@ void opcode_00e2(const ScriptArguments& args, const ScriptPad padID, const Scrip
     opcode 00e3
     @arg player Player
     @arg center Center of object
-    @arg radius Radius of object 
+    @arg radius Radius of object
     @arg showMarker Show marker (True/False)
 */
-bool opcode_00e3(const ScriptArguments& args, const ScriptPlayer player, const ScriptVec2 center, const ScriptVec2 radius, const ScriptBoolean showMarker) {
+bool opcode_00e3(const ScriptArguments& args, const ScriptPlayer player,
+                 const ScriptVec2 center, const ScriptVec2 radius,
+                 const ScriptBoolean showMarker) {
     auto plyChar = player->getCharacter();
     return script::objectInRadius(args, plyChar, center, radius, showMarker);
 }
 
 /**
-    @brief   player %1d% %6b:in-sphere/%near_point_on_foot %2d% %3d% radius %4d% %5d%
+    @brief   player %1d% %6b:in-sphere/%near_point_on_foot %2d% %3d% radius %4d%
+   %5d%
 
     opcode 00e4
     @arg player Player
@@ -2492,14 +2664,18 @@ bool opcode_00e3(const ScriptArguments& args, const ScriptPlayer player, const S
     @arg radius Radius of object
     @arg showMarker Show marker (True/False)
 */
-bool opcode_00e4(const ScriptArguments& args, const ScriptPlayer player, const ScriptVec2 center, const ScriptVec2 radius, const ScriptBoolean showMarker) {
+bool opcode_00e4(const ScriptArguments& args, const ScriptPlayer player,
+                 const ScriptVec2 center, const ScriptVec2 radius,
+                 const ScriptBoolean showMarker) {
     auto plyChar = player->getCharacter();
     auto condition = plyChar->getCurrentVehicle() == nullptr;
-    return script::objectInRadius(args, plyChar, center, radius, showMarker, condition);
+    return script::objectInRadius(args, plyChar, center, radius, showMarker,
+                                  condition);
 }
 
 /**
-    @brief   player %1d% %6bin-sphere/%near_point_in_car %2d% %3d% radius %4d% %5d%
+    @brief   player %1d% %6bin-sphere/%near_point_in_car %2d% %3d% radius %4d%
+   %5d%
 
     opcode 00e5
     @arg player Player
@@ -2507,14 +2683,18 @@ bool opcode_00e4(const ScriptArguments& args, const ScriptPlayer player, const S
     @arg radius Radius of object
     @arg showMarker Show marker (True/False)
 */
-bool opcode_00e5(const ScriptArguments& args, const ScriptPlayer player, ScriptVec2 center, ScriptVec2 radius, const ScriptBoolean showMarker) {
+bool opcode_00e5(const ScriptArguments& args, const ScriptPlayer player,
+                 ScriptVec2 center, ScriptVec2 radius,
+                 const ScriptBoolean showMarker) {
     auto plyChar = player->getCharacter();
     auto condition = plyChar->getCurrentVehicle() != nullptr;
-    return script::objectInRadius(args, plyChar, center, radius, showMarker, condition);
+    return script::objectInRadius(args, plyChar, center, radius, showMarker,
+                                  condition);
 }
 
 /**
-    @brief   player %1d% stopped %6bin-sphere/%near_point %2d% %3d% radius %4d% %5d%
+    @brief   player %1d% stopped %6bin-sphere/%near_point %2d% %3d% radius %4d%
+   %5d%
 
     opcode 00e6
     @arg player Player
@@ -2522,14 +2702,18 @@ bool opcode_00e5(const ScriptArguments& args, const ScriptPlayer player, ScriptV
     @arg radius Radius of object
     @arg showMarker Show marker (True/False)
 */
-bool opcode_00e6(const ScriptArguments& args, const ScriptPlayer player, ScriptVec2 center, ScriptVec2 radius, const ScriptBoolean showMarker) {
+bool opcode_00e6(const ScriptArguments& args, const ScriptPlayer player,
+                 ScriptVec2 center, ScriptVec2 radius,
+                 const ScriptBoolean showMarker) {
     auto plyChar = player->getCharacter();
     auto condition = plyChar->isStopped();
-    return script::objectInRadius(args, plyChar, center, radius, showMarker, condition);
+    return script::objectInRadius(args, plyChar, center, radius, showMarker,
+                                  condition);
 }
 
 /**
-    @brief   player %1d% stopped %6b:in-sphere/%near_point_on_foot %2d% %3d% radius %4d% %5d%
+    @brief   player %1d% stopped %6b:in-sphere/%near_point_on_foot %2d% %3d%
+   radius %4d% %5d%
 
     opcode 00e7
     @arg player Player
@@ -2537,14 +2721,19 @@ bool opcode_00e6(const ScriptArguments& args, const ScriptPlayer player, ScriptV
     @arg radius Radius of object
     @arg showMarker Show marker (True/False)
 */
-bool opcode_00e7(const ScriptArguments& args, const ScriptPlayer player, ScriptVec2 center, ScriptVec2 radius, const ScriptBoolean showMarker) {
+bool opcode_00e7(const ScriptArguments& args, const ScriptPlayer player,
+                 ScriptVec2 center, ScriptVec2 radius,
+                 const ScriptBoolean showMarker) {
     auto plyChar = player->getCharacter();
-    auto condition = plyChar->isStopped() && plyChar->getCurrentVehicle() == nullptr;
-    return script::objectInRadius(args, plyChar, center, radius, showMarker, condition);
+    auto condition =
+        plyChar->isStopped() && plyChar->getCurrentVehicle() == nullptr;
+    return script::objectInRadius(args, plyChar, center, radius, showMarker,
+                                  condition);
 }
 
 /**
-    @brief   player %1d% stopped %6b:in-sphere/%near_point_in_car %2d% %3d% radius %4d% %5d%
+    @brief   player %1d% stopped %6b:in-sphere/%near_point_in_car %2d% %3d%
+   radius %4d% %5d%
 
     opcode 00e8
     @arg player Player
@@ -2552,10 +2741,14 @@ bool opcode_00e7(const ScriptArguments& args, const ScriptPlayer player, ScriptV
     @arg radius Radius of object
     @arg showMarker Show marker (True/False)
 */
-bool opcode_00e8(const ScriptArguments& args, const ScriptPlayer player, ScriptVec2 center, ScriptVec2 radius, const ScriptBoolean showMarker) {
+bool opcode_00e8(const ScriptArguments& args, const ScriptPlayer player,
+                 ScriptVec2 center, ScriptVec2 radius,
+                 const ScriptBoolean showMarker) {
     auto plyChar = player->getCharacter();
-    auto condition = plyChar->isStopped() && plyChar->getCurrentVehicle() != nullptr;
-    return script::objectInRadius(args, plyChar, center, radius, showMarker, condition);
+    auto condition =
+        plyChar->isStopped() && plyChar->getCurrentVehicle() != nullptr;
+    return script::objectInRadius(args, plyChar, center, radius, showMarker,
+                                  condition);
 }
 
 /**
@@ -2567,10 +2760,14 @@ bool opcode_00e8(const ScriptArguments& args, const ScriptPlayer player, ScriptV
     @arg radius Radius of goal
     @arg showMarker Show marker (True/False)
 */
-bool opcode_00e9(const ScriptArguments& args, const ScriptPlayer player, const ScriptCharacter character, ScriptVec2 radius, const ScriptBoolean showMarker) {
+bool opcode_00e9(const ScriptArguments& args, const ScriptPlayer player,
+                 const ScriptCharacter character, ScriptVec2 radius,
+                 const ScriptBoolean showMarker) {
     auto plyChar = player->getCharacter();
-    /// @todo if character is in vehicle, game uses vehicle position instead of character one
-    return script::objectInRadiusNear(args, plyChar, character, radius, showMarker);
+    /// @todo if character is in vehicle, game uses vehicle position instead of
+    /// character one
+    return script::objectInRadiusNear(args, plyChar, character, radius,
+                                      showMarker);
 }
 
 /**
@@ -2582,11 +2779,15 @@ bool opcode_00e9(const ScriptArguments& args, const ScriptPlayer player, const S
     @arg radius Radius of goal
     @arg showMarker Show marker (True/False)
 */
-bool opcode_00ea(const ScriptArguments& args, const ScriptPlayer player, const ScriptCharacter character, ScriptVec2 radius, const ScriptBoolean showMarker) {
+bool opcode_00ea(const ScriptArguments& args, const ScriptPlayer player,
+                 const ScriptCharacter character, ScriptVec2 radius,
+                 const ScriptBoolean showMarker) {
     auto plyChar = player->getCharacter();
     auto condition = plyChar->getCurrentVehicle() == nullptr;
-    /// @todo if character is in vehicle, game uses vehicle position instead of character one
-    return script::objectInRadiusNear(args, plyChar, character, radius, showMarker, condition);
+    /// @todo if character is in vehicle, game uses vehicle position instead of
+    /// character one
+    return script::objectInRadiusNear(args, plyChar, character, radius,
+                                      showMarker, condition);
 }
 
 /**
@@ -2598,11 +2799,15 @@ bool opcode_00ea(const ScriptArguments& args, const ScriptPlayer player, const S
     @arg radius Radius of goal
     @arg showMarker Show marker (True/False)
 */
-bool opcode_00eb(const ScriptArguments& args, const ScriptPlayer player, const ScriptCharacter character, ScriptVec2 radius, const ScriptBoolean showMarker) {
+bool opcode_00eb(const ScriptArguments& args, const ScriptPlayer player,
+                 const ScriptCharacter character, ScriptVec2 radius,
+                 const ScriptBoolean showMarker) {
     auto plyChar = player->getCharacter();
     auto condition = plyChar->getCurrentVehicle() != nullptr;
-    /// @todo if character is in vehicle, game uses vehicle position instead of character one
-    return script::objectInRadiusNear(args, plyChar, character, radius, showMarker, condition);
+    /// @todo if character is in vehicle, game uses vehicle position instead of
+    /// character one
+    return script::objectInRadiusNear(args, plyChar, character, radius,
+                                      showMarker, condition);
 }
 
 /**
@@ -2614,12 +2819,16 @@ bool opcode_00eb(const ScriptArguments& args, const ScriptPlayer player, const S
     @arg radius Radius of goal
     @arg showMarker Show marker (True/False)
 */
-bool opcode_00ec(const ScriptArguments& args, const ScriptCharacter character, ScriptVec2 center, ScriptVec2 radius, const ScriptBoolean showMarker) {
-    return script::objectInRadius(args, character.get(), center, radius, showMarker);
+bool opcode_00ec(const ScriptArguments& args, const ScriptCharacter character,
+                 ScriptVec2 center, ScriptVec2 radius,
+                 const ScriptBoolean showMarker) {
+    return script::objectInRadius(args, character.get(), center, radius,
+                                  showMarker);
 }
 
 /**
-    @brief   actor %1d% %6bin-sphere/%near_point_on_foot %2d% %3d% radius %4d% %5d%
+    @brief   actor %1d% %6bin-sphere/%near_point_on_foot %2d% %3d% radius %4d%
+   %5d%
 
     opcode 00ed
     @arg character Character/ped
@@ -2627,13 +2836,17 @@ bool opcode_00ec(const ScriptArguments& args, const ScriptCharacter character, S
     @arg radius Radius of goal
     @arg showMarker Show marker (True/False)
 */
-bool opcode_00ed(const ScriptArguments& args, const ScriptCharacter character, ScriptVec2 center, ScriptVec2 radius, const ScriptBoolean showMarker) {
+bool opcode_00ed(const ScriptArguments& args, const ScriptCharacter character,
+                 ScriptVec2 center, ScriptVec2 radius,
+                 const ScriptBoolean showMarker) {
     auto condition = character->getCurrentVehicle() == nullptr;
-    return script::objectInRadius(args, character.get(), center, radius, showMarker, condition);
+    return script::objectInRadius(args, character.get(), center, radius,
+                                  showMarker, condition);
 }
 
 /**
-    @brief   actor %1d% %6bin-sphere/%near_point_in_car %2d% %3d% radius %4d% %5d%
+    @brief   actor %1d% %6bin-sphere/%near_point_in_car %2d% %3d% radius %4d%
+   %5d%
 
     opcode 00ee
     @arg character Character/ped
@@ -2641,13 +2854,17 @@ bool opcode_00ed(const ScriptArguments& args, const ScriptCharacter character, S
     @arg radius Radius of goal
     @arg showMarker Show marker (True/False)
 */
-bool opcode_00ee(const ScriptArguments& args, const ScriptCharacter character, ScriptVec2 center, ScriptVec2 radius, const ScriptBoolean showMarker) {
+bool opcode_00ee(const ScriptArguments& args, const ScriptCharacter character,
+                 ScriptVec2 center, ScriptVec2 radius,
+                 const ScriptBoolean showMarker) {
     auto condition = character->getCurrentVehicle() != nullptr;
-    return script::objectInRadius(args, character.get(), center, radius, showMarker, condition);
+    return script::objectInRadius(args, character.get(), center, radius,
+                                  showMarker, condition);
 }
 
 /**
-    @brief   actor %1d% sphere %6bin-sphere/%near_point %2d% %3d% radius %4d% %5d%
+    @brief   actor %1d% sphere %6bin-sphere/%near_point %2d% %3d% radius %4d%
+   %5d%
 
     opcode 00ef
     @arg character Character/ped
@@ -2655,13 +2872,17 @@ bool opcode_00ee(const ScriptArguments& args, const ScriptCharacter character, S
     @arg radius Radius of goal
     @arg showMarker Show marker (True/False)
 */
-bool opcode_00ef(const ScriptArguments& args, const ScriptCharacter character, ScriptVec2 center, ScriptVec2 radius, const ScriptBoolean showMarker) {
+bool opcode_00ef(const ScriptArguments& args, const ScriptCharacter character,
+                 ScriptVec2 center, ScriptVec2 radius,
+                 const ScriptBoolean showMarker) {
     auto condition = character->isStopped();
-    return script::objectInRadius(args, character.get(), center, radius, showMarker, condition);
+    return script::objectInRadius(args, character.get(), center, radius,
+                                  showMarker, condition);
 }
 
 /**
-    @brief   actor %1d% stopped %6bin-sphere/%near_point_on_foot %2d% %3d% radius %4d% %5d%
+    @brief   actor %1d% stopped %6bin-sphere/%near_point_on_foot %2d% %3d%
+   radius %4d% %5d%
 
     opcode 00f0
     @arg character Character/ped
@@ -2669,13 +2890,18 @@ bool opcode_00ef(const ScriptArguments& args, const ScriptCharacter character, S
     @arg radius Radius of goal
     @arg showMarker Show marker (True/False)
 */
-bool opcode_00f0(const ScriptArguments& args, const ScriptCharacter character, ScriptVec2 center, ScriptVec2 radius, const ScriptBoolean showMarker) {
-    auto condition = character->isStopped() && character->getCurrentVehicle() == nullptr;
-    return script::objectInRadius(args, character.get(), center, radius, showMarker, condition);
+bool opcode_00f0(const ScriptArguments& args, const ScriptCharacter character,
+                 ScriptVec2 center, ScriptVec2 radius,
+                 const ScriptBoolean showMarker) {
+    auto condition =
+        character->isStopped() && character->getCurrentVehicle() == nullptr;
+    return script::objectInRadius(args, character.get(), center, radius,
+                                  showMarker, condition);
 }
 
 /**
-    @brief   actor %1d% stopped %6bin-sphere/%near_point_in_car %2d% %3d% radius %4d% %5d%
+    @brief   actor %1d% stopped %6bin-sphere/%near_point_in_car %2d% %3d% radius
+   %4d% %5d%
 
     opcode 00f1
     @arg character Character/ped
@@ -2683,13 +2909,18 @@ bool opcode_00f0(const ScriptArguments& args, const ScriptCharacter character, S
     @arg radius Radius of goal
     @arg showMarker Show marker (True/False)
 */
-bool opcode_00f1(const ScriptArguments& args, const ScriptCharacter character, ScriptVec2 center, ScriptVec2 radius, const ScriptBoolean showMarker) {
-    auto condition = character->isStopped() && character->getCurrentVehicle() != nullptr;
-    return script::objectInRadius(args, character.get(), center, radius, showMarker, condition);
+bool opcode_00f1(const ScriptArguments& args, const ScriptCharacter character,
+                 ScriptVec2 center, ScriptVec2 radius,
+                 const ScriptBoolean showMarker) {
+    auto condition =
+        character->isStopped() && character->getCurrentVehicle() != nullptr;
+    return script::objectInRadius(args, character.get(), center, radius,
+                                  showMarker, condition);
 }
 
 /**
-    @brief   locate_char_any_means_char_2d %1d% char %2d% radius %3d% %4d% sphere %5h%
+    @brief   locate_char_any_means_char_2d %1d% char %2d% radius %3d% %4d%
+   sphere %5h%
 
     opcode 00f2
     @arg character0 Character/ped
@@ -2697,9 +2928,13 @@ bool opcode_00f1(const ScriptArguments& args, const ScriptCharacter character, S
     @arg radius Radius of goal
     @arg showMarker Show marker (True/False)
 */
-bool opcode_00f2(const ScriptArguments& args, const ScriptCharacter character0, const ScriptCharacter character1, ScriptVec2 radius, const ScriptBoolean showMarker) {
-    /// @todo if characters are in vehicles, game uses vehicle positions instead of character ones
-    return script::objectInRadiusNear(args, character0, character1, radius, showMarker);
+bool opcode_00f2(const ScriptArguments& args, const ScriptCharacter character0,
+                 const ScriptCharacter character1, ScriptVec2 radius,
+                 const ScriptBoolean showMarker) {
+    /// @todo if characters are in vehicles, game uses vehicle positions instead
+    /// of character ones
+    return script::objectInRadiusNear(args, character0, character1, radius,
+                                      showMarker);
 }
 
 /**
@@ -2711,10 +2946,14 @@ bool opcode_00f2(const ScriptArguments& args, const ScriptCharacter character0, 
     @arg radius Radius of goal
     @arg showMarker Show marker (True/False)
 */
-bool opcode_00f3(const ScriptArguments& args, const ScriptCharacter character0, const ScriptCharacter character1, ScriptVec2 radius, const ScriptBoolean showMarker) {
+bool opcode_00f3(const ScriptArguments& args, const ScriptCharacter character0,
+                 const ScriptCharacter character1, ScriptVec2 radius,
+                 const ScriptBoolean showMarker) {
     auto condition = character0->getCurrentVehicle() == nullptr;
-    /// @todo if characters are in vehicles, game uses vehicle positions instead of character ones
-    return script::objectInRadiusNear(args, character0, character1, radius, showMarker, condition);
+    /// @todo if characters are in vehicles, game uses vehicle positions instead
+    /// of character ones
+    return script::objectInRadiusNear(args, character0, character1, radius,
+                                      showMarker, condition);
 }
 
 /**
@@ -2726,14 +2965,19 @@ bool opcode_00f3(const ScriptArguments& args, const ScriptCharacter character0, 
     @arg radius Radius of goal
     @arg showMarker Show marker (True/False)
 */
-bool opcode_00f4(const ScriptArguments& args, const ScriptCharacter character0, const ScriptCharacter character1, ScriptVec2 radius, const ScriptBoolean showMarker) {
+bool opcode_00f4(const ScriptArguments& args, const ScriptCharacter character0,
+                 const ScriptCharacter character1, ScriptVec2 radius,
+                 const ScriptBoolean showMarker) {
     auto condition = character0->getCurrentVehicle() != nullptr;
-    /// @todo if characters are in vehicles, game uses vehicle positions instead of character ones
-    return script::objectInRadiusNear(args, character0, character1, radius, showMarker, condition);
+    /// @todo if characters are in vehicles, game uses vehicle positions instead
+    /// of character ones
+    return script::objectInRadiusNear(args, character0, character1, radius,
+                                      showMarker, condition);
 }
 
 /**
-    @brief   player %1d% %8b:in-sphere/%near_point %2d% %3d% %4d% radius %5d% %6d% %7d%
+    @brief   player %1d% %8b:in-sphere/%near_point %2d% %3d% %4d% radius %5d%
+   %6d% %7d%
 
     opcode 00f5
     @arg player Player
@@ -2741,13 +2985,16 @@ bool opcode_00f4(const ScriptArguments& args, const ScriptCharacter character0, 
     @arg radius Radius of object
     @arg showMarker Show marker (True/False)
 */
-bool opcode_00f5(const ScriptArguments& args, const ScriptPlayer player, ScriptVec3 center, ScriptVec3 radius, const ScriptBoolean showMarker) {
+bool opcode_00f5(const ScriptArguments& args, const ScriptPlayer player,
+                 ScriptVec3 center, ScriptVec3 radius,
+                 const ScriptBoolean showMarker) {
     auto plyChar = player->getCharacter();
     return script::objectInRadius(args, plyChar, center, radius, showMarker);
 }
 
 /**
-    @brief   player %1d% %8b:in-sphere/%near_point_on_foot %2d% %3d% %4d% radius %5d% %6d% %7d%
+    @brief   player %1d% %8b:in-sphere/%near_point_on_foot %2d% %3d% %4d% radius
+   %5d% %6d% %7d%
 
     opcode 00f6
     @arg player Player
@@ -2755,14 +3002,18 @@ bool opcode_00f5(const ScriptArguments& args, const ScriptPlayer player, ScriptV
     @arg radius Radius of object
     @arg showMarker Show marker (True/False)
 */
-bool opcode_00f6(const ScriptArguments& args, const ScriptPlayer player, ScriptVec3 center, ScriptVec3 radius, const ScriptBoolean showMarker) {
+bool opcode_00f6(const ScriptArguments& args, const ScriptPlayer player,
+                 ScriptVec3 center, ScriptVec3 radius,
+                 const ScriptBoolean showMarker) {
     auto plyChar = player->getCharacter();
     auto condition = plyChar->getCurrentVehicle() == nullptr;
-    return script::objectInRadius(args, plyChar, center, radius, showMarker, condition);
+    return script::objectInRadius(args, plyChar, center, radius, showMarker,
+                                  condition);
 }
 
 /**
-    @brief   player %1d% sphere %8b% near_point_in_car %2d% %3d% %4d% radius %5d% %6d% %7d%
+    @brief   player %1d% sphere %8b% near_point_in_car %2d% %3d% %4d% radius
+   %5d% %6d% %7d%
 
     opcode 00f7
     @arg player Player
@@ -2770,14 +3021,18 @@ bool opcode_00f6(const ScriptArguments& args, const ScriptPlayer player, ScriptV
     @arg radius Radius of object
     @arg showMarker Show marker (True/False)
 */
-bool opcode_00f7(const ScriptArguments& args, const ScriptPlayer player, ScriptVec3 center, ScriptVec3 radius, const ScriptBoolean showMarker) {
+bool opcode_00f7(const ScriptArguments& args, const ScriptPlayer player,
+                 ScriptVec3 center, ScriptVec3 radius,
+                 const ScriptBoolean showMarker) {
     auto plyChar = player->getCharacter();
     auto condition = plyChar->getCurrentVehicle() != nullptr;
-    return script::objectInRadius(args, plyChar, center, radius, showMarker, condition);
+    return script::objectInRadius(args, plyChar, center, radius, showMarker,
+                                  condition);
 }
 
 /**
-    @brief   player %1d% stopped %8b:in-sphere/%near_point %2d% %3d% %4d% radius %5d% %6d% %7d%
+    @brief   player %1d% stopped %8b:in-sphere/%near_point %2d% %3d% %4d% radius
+   %5d% %6d% %7d%
 
     opcode 00f8
     @arg player Player
@@ -2785,14 +3040,18 @@ bool opcode_00f7(const ScriptArguments& args, const ScriptPlayer player, ScriptV
     @arg radius Radius of object
     @arg showMarker Show marker (True/False)
 */
-bool opcode_00f8(const ScriptArguments& args, const ScriptPlayer player, ScriptVec3 center, ScriptVec3 radius, const ScriptBoolean showMarker) {
+bool opcode_00f8(const ScriptArguments& args, const ScriptPlayer player,
+                 ScriptVec3 center, ScriptVec3 radius,
+                 const ScriptBoolean showMarker) {
     auto plyChar = player->getCharacter();
     auto condition = plyChar->isStopped();
-    return script::objectInRadius(args, plyChar, center, radius, showMarker, condition);
+    return script::objectInRadius(args, plyChar, center, radius, showMarker,
+                                  condition);
 }
 
 /**
-    @brief   player %1d% stopped %8b:in-sphere/%near_point_on_foot %2d% %3d% %4d% radius %5d% %6d% %7d%
+    @brief   player %1d% stopped %8b:in-sphere/%near_point_on_foot %2d% %3d%
+   %4d% radius %5d% %6d% %7d%
 
     opcode 00f9
     @arg player Player
@@ -2800,14 +3059,19 @@ bool opcode_00f8(const ScriptArguments& args, const ScriptPlayer player, ScriptV
     @arg radius Radius of object
     @arg showMarker Show marker (True/False)
 */
-bool opcode_00f9(const ScriptArguments& args, const ScriptPlayer player, ScriptVec3 center, ScriptVec3 radius, const ScriptBoolean showMarker) {
+bool opcode_00f9(const ScriptArguments& args, const ScriptPlayer player,
+                 ScriptVec3 center, ScriptVec3 radius,
+                 const ScriptBoolean showMarker) {
     auto plyChar = player->getCharacter();
-    auto condition = plyChar->isStopped() && plyChar->getCurrentVehicle() == nullptr;
-    return script::objectInRadius(args, plyChar, center, radius, showMarker, condition);
+    auto condition =
+        plyChar->isStopped() && plyChar->getCurrentVehicle() == nullptr;
+    return script::objectInRadius(args, plyChar, center, radius, showMarker,
+                                  condition);
 }
 
 /**
-    @brief   player %1d% stopped %8b:in-sphere/%near_point_in_car %2d% %3d% %4d% radius %5d% %6d% %7d%
+    @brief   player %1d% stopped %8b:in-sphere/%near_point_in_car %2d% %3d% %4d%
+   radius %5d% %6d% %7d%
 
     opcode 00fa
     @arg player Player
@@ -2815,10 +3079,14 @@ bool opcode_00f9(const ScriptArguments& args, const ScriptPlayer player, ScriptV
     @arg radius Radius of object
     @arg showMarker Show marker (True/False)
 */
-bool opcode_00fa(const ScriptArguments& args, const ScriptPlayer player, ScriptVec3 center, ScriptVec3 radius, const ScriptBoolean showMarker) {
+bool opcode_00fa(const ScriptArguments& args, const ScriptPlayer player,
+                 ScriptVec3 center, ScriptVec3 radius,
+                 const ScriptBoolean showMarker) {
     auto plyChar = player->getCharacter();
-    auto condition = plyChar->isStopped() && plyChar->getCurrentVehicle() != nullptr;
-    return script::objectInRadius(args, plyChar, center, radius, showMarker, condition);
+    auto condition =
+        plyChar->isStopped() && plyChar->getCurrentVehicle() != nullptr;
+    return script::objectInRadius(args, plyChar, center, radius, showMarker,
+                                  condition);
 }
 
 /**
@@ -2830,14 +3098,19 @@ bool opcode_00fa(const ScriptArguments& args, const ScriptPlayer player, ScriptV
     @arg radius Radius of goal
     @arg showMarker Show marker (True/False)
 */
-bool opcode_00fb(const ScriptArguments& args, const ScriptPlayer player, const ScriptCharacter character, ScriptVec3 radius, const ScriptBoolean showMarker) {
+bool opcode_00fb(const ScriptArguments& args, const ScriptPlayer player,
+                 const ScriptCharacter character, ScriptVec3 radius,
+                 const ScriptBoolean showMarker) {
     auto plyChar = player->getCharacter();
-    /// @todo if character is in vehicle, game uses vehicle position instead of character one
-    return script::objectInRadiusNear(args, plyChar, character, radius, showMarker);
+    /// @todo if character is in vehicle, game uses vehicle position instead of
+    /// character one
+    return script::objectInRadiusNear(args, plyChar, character, radius,
+                                      showMarker);
 }
 
 /**
-    @brief   player %1d% %6b:in-sphere/%near_actor %2d% on_foot radius %3d% %4d% %5d%
+    @brief   player %1d% %6b:in-sphere/%near_actor %2d% on_foot radius %3d% %4d%
+   %5d%
 
     opcode 00fc
     @arg player Player
@@ -2845,15 +3118,20 @@ bool opcode_00fb(const ScriptArguments& args, const ScriptPlayer player, const S
     @arg radius Radius of goal
     @arg showMarker Show marker (True/False)
 */
-bool opcode_00fc(const ScriptArguments& args, const ScriptPlayer player, const ScriptCharacter character, ScriptVec3 radius, const ScriptBoolean showMarker) {
+bool opcode_00fc(const ScriptArguments& args, const ScriptPlayer player,
+                 const ScriptCharacter character, ScriptVec3 radius,
+                 const ScriptBoolean showMarker) {
     auto plyChar = player->getCharacter();
     auto condition = plyChar->getCurrentVehicle() == nullptr;
-    /// @todo if character is in vehicle, game uses vehicle position instead of character one
-    return script::objectInRadiusNear(args, plyChar, character, radius, showMarker, condition);
+    /// @todo if character is in vehicle, game uses vehicle position instead of
+    /// character one
+    return script::objectInRadiusNear(args, plyChar, character, radius,
+                                      showMarker, condition);
 }
 
 /**
-    @brief   player %1d% %6b:in-sphere/%near_actor %2d% in_car radius %3d% %4d% %5d%
+    @brief   player %1d% %6b:in-sphere/%near_actor %2d% in_car radius %3d% %4d%
+   %5d%
 
     opcode 00fd
     @arg player Player
@@ -2861,15 +3139,20 @@ bool opcode_00fc(const ScriptArguments& args, const ScriptPlayer player, const S
     @arg radius Radius of goal
     @arg showMarker Show marker (True/False)
 */
-bool opcode_00fd(const ScriptArguments& args, const ScriptPlayer player, const ScriptCharacter character, ScriptVec3 radius, const ScriptBoolean showMarker) {
+bool opcode_00fd(const ScriptArguments& args, const ScriptPlayer player,
+                 const ScriptCharacter character, ScriptVec3 radius,
+                 const ScriptBoolean showMarker) {
     auto plyChar = player->getCharacter();
     auto condition = plyChar->getCurrentVehicle() != nullptr;
-    /// @todo if character is in vehicle, game uses vehicle position instead of character one
-    return script::objectInRadiusNear(args, plyChar, character, radius, showMarker, condition);
+    /// @todo if character is in vehicle, game uses vehicle position instead of
+    /// character one
+    return script::objectInRadiusNear(args, plyChar, character, radius,
+                                      showMarker, condition);
 }
 
 /**
-    @brief   actor %1d% %8bin-sphere/%near_point %2d% %3d% %4d% radius %5d% %6d% %7d%
+    @brief   actor %1d% %8bin-sphere/%near_point %2d% %3d% %4d% radius %5d% %6d%
+   %7d%
 
     opcode 00fe
     @arg player Player
@@ -2877,13 +3160,18 @@ bool opcode_00fd(const ScriptArguments& args, const ScriptPlayer player, const S
     @arg radius Radius of object
     @arg showMarker Show marker (True/False)
 */
-bool opcode_00fe(const ScriptArguments& args, const ScriptCharacter character, ScriptVec3 center, ScriptVec3 radius, const ScriptBoolean showMarker) {
-    /// @todo if character is in vehicle, game uses vehicle position instead of character one
-    return script::objectInRadius(args, character.get(), center, radius, showMarker);
+bool opcode_00fe(const ScriptArguments& args, const ScriptCharacter character,
+                 ScriptVec3 center, ScriptVec3 radius,
+                 const ScriptBoolean showMarker) {
+    /// @todo if character is in vehicle, game uses vehicle position instead of
+    /// character one
+    return script::objectInRadius(args, character.get(), center, radius,
+                                  showMarker);
 }
 
 /**
-    @brief   actor %1d% %8bin-sphere/%near_point_on_foot %2d% %3d% %4d% radius %5d% %6d% %7d%
+    @brief   actor %1d% %8bin-sphere/%near_point_on_foot %2d% %3d% %4d% radius
+   %5d% %6d% %7d%
 
     opcode 00ff
     @arg player Player
@@ -2891,14 +3179,19 @@ bool opcode_00fe(const ScriptArguments& args, const ScriptCharacter character, S
     @arg radius Radius of object
     @arg showMarker Show marker (True/False)
 */
-bool opcode_00ff(const ScriptArguments& args, const ScriptCharacter character, ScriptVec3 center, ScriptVec3 radius, const ScriptBoolean showMarker) {
+bool opcode_00ff(const ScriptArguments& args, const ScriptCharacter character,
+                 ScriptVec3 center, ScriptVec3 radius,
+                 const ScriptBoolean showMarker) {
     auto condition = character->getCurrentVehicle() == nullptr;
-    /// @todo if character is in vehicle, game uses vehicle position instead of character one
-    return script::objectInRadius(args, character.get(), center, radius, showMarker, condition);
+    /// @todo if character is in vehicle, game uses vehicle position instead of
+    /// character one
+    return script::objectInRadius(args, character.get(), center, radius,
+                                  showMarker, condition);
 }
 
 /**
-    @brief   actor %1d% near_point_in_car %2d% %3d% %4d% radius %5d% %6d% %7d% sphere %8h%
+    @brief   actor %1d% near_point_in_car %2d% %3d% %4d% radius %5d% %6d% %7d%
+   sphere %8h%
 
     opcode 0100
     @arg character Character/ped
@@ -2906,14 +3199,19 @@ bool opcode_00ff(const ScriptArguments& args, const ScriptCharacter character, S
     @arg radius Radius of object
     @arg showMarker Show marker (True/False)
 */
-bool opcode_0100(const ScriptArguments& args, const ScriptCharacter character, ScriptVec3 center, ScriptVec3 radius, const ScriptBoolean showMarker) {
+bool opcode_0100(const ScriptArguments& args, const ScriptCharacter character,
+                 ScriptVec3 center, ScriptVec3 radius,
+                 const ScriptBoolean showMarker) {
     auto condition = character->getCurrentVehicle() != nullptr;
-    /// @todo if character is in vehicle, game uses vehicle position instead of character one
-    return script::objectInRadius(args, character.get(), center, radius, showMarker, condition);
+    /// @todo if character is in vehicle, game uses vehicle position instead of
+    /// character one
+    return script::objectInRadius(args, character.get(), center, radius,
+                                  showMarker, condition);
 }
 
 /**
-    @brief   actor %1d% stopped_near_point %2d% %3d% %4d% radius %5d% %6d% %7d% sphere %8h%
+    @brief   actor %1d% stopped_near_point %2d% %3d% %4d% radius %5d% %6d% %7d%
+   sphere %8h%
 
     opcode 0101
     @arg character Character/ped
@@ -2921,14 +3219,19 @@ bool opcode_0100(const ScriptArguments& args, const ScriptCharacter character, S
     @arg radius Radius of object
     @arg showMarker Show marker (True/False)
 */
-bool opcode_0101(const ScriptArguments& args, const ScriptCharacter character, ScriptVec3 center, ScriptVec3 radius, const ScriptBoolean showMarker) {
+bool opcode_0101(const ScriptArguments& args, const ScriptCharacter character,
+                 ScriptVec3 center, ScriptVec3 radius,
+                 const ScriptBoolean showMarker) {
     auto condition = character->isStopped();
-    /// @todo if character is in vehicle, game uses vehicle position instead of character one
-    return script::objectInRadius(args, character.get(), center, radius, showMarker, condition);
+    /// @todo if character is in vehicle, game uses vehicle position instead of
+    /// character one
+    return script::objectInRadius(args, character.get(), center, radius,
+                                  showMarker, condition);
 }
 
 /**
-    @brief   actor %1d% stopped_near_point_on_foot %2d% %3d% %4d% radius %5d% %6d% %7d% sphere %8h%
+    @brief   actor %1d% stopped_near_point_on_foot %2d% %3d% %4d% radius %5d%
+   %6d% %7d% sphere %8h%
 
     opcode 0102
     @arg character Character/ped
@@ -2936,14 +3239,20 @@ bool opcode_0101(const ScriptArguments& args, const ScriptCharacter character, S
     @arg radius Radius of object
     @arg showMarker Show marker (True/False)
 */
-bool opcode_0102(const ScriptArguments& args, const ScriptCharacter character, ScriptVec3 center, ScriptVec3 radius, const ScriptBoolean showMarker) {
-    auto condition = character->isStopped() && character->getCurrentVehicle() == nullptr;
-    /// @todo if character is in vehicle, game uses vehicle position instead of character one
-    return script::objectInRadius(args, character.get(), center, radius, showMarker, condition);
+bool opcode_0102(const ScriptArguments& args, const ScriptCharacter character,
+                 ScriptVec3 center, ScriptVec3 radius,
+                 const ScriptBoolean showMarker) {
+    auto condition =
+        character->isStopped() && character->getCurrentVehicle() == nullptr;
+    /// @todo if character is in vehicle, game uses vehicle position instead of
+    /// character one
+    return script::objectInRadius(args, character.get(), center, radius,
+                                  showMarker, condition);
 }
 
 /**
-    @brief   actor %1d% stopped_near_point_in_car %2d% %3d% %4d% radius %5d% %6d% %7d% sphere %8d%
+    @brief   actor %1d% stopped_near_point_in_car %2d% %3d% %4d% radius %5d%
+   %6d% %7d% sphere %8d%
 
     opcode 0103
     @arg character Character/ped
@@ -2951,10 +3260,15 @@ bool opcode_0102(const ScriptArguments& args, const ScriptCharacter character, S
     @arg radius Radius of object
     @arg showMarker Show marker (True/False)
 */
-bool opcode_0103(const ScriptArguments& args, const ScriptCharacter character, ScriptVec3 center, ScriptVec3 radius, const ScriptBoolean showMarker) {
-    auto condition = character->isStopped() && character->getCurrentVehicle() != nullptr;
-    /// @todo if character is in vehicle, game uses vehicle position instead of character one
-    return script::objectInRadius(args, character.get(), center, radius, showMarker, condition);
+bool opcode_0103(const ScriptArguments& args, const ScriptCharacter character,
+                 ScriptVec3 center, ScriptVec3 radius,
+                 const ScriptBoolean showMarker) {
+    auto condition =
+        character->isStopped() && character->getCurrentVehicle() != nullptr;
+    /// @todo if character is in vehicle, game uses vehicle position instead of
+    /// character one
+    return script::objectInRadius(args, character.get(), center, radius,
+                                  showMarker, condition);
 }
 
 /**
@@ -2966,13 +3280,18 @@ bool opcode_0103(const ScriptArguments& args, const ScriptCharacter character, S
     @arg radius Radius of goal
     @arg showMarker Show marker (True/False)
 */
-bool opcode_0104(const ScriptArguments& args, const ScriptCharacter character0, const ScriptCharacter character1, ScriptVec3 radius, const ScriptBoolean showMarker) {
-    /// @todo if characters are in vehicles, game uses vehicle positions instead of character ones
-    return script::objectInRadiusNear(args, character0, character1, radius, showMarker);
+bool opcode_0104(const ScriptArguments& args, const ScriptCharacter character0,
+                 const ScriptCharacter character1, ScriptVec3 radius,
+                 const ScriptBoolean showMarker) {
+    /// @todo if characters are in vehicles, game uses vehicle positions instead
+    /// of character ones
+    return script::objectInRadiusNear(args, character0, character1, radius,
+                                      showMarker);
 }
 
 /**
-    @brief   actor %1d% near_actor_on_foot %2d% radius %3d% %4d% %5d% sphere %6h%
+    @brief   actor %1d% near_actor_on_foot %2d% radius %3d% %4d% %5d% sphere
+   %6h%
 
     opcode 0105
     @arg character0 Character/ped
@@ -2980,10 +3299,14 @@ bool opcode_0104(const ScriptArguments& args, const ScriptCharacter character0, 
     @arg radius Radius of goal
     @arg showMarker Show marker (True/False)
 */
-bool opcode_0105(const ScriptArguments& args, const ScriptCharacter character0, const ScriptCharacter character1, ScriptVec3 radius, const ScriptBoolean showMarker) {
+bool opcode_0105(const ScriptArguments& args, const ScriptCharacter character0,
+                 const ScriptCharacter character1, ScriptVec3 radius,
+                 const ScriptBoolean showMarker) {
     auto condition = character0->getCurrentVehicle() == nullptr;
-    /// @todo if characters are in vehicles, game uses vehicle positions instead of character ones
-    return script::objectInRadiusNear(args, character0, character1, radius, showMarker, condition);
+    /// @todo if characters are in vehicles, game uses vehicle positions instead
+    /// of character ones
+    return script::objectInRadiusNear(args, character0, character1, radius,
+                                      showMarker, condition);
 }
 
 /**
@@ -2995,10 +3318,14 @@ bool opcode_0105(const ScriptArguments& args, const ScriptCharacter character0, 
     @arg radius Radius of goal
     @arg showMarker Show marker (True/False)
 */
-bool opcode_0106(const ScriptArguments& args, const ScriptCharacter character0, const ScriptCharacter character1, ScriptVec3 radius, const ScriptBoolean showMarker) {
+bool opcode_0106(const ScriptArguments& args, const ScriptCharacter character0,
+                 const ScriptCharacter character1, ScriptVec3 radius,
+                 const ScriptBoolean showMarker) {
     auto condition = character0->getCurrentVehicle() != nullptr;
-    /// @todo if characters are in vehicles, game uses vehicle positions instead of character ones
-    return script::objectInRadiusNear(args, character0, character1, radius, showMarker, condition);
+    /// @todo if characters are in vehicles, game uses vehicle positions instead
+    /// of character ones
+    return script::objectInRadiusNear(args, character0, character1, radius,
+                                      showMarker, condition);
 }
 
 /**
@@ -3009,10 +3336,13 @@ bool opcode_0106(const ScriptArguments& args, const ScriptCharacter character0, 
     @arg coord Coordinates
     @arg object Object
 */
-void opcode_0107(const ScriptArguments& args, const ScriptModel model, ScriptVec3 coord, ScriptObject& object) {
-    // @todo calculate distance from centre of mass to base of model and apply it as spawnOffset
+void opcode_0107(const ScriptArguments& args, const ScriptModel model,
+                 ScriptVec3 coord, ScriptObject& object) {
+    // @todo calculate distance from centre of mass to base of model and apply
+    // it as spawnOffset
     coord = script::getGround(args, coord);
-    object = args.getWorld()->createInstance(script::getModel(args, model), coord);
+    object =
+        args.getWorld()->createInstance(script::getModel(args, model), coord);
     object->setStatic(true);
 }
 
@@ -3031,9 +3361,10 @@ void opcode_0108(const ScriptArguments& args, const ScriptObject object) {
 
     opcode 0109
     @arg player Player
-    @arg money 
+    @arg money
 */
-void opcode_0109(const ScriptArguments& args, const ScriptPlayer player, const ScriptInt money) {
+void opcode_0109(const ScriptArguments& args, const ScriptPlayer player,
+                 const ScriptInt money) {
     RW_UNUSED(player);
     args.getState()->playerInfo.money += money;
 }
@@ -3043,9 +3374,10 @@ void opcode_0109(const ScriptArguments& args, const ScriptPlayer player, const S
 
     opcode 010a
     @arg player Player
-    @arg money 
+    @arg money
 */
-bool opcode_010a(const ScriptArguments& args, const ScriptPlayer player, const ScriptInt money) {
+bool opcode_010a(const ScriptArguments& args, const ScriptPlayer player,
+                 const ScriptInt money) {
     RW_UNUSED(player);
     return args.getState()->playerInfo.money > money;
 }
@@ -3055,9 +3387,10 @@ bool opcode_010a(const ScriptArguments& args, const ScriptPlayer player, const S
 
     opcode 010b
     @arg player Player
-    @arg money 
+    @arg money
 */
-void opcode_010b(const ScriptArguments& args, const ScriptPlayer player, ScriptInt& money) {
+void opcode_010b(const ScriptArguments& args, const ScriptPlayer player,
+                 ScriptInt& money) {
     RW_UNUSED(player);
     money = args.getState()->playerInfo.money;
 }
@@ -3068,9 +3401,10 @@ void opcode_010b(const ScriptArguments& args, const ScriptPlayer player, ScriptI
     opcode 010c
     @arg player Player
     @arg coord Coordinates
-    @arg arg5 
+    @arg arg5
 */
-void opcode_010c(const ScriptArguments& args, const ScriptPlayer player, ScriptVec3 coord, const ScriptFloat arg5) {
+void opcode_010c(const ScriptArguments& args, const ScriptPlayer player,
+                 ScriptVec3 coord, const ScriptFloat arg5) {
     RW_UNIMPLEMENTED_OPCODE(0x010c);
     RW_UNUSED(player);
     RW_UNUSED(coord);
@@ -3083,9 +3417,10 @@ void opcode_010c(const ScriptArguments& args, const ScriptPlayer player, ScriptV
 
     opcode 010d
     @arg player Player
-    @arg arg2 
+    @arg arg2
 */
-void opcode_010d(const ScriptArguments& args, const ScriptPlayer player, const ScriptInt arg2) {
+void opcode_010d(const ScriptArguments& args, const ScriptPlayer player,
+                 const ScriptInt arg2) {
     RW_UNIMPLEMENTED_OPCODE(0x010d);
     RW_UNUSED(player);
     RW_UNUSED(arg2);
@@ -3097,9 +3432,10 @@ void opcode_010d(const ScriptArguments& args, const ScriptPlayer player, const S
 
     opcode 010e
     @arg player Player
-    @arg arg2 
+    @arg arg2
 */
-void opcode_010e(const ScriptArguments& args, const ScriptPlayer player, const ScriptInt arg2) {
+void opcode_010e(const ScriptArguments& args, const ScriptPlayer player,
+                 const ScriptInt arg2) {
     RW_UNIMPLEMENTED_OPCODE(0x010e);
     RW_UNUSED(player);
     RW_UNUSED(arg2);
@@ -3111,9 +3447,10 @@ void opcode_010e(const ScriptArguments& args, const ScriptPlayer player, const S
 
     opcode 010f
     @arg player Player
-    @arg arg2 
+    @arg arg2
 */
-bool opcode_010f(const ScriptArguments& args, const ScriptPlayer player, const ScriptInt arg2) {
+bool opcode_010f(const ScriptArguments& args, const ScriptPlayer player,
+                 const ScriptInt arg2) {
     RW_UNIMPLEMENTED_OPCODE(0x010f);
     RW_UNUSED(player);
     RW_UNUSED(arg2);
@@ -3158,9 +3495,10 @@ bool opcode_0112(const ScriptArguments& args) {
     opcode 0113
     @arg player Player
     @arg weaponID Weapon ID
-    @arg arg3 
+    @arg arg3
 */
-void opcode_0113(const ScriptArguments& args, const ScriptPlayer player, const ScriptWeaponType weaponID, const ScriptInt arg3) {
+void opcode_0113(const ScriptArguments& args, const ScriptPlayer player,
+                 const ScriptWeaponType weaponID, const ScriptInt arg3) {
     RW_UNIMPLEMENTED_OPCODE(0x0113);
     RW_UNUSED(player);
     RW_UNUSED(weaponID);
@@ -3174,9 +3512,10 @@ void opcode_0113(const ScriptArguments& args, const ScriptPlayer player, const S
     opcode 0114
     @arg character Character/ped
     @arg weaponID Weapon ID
-    @arg arg3 
+    @arg arg3
 */
-void opcode_0114(const ScriptArguments& args, const ScriptCharacter character, const ScriptWeaponType weaponID, const ScriptInt arg3) {
+void opcode_0114(const ScriptArguments& args, const ScriptCharacter character,
+                 const ScriptWeaponType weaponID, const ScriptInt arg3) {
     RW_UNIMPLEMENTED_OPCODE(0x0114);
     RW_UNUSED(character);
     RW_UNUSED(weaponID);
@@ -3204,7 +3543,7 @@ bool opcode_0117(const ScriptArguments& args, const ScriptPlayer player) {
 bool opcode_0118(const ScriptArguments& args, const ScriptCharacter character) {
     RW_UNUSED(args);
     if (character) {
-    	return !character->isAlive();
+        return !character->isAlive();
     }
     return true;
 }
@@ -3227,10 +3566,11 @@ bool opcode_0119(const ScriptArguments& args, const ScriptVehicle vehicle) {
     @brief set_actor %1d% search_threat %2i%
 
     opcode 011a
-    @arg character 
-    @arg arg2 
+    @arg character
+    @arg arg2
 */
-void opcode_011a(const ScriptArguments& args, const ScriptCharacter character, const ScriptThreat arg2) {
+void opcode_011a(const ScriptArguments& args, const ScriptCharacter character,
+                 const ScriptThreat arg2) {
     RW_UNIMPLEMENTED_OPCODE(0x011a);
     RW_UNUSED(character);
     RW_UNUSED(arg2);
@@ -3241,7 +3581,7 @@ void opcode_011a(const ScriptArguments& args, const ScriptCharacter character, c
     @brief actor %1d% clear_objective
 
     opcode 011c
-    @arg character 
+    @arg character
 */
 void opcode_011c(const ScriptArguments& args, const ScriptCharacter character) {
     RW_UNIMPLEMENTED_OPCODE(0x011c);
@@ -3256,7 +3596,8 @@ void opcode_011c(const ScriptArguments& args, const ScriptCharacter character) {
     @arg player Player
     @arg areaName Area name
 */
-bool opcode_0121(const ScriptArguments& args, const ScriptPlayer player, const ScriptString areaName) {
+bool opcode_0121(const ScriptArguments& args, const ScriptPlayer player,
+                 const ScriptString areaName) {
     return script::objectInZone(args, player->getCharacter(), areaName);
 }
 
@@ -3280,7 +3621,8 @@ bool opcode_0122(const ScriptArguments& args, const ScriptPlayer player) {
     @arg character Character/ped
     @arg player Player
 */
-bool opcode_0123(const ScriptArguments& args, const ScriptCharacter character, const ScriptPlayer player) {
+bool opcode_0123(const ScriptArguments& args, const ScriptCharacter character,
+                 const ScriptPlayer player) {
     RW_UNIMPLEMENTED_OPCODE(0x0123);
     RW_UNUSED(character);
     RW_UNUSED(player);
@@ -3309,7 +3651,9 @@ bool opcode_0126(const ScriptArguments& args, const ScriptCharacter character) {
     @arg model Car/vehicle
     @arg character Character/ped
 */
-void opcode_0129(const ScriptArguments& args, const ScriptVehicle vehicle, const ScriptPedType pedType, const ScriptModelID model, ScriptCharacter& character) {
+void opcode_0129(const ScriptArguments& args, const ScriptVehicle vehicle,
+                 const ScriptPedType pedType, const ScriptModelID model,
+                 ScriptCharacter& character) {
     RW_UNIMPLEMENTED_OPCODE(0x0129);
     RW_UNUSED(pedType);
     RW_UNIMPLEMENTED("character type");
@@ -3330,10 +3674,11 @@ void opcode_0129(const ScriptArguments& args, const ScriptVehicle vehicle, const
     @brief put_player %1d% at %2d% %3d% %4d% and_remove_from_car
 
     opcode 012a
-    @arg player 
+    @arg player
     @arg coord
 */
-void opcode_012a(const ScriptArguments& args, const ScriptPlayer player, const ScriptVec3 coord) {
+void opcode_012a(const ScriptArguments& args, const ScriptPlayer player,
+                 const ScriptVec3 coord) {
     RW_UNUSED(args);
     auto plyChar = player->getCharacter();
     plyChar->setCurrentVehicle(nullptr, 0);
@@ -3358,9 +3703,10 @@ bool opcode_0130(const ScriptArguments& args, const ScriptPlayer player) {
 
     opcode 0135
     @arg vehicle Car/vehicle
-    @arg arg2 
+    @arg arg2
 */
-void opcode_0135(const ScriptArguments& args, const ScriptVehicle vehicle, const ScriptCarLock arg2) {
+void opcode_0135(const ScriptArguments& args, const ScriptVehicle vehicle,
+                 const ScriptCarLock arg2) {
     RW_UNIMPLEMENTED_OPCODE(0x0135);
     RW_UNUSED(vehicle);
     RW_UNUSED(arg2);
@@ -3371,12 +3717,14 @@ void opcode_0135(const ScriptArguments& args, const ScriptVehicle vehicle, const
     @brief  shake_cam_with_point %1d% xyz %2% %3% %4%
 
     opcode 0136
-    @arg arg1 
-    @arg arg2 
-    @arg arg3 
-    @arg arg4 
+    @arg arg1
+    @arg arg2
+    @arg arg3
+    @arg arg4
 */
-void opcode_0136(const ScriptArguments& args, const ScriptInt arg1, const ScriptFloat arg2, const ScriptFloat arg3, const ScriptFloat arg4) {
+void opcode_0136(const ScriptArguments& args, const ScriptInt arg1,
+                 const ScriptFloat arg2, const ScriptFloat arg3,
+                 const ScriptFloat arg4) {
     RW_UNIMPLEMENTED_OPCODE(0x0136);
     RW_UNUSED(arg1);
     RW_UNUSED(arg2);
@@ -3392,7 +3740,8 @@ void opcode_0136(const ScriptArguments& args, const ScriptInt arg1, const Script
     @arg vehicle Car/vehicle
     @arg model Model ID
 */
-bool opcode_0137(const ScriptArguments& args, const ScriptVehicle vehicle, const ScriptModelID model) {
+bool opcode_0137(const ScriptArguments& args, const ScriptVehicle vehicle,
+                 const ScriptModelID model) {
     RW_UNUSED(args);
     return vehicle->getVehicle()->id() == model;
 }
@@ -3411,7 +3760,8 @@ bool opcode_0149(const ScriptArguments& args, const ScriptVehicle vehicle) {
 }
 
 /**
-    @brief %13d% = init_car_generator %5o% %6d% %7d% force_spawn %8d% alarm %9d% door_lock %10d% min_delay %11d% max_delay %12d% at %1d% %2d% %3d% angle %4d%
+    @brief %13d% = init_car_generator %5o% %6d% %7d% force_spawn %8d% alarm %9d%
+   door_lock %10d% min_delay %11d% max_delay %12d% at %1d% %2d% %3d% angle %4d%
 
     opcode 014b
     @arg coord Coordinates
@@ -3426,12 +3776,17 @@ bool opcode_0149(const ScriptArguments& args, const ScriptVehicle vehicle) {
     @arg time1 Time (ms)
     @arg carGen Car generator
 */
-void opcode_014b(const ScriptArguments& args, ScriptVec3 coord, const ScriptFloat angle, const ScriptModelID model, const ScriptCarColour carColour0, const ScriptCarColour carColour1, const ScriptBoolean force, const ScriptInt alarmChance, const ScriptInt lockChance, const ScriptInt time0, const ScriptInt time1, ScriptVehicleGenerator& carGen) {
+void opcode_014b(const ScriptArguments& args, ScriptVec3 coord,
+                 const ScriptFloat angle, const ScriptModelID model,
+                 const ScriptCarColour carColour0,
+                 const ScriptCarColour carColour1, const ScriptBoolean force,
+                 const ScriptInt alarmChance, const ScriptInt lockChance,
+                 const ScriptInt time0, const ScriptInt time1,
+                 ScriptVehicleGenerator& carGen) {
     auto& vehicleGenerators = args.getWorld()->state->vehicleGenerators;
-    vehicleGenerators.emplace_back(
-        vehicleGenerators.size(),
-        coord, angle, model, carColour0, carColour1, force, alarmChance,
-        lockChance, time0, time1, 0, 0);
+    vehicleGenerators.emplace_back(vehicleGenerators.size(), coord, angle,
+                                   model, carColour0, carColour1, force,
+                                   alarmChance, lockChance, time0, time1, 0, 0);
     /// @todo fix assignment here
     carGen = &(args.getWorld()->state->vehicleGenerators.back());
 }
@@ -3441,9 +3796,10 @@ void opcode_014b(const ScriptArguments& args, ScriptVec3 coord, const ScriptFloa
 
     opcode 014c
     @arg carGen Car generator
-    @arg arg2 
+    @arg arg2
 */
-void opcode_014c(const ScriptArguments& args, const ScriptVehicleGenerator carGen, const ScriptInt arg2) {
+void opcode_014c(const ScriptArguments& args,
+                 const ScriptVehicleGenerator carGen, const ScriptInt arg2) {
     carGen->remainingSpawns = arg2;
     RW_UNUSED(args);
 }
@@ -3452,12 +3808,14 @@ void opcode_014c(const ScriptArguments& args, const ScriptVehicleGenerator carGe
     @brief text_pager %1g% time_per_char %2d% ms unknown_flags %3d% %4d%
 
     opcode 014d
-    @arg arg1 
-    @arg arg2 
-    @arg arg3 
-    @arg arg4 
+    @arg arg1
+    @arg arg2
+    @arg arg3
+    @arg arg4
 */
-void opcode_014d(const ScriptArguments& args, const ScriptString arg1, const ScriptInt arg2, const ScriptInt arg3, const ScriptInt arg4) {
+void opcode_014d(const ScriptArguments& args, const ScriptString arg1,
+                 const ScriptInt arg2, const ScriptInt arg3,
+                 const ScriptInt arg4) {
     RW_UNIMPLEMENTED_OPCODE(0x014d);
     RW_UNUSED(arg1);
     RW_UNUSED(arg2);
@@ -3491,7 +3849,7 @@ void opcode_014f(const ScriptArguments& args, ScriptInt& unused) {
     @brief remove_status_text %1d%
 
     opcode 0151
-    @arg arg1G 
+    @arg arg1G
 */
 void opcode_0151(const ScriptArguments& args, ScriptInt& arg1G) {
     RW_UNIMPLEMENTED_OPCODE(0x0151);
@@ -3500,28 +3858,37 @@ void opcode_0151(const ScriptArguments& args, ScriptInt& arg1G) {
 }
 
 /**
-    @brief set_zone_car_info %1s% %2bday/night% %3h% %4h% %5h% %6h% %7h% %8h% %9h% %10h% %11h% %12h% %13h% %14h% %15h% %16h% %17h%
+    @brief set_zone_car_info %1s% %2bday/night% %3h% %4h% %5h% %6h% %7h% %8h%
+   %9h% %10h% %11h% %12h% %13h% %14h% %15h% %16h% %17h%
 
     opcode 0152
-    @arg arg1 
-    @arg arg2 
-    @arg arg3 
-    @arg arg4 
-    @arg arg5 
-    @arg arg6 
-    @arg arg7 
-    @arg arg8 
-    @arg arg9 
-    @arg arg10 
-    @arg arg11 
-    @arg arg12 
-    @arg arg13 
-    @arg arg14 
-    @arg arg15 
-    @arg arg16 
-    @arg arg17 
+    @arg arg1
+    @arg arg2
+    @arg arg3
+    @arg arg4
+    @arg arg5
+    @arg arg6
+    @arg arg7
+    @arg arg8
+    @arg arg9
+    @arg arg10
+    @arg arg11
+    @arg arg12
+    @arg arg13
+    @arg arg14
+    @arg arg15
+    @arg arg16
+    @arg arg17
 */
-void opcode_0152(const ScriptArguments& args, const ScriptString arg1, const ScriptInt arg2, const ScriptInt arg3, const ScriptInt arg4, const ScriptInt arg5, const ScriptInt arg6, const ScriptInt arg7, const ScriptInt arg8, const ScriptInt arg9, const ScriptInt arg10, const ScriptInt arg11, const ScriptInt arg12, const ScriptInt arg13, const ScriptInt arg14, const ScriptInt arg15, const ScriptInt arg16, const ScriptInt arg17) {
+void opcode_0152(const ScriptArguments& args, const ScriptString arg1,
+                 const ScriptInt arg2, const ScriptInt arg3,
+                 const ScriptInt arg4, const ScriptInt arg5,
+                 const ScriptInt arg6, const ScriptInt arg7,
+                 const ScriptInt arg8, const ScriptInt arg9,
+                 const ScriptInt arg10, const ScriptInt arg11,
+                 const ScriptInt arg12, const ScriptInt arg13,
+                 const ScriptInt arg14, const ScriptInt arg15,
+                 const ScriptInt arg16, const ScriptInt arg17) {
     RW_UNUSED(arg2);
     RW_UNUSED(arg3);
     RW_UNUSED(arg4);
@@ -3540,14 +3907,14 @@ void opcode_0152(const ScriptArguments& args, const ScriptString arg1, const Scr
     RW_UNUSED(arg17);
     auto zone = args.getWorld()->data->findZone(arg1);
     if (zone) {
-    	auto density = (zone->gangCarDensityNight);
-    	if (arg2) {
-    		density = zone->gangCarDensityDay;
-    	}
-    	auto count = args.getParameters().size();
-    	for (auto g = 0u; g < count - 2; ++g) {
-    		*density++ = args[g+2].integerValue();
-    	}
+        auto density = (zone->gangCarDensityNight);
+        if (arg2) {
+            density = zone->gangCarDensityDay;
+        }
+        auto count = args.getParameters().size();
+        for (auto g = 0u; g < count - 2; ++g) {
+            *density++ = args[g + 2].integerValue();
+        }
     }
 }
 
@@ -3558,7 +3925,8 @@ void opcode_0152(const ScriptArguments& args, const ScriptString arg1, const Scr
     @arg character Character/ped
     @arg areaName Area name
 */
-bool opcode_0154(const ScriptArguments& args, const ScriptCharacter character, const ScriptString areaName) {
+bool opcode_0154(const ScriptArguments& args, const ScriptCharacter character,
+                 const ScriptString areaName) {
     return script::objectInZone(args, character.get(), areaName);
 }
 
@@ -3566,11 +3934,12 @@ bool opcode_0154(const ScriptArguments& args, const ScriptCharacter character, c
     @brief set_zone_ped_density %1z% %2b:day/night% %3d%
 
     opcode 0156
-    @arg arg1 
-    @arg arg2 
-    @arg arg3 
+    @arg arg1
+    @arg arg2
+    @arg arg3
 */
-void opcode_0156(const ScriptArguments& args, const ScriptString arg1, const ScriptInt arg2, const ScriptInt arg3) {
+void opcode_0156(const ScriptArguments& args, const ScriptString arg1,
+                 const ScriptInt arg2, const ScriptInt arg3) {
     RW_UNIMPLEMENTED_OPCODE(0x0156);
     RW_UNUSED(arg1);
     RW_UNUSED(arg2);
@@ -3643,22 +4012,28 @@ void opcode_015a(const ScriptArguments& args) {
 }
 
 /**
-    @brief set_zone_gang_info %1s% %2bday/night% %3h% %4h% %5h% %6h% %7h% %8h% %9h% %10h% %11h%
+    @brief set_zone_gang_info %1s% %2bday/night% %3h% %4h% %5h% %6h% %7h% %8h%
+   %9h% %10h% %11h%
 
     opcode 015c
     @arg areaName Area name
     @arg arg2 Boolean true/false
-    @arg arg3 
-    @arg arg4 
-    @arg arg5 
-    @arg arg6 
-    @arg arg7 
-    @arg arg8 
-    @arg arg9 
-    @arg arg10 
-    @arg arg11 
+    @arg arg3
+    @arg arg4
+    @arg arg5
+    @arg arg6
+    @arg arg7
+    @arg arg8
+    @arg arg9
+    @arg arg10
+    @arg arg11
 */
-void opcode_015c(const ScriptArguments& args, const ScriptString areaName, const ScriptBoolean arg2, const ScriptInt arg3, const ScriptInt arg4, const ScriptInt arg5, const ScriptInt arg6, const ScriptInt arg7, const ScriptInt arg8, const ScriptInt arg9, const ScriptInt arg10, const ScriptInt arg11) {
+void opcode_015c(const ScriptArguments& args, const ScriptString areaName,
+                 const ScriptBoolean arg2, const ScriptInt arg3,
+                 const ScriptInt arg4, const ScriptInt arg5,
+                 const ScriptInt arg6, const ScriptInt arg7,
+                 const ScriptInt arg8, const ScriptInt arg9,
+                 const ScriptInt arg10, const ScriptInt arg11) {
     RW_UNUSED(arg2);
     RW_UNUSED(arg3);
     RW_UNUSED(arg4);
@@ -3671,14 +4046,14 @@ void opcode_015c(const ScriptArguments& args, const ScriptString areaName, const
     RW_UNUSED(arg11);
     auto zone = args.getWorld()->data->findZone(areaName);
     if (zone) {
-    	auto density = (zone->gangCarDensityNight);
-    	if (arg2) {
-    		density = zone->gangCarDensityDay;
-    	}
-    	auto count = args.getParameters().size();
-    	for (auto g = 0u; g < count - 2; ++g) {
-    		*density++ = args[g+2].integerValue();
-    	}
+        auto density = (zone->gangCarDensityNight);
+        if (arg2) {
+            density = zone->gangCarDensityDay;
+        }
+        auto count = args.getParameters().size();
+        for (auto g = 0u; g < count - 2; ++g) {
+            *density++ = args[g + 2].integerValue();
+        }
     }
 }
 
@@ -3686,7 +4061,7 @@ void opcode_015c(const ScriptArguments& args, const ScriptString areaName, const
     @brief set_time_scale %1d%
 
     opcode 015d
-    @arg scale 
+    @arg scale
 */
 void opcode_015d(const ScriptArguments& args, const ScriptFloat scale) {
     args.getState()->basic.timeScale = scale;
@@ -3696,7 +4071,7 @@ void opcode_015d(const ScriptArguments& args, const ScriptFloat scale) {
     @brief   car %1d% wheels_on_ground
 
     opcode 015e
-    @arg vehicle 
+    @arg vehicle
 */
 bool opcode_015e(const ScriptArguments& args, const ScriptVehicle vehicle) {
     RW_UNIMPLEMENTED_OPCODE(0x015e);
@@ -3712,7 +4087,8 @@ bool opcode_015e(const ScriptArguments& args, const ScriptVehicle vehicle) {
     @arg coord Coordinates
     @arg rotation Rotation
 */
-void opcode_015f(const ScriptArguments& args, ScriptVec3 coord, ScriptVec3 rotation) {
+void opcode_015f(const ScriptArguments& args, ScriptVec3 coord,
+                 ScriptVec3 rotation) {
     args.getWorld()->state->cameraFixed = true;
     args.getWorld()->state->cameraPosition = coord;
     args.getWorld()->state->cameraRotation = glm::quat(rotation);
@@ -3723,29 +4099,32 @@ void opcode_015f(const ScriptArguments& args, ScriptVec3 coord, ScriptVec3 rotat
 
     opcode 0160
     @arg coord Coordinates
-    @arg arg4 
+    @arg arg4
 */
-void opcode_0160(const ScriptArguments& args, ScriptVec3 coord, const ScriptChangeCamMode arg4) {
+void opcode_0160(const ScriptArguments& args, ScriptVec3 coord,
+                 const ScriptChangeCamMode arg4) {
     RW_UNUSED(arg4);
     RW_UNIMPLEMENTED("camera switch mode");
 
-    auto direction = glm::normalize(coord - args.getWorld()->state->cameraPosition);
-    auto right = glm::normalize(glm::cross(glm::vec3(0.f, 0.f, 1.f), direction));
+    auto direction =
+        glm::normalize(coord - args.getWorld()->state->cameraPosition);
+    auto right =
+        glm::normalize(glm::cross(glm::vec3(0.f, 0.f, 1.f), direction));
     auto up = glm::normalize(glm::cross(direction, right));
-    
+
     glm::mat3 v;
     v[0][0] = direction.x;
     v[0][1] = right.x;
     v[0][2] = up.x;
-    
+
     v[1][0] = direction.y;
     v[1][1] = right.y;
     v[1][2] = up.y;
-    
+
     v[2][0] = direction.z;
     v[2][1] = right.z;
     v[2][2] = up.z;
-    
+
     args.getWorld()->state->cameraRotation = glm::inverse(glm::quat_cast(v));
 }
 
@@ -3754,15 +4133,17 @@ void opcode_0160(const ScriptArguments& args, ScriptVec3 coord, const ScriptChan
 
     opcode 0161
     @arg vehicle Car/vehicle
-    @arg color Blip color 
+    @arg color Blip color
     @arg display Blip display mode
     @arg blip Blip
 */
-void opcode_0161(const ScriptArguments& args, const ScriptVehicle vehicle, const ScriptBlipColour colour, const ScriptBlipDisplay display, ScriptBlip& blip) {
+void opcode_0161(const ScriptArguments& args, const ScriptVehicle vehicle,
+                 const ScriptBlipColour colour, const ScriptBlipDisplay display,
+                 ScriptBlip& blip) {
     auto& data = script::createObjectBlip(args, vehicle);
     data.colour = colour;
     /// @todo change ScriptBlipDisplay to BlipData::DisplayMode
-    data.display = static_cast <BlipData::DisplayMode> (display);
+    data.display = static_cast<BlipData::DisplayMode>(display);
     blip = &data;
 }
 
@@ -3778,11 +4159,13 @@ void opcode_0161(const ScriptArguments& args, const ScriptVehicle vehicle, const
     @arg display Blip display mode
     @arg blip Created blip
 */
-void opcode_0162(const ScriptArguments& args, const ScriptCharacter character, const ScriptBlipColour colour, const ScriptBlipDisplay display, ScriptBlip& blip) {
+void opcode_0162(const ScriptArguments& args, const ScriptCharacter character,
+                 const ScriptBlipColour colour, const ScriptBlipDisplay display,
+                 ScriptBlip& blip) {
     auto& data = script::createObjectBlip(args, character);
     data.colour = colour;
     /// @todo change ScriptBlipDisplay to BlipData::DisplayMode
-    data.display = static_cast <BlipData::DisplayMode> (display);
+    data.display = static_cast<BlipData::DisplayMode>(display);
     blip = &data;
 }
 
@@ -3799,11 +4182,13 @@ void opcode_0162(const ScriptArguments& args, const ScriptCharacter character, c
     @arg display Blip display mode
     @arg blip Created blip
 */
-void opcode_0163(const ScriptArguments& args, const ScriptObject instance, const ScriptBlipColour colour, const ScriptBlipDisplay display, ScriptBlip& blip) {
+void opcode_0163(const ScriptArguments& args, const ScriptObject instance,
+                 const ScriptBlipColour colour, const ScriptBlipDisplay display,
+                 ScriptBlip& blip) {
     auto& data = script::createObjectBlip(args, instance);
     data.colour = colour;
     /// @todo change ScriptBlipDisplay to BlipData::DisplayMode
-    data.display = static_cast <BlipData::DisplayMode> (display);
+    data.display = static_cast<BlipData::DisplayMode>(display);
     blip = &data;
 }
 
@@ -3816,7 +4201,7 @@ void opcode_0163(const ScriptArguments& args, const ScriptObject instance, const
 void opcode_0164(const ScriptArguments& args, const ScriptBlip blip) {
     RW_CHECK(blip.get(), "Blip is null");
     if (blip) {
-    	args.getWorld()->state->removeBlip(blip->id);
+        args.getWorld()->state->removeBlip(blip->id);
     }
 }
 
@@ -3827,7 +4212,8 @@ void opcode_0164(const ScriptArguments& args, const ScriptBlip blip) {
     @arg blip Blip
     @arg colour Blip colour
 */
-void opcode_0165(const ScriptArguments& args, const ScriptBlip blip, const ScriptBlipColour colour) {
+void opcode_0165(const ScriptArguments& args, const ScriptBlip blip,
+                 const ScriptBlipColour colour) {
     RW_UNUSED(args);
     blip->colour = colour;
 }
@@ -3839,7 +4225,8 @@ void opcode_0165(const ScriptArguments& args, const ScriptBlip blip, const Scrip
     @arg blip Blip
     @arg brightness Blip brightness
 */
-void opcode_0166(const ScriptArguments& args, const ScriptBlip blip, const ScriptInt brightness) {
+void opcode_0166(const ScriptArguments& args, const ScriptBlip blip,
+                 const ScriptInt brightness) {
     RW_UNUSED(args);
     blip->brightness = brightness;
 }
@@ -3853,11 +4240,14 @@ void opcode_0166(const ScriptArguments& args, const ScriptBlip blip, const Scrip
     @arg display Blip display mode
     @arg blip Blip
 */
-void opcode_0167(const ScriptArguments& args, ScriptVec3 coord, const ScriptBlipColour colour, const ScriptBlipDisplay display, ScriptBlip& blip) {
-    auto& data = script::createBlip(args, script::getGround(args, coord), BlipData::Coord);
+void opcode_0167(const ScriptArguments& args, ScriptVec3 coord,
+                 const ScriptBlipColour colour, const ScriptBlipDisplay display,
+                 ScriptBlip& blip) {
+    auto& data = script::createBlip(args, script::getGround(args, coord),
+                                    BlipData::Coord);
     data.colour = colour;
     /// @todo change ScriptBlipDisplay to BlipData::DisplayMode
-    data.display = static_cast <BlipData::DisplayMode> (display);
+    data.display = static_cast<BlipData::DisplayMode>(display);
     blip = &data;
 }
 
@@ -3868,7 +4258,8 @@ void opcode_0167(const ScriptArguments& args, ScriptVec3 coord, const ScriptBlip
     @arg blip Blip
     @arg size Blip size
 */
-void opcode_0168(const ScriptArguments& args, const ScriptBlip blip, const ScriptInt size) {
+void opcode_0168(const ScriptArguments& args, const ScriptBlip blip,
+                 const ScriptInt size) {
     RW_UNUSED(args);
     blip->size = size;
 }
@@ -3890,7 +4281,8 @@ void opcode_0169(const ScriptArguments& args, ScriptRGB colour) {
     @arg time Time (ms)
     @arg fadeIn Boolean true/false
 */
-void opcode_016a(const ScriptArguments& args, const ScriptInt time, const ScriptBoolean fadeIn) {
+void opcode_016a(const ScriptArguments& args, const ScriptInt time,
+                 const ScriptBoolean fadeIn) {
     args.getState()->fade(time / 1000.f, fadeIn);
 }
 
@@ -3910,7 +4302,8 @@ bool opcode_016b(const ScriptArguments& args) {
     @arg coord Coordinates
     @arg angle Angle
 */
-void opcode_016c(const ScriptArguments& args, ScriptVec3 coord, const ScriptFloat heading) {
+void opcode_016c(const ScriptArguments& args, ScriptVec3 coord,
+                 const ScriptFloat heading) {
     coord = script::getGround(args, coord);
     args.getState()->addHospitalRestart(glm::vec4(coord, heading));
 }
@@ -3922,7 +4315,8 @@ void opcode_016c(const ScriptArguments& args, ScriptVec3 coord, const ScriptFloa
     @arg coord Coordinates
     @arg angle Angle
 */
-void opcode_016d(const ScriptArguments& args, ScriptVec3 coord, const ScriptFloat heading) {
+void opcode_016d(const ScriptArguments& args, ScriptVec3 coord,
+                 const ScriptFloat heading) {
     coord = script::getGround(args, coord);
     args.getState()->addPoliceRestart(glm::vec4(coord, heading));
 }
@@ -3934,7 +4328,8 @@ void opcode_016d(const ScriptArguments& args, ScriptVec3 coord, const ScriptFloa
     @arg coord Coordinates
     @arg angle Angle
 */
-void opcode_016e(const ScriptArguments& args, ScriptVec3 coord, const ScriptFloat heading) {
+void opcode_016e(const ScriptArguments& args, ScriptVec3 coord,
+                 const ScriptFloat heading) {
     coord = script::getGround(args, coord);
     args.getState()->overrideRestart(glm::vec4(coord, heading));
 }
@@ -3943,14 +4338,17 @@ void opcode_016e(const ScriptArguments& args, ScriptVec3 coord, const ScriptFloa
     @brief create_particle %1a% %5d% %6d% %7d% %8d% %9d% %10d% at %2d% %3d% %4d%
 
     opcode 016f
-    @arg arg1 
+    @arg arg1
     @arg coord Coordinates
     @arg angle Angle
-    @arg arg6 
-    @arg arg7 
+    @arg arg6
+    @arg arg7
     @arg colour Colour (0-255)
 */
-void opcode_016f(const ScriptArguments& args, const ScriptShadow arg1, ScriptVec3 coord, const ScriptFloat angle, const ScriptFloat arg6, const ScriptInt arg7, ScriptRGB colour) {
+void opcode_016f(const ScriptArguments& args, const ScriptShadow arg1,
+                 ScriptVec3 coord, const ScriptFloat angle,
+                 const ScriptFloat arg6, const ScriptInt arg7,
+                 ScriptRGB colour) {
     RW_UNIMPLEMENTED_OPCODE(0x016f);
     RW_UNUSED(arg1);
     RW_UNUSED(coord);
@@ -3968,7 +4366,8 @@ void opcode_016f(const ScriptArguments& args, const ScriptShadow arg1, ScriptVec
     @arg player Player
     @arg angle Angle
 */
-void opcode_0170(const ScriptArguments& args, const ScriptPlayer player, ScriptFloat& angle) {
+void opcode_0170(const ScriptArguments& args, const ScriptPlayer player,
+                 ScriptFloat& angle) {
     RW_UNUSED(args);
     angle = player->getCharacter()->getHeading();
 }
@@ -3980,7 +4379,8 @@ void opcode_0170(const ScriptArguments& args, const ScriptPlayer player, ScriptF
     @arg player Player
     @arg angle Angle
 */
-void opcode_0171(const ScriptArguments& args, const ScriptPlayer player, const ScriptFloat angle) {
+void opcode_0171(const ScriptArguments& args, const ScriptPlayer player,
+                 const ScriptFloat angle) {
     RW_UNUSED(args);
     player->getCharacter()->setHeading(angle);
 }
@@ -3992,7 +4392,8 @@ void opcode_0171(const ScriptArguments& args, const ScriptPlayer player, const S
     @arg character Character/ped
     @arg angle Angle
 */
-void opcode_0172(const ScriptArguments& args, const ScriptCharacter character, ScriptFloat& angle) {
+void opcode_0172(const ScriptArguments& args, const ScriptCharacter character,
+                 ScriptFloat& angle) {
     RW_UNUSED(args);
     angle = character->getHeading();
 }
@@ -4004,7 +4405,8 @@ void opcode_0172(const ScriptArguments& args, const ScriptCharacter character, S
     @arg character Character/ped
     @arg angle Angle
 */
-void opcode_0173(const ScriptArguments& args, const ScriptCharacter character, const ScriptFloat angle) {
+void opcode_0173(const ScriptArguments& args, const ScriptCharacter character,
+                 const ScriptFloat angle) {
     RW_UNUSED(args);
     character->setHeading(angle);
 }
@@ -4016,7 +4418,8 @@ void opcode_0173(const ScriptArguments& args, const ScriptCharacter character, c
     @arg vehicle Car/vehicle
     @arg angle Angle
 */
-void opcode_0174(const ScriptArguments& args, const ScriptVehicle vehicle, ScriptFloat& angle) {
+void opcode_0174(const ScriptArguments& args, const ScriptVehicle vehicle,
+                 ScriptFloat& angle) {
     RW_UNUSED(args);
     angle = vehicle->getHeading();
 }
@@ -4028,7 +4431,8 @@ void opcode_0174(const ScriptArguments& args, const ScriptVehicle vehicle, Scrip
     @arg vehicle Car/vehicle
     @arg angle Angle
 */
-void opcode_0175(const ScriptArguments& args, const ScriptVehicle vehicle, const ScriptFloat angle) {
+void opcode_0175(const ScriptArguments& args, const ScriptVehicle vehicle,
+                 const ScriptFloat angle) {
     RW_UNUSED(args);
     vehicle->setHeading(angle);
 }
@@ -4040,7 +4444,8 @@ void opcode_0175(const ScriptArguments& args, const ScriptVehicle vehicle, const
     @arg object Object
     @arg angle Angle
 */
-void opcode_0176(const ScriptArguments& args, const ScriptObject object, ScriptFloat& angle) {
+void opcode_0176(const ScriptArguments& args, const ScriptObject object,
+                 ScriptFloat& angle) {
     RW_UNUSED(args);
     angle = object->getHeading();
 }
@@ -4052,7 +4457,8 @@ void opcode_0176(const ScriptArguments& args, const ScriptObject object, ScriptF
     @arg object Object
     @arg angle Angle
 */
-void opcode_0177(const ScriptArguments& args, const ScriptObject object, const ScriptFloat angle) {
+void opcode_0177(const ScriptArguments& args, const ScriptObject object,
+                 const ScriptFloat angle) {
     RW_UNUSED(args);
     object->setHeading(angle);
 }
@@ -4064,7 +4470,8 @@ void opcode_0177(const ScriptArguments& args, const ScriptObject object, const S
     @arg player Player
     @arg object Object
 */
-bool opcode_0178(const ScriptArguments& args, const ScriptPlayer player, const ScriptObject object) {
+bool opcode_0178(const ScriptArguments& args, const ScriptPlayer player,
+                 const ScriptObject object) {
     RW_UNIMPLEMENTED_OPCODE(0x0178);
     RW_UNUSED(player);
     RW_UNUSED(object);
@@ -4079,7 +4486,8 @@ bool opcode_0178(const ScriptArguments& args, const ScriptPlayer player, const S
     @arg character Character/ped
     @arg object Object
 */
-bool opcode_0179(const ScriptArguments& args, const ScriptCharacter character, const ScriptObject object) {
+bool opcode_0179(const ScriptArguments& args, const ScriptCharacter character,
+                 const ScriptObject object) {
     RW_UNIMPLEMENTED_OPCODE(0x0179);
     RW_UNUSED(character);
     RW_UNUSED(object);
@@ -4108,9 +4516,10 @@ void opcode_017a(const ScriptArguments& args, const ScriptPlayer player,
     opcode 017b
     @arg character Character/ped
     @arg weaponID Weapon ID
-    @arg arg3 
+    @arg arg3
 */
-void opcode_017b(const ScriptArguments& args, const ScriptCharacter character, const ScriptWeaponType weaponID, const ScriptInt arg3) {
+void opcode_017b(const ScriptArguments& args, const ScriptCharacter character,
+                 const ScriptWeaponType weaponID, const ScriptInt arg3) {
     RW_UNIMPLEMENTED_OPCODE(0x017b);
     RW_UNUSED(character);
     RW_UNUSED(weaponID);
@@ -4122,7 +4531,7 @@ void opcode_017b(const ScriptArguments& args, const ScriptCharacter character, c
     @brief declare_mission_flag %1d%
 
     opcode 0180
-    @arg arg1G 
+    @arg arg1G
 */
 void opcode_0180(const ScriptArguments& args, ScriptInt& arg1G) {
     args.getState()->scriptOnMissionFlag = &arg1G;
@@ -4132,10 +4541,11 @@ void opcode_0180(const ScriptArguments& args, ScriptInt& arg1G) {
     @brief declare_mission_flag_for_contact %1d% as %2d%
 
     opcode 0181
-    @arg arg1 
-    @arg arg2G 
+    @arg arg1
+    @arg arg2G
 */
-void opcode_0181(const ScriptArguments& args, const ScriptContact arg1, ScriptInt& arg2G) {
+void opcode_0181(const ScriptArguments& args, const ScriptContact arg1,
+                 ScriptInt& arg2G) {
     auto& c = args.getState()->scriptContacts.at(arg1);
     c.onMissionOffset = args.getVM()->getGlobalOffset(arg2G);
 }
@@ -4144,10 +4554,11 @@ void opcode_0181(const ScriptArguments& args, const ScriptContact arg1, ScriptIn
     @brief contact %1d% base_brief = %2d%
 
     opcode 0182
-    @arg arg1 
-    @arg arg2 
+    @arg arg1
+    @arg arg2
 */
-void opcode_0182(const ScriptArguments& args, const ScriptContact arg1, const ScriptInt arg2) {
+void opcode_0182(const ScriptArguments& args, const ScriptContact arg1,
+                 const ScriptInt arg2) {
     auto& c = args.getState()->scriptContacts.at(arg1);
     c.baseBrief = arg2;
 }
@@ -4157,9 +4568,10 @@ void opcode_0182(const ScriptArguments& args, const ScriptContact arg1, const Sc
 
     opcode 0183
     @arg player Player
-    @arg value 
+    @arg value
 */
-bool opcode_0183(const ScriptArguments& args, const ScriptPlayer player, const ScriptInt value) {
+bool opcode_0183(const ScriptArguments& args, const ScriptPlayer player,
+                 const ScriptInt value) {
     RW_UNUSED(args);
     return player->getCharacter()->getCurrentState().health > value;
 }
@@ -4169,9 +4581,10 @@ bool opcode_0183(const ScriptArguments& args, const ScriptPlayer player, const S
 
     opcode 0184
     @arg character Character/ped
-    @arg value 
+    @arg value
 */
-bool opcode_0184(const ScriptArguments& args, const ScriptCharacter character, const ScriptInt value) {
+bool opcode_0184(const ScriptArguments& args, const ScriptCharacter character,
+                 const ScriptInt value) {
     RW_UNUSED(args);
     return character->getCurrentState().health > value;
 }
@@ -4181,9 +4594,10 @@ bool opcode_0184(const ScriptArguments& args, const ScriptCharacter character, c
 
     opcode 0185
     @arg vehicle Car/vehicle
-    @arg arg2 
+    @arg arg2
 */
-bool opcode_0185(const ScriptArguments& args, const ScriptVehicle vehicle, const ScriptInt arg2) {
+bool opcode_0185(const ScriptArguments& args, const ScriptVehicle vehicle,
+                 const ScriptInt arg2) {
     RW_UNUSED(args);
     return vehicle->getHealth() > arg2;
 }
@@ -4195,7 +4609,8 @@ bool opcode_0185(const ScriptArguments& args, const ScriptVehicle vehicle, const
     @arg vehicle Car/vehicle
     @arg blip Blip
 */
-void opcode_0186(const ScriptArguments& args, const ScriptVehicle vehicle, ScriptBlip& blip) {
+void opcode_0186(const ScriptArguments& args, const ScriptVehicle vehicle,
+                 ScriptBlip& blip) {
     auto& data = script::createObjectBlip(args, vehicle);
     blip = &data;
 }
@@ -4207,7 +4622,8 @@ void opcode_0186(const ScriptArguments& args, const ScriptVehicle vehicle, Scrip
     @arg character Character/ped
     @arg blip Blip
 */
-void opcode_0187(const ScriptArguments& args, const ScriptCharacter character, ScriptBlip& blip) {
+void opcode_0187(const ScriptArguments& args, const ScriptCharacter character,
+                 ScriptBlip& blip) {
     auto& data = script::createObjectBlip(args, character);
     blip = &data;
 }
@@ -4219,7 +4635,8 @@ void opcode_0187(const ScriptArguments& args, const ScriptCharacter character, S
     @arg object Character/ped
     @arg blip Blip
 */
-void opcode_0188(const ScriptArguments& args, const ScriptObject object, ScriptBlip& blip) {
+void opcode_0188(const ScriptArguments& args, const ScriptObject object,
+                 ScriptBlip& blip) {
     auto& data = script::createObjectBlip(args, object);
     blip = &data;
 }
@@ -4231,8 +4648,10 @@ void opcode_0188(const ScriptArguments& args, const ScriptObject object, ScriptB
     @arg coord Coordinates
     @arg blip Blip
 */
-void opcode_0189(const ScriptArguments& args, const ScriptVec3 coord, ScriptBlip& blip) {
-    auto& data = script::createBlip(args, script::getGround(args, coord), BlipData::Contact);
+void opcode_0189(const ScriptArguments& args, const ScriptVec3 coord,
+                 ScriptBlip& blip) {
+    auto& data = script::createBlip(args, script::getGround(args, coord),
+                                    BlipData::Contact);
     blip = &data;
 }
 
@@ -4243,8 +4662,10 @@ void opcode_0189(const ScriptArguments& args, const ScriptVec3 coord, ScriptBlip
     @arg coord Coordinates
     @arg blip Blip
 */
-void opcode_018a(const ScriptArguments& args, const ScriptVec3 coord, ScriptBlip& blip) {
-    auto& data = script::createBlip(args, script::getGround(args, coord), BlipData::Coord);
+void opcode_018a(const ScriptArguments& args, const ScriptVec3 coord,
+                 ScriptBlip& blip) {
+    auto& data = script::createBlip(args, script::getGround(args, coord),
+                                    BlipData::Coord);
     blip = &data;
 }
 
@@ -4255,21 +4676,22 @@ void opcode_018a(const ScriptArguments& args, const ScriptVec3 coord, ScriptBlip
     @arg blip Blip
     @arg display Blip display mode
 */
-void opcode_018b(const ScriptArguments& args, const ScriptBlip blip, const ScriptBlipDisplay display) {
+void opcode_018b(const ScriptArguments& args, const ScriptBlip blip,
+                 const ScriptBlipDisplay display) {
     RW_UNUSED(args);
     switch (display) {
-    default:
-    	blip->display = BlipData::Hide;
-    	break;
-    case 1:
-    	blip->display = BlipData::MarkerOnly;
-    	break;
-    case 2:
-    	blip->display = BlipData::RadarOnly;
-    	break;
-    case 3:
-    	blip->display = BlipData::ShowBoth;
-    	break;
+        default:
+            blip->display = BlipData::Hide;
+            break;
+        case 1:
+            blip->display = BlipData::MarkerOnly;
+            break;
+        case 2:
+            blip->display = BlipData::RadarOnly;
+            break;
+        case 3:
+            blip->display = BlipData::ShowBoth;
+            break;
     }
 }
 
@@ -4278,9 +4700,10 @@ void opcode_018b(const ScriptArguments& args, const ScriptBlip blip, const Scrip
 
     opcode 018c
     @arg coord Coordinates
-    @arg sound 
+    @arg sound
 */
-void opcode_018c(const ScriptArguments& args, ScriptVec3 coord, const ScriptSoundType sound) {
+void opcode_018c(const ScriptArguments& args, ScriptVec3 coord,
+                 const ScriptSoundType sound) {
     auto world = args.getWorld();
     auto metaData = getSoundInstanceData(sound);
     auto name = world->sound.createSfxInstance(metaData->sfx);
@@ -4292,10 +4715,11 @@ void opcode_018c(const ScriptArguments& args, ScriptVec3 coord, const ScriptSoun
 
     opcode 018d
     @arg coord Coordinates
-    @arg sound0 
-    @arg sound1 
+    @arg sound0
+    @arg sound1
 */
-void opcode_018d(const ScriptArguments& args, ScriptVec3 coord, const ScriptSoundType sound0, ScriptSound& sound1) {
+void opcode_018d(const ScriptArguments& args, ScriptVec3 coord,
+                 const ScriptSoundType sound0, ScriptSound& sound1) {
     auto world = args.getWorld();
     auto metaData = getSoundInstanceData(sound0);
     auto bufferName = world->sound.createSfxInstance(metaData->sfx);
@@ -4307,7 +4731,7 @@ void opcode_018d(const ScriptArguments& args, ScriptVec3 coord, const ScriptSoun
     @brief stop_sound %1d%
 
     opcode 018e
-    @arg sound 
+    @arg sound
 */
 void opcode_018e(const ScriptArguments& args, const ScriptSound sound) {
     RW_UNUSED(args);
@@ -4382,7 +4806,8 @@ void opcode_0193(const ScriptArguments& args, const ScriptCharacter character) {
     @arg character Character/ped
     @arg coord Coordinates
 */
-void opcode_0194(const ScriptArguments& args, const ScriptCharacter character, ScriptVec3 coord) {
+void opcode_0194(const ScriptArguments& args, const ScriptCharacter character,
+                 ScriptVec3 coord) {
     RW_UNIMPLEMENTED_OPCODE(0x0194);
     RW_UNUSED(character);
     RW_UNUSED(coord);
@@ -4393,13 +4818,15 @@ void opcode_0194(const ScriptArguments& args, const ScriptCharacter character, S
     @brief set_actor %1d% objective3 %2d% %3d% %4d% %5d%
 
     opcode 0195
-    @arg character 
-    @arg arg2 
-    @arg arg3 
-    @arg arg4 
-    @arg arg5 
+    @arg character
+    @arg arg2
+    @arg arg3
+    @arg arg4
+    @arg arg5
 */
-void opcode_0195(const ScriptArguments& args, const ScriptCharacter character, const ScriptFloat arg2, const ScriptFloat arg3, const ScriptFloat arg4, const ScriptFloat arg5) {
+void opcode_0195(const ScriptArguments& args, const ScriptCharacter character,
+                 const ScriptFloat arg2, const ScriptFloat arg3,
+                 const ScriptFloat arg4, const ScriptFloat arg5) {
     RW_UNIMPLEMENTED_OPCODE(0x0195);
     RW_UNUSED(character);
     RW_UNUSED(arg2);
@@ -4413,7 +4840,7 @@ void opcode_0195(const ScriptArguments& args, const ScriptCharacter character, c
     @brief actor %1d% objective5
 
     opcode 0196
-    @arg character 
+    @arg character
 */
 void opcode_0196(const ScriptArguments& args, const ScriptCharacter character) {
     RW_UNIMPLEMENTED_OPCODE(0x0196);
@@ -4430,9 +4857,12 @@ void opcode_0196(const ScriptArguments& args, const ScriptCharacter character) {
     @arg coord1 Coordinates
     @arg arg6 Boolean true/false
 */
-bool opcode_0197(const ScriptArguments& args, const ScriptPlayer player, const ScriptVec2 coord0, const ScriptVec2 coord1, const ScriptBoolean arg6) {
+bool opcode_0197(const ScriptArguments& args, const ScriptPlayer player,
+                 const ScriptVec2 coord0, const ScriptVec2 coord1,
+                 const ScriptBoolean arg6) {
     auto condition = player->getCharacter()->getCurrentVehicle() == nullptr;
-    return script::objectInArea(args, player->getCharacter(), coord0, coord1, arg6, condition);
+    return script::objectInArea(args, player->getCharacter(), coord0, coord1,
+                                arg6, condition);
 }
 
 /**
@@ -4444,9 +4874,12 @@ bool opcode_0197(const ScriptArguments& args, const ScriptPlayer player, const S
     @arg coord1 Coordinates
     @arg arg6 Boolean true/false
 */
-bool opcode_0198(const ScriptArguments& args, const ScriptPlayer player, const ScriptVec2 coord0, const ScriptVec2 coord1, const ScriptBoolean arg6) {
+bool opcode_0198(const ScriptArguments& args, const ScriptPlayer player,
+                 const ScriptVec2 coord0, const ScriptVec2 coord1,
+                 const ScriptBoolean arg6) {
     auto condition = player->getCharacter()->getCurrentVehicle() != nullptr;
-    return script::objectInArea(args, player->getCharacter(), coord0, coord1, arg6, condition);
+    return script::objectInArea(args, player->getCharacter(), coord0, coord1,
+                                arg6, condition);
 }
 
 /**
@@ -4458,106 +4891,141 @@ bool opcode_0198(const ScriptArguments& args, const ScriptPlayer player, const S
     @arg coord1 Coordinates
     @arg arg6 Boolean true/false
 */
-bool opcode_0199(const ScriptArguments& args, const ScriptPlayer player, const ScriptVec2 coord0, const ScriptVec2 coord1, const ScriptBoolean arg6) {
-    return script::objectInArea(args, player->getCharacter(), coord0, coord1, arg6);
+bool opcode_0199(const ScriptArguments& args, const ScriptPlayer player,
+                 const ScriptVec2 coord0, const ScriptVec2 coord1,
+                 const ScriptBoolean arg6) {
+    return script::objectInArea(args, player->getCharacter(), coord0, coord1,
+                                arg6);
 }
 
 /**
-    @brief   player %1d% stopped %6b:in-sphere/%in_rectangle_on_foot %2d% %3d% %4d% %5d%
+    @brief   player %1d% stopped %6b:in-sphere/%in_rectangle_on_foot %2d% %3d%
+   %4d% %5d%
 
     opcode 019a
-    @arg player 
-    @arg coord0 
-    @arg coord1 
-    @arg arg6 
+    @arg player
+    @arg coord0
+    @arg coord1
+    @arg arg6
 */
-bool opcode_019a(const ScriptArguments& args, const ScriptPlayer player, const ScriptVec2 coord0, const ScriptVec2 coord1, const ScriptInt arg6) {
-    auto condition = player->getCharacter()->getCurrentVehicle() == nullptr && player->getCharacter()->isStopped(); 
-    return script::objectInArea(args, player->getCharacter(), coord0, coord1, arg6, condition);
+bool opcode_019a(const ScriptArguments& args, const ScriptPlayer player,
+                 const ScriptVec2 coord0, const ScriptVec2 coord1,
+                 const ScriptInt arg6) {
+    auto condition = player->getCharacter()->getCurrentVehicle() == nullptr &&
+                     player->getCharacter()->isStopped();
+    return script::objectInArea(args, player->getCharacter(), coord0, coord1,
+                                arg6, condition);
 }
 
 /**
-    @brief   player %1d% stopped %6b:in-sphere/%in_rectangle_in_car %2d% %3d% %4d% %5d%
+    @brief   player %1d% stopped %6b:in-sphere/%in_rectangle_in_car %2d% %3d%
+   %4d% %5d%
 
     opcode 019b
-    @arg player 
-    @arg coord0 
-    @arg coord1 
-    @arg arg6 
+    @arg player
+    @arg coord0
+    @arg coord1
+    @arg arg6
 */
-bool opcode_019b(const ScriptArguments& args, const ScriptPlayer player, const ScriptVec2 coord0, const ScriptVec2 coord1, const ScriptInt arg6) {
-    auto condition = player->getCharacter()->getCurrentVehicle() != nullptr && player->getCharacter()->isStopped(); 
-    return script::objectInArea(args, player->getCharacter(), coord0, coord1, arg6, condition);
+bool opcode_019b(const ScriptArguments& args, const ScriptPlayer player,
+                 const ScriptVec2 coord0, const ScriptVec2 coord1,
+                 const ScriptInt arg6) {
+    auto condition = player->getCharacter()->getCurrentVehicle() != nullptr &&
+                     player->getCharacter()->isStopped();
+    return script::objectInArea(args, player->getCharacter(), coord0, coord1,
+                                arg6, condition);
 }
 
 /**
-    @brief   player %1d% %8b:in-sphere/%in_cube_on_foot %2d% %3d% %4d% %5d% %6d% %7d%
+    @brief   player %1d% %8b:in-sphere/%in_cube_on_foot %2d% %3d% %4d% %5d% %6d%
+   %7d%
 
     opcode 019c
-    @arg player 
-    @arg coord0 
-    @arg coord1 
-    @arg arg8 
+    @arg player
+    @arg coord0
+    @arg coord1
+    @arg arg8
 */
-bool opcode_019c(const ScriptArguments& args, const ScriptPlayer player, const ScriptVec3 coord0, const ScriptVec3 coord1, const ScriptInt arg8) {
+bool opcode_019c(const ScriptArguments& args, const ScriptPlayer player,
+                 const ScriptVec3 coord0, const ScriptVec3 coord1,
+                 const ScriptInt arg8) {
     auto condition = player->getCharacter()->getCurrentVehicle() == nullptr;
-    return script::objectInArea(args, player->getCharacter(), coord0, coord1, arg8, condition);
+    return script::objectInArea(args, player->getCharacter(), coord0, coord1,
+                                arg8, condition);
 }
 
 /**
-    @brief   player %1d% %8b:in-sphere/%in_cube_in_car %2d% %3d% %4d% %5d% %6d% %7d%
+    @brief   player %1d% %8b:in-sphere/%in_cube_in_car %2d% %3d% %4d% %5d% %6d%
+   %7d%
 
     opcode 019d
-    @arg player 
-    @arg coord0 
-    @arg coord1 
-    @arg arg8 
+    @arg player
+    @arg coord0
+    @arg coord1
+    @arg arg8
 */
-bool opcode_019d(const ScriptArguments& args, const ScriptPlayer player, const ScriptVec3 coord0, const ScriptVec3 coord1, const ScriptInt arg8) {
+bool opcode_019d(const ScriptArguments& args, const ScriptPlayer player,
+                 const ScriptVec3 coord0, const ScriptVec3 coord1,
+                 const ScriptInt arg8) {
     auto condition = player->getCharacter()->getCurrentVehicle() != nullptr;
-    return script::objectInArea(args, player->getCharacter(), coord0, coord1, arg8, condition);
+    return script::objectInArea(args, player->getCharacter(), coord0, coord1,
+                                arg8, condition);
 }
 
 /**
-    @brief   player %1d% stopped %8b:in-sphere/%in_cube %2d% %3d% %4d% %5d% %6d% %7d%
+    @brief   player %1d% stopped %8b:in-sphere/%in_cube %2d% %3d% %4d% %5d% %6d%
+   %7d%
 
     opcode 019e
-    @arg player 
+    @arg player
     @arg coord0
     @arg coord1
-    @arg arg8 
+    @arg arg8
 */
-bool opcode_019e(const ScriptArguments& args, const ScriptPlayer player, const ScriptVec3 coord0, const ScriptVec3 coord1, const ScriptInt arg8) {
+bool opcode_019e(const ScriptArguments& args, const ScriptPlayer player,
+                 const ScriptVec3 coord0, const ScriptVec3 coord1,
+                 const ScriptInt arg8) {
     auto condition = player->getCharacter()->isStopped();
-    return script::objectInArea(args, player->getCharacter(), coord0, coord1, arg8, condition);
+    return script::objectInArea(args, player->getCharacter(), coord0, coord1,
+                                arg8, condition);
 }
 
 /**
-    @brief   player %1d% stopped %8b:in-sphere/%in_cube_on_foot %2d% %3d% %4d% %5d% %6d% %7d%
+    @brief   player %1d% stopped %8b:in-sphere/%in_cube_on_foot %2d% %3d% %4d%
+   %5d% %6d% %7d%
 
     opcode 019f
-    @arg player 
+    @arg player
     @arg coord0
     @arg coord1
-    @arg arg8 
+    @arg arg8
 */
-bool opcode_019f(const ScriptArguments& args, const ScriptPlayer player, const ScriptVec3 coord0, const ScriptVec3 coord1, const ScriptInt arg8) {
-    auto condition = player->getCharacter()->getCurrentVehicle() == nullptr && player->getCharacter()->isStopped();
-    return script::objectInArea(args, player->getCharacter(), coord0, coord1, arg8, condition);
+bool opcode_019f(const ScriptArguments& args, const ScriptPlayer player,
+                 const ScriptVec3 coord0, const ScriptVec3 coord1,
+                 const ScriptInt arg8) {
+    auto condition = player->getCharacter()->getCurrentVehicle() == nullptr &&
+                     player->getCharacter()->isStopped();
+    return script::objectInArea(args, player->getCharacter(), coord0, coord1,
+                                arg8, condition);
 }
 
 /**
-    @brief   player %1d% stopped %8b:in-sphere/%in_cube_in_car %2d% %3d% %4d% %5d% %6d% %7d%
+    @brief   player %1d% stopped %8b:in-sphere/%in_cube_in_car %2d% %3d% %4d%
+   %5d% %6d% %7d%
 
     opcode 01a0
-    @arg player 
+    @arg player
     @arg coord0
     @arg coord1
-    @arg arg8 
+    @arg arg8
 */
-bool opcode_01a0(const ScriptArguments& args, const ScriptPlayer player, const ScriptVec3 coord0, const ScriptVec3 coord1, const ScriptInt arg8) {
-    auto condition = player->getCharacter()->getCurrentVehicle() != nullptr && player->getCharacter()->isStopped();
-    return script::objectInArea(args, player->getCharacter(), coord0, coord1, arg8, condition);
+bool opcode_01a0(const ScriptArguments& args, const ScriptPlayer player,
+                 const ScriptVec3 coord0, const ScriptVec3 coord1,
+                 const ScriptInt arg8) {
+    auto condition = player->getCharacter()->getCurrentVehicle() != nullptr &&
+                     player->getCharacter()->isStopped();
+    return script::objectInArea(args, player->getCharacter(), coord0, coord1,
+                                arg8, condition);
 }
 
 /**
@@ -4569,9 +5037,12 @@ bool opcode_01a0(const ScriptArguments& args, const ScriptPlayer player, const S
     @arg coord1 Coordinates
     @arg arg6 Boolean true/false
 */
-bool opcode_01a1(const ScriptArguments& args, const ScriptCharacter character, const ScriptVec2 coord0, const ScriptVec2 coord1, const ScriptBoolean arg6) {
+bool opcode_01a1(const ScriptArguments& args, const ScriptCharacter character,
+                 const ScriptVec2 coord0, const ScriptVec2 coord1,
+                 const ScriptBoolean arg6) {
     auto condition = character->getCurrentVehicle() == nullptr;
-    return script::objectInArea(args, character, coord0, coord1, arg6, condition);
+    return script::objectInArea(args, character, coord0, coord1, arg6,
+                                condition);
 }
 
 /**
@@ -4583,9 +5054,12 @@ bool opcode_01a1(const ScriptArguments& args, const ScriptCharacter character, c
     @arg coord1 Coordinates
     @arg arg6 Boolean true/false
 */
-bool opcode_01a2(const ScriptArguments& args, const ScriptCharacter character, const ScriptVec2 coord0, const ScriptVec2 coord1, const ScriptBoolean arg6) {
+bool opcode_01a2(const ScriptArguments& args, const ScriptCharacter character,
+                 const ScriptVec2 coord0, const ScriptVec2 coord1,
+                 const ScriptBoolean arg6) {
     auto condition = character->getCurrentVehicle() != nullptr;
-    return script::objectInArea(args, character, coord0, coord1, arg6, condition);
+    return script::objectInArea(args, character, coord0, coord1, arg6,
+                                condition);
 }
 
 /**
@@ -4597,13 +5071,17 @@ bool opcode_01a2(const ScriptArguments& args, const ScriptCharacter character, c
     @arg coord1 Coordinates
     @arg arg6 Boolean true/false
 */
-bool opcode_01a3(const ScriptArguments& args, const ScriptCharacter character, const ScriptVec2 coord0, const ScriptVec2 coord1, const ScriptBoolean arg6) {
+bool opcode_01a3(const ScriptArguments& args, const ScriptCharacter character,
+                 const ScriptVec2 coord0, const ScriptVec2 coord1,
+                 const ScriptBoolean arg6) {
     auto condition = character->isStopped();
-    return script::objectInArea(args, character, coord0, coord1, arg6, condition);
+    return script::objectInArea(args, character, coord0, coord1, arg6,
+                                condition);
 }
 
 /**
-    @brief   actor %1d% stopped %6bin-sphere/%in_rectangle_on_foot %2d% %3d% %4d% %5d%
+    @brief   actor %1d% stopped %6bin-sphere/%in_rectangle_on_foot %2d% %3d%
+   %4d% %5d%
 
     opcode 01a4
     @arg character Character/ped
@@ -4611,13 +5089,18 @@ bool opcode_01a3(const ScriptArguments& args, const ScriptCharacter character, c
     @arg coord1 Coordinates
     @arg arg6 Boolean true/false
 */
-bool opcode_01a4(const ScriptArguments& args, const ScriptCharacter character, const ScriptVec2 coord0, const ScriptVec2 coord1, const ScriptBoolean arg6) {
-    auto condition = character->getCurrentVehicle() == nullptr && character->isStopped();
-    return script::objectInArea(args, character, coord0, coord1, arg6, condition);
+bool opcode_01a4(const ScriptArguments& args, const ScriptCharacter character,
+                 const ScriptVec2 coord0, const ScriptVec2 coord1,
+                 const ScriptBoolean arg6) {
+    auto condition =
+        character->getCurrentVehicle() == nullptr && character->isStopped();
+    return script::objectInArea(args, character, coord0, coord1, arg6,
+                                condition);
 }
 
 /**
-    @brief   actor %1d% stopped %6b:in-sphere/%in_rectangle_in_car %2d% %3d% %4d% %5d%
+    @brief   actor %1d% stopped %6b:in-sphere/%in_rectangle_in_car %2d% %3d%
+   %4d% %5d%
 
     opcode 01a5
     @arg character Character/ped
@@ -4625,13 +5108,18 @@ bool opcode_01a4(const ScriptArguments& args, const ScriptCharacter character, c
     @arg coord1 Coordinates
     @arg arg6 Boolean true/false
 */
-bool opcode_01a5(const ScriptArguments& args, const ScriptCharacter character, const ScriptVec2 coord0, const ScriptVec2 coord1, const ScriptBoolean arg6) {
-    auto condition = character->getCurrentVehicle() != nullptr && character->isStopped();
-    return script::objectInArea(args, character, coord0, coord1, arg6, condition);
+bool opcode_01a5(const ScriptArguments& args, const ScriptCharacter character,
+                 const ScriptVec2 coord0, const ScriptVec2 coord1,
+                 const ScriptBoolean arg6) {
+    auto condition =
+        character->getCurrentVehicle() != nullptr && character->isStopped();
+    return script::objectInArea(args, character, coord0, coord1, arg6,
+                                condition);
 }
 
 /**
-    @brief   actor %1d% %8b:in-sphere/%in_cube_on_foot %2d% %3d% %4d% %5d% %6d% %7d%
+    @brief   actor %1d% %8b:in-sphere/%in_cube_on_foot %2d% %3d% %4d% %5d% %6d%
+   %7d%
 
     opcode 01a6
     @arg character Character/ped
@@ -4639,13 +5127,17 @@ bool opcode_01a5(const ScriptArguments& args, const ScriptCharacter character, c
     @arg coord1 Coordinates
     @arg arg8 Boolean true/false
 */
-bool opcode_01a6(const ScriptArguments& args, const ScriptCharacter character, const ScriptVec3 coord0, const ScriptVec3 coord1, const ScriptBoolean arg8) {
+bool opcode_01a6(const ScriptArguments& args, const ScriptCharacter character,
+                 const ScriptVec3 coord0, const ScriptVec3 coord1,
+                 const ScriptBoolean arg8) {
     auto condition = character->getCurrentVehicle() == nullptr;
-    return script::objectInArea(args, character, coord0, coord1, arg8, condition);
+    return script::objectInArea(args, character, coord0, coord1, arg8,
+                                condition);
 }
 
 /**
-    @brief   actor %1d% %8b:in-sphere/%in_cube_in_car %2d% %3d% %4d% %5d% %6d% %7d%
+    @brief   actor %1d% %8b:in-sphere/%in_cube_in_car %2d% %3d% %4d% %5d% %6d%
+   %7d%
 
     opcode 01a7
     @arg character Character/ped
@@ -4653,13 +5145,17 @@ bool opcode_01a6(const ScriptArguments& args, const ScriptCharacter character, c
     @arg coord1 Coordinates
     @arg arg8 Boolean true/false
 */
-bool opcode_01a7(const ScriptArguments& args, const ScriptCharacter character, const ScriptVec3 coord0, const ScriptVec3 coord1, const ScriptBoolean arg8) {
+bool opcode_01a7(const ScriptArguments& args, const ScriptCharacter character,
+                 const ScriptVec3 coord0, const ScriptVec3 coord1,
+                 const ScriptBoolean arg8) {
     auto condition = character->getCurrentVehicle() != nullptr;
-    return script::objectInArea(args, character, coord0, coord1, arg8, condition);
+    return script::objectInArea(args, character, coord0, coord1, arg8,
+                                condition);
 }
 
 /**
-    @brief   actor %1d% stopped %8bin-sphere/%in_cube %2d% %3d% %4d% %5d% %6d% %7d%
+    @brief   actor %1d% stopped %8bin-sphere/%in_cube %2d% %3d% %4d% %5d% %6d%
+   %7d%
 
     opcode 01a8
     @arg character Character/ped
@@ -4667,13 +5163,17 @@ bool opcode_01a7(const ScriptArguments& args, const ScriptCharacter character, c
     @arg coord1 Coordinates
     @arg arg8 Boolean true/false
 */
-bool opcode_01a8(const ScriptArguments& args, const ScriptCharacter character, const ScriptVec3 coord0, const ScriptVec3 coord1, const ScriptBoolean arg8) {
+bool opcode_01a8(const ScriptArguments& args, const ScriptCharacter character,
+                 const ScriptVec3 coord0, const ScriptVec3 coord1,
+                 const ScriptBoolean arg8) {
     auto condition = character->isStopped();
-    return script::objectInArea(args, character, coord0, coord1, arg8, condition);
+    return script::objectInArea(args, character, coord0, coord1, arg8,
+                                condition);
 }
 
 /**
-    @brief   actor %1d% stopped %8b:in-sphere/%in_cube_on_foot %2d% %3d% %4d% %5d% %6d% %7d%
+    @brief   actor %1d% stopped %8b:in-sphere/%in_cube_on_foot %2d% %3d% %4d%
+   %5d% %6d% %7d%
 
     opcode 01a9
     @arg character Character/ped
@@ -4681,13 +5181,18 @@ bool opcode_01a8(const ScriptArguments& args, const ScriptCharacter character, c
     @arg coord1 Coordinates
     @arg arg8 Boolean true/false
 */
-bool opcode_01a9(const ScriptArguments& args, const ScriptCharacter character, const ScriptVec3 coord0, const ScriptVec3 coord1, const ScriptBoolean arg8) {
-    auto condition = character->getCurrentVehicle() == nullptr && character->isStopped();
-    return script::objectInArea(args, character, coord0, coord1, arg8, condition);
+bool opcode_01a9(const ScriptArguments& args, const ScriptCharacter character,
+                 const ScriptVec3 coord0, const ScriptVec3 coord1,
+                 const ScriptBoolean arg8) {
+    auto condition =
+        character->getCurrentVehicle() == nullptr && character->isStopped();
+    return script::objectInArea(args, character, coord0, coord1, arg8,
+                                condition);
 }
 
 /**
-    @brief   actor %1d% stopped %8b:in-sphere/%in_cube_in_car %2d% %3d% %4d% %5d% %6d% %7d%
+    @brief   actor %1d% stopped %8b:in-sphere/%in_cube_in_car %2d% %3d% %4d%
+   %5d% %6d% %7d%
 
     opcode 01aa
     @arg character Character/ped
@@ -4695,9 +5200,13 @@ bool opcode_01a9(const ScriptArguments& args, const ScriptCharacter character, c
     @arg coord1 Coordinates
     @arg arg8 Boolean true/false
 */
-bool opcode_01aa(const ScriptArguments& args, const ScriptCharacter character, const ScriptVec3 coord0, const ScriptVec3 coord1, const ScriptBoolean arg8) {
-    auto condition = character->getCurrentVehicle() != nullptr && character->isStopped();
-    return script::objectInArea(args, character, coord0, coord1, arg8, condition);
+bool opcode_01aa(const ScriptArguments& args, const ScriptCharacter character,
+                 const ScriptVec3 coord0, const ScriptVec3 coord1,
+                 const ScriptBoolean arg8) {
+    auto condition =
+        character->getCurrentVehicle() != nullptr && character->isStopped();
+    return script::objectInArea(args, character, coord0, coord1, arg8,
+                                condition);
 }
 
 /**
@@ -4709,13 +5218,16 @@ bool opcode_01aa(const ScriptArguments& args, const ScriptCharacter character, c
     @arg coord1 Coordinates
     @arg arg6 Boolean true/false
 */
-bool opcode_01ab(const ScriptArguments& args, const ScriptVehicle vehicle, const ScriptVec2 coord0, const ScriptVec2 coord1, const ScriptBoolean arg6) {
+bool opcode_01ab(const ScriptArguments& args, const ScriptVehicle vehicle,
+                 const ScriptVec2 coord0, const ScriptVec2 coord1,
+                 const ScriptBoolean arg6) {
     auto condition = vehicle->isStopped();
     return script::objectInArea(args, vehicle, coord0, coord1, arg6, condition);
 }
 
 /**
-    @brief   car %1d% stopped %8b:in-sphere/%in_cube %2d% %3d% %4d% %5d% %6d% %7d%
+    @brief   car %1d% stopped %8b:in-sphere/%in_cube %2d% %3d% %4d% %5d% %6d%
+   %7d%
 
     opcode 01ac
     @arg vehicle Car/vehicle
@@ -4723,7 +5235,9 @@ bool opcode_01ab(const ScriptArguments& args, const ScriptVehicle vehicle, const
     @arg coord1 Coordinates
     @arg arg8 Boolean true/false
 */
-bool opcode_01ac(const ScriptArguments& args, const ScriptVehicle vehicle, const ScriptVec3 coord0, const ScriptVec3 coord1, const ScriptBoolean arg8) {
+bool opcode_01ac(const ScriptArguments& args, const ScriptVehicle vehicle,
+                 const ScriptVec3 coord0, const ScriptVec3 coord1,
+                 const ScriptBoolean arg8) {
     auto condition = vehicle->isStopped();
     return script::objectInArea(args, vehicle, coord0, coord1, arg8, condition);
 }
@@ -4737,7 +5251,9 @@ bool opcode_01ac(const ScriptArguments& args, const ScriptVehicle vehicle, const
     @arg radius Radius
     @arg arg6 Boolean true/false
 */
-bool opcode_01ad(const ScriptArguments& args, const ScriptVehicle vehicle, const ScriptVec2 coord, const ScriptVec2 radius, const ScriptBoolean arg6) {
+bool opcode_01ad(const ScriptArguments& args, const ScriptVehicle vehicle,
+                 const ScriptVec2 coord, const ScriptVec2 radius,
+                 const ScriptBoolean arg6) {
     return script::objectInRadius(args, vehicle, coord, radius, arg6);
 }
 
@@ -4750,13 +5266,17 @@ bool opcode_01ad(const ScriptArguments& args, const ScriptVehicle vehicle, const
     @arg radius Radius
     @arg arg6 Boolean true/false
 */
-bool opcode_01ae(const ScriptArguments& args, const ScriptVehicle vehicle, const ScriptVec2 coord, const ScriptVec2 radius, const ScriptBoolean arg6) {
+bool opcode_01ae(const ScriptArguments& args, const ScriptVehicle vehicle,
+                 const ScriptVec2 coord, const ScriptVec2 radius,
+                 const ScriptBoolean arg6) {
     auto condition = vehicle->isStopped();
-    return script::objectInRadius(args, vehicle, coord, radius, arg6, condition);
+    return script::objectInRadius(args, vehicle, coord, radius, arg6,
+                                  condition);
 }
 
 /**
-    @brief   car %1d% %8bin-sphere/%near_point %2d% %3d% %4d% radius %5d% %6d% %7d%
+    @brief   car %1d% %8bin-sphere/%near_point %2d% %3d% %4d% radius %5d% %6d%
+   %7d%
 
     opcode 01af
     @arg vehicle Car/vehicle
@@ -4764,12 +5284,15 @@ bool opcode_01ae(const ScriptArguments& args, const ScriptVehicle vehicle, const
     @arg radius Radius
     @arg arg8 Boolean true/false
 */
-bool opcode_01af(const ScriptArguments& args, const ScriptVehicle vehicle, const ScriptVec3 coord, const ScriptVec3 radius, const ScriptBoolean arg8) {
+bool opcode_01af(const ScriptArguments& args, const ScriptVehicle vehicle,
+                 const ScriptVec3 coord, const ScriptVec3 radius,
+                 const ScriptBoolean arg8) {
     return script::objectInRadius(args, vehicle, coord, radius, arg8);
 }
 
 /**
-    @brief   car %1d% stopped %8b:in-sphere/%near_point %2d% %3d% %4d% radius %5d% %6d% %7d%
+    @brief   car %1d% stopped %8b:in-sphere/%near_point %2d% %3d% %4d% radius
+   %5d% %6d% %7d%
 
     opcode 01b0
     @arg vehicle Character/ped
@@ -4777,23 +5300,30 @@ bool opcode_01af(const ScriptArguments& args, const ScriptVehicle vehicle, const
     @arg radius Radius
     @arg arg8 Boolean true/false
 */
-bool opcode_01b0(const ScriptArguments& args, const ScriptVehicle vehicle, const ScriptVec3 coord, const ScriptVec3 radius, const ScriptBoolean arg8) {
+bool opcode_01b0(const ScriptArguments& args, const ScriptVehicle vehicle,
+                 const ScriptVec3 coord, const ScriptVec3 radius,
+                 const ScriptBoolean arg8) {
     auto condition = vehicle->isStopped();
-    return script::objectInRadius(args, vehicle, coord, radius, arg8, condition);
+    return script::objectInRadius(args, vehicle, coord, radius, arg8,
+                                  condition);
 }
 
 /**
     @brief give_player %1d% weapon %2c% ammo %3d%
 
     opcode 01b1
-    @arg player 
-    @arg weaponID 
-    @arg bullets 
+    @arg player
+    @arg weaponID
+    @arg bullets
 */
-void opcode_01b1(const ScriptArguments& args, const ScriptPlayer player, const ScriptWeaponType weaponID, const ScriptInt bullets) {
+void opcode_01b1(const ScriptArguments& args, const ScriptPlayer player,
+                 const ScriptWeaponType weaponID, const ScriptInt bullets) {
     RW_UNUSED(args);
     RW_CHECK(weaponID >= 0, "Weapon-ID too low");
-    RW_CHECK(weaponID < static_cast<int>(player->getCharacter()->getCurrentState().weapons.size()), "Weapon-ID too high");
+    RW_CHECK(weaponID <
+                 static_cast<int>(
+                     player->getCharacter()->getCurrentState().weapons.size()),
+             "Weapon-ID too high");
 
     auto plyChar = player->getCharacter();
     plyChar->addToInventory(weaponID, bullets);
@@ -4806,12 +5336,15 @@ void opcode_01b1(const ScriptArguments& args, const ScriptPlayer player, const S
     opcode 01b2
     @arg character Character/ped
     @arg weaponID Weapon ID
-    @arg bullets 
+    @arg bullets
 */
-void opcode_01b2(const ScriptArguments& args, const ScriptCharacter character, const ScriptWeaponType weaponID, const ScriptInt bullets) {
+void opcode_01b2(const ScriptArguments& args, const ScriptCharacter character,
+                 const ScriptWeaponType weaponID, const ScriptInt bullets) {
     RW_UNUSED(args);
     RW_CHECK(weaponID >= 0, "Weapon-ID too low");
-    RW_CHECK(weaponID < static_cast<int>(character->getCurrentState().weapons.size()), "Weapon-ID too high");
+    RW_CHECK(weaponID <
+                 static_cast<int>(character->getCurrentState().weapons.size()),
+             "Weapon-ID too high");
 
     character->addToInventory(weaponID, bullets);
     character->setActiveItem(weaponID);
@@ -4870,10 +5403,11 @@ void opcode_01b7(const ScriptArguments& args) {
     @brief set_player %1d% armed_weapon_to %2c%
 
     opcode 01b8
-    @arg player 
-    @arg weaponId 
+    @arg player
+    @arg weaponId
 */
-void opcode_01b8(const ScriptArguments& args, const ScriptPlayer player, const ScriptWeaponType weaponId) {
+void opcode_01b8(const ScriptArguments& args, const ScriptPlayer player,
+                 const ScriptWeaponType weaponId) {
     RW_UNUSED(args);
     player->getCharacter()->setActiveItem(weaponId);
 }
@@ -4885,7 +5419,8 @@ void opcode_01b8(const ScriptArguments& args, const ScriptPlayer player, const S
     @arg character Character/ped
     @arg weaponID Weapon ID
 */
-void opcode_01b9(const ScriptArguments& args, const ScriptCharacter character, const ScriptWeaponType weaponID) {
+void opcode_01b9(const ScriptArguments& args, const ScriptCharacter character,
+                 const ScriptWeaponType weaponID) {
     RW_UNUSED(args);
     character->setActiveItem(weaponID);
 }
@@ -4899,7 +5434,9 @@ void opcode_01b9(const ScriptArguments& args, const ScriptCharacter character, c
     @arg yCoord Y Coord
     @arg zCoord Z Coord
 */
-void opcode_01bb(const ScriptArguments& args, const ScriptObject object, ScriptFloat& xCoord, ScriptFloat& yCoord, ScriptFloat& zCoord) {
+void opcode_01bb(const ScriptArguments& args, const ScriptObject object,
+                 ScriptFloat& xCoord, ScriptFloat& yCoord,
+                 ScriptFloat& zCoord) {
     RW_UNUSED(args);
     script::getObjectPosition(object, xCoord, yCoord, zCoord);
 }
@@ -4911,7 +5448,8 @@ void opcode_01bb(const ScriptArguments& args, const ScriptObject object, ScriptF
     @arg object Object
     @arg coord Coordinates
 */
-void opcode_01bc(const ScriptArguments& args, const ScriptObject object, ScriptVec3 coord) {
+void opcode_01bc(const ScriptArguments& args, const ScriptObject object,
+                 ScriptVec3 coord) {
     RW_UNUSED(args);
     script::setObjectPosition(object, coord);
 }
@@ -4952,9 +5490,10 @@ void opcode_01be(const ScriptArguments& args, const ScriptCharacter character,
 
     opcode 01c0
     @arg player Player
-    @arg wantedLevel 
+    @arg wantedLevel
 */
-void opcode_01c0(const ScriptArguments& args, const ScriptPlayer player, ScriptInt& wantedLevel) {
+void opcode_01c0(const ScriptArguments& args, const ScriptPlayer player,
+                 ScriptInt& wantedLevel) {
     RW_UNIMPLEMENTED_OPCODE(0x01c0);
     RW_UNUSED(player);
     RW_UNUSED(args);
@@ -4979,7 +5518,8 @@ bool opcode_01c1(const ScriptArguments& args, const ScriptVehicle vehicle) {
     @arg character Character/ped
 */
 void opcode_01c2(const ScriptArguments& args, const ScriptCharacter character) {
-    /// @todo: there's more logic than only changing life time, or maybe it should be done in cleanUpTraffic
+    /// @todo: there's more logic than only changing life time, or maybe it
+    /// should be done in cleanUpTraffic
     if (character) {
         character->setLifetime(GameObject::TrafficLifetime);
 
@@ -4996,7 +5536,8 @@ void opcode_01c2(const ScriptArguments& args, const ScriptCharacter character) {
     @arg vehicle Car/vehicle
 */
 void opcode_01c3(const ScriptArguments& args, const ScriptVehicle vehicle) {
-    /// @todo: there's more logic than only changing life time, or maybe it should be done in cleanUpTraffic
+    /// @todo: there's more logic than only changing life time, or maybe it
+    /// should be done in cleanUpTraffic
     if (vehicle) {
         vehicle->setLifetime(GameObject::TrafficLifetime);
 
@@ -5013,10 +5554,11 @@ void opcode_01c3(const ScriptArguments& args, const ScriptVehicle vehicle) {
     @arg object Object
 */
 void opcode_01c4(const ScriptArguments& args, const ScriptObject object) {
-    /// @todo: there's more logic than only changing life time, or maybe it should be done in cleanUpTraffic
+    /// @todo: there's more logic than only changing life time, or maybe it
+    /// should be done in cleanUpTraffic
     if (object) {
         object->setLifetime(GameObject::TrafficLifetime);
-        
+
         if (args.getThread()->isMission) {
             script::removeObjectFromMissionCleanup(args, object);
         }
@@ -5063,13 +5605,16 @@ void opcode_01c7(const ScriptArguments& args, const ScriptObject object) {
     @arg vehicle Ped type
     @arg pedType Model ID
     @arg model Car/vehicle
-    @arg arg4 
+    @arg arg4
     @arg character Character/ped
 */
-void opcode_01c8(const ScriptArguments& args, const ScriptVehicle vehicle, const ScriptPedType pedType, const ScriptModelID model, const ScriptInt arg4, ScriptCharacter& character) {
+void opcode_01c8(const ScriptArguments& args, const ScriptVehicle vehicle,
+                 const ScriptPedType pedType, const ScriptModelID model,
+                 const ScriptInt arg4, ScriptCharacter& character) {
     RW_UNUSED(pedType);
 
-    character = args.getWorld()->createPedestrian(model, vehicle->getPosition());
+    character =
+        args.getWorld()->createPedestrian(model, vehicle->getPosition());
     character->setLifetime(GameObject::MissionLifetime);
 
     if (args.getThread()->isMission) {
@@ -5078,19 +5623,25 @@ void opcode_01c8(const ScriptArguments& args, const ScriptVehicle vehicle, const
 
     int pickedseat = arg4;
     if (pickedseat <= -1) {
-    	for (pickedseat = 0; pickedseat < static_cast<int>(vehicle->info->seats.size()); pickedseat++) {
-    		if (vehicle->getOccupant(pickedseat) == nullptr && !vehicle->isOccupantDriver(pickedseat)) {
-    			break;
-    		}
-    	}
+        for (pickedseat = 0;
+             pickedseat < static_cast<int>(vehicle->info->seats.size());
+             pickedseat++) {
+            if (vehicle->getOccupant(pickedseat) == nullptr &&
+                !vehicle->isOccupantDriver(pickedseat)) {
+                break;
+            }
+        }
     } else {
-    	/// @todo 0 - passenger pickedseat (or back pickedseat of bike); 1 - left rear pickedseat; 2 - right rear pickedseat
-    	pickedseat++;
+        /// @todo 0 - passenger pickedseat (or back pickedseat of bike); 1 -
+        /// left rear pickedseat; 2 - right rear pickedseat
+        pickedseat++;
     }
 
-    RW_CHECK(pickedseat < static_cast<int>(vehicle->info->seats.size()), "Seat index too high");
+    RW_CHECK(pickedseat < static_cast<int>(vehicle->info->seats.size()),
+             "Seat index too high");
     RW_CHECK(vehicle->getOccupant(pickedseat) == nullptr, "Seat is not free");
-    RW_CHECK(vehicle->isOccupantDriver(pickedseat) == false, "Seat is not a passenger seat");
+    RW_CHECK(vehicle->isOccupantDriver(pickedseat) == false,
+             "Seat is not a passenger seat");
 
     character->setCurrentVehicle(vehicle, pickedseat);
     vehicle->setOccupant(pickedseat, character);
@@ -5100,10 +5651,11 @@ void opcode_01c8(const ScriptArguments& args, const ScriptVehicle vehicle, const
     @brief actor %1d% kill_actor %2d%
 
     opcode 01c9
-    @arg character0 
-    @arg character1 
+    @arg character0
+    @arg character1
 */
-void opcode_01c9(const ScriptArguments& args, const ScriptCharacter character0, const ScriptCharacter character1) {
+void opcode_01c9(const ScriptArguments& args, const ScriptCharacter character0,
+                 const ScriptCharacter character1) {
     RW_UNIMPLEMENTED_OPCODE(0x01c9);
     RW_UNUSED(character0);
     RW_UNUSED(character1);
@@ -5114,10 +5666,11 @@ void opcode_01c9(const ScriptArguments& args, const ScriptCharacter character0, 
     @brief actor %1d% kill_player %2d%
 
     opcode 01ca
-    @arg character 
-    @arg player 
+    @arg character
+    @arg player
 */
-void opcode_01ca(const ScriptArguments& args, const ScriptCharacter character, const ScriptPlayer player) {
+void opcode_01ca(const ScriptArguments& args, const ScriptCharacter character,
+                 const ScriptPlayer player) {
     RW_UNIMPLEMENTED_OPCODE(0x01ca);
     RW_UNUSED(character);
     RW_UNUSED(player);
@@ -5128,10 +5681,11 @@ void opcode_01ca(const ScriptArguments& args, const ScriptCharacter character, c
     @brief actor %1d% kill_actor %2d%
 
     opcode 01cb
-    @arg character0 
-    @arg character1 
+    @arg character0
+    @arg character1
 */
-void opcode_01cb(const ScriptArguments& args, const ScriptCharacter character0, const ScriptCharacter character1) {
+void opcode_01cb(const ScriptArguments& args, const ScriptCharacter character0,
+                 const ScriptCharacter character1) {
     RW_UNIMPLEMENTED_OPCODE(0x01cb);
     RW_UNUSED(character0);
     RW_UNUSED(character1);
@@ -5142,10 +5696,11 @@ void opcode_01cb(const ScriptArguments& args, const ScriptCharacter character0, 
     @brief actor %1d% kill_player %2d%
 
     opcode 01cc
-    @arg character 
-    @arg player 
+    @arg character
+    @arg player
 */
-void opcode_01cc(const ScriptArguments& args, const ScriptCharacter character, const ScriptPlayer player) {
+void opcode_01cc(const ScriptArguments& args, const ScriptCharacter character,
+                 const ScriptPlayer player) {
     RW_UNIMPLEMENTED_OPCODE(0x01cc);
     RW_UNUSED(character);
     RW_UNUSED(player);
@@ -5156,10 +5711,11 @@ void opcode_01cc(const ScriptArguments& args, const ScriptCharacter character, c
     @brief actor %1d% avoid_player %2d%
 
     opcode 01ce
-    @arg character 
-    @arg player 
+    @arg character
+    @arg player
 */
-void opcode_01ce(const ScriptArguments& args, const ScriptCharacter character, const ScriptPlayer player) {
+void opcode_01ce(const ScriptArguments& args, const ScriptCharacter character,
+                 const ScriptPlayer player) {
     RW_UNIMPLEMENTED_OPCODE(0x01ce);
     RW_UNUSED(character);
     RW_UNUSED(player);
@@ -5170,10 +5726,11 @@ void opcode_01ce(const ScriptArguments& args, const ScriptCharacter character, c
     @brief actor %1d% avoid_char %2d%
 
     opcode 01cf
-    @arg character0 
-    @arg character1 
+    @arg character0
+    @arg character1
 */
-void opcode_01cf(const ScriptArguments& args, const ScriptCharacter character0, const ScriptCharacter character1) {
+void opcode_01cf(const ScriptArguments& args, const ScriptCharacter character0,
+                 const ScriptCharacter character1) {
     RW_UNIMPLEMENTED_OPCODE(0x01cf);
     RW_UNUSED(character0);
     RW_UNUSED(character1);
@@ -5184,10 +5741,11 @@ void opcode_01cf(const ScriptArguments& args, const ScriptCharacter character0, 
     @brief actor %1d% avoid_player %2d%
 
     opcode 01d0
-    @arg character 
-    @arg player 
+    @arg character
+    @arg player
 */
-void opcode_01d0(const ScriptArguments& args, const ScriptCharacter character, const ScriptPlayer player) {
+void opcode_01d0(const ScriptArguments& args, const ScriptCharacter character,
+                 const ScriptPlayer player) {
     RW_UNIMPLEMENTED_OPCODE(0x01d0);
     RW_UNUSED(character);
     RW_UNUSED(player);
@@ -5198,10 +5756,11 @@ void opcode_01d0(const ScriptArguments& args, const ScriptCharacter character, c
     @brief actor %1d% follow_actor %2d%
 
     opcode 01d1
-    @arg character0 
-    @arg character1 
+    @arg character0
+    @arg character1
 */
-void opcode_01d1(const ScriptArguments& args, const ScriptCharacter character0, const ScriptCharacter character1) {
+void opcode_01d1(const ScriptArguments& args, const ScriptCharacter character0,
+                 const ScriptCharacter character1) {
     RW_UNIMPLEMENTED_OPCODE(0x01d1);
     RW_UNUSED(character0);
     RW_UNUSED(character1);
@@ -5212,10 +5771,11 @@ void opcode_01d1(const ScriptArguments& args, const ScriptCharacter character0, 
     @brief actor %1d% follow_player %2d%
 
     opcode 01d2
-    @arg character 
-    @arg player 
+    @arg character
+    @arg player
 */
-void opcode_01d2(const ScriptArguments& args, const ScriptCharacter character, const ScriptPlayer player) {
+void opcode_01d2(const ScriptArguments& args, const ScriptCharacter character,
+                 const ScriptPlayer player) {
     RW_UNIMPLEMENTED_OPCODE(0x01d2);
     RW_UNUSED(character);
     RW_UNUSED(player);
@@ -5226,53 +5786,57 @@ void opcode_01d2(const ScriptArguments& args, const ScriptCharacter character, c
     @brief actor %1d% leave_car %2d%
 
     opcode 01d3
-    @arg character 
-    @arg vehicle 
+    @arg character
+    @arg vehicle
 */
-void opcode_01d3(const ScriptArguments& args, const ScriptCharacter character, const ScriptVehicle vehicle) {
+void opcode_01d3(const ScriptArguments& args, const ScriptCharacter character,
+                 const ScriptVehicle vehicle) {
     RW_UNUSED(vehicle);
     RW_UNUSED(args);
     character->controller->skipActivity();
     character->controller->setNextActivity(
-            std::make_unique<Activities::ExitVehicle>());
+        std::make_unique<Activities::ExitVehicle>());
 }
 
 /**
     @brief actor %1d% go_to_car %2d% and_enter_it_as_a_passenger
 
     opcode 01d4
-    @arg character 
-    @arg vehicle 
+    @arg character
+    @arg vehicle
 */
-void opcode_01d4(const ScriptArguments& args, const ScriptCharacter character, const ScriptVehicle vehicle) {
+void opcode_01d4(const ScriptArguments& args, const ScriptCharacter character,
+                 const ScriptVehicle vehicle) {
     RW_UNUSED(args);
     character->controller->skipActivity();
     character->controller->setNextActivity(
-            std::make_unique<Activities::EnterVehicle>(
-                vehicle,Activities::EnterVehicle::ANY_SEAT));
+        std::make_unique<Activities::EnterVehicle>(
+            vehicle, Activities::EnterVehicle::ANY_SEAT));
 }
 
 /**
     @brief actor %1d% go_to_and_drive_car %2d%
 
     opcode 01d5
-    @arg character 
-    @arg vehicle 
+    @arg character
+    @arg vehicle
 */
-void opcode_01d5(const ScriptArguments& args, const ScriptCharacter character, const ScriptVehicle vehicle) {
+void opcode_01d5(const ScriptArguments& args, const ScriptCharacter character,
+                 const ScriptVehicle vehicle) {
     RW_UNUSED(args);
     character->controller->setNextActivity(
-            std::make_unique<Activities::EnterVehicle>(vehicle));
+        std::make_unique<Activities::EnterVehicle>(vehicle));
 }
 
 /**
     @brief actor %1d% destroy_object %2d%
 
     opcode 01d8
-    @arg character 
-    @arg object 
+    @arg character
+    @arg object
 */
-void opcode_01d8(const ScriptArguments& args, const ScriptCharacter character, const ScriptObject object) {
+void opcode_01d8(const ScriptArguments& args, const ScriptCharacter character,
+                 const ScriptObject object) {
     RW_UNIMPLEMENTED_OPCODE(0x01d8);
     RW_UNUSED(character);
     RW_UNUSED(object);
@@ -5283,10 +5847,11 @@ void opcode_01d8(const ScriptArguments& args, const ScriptCharacter character, c
     @brief actor %1d% destroy_car %2d%
 
     opcode 01d9
-    @arg character 
-    @arg vehicle 
+    @arg character
+    @arg vehicle
 */
-void opcode_01d9(const ScriptArguments& args, const ScriptCharacter character, const ScriptVehicle vehicle) {
+void opcode_01d9(const ScriptArguments& args, const ScriptCharacter character,
+                 const ScriptVehicle vehicle) {
     RW_UNIMPLEMENTED_OPCODE(0x01d9);
     RW_UNUSED(character);
     RW_UNUSED(vehicle);
@@ -5297,10 +5862,11 @@ void opcode_01d9(const ScriptArguments& args, const ScriptCharacter character, c
     @brief tie_actor %1d% to_actor %2d%
 
     opcode 01de
-    @arg character0 
-    @arg character1 
+    @arg character0
+    @arg character1
 */
-void opcode_01de(const ScriptArguments& args, const ScriptCharacter character0, const ScriptCharacter character1) {
+void opcode_01de(const ScriptArguments& args, const ScriptCharacter character0,
+                 const ScriptCharacter character1) {
     RW_UNIMPLEMENTED_OPCODE(0x01de);
     RW_UNUSED(character0);
     RW_UNUSED(character1);
@@ -5311,10 +5877,11 @@ void opcode_01de(const ScriptArguments& args, const ScriptCharacter character0, 
     @brief tie_actor %1d% to_player %2d%
 
     opcode 01df
-    @arg character 
-    @arg player 
+    @arg character
+    @arg player
 */
-void opcode_01df(const ScriptArguments& args, const ScriptCharacter character, const ScriptPlayer player) {
+void opcode_01df(const ScriptArguments& args, const ScriptCharacter character,
+                 const ScriptPlayer player) {
     character->controller->setGoal(CharacterController::FollowLeader);
     character->controller->setTargetCharacter(player->getCharacter());
     RW_UNUSED(args);
@@ -5324,7 +5891,7 @@ void opcode_01df(const ScriptArguments& args, const ScriptCharacter character, c
     @brief clear_leader %1d%
 
     opcode 01e0
-    @arg character 
+    @arg character
 */
 void opcode_01e0(const ScriptArguments& args, const ScriptCharacter character) {
     RW_UNUSED(args);
@@ -5335,11 +5902,12 @@ void opcode_01e0(const ScriptArguments& args, const ScriptCharacter character) {
     @brief set_actor %1d% follow_route %2d% behaviour %3d%
 
     opcode 01e1
-    @arg character 
-    @arg arg2 
-    @arg arg3 
+    @arg character
+    @arg arg2
+    @arg arg3
 */
-void opcode_01e1(const ScriptArguments& args, const ScriptCharacter character, const ScriptInt arg2, const ScriptFollowRoute arg3) {
+void opcode_01e1(const ScriptArguments& args, const ScriptCharacter character,
+                 const ScriptInt arg2, const ScriptFollowRoute arg3) {
     RW_UNIMPLEMENTED_OPCODE(0x01e1);
     RW_UNUSED(character);
     RW_UNUSED(arg2);
@@ -5351,12 +5919,14 @@ void opcode_01e1(const ScriptArguments& args, const ScriptCharacter character, c
     @brief add_route_point %1d% at %2d% %3d% %4d%
 
     opcode 01e2
-    @arg arg1 
-    @arg arg2 
-    @arg arg3 
-    @arg arg4 
+    @arg arg1
+    @arg arg2
+    @arg arg3
+    @arg arg4
 */
-void opcode_01e2(const ScriptArguments& args, const ScriptInt arg1, const ScriptFloat arg2, const ScriptFloat arg3, const ScriptFloat arg4) {
+void opcode_01e2(const ScriptArguments& args, const ScriptInt arg1,
+                 const ScriptFloat arg2, const ScriptFloat arg3,
+                 const ScriptFloat arg4) {
     RW_UNIMPLEMENTED_OPCODE(0x01e2);
     RW_UNUSED(arg1);
     RW_UNUSED(arg2);
@@ -5370,18 +5940,18 @@ void opcode_01e2(const ScriptArguments& args, const ScriptInt arg1, const Script
 
     opcode 01e3
     @arg gxtEntry GXT entry
-    @arg arg2 
+    @arg arg2
     @arg time Time (ms)
     @arg style
 */
-void opcode_01e3(const ScriptArguments& args, const ScriptString gxtEntry, const ScriptInt arg2, const ScriptInt time, const ScriptInt style) {
-    auto str =
-            ScreenText::format(
-                script::gxt(args, gxtEntry),
-                GameStringUtil::fromString(std::to_string(arg2), FONT_PRICEDOWN));
+void opcode_01e3(const ScriptArguments& args, const ScriptString gxtEntry,
+                 const ScriptInt arg2, const ScriptInt time,
+                 const ScriptInt style) {
+    auto str = ScreenText::format(
+        script::gxt(args, gxtEntry),
+        GameStringUtil::fromString(std::to_string(arg2), FONT_PRICEDOWN));
     args.getState()->text.addText<ScreenTextType::Big>(
-                ScreenTextEntry::makeBig(
-                    gxtEntry, str, style, time));
+        ScreenTextEntry::makeBig(gxtEntry, str, style, time));
 }
 
 /**
@@ -5389,11 +5959,13 @@ void opcode_01e3(const ScriptArguments& args, const ScriptString gxtEntry, const
 
     opcode 01e4
     @arg gxtEntry GXT entry
-    @arg arg2 
+    @arg arg2
     @arg time Time (ms)
-    @arg arg4 
+    @arg arg4
 */
-void opcode_01e4(const ScriptArguments& args, const ScriptString gxtEntry, const ScriptInt arg2, const ScriptInt time, const ScriptInt arg4) {
+void opcode_01e4(const ScriptArguments& args, const ScriptString gxtEntry,
+                 const ScriptInt arg2, const ScriptInt time,
+                 const ScriptInt arg4) {
     RW_UNIMPLEMENTED_OPCODE(0x01e4);
     RW_UNUSED(gxtEntry);
     RW_UNUSED(arg2);
@@ -5407,11 +5979,13 @@ void opcode_01e4(const ScriptArguments& args, const ScriptString gxtEntry, const
 
     opcode 01e5
     @arg gxtEntry GXT entry
-    @arg arg2 
+    @arg arg2
     @arg time Time (ms)
-    @arg arg4 
+    @arg arg4
 */
-void opcode_01e5(const ScriptArguments& args, const ScriptString gxtEntry, const ScriptInt arg2, const ScriptInt time, const ScriptInt arg4) {
+void opcode_01e5(const ScriptArguments& args, const ScriptString gxtEntry,
+                 const ScriptInt arg2, const ScriptInt time,
+                 const ScriptInt arg4) {
     RW_UNIMPLEMENTED_OPCODE(0x01e5);
     RW_UNUSED(gxtEntry);
     RW_UNUSED(arg2);
@@ -5427,7 +6001,8 @@ void opcode_01e5(const ScriptArguments& args, const ScriptString gxtEntry, const
     @arg coord0 Coordinates
     @arg coord1 Coordinates
 */
-void opcode_01e7(const ScriptArguments& args, ScriptVec3 coord0, ScriptVec3 coord1) {
+void opcode_01e7(const ScriptArguments& args, ScriptVec3 coord0,
+                 ScriptVec3 coord1) {
     args.getWorld()->enableAIPaths(AIGraphNode::Vehicle, coord0, coord1);
 }
 
@@ -5438,7 +6013,8 @@ void opcode_01e7(const ScriptArguments& args, ScriptVec3 coord0, ScriptVec3 coor
     @arg coord0 Coordinates
     @arg coord1 Coordinates
 */
-void opcode_01e8(const ScriptArguments& args, ScriptVec3 coord0, ScriptVec3 coord1) {
+void opcode_01e8(const ScriptArguments& args, ScriptVec3 coord0,
+                 ScriptVec3 coord1) {
     args.getWorld()->disableAIPaths(AIGraphNode::Vehicle, coord0, coord1);
 }
 
@@ -5447,7 +6023,7 @@ void opcode_01e8(const ScriptArguments& args, ScriptVec3 coord0, ScriptVec3 coor
 
     opcode 01e9
     @arg vehicle Car/vehicle
-    @arg numOfPassengers 
+    @arg numOfPassengers
 */
 void opcode_01e9(const ScriptArguments& args, const ScriptVehicle vehicle,
                  ScriptInt& numOfPassengers) {
@@ -5460,7 +6036,7 @@ void opcode_01e9(const ScriptArguments& args, const ScriptVehicle vehicle,
 
     opcode 01ea
     @arg vehicle Car/vehicle
-    @arg maxNumOfPassengers 
+    @arg maxNumOfPassengers
 */
 void opcode_01ea(const ScriptArguments& args, const ScriptVehicle vehicle,
                  ScriptInt& maxNumOfPassengers) {
@@ -5472,7 +6048,7 @@ void opcode_01ea(const ScriptArguments& args, const ScriptVehicle vehicle,
     @brief set_car_density_to %1d%
 
     opcode 01eb
-    @arg arg1 
+    @arg arg1
 */
 void opcode_01eb(const ScriptArguments& args, const ScriptFloat arg1) {
     RW_UNIMPLEMENTED_OPCODE(0x01eb);
@@ -5487,7 +6063,8 @@ void opcode_01eb(const ScriptArguments& args, const ScriptFloat arg1) {
     @arg vehicle Car/vehicle
     @arg arg2 Boolean true/false
 */
-void opcode_01ec(const ScriptArguments& args, const ScriptVehicle vehicle, const ScriptBoolean arg2) {
+void opcode_01ec(const ScriptArguments& args, const ScriptVehicle vehicle,
+                 const ScriptBoolean arg2) {
     RW_UNIMPLEMENTED_OPCODE(0x01ec);
     RW_UNUSED(vehicle);
     RW_UNUSED(arg2);
@@ -5498,7 +6075,7 @@ void opcode_01ec(const ScriptArguments& args, const ScriptVehicle vehicle, const
     @brief clear_actor %1d% threat_search
 
     opcode 01ed
-    @arg character 
+    @arg character
 */
 void opcode_01ed(const ScriptArguments& args, const ScriptCharacter character) {
     RW_UNIMPLEMENTED_OPCODE(0x01ed);
@@ -5510,18 +6087,23 @@ void opcode_01ed(const ScriptArguments& args, const ScriptCharacter character) {
     @brief activate_crane %1d% %2d% %3d% %4d% %5d% %6d% %7d% %8d% %9d% %10d%
 
     opcode 01ee
-    @arg arg1 
-    @arg arg2 
-    @arg arg3 
-    @arg arg4 
-    @arg arg5 
-    @arg arg6 
-    @arg arg7 
-    @arg arg8 
-    @arg arg9 
-    @arg arg10 
+    @arg arg1
+    @arg arg2
+    @arg arg3
+    @arg arg4
+    @arg arg5
+    @arg arg6
+    @arg arg7
+    @arg arg8
+    @arg arg9
+    @arg arg10
 */
-void opcode_01ee(const ScriptArguments& args, const ScriptFloat arg1, const ScriptFloat arg2, const ScriptFloat arg3, const ScriptFloat arg4, const ScriptFloat arg5, const ScriptFloat arg6, const ScriptFloat arg7, const ScriptFloat arg8, const ScriptFloat arg9, const ScriptFloat arg10) {
+void opcode_01ee(const ScriptArguments& args, const ScriptFloat arg1,
+                 const ScriptFloat arg2, const ScriptFloat arg3,
+                 const ScriptFloat arg4, const ScriptFloat arg5,
+                 const ScriptFloat arg6, const ScriptFloat arg7,
+                 const ScriptFloat arg8, const ScriptFloat arg9,
+                 const ScriptFloat arg10) {
     RW_UNIMPLEMENTED_OPCODE(0x01ee);
     RW_UNUSED(arg1);
     RW_UNUSED(arg2);
@@ -5540,10 +6122,11 @@ void opcode_01ee(const ScriptArguments& args, const ScriptFloat arg1, const Scri
     @brief deactivate_crane %1d% %2d%
 
     opcode 01ef
-    @arg arg1 
-    @arg arg2 
+    @arg arg1
+    @arg arg2
 */
-void opcode_01ef(const ScriptArguments& args, const ScriptFloat arg1, const ScriptFloat arg2) {
+void opcode_01ef(const ScriptArguments& args, const ScriptFloat arg1,
+                 const ScriptFloat arg2) {
     RW_UNIMPLEMENTED_OPCODE(0x01ef);
     RW_UNUSED(arg1);
     RW_UNUSED(arg2);
@@ -5554,7 +6137,7 @@ void opcode_01ef(const ScriptArguments& args, const ScriptFloat arg1, const Scri
     @brief set_max_wanted_level_to %1d%
 
     opcode 01f0
-    @arg wantedLevel 
+    @arg wantedLevel
 */
 void opcode_01f0(const ScriptArguments& args, const ScriptInt wantedLevel) {
     args.getState()->maxWantedLevel = wantedLevel;
@@ -5591,7 +6174,8 @@ bool opcode_01f4(const ScriptArguments& args, const ScriptVehicle vehicle) {
     @arg player Player
     @arg character Character/ped
 */
-void opcode_01f5(const ScriptArguments& args, const ScriptPlayer player, ScriptCharacter& character) {
+void opcode_01f5(const ScriptArguments& args, const ScriptPlayer player,
+                 ScriptCharacter& character) {
     RW_UNUSED(args);
     character = player->getCharacter();
 }
@@ -5612,7 +6196,8 @@ void opcode_01f6(const ScriptArguments& args) {
     @arg player Player
     @arg arg2 Boolean true/false
 */
-void opcode_01f7(const ScriptArguments& args, const ScriptPlayer player, const ScriptBoolean arg2) {
+void opcode_01f7(const ScriptArguments& args, const ScriptPlayer player,
+                 const ScriptBoolean arg2) {
     RW_UNIMPLEMENTED_OPCODE(0x01f7);
     RW_UNUSED(player);
     RW_UNUSED(arg2);
@@ -5620,20 +6205,25 @@ void opcode_01f7(const ScriptArguments& args, const ScriptPlayer player, const S
 }
 
 /**
-    @brief init_rampage %1g% weapon %2d% time %3d% %4d% targets %5o% %6o% %7o% %8o% flag %9d%
+    @brief init_rampage %1g% weapon %2d% time %3d% %4d% targets %5o% %6o% %7o%
+   %8o% flag %9d%
 
     opcode 01f9
     @arg gxtEntry GXT entry
     @arg weaponID Weapon ID
     @arg time Time (ms)
-    @arg arg4 
+    @arg arg4
     @arg model0 Model ID
     @arg model1 Model ID
     @arg model2 Model ID
     @arg model3 Model ID
     @arg arg9 Boolean true/false
 */
-void opcode_01f9(const ScriptArguments& args, const ScriptString gxtEntry, const ScriptWeaponType weaponID, const ScriptInt time, const ScriptInt arg4, const ScriptModelID model0, const ScriptModelID model1, const ScriptModelID model2, const ScriptModelID model3, const ScriptBoolean arg9) {
+void opcode_01f9(const ScriptArguments& args, const ScriptString gxtEntry,
+                 const ScriptWeaponType weaponID, const ScriptInt time,
+                 const ScriptInt arg4, const ScriptModelID model0,
+                 const ScriptModelID model1, const ScriptModelID model2,
+                 const ScriptModelID model3, const ScriptBoolean arg9) {
     RW_UNIMPLEMENTED_OPCODE(0x01f9);
     RW_UNUSED(gxtEntry);
     RW_UNUSED(weaponID);
@@ -5651,7 +6241,7 @@ void opcode_01f9(const ScriptArguments& args, const ScriptString gxtEntry, const
     @brief %1d% = rampage_status
 
     opcode 01fa
-    @arg arg1 
+    @arg arg1
 */
 void opcode_01fa(const ScriptArguments& args, ScriptInt& arg1) {
     RW_UNIMPLEMENTED_OPCODE(0x01fa);
@@ -5663,10 +6253,11 @@ void opcode_01fa(const ScriptArguments& args, ScriptInt& arg1) {
     @brief %2d% = square_root %1d%
 
     opcode 01fb
-    @arg arg1 
-    @arg arg2 
+    @arg arg1
+    @arg arg2
 */
-void opcode_01fb(const ScriptArguments& args, const ScriptFloat arg1, ScriptFloat& arg2) {
+void opcode_01fb(const ScriptArguments& args, const ScriptFloat arg1,
+                 ScriptFloat& arg2) {
     RW_UNUSED(args);
     arg2 = std::sqrt(arg1);
 }
@@ -5675,47 +6266,56 @@ void opcode_01fb(const ScriptArguments& args, const ScriptFloat arg1, ScriptFloa
     @brief   player %1d% near_car %2d% radius %3d% %4d% unknown %5d%
 
     opcode 01fc
-    @arg player 
-    @arg vehicle 
-    @arg arg3 
-    @arg arg4 
-    @arg showMarker 
+    @arg player
+    @arg vehicle
+    @arg arg3
+    @arg arg4
+    @arg showMarker
 */
-bool opcode_01fc(const ScriptArguments& args, const ScriptPlayer player, const ScriptVehicle vehicle, const ScriptVec2 radius, const ScriptBoolean showMarker) {
+bool opcode_01fc(const ScriptArguments& args, const ScriptPlayer player,
+                 const ScriptVehicle vehicle, const ScriptVec2 radius,
+                 const ScriptBoolean showMarker) {
     auto plyChar = player->getCharacter();
-    return script::objectInRadiusNear(args, plyChar, vehicle, radius, showMarker);
+    return script::objectInRadiusNear(args, plyChar, vehicle, radius,
+                                      showMarker);
 }
 
 /**
     @brief   player %1d% near_car_on_foot %2d% radius %3d% %4d% unknown %5d%
 
     opcode 01fd
-    @arg player 
-    @arg vehicle 
-    @arg arg3 
-    @arg arg4 
-    @arg arg5 
+    @arg player
+    @arg vehicle
+    @arg arg3
+    @arg arg4
+    @arg arg5
 */
-bool opcode_01fd(const ScriptArguments& args, const ScriptPlayer player, const ScriptVehicle vehicle, const ScriptVec2 radius, const ScriptBoolean showMarker) {
+bool opcode_01fd(const ScriptArguments& args, const ScriptPlayer player,
+                 const ScriptVehicle vehicle, const ScriptVec2 radius,
+                 const ScriptBoolean showMarker) {
     auto plyChar = player->getCharacter();
     auto condition = plyChar->getCurrentVehicle() == nullptr;
-    return script::objectInRadiusNear(args, plyChar, vehicle, radius, showMarker, condition);
+    return script::objectInRadiusNear(args, plyChar, vehicle, radius,
+                                      showMarker, condition);
 }
 
 /**
     @brief   player %1d% near_car_in_car %2d% radius %3d% %4d% unknown %5d%
 
     opcode 01fe
-    @arg player 
-    @arg vehicle 
-    @arg arg3 
-    @arg arg4 
-    @arg arg5 
+    @arg player
+    @arg vehicle
+    @arg arg3
+    @arg arg4
+    @arg arg5
 */
-bool opcode_01fe(const ScriptArguments& args, const ScriptPlayer player, const ScriptVehicle vehicle, const ScriptVec2 radius, const ScriptBoolean showMarker) {
+bool opcode_01fe(const ScriptArguments& args, const ScriptPlayer player,
+                 const ScriptVehicle vehicle, const ScriptVec2 radius,
+                 const ScriptBoolean showMarker) {
     auto plyChar = player->getCharacter();
     auto condition = plyChar->getCurrentVehicle() != nullptr;
-    return script::objectInRadiusNear(args, plyChar, vehicle, radius, showMarker, condition);
+    return script::objectInRadiusNear(args, plyChar, vehicle, radius,
+                                      showMarker, condition);
 }
 
 /**
@@ -5727,7 +6327,9 @@ bool opcode_01fe(const ScriptArguments& args, const ScriptPlayer player, const S
     @arg radius Radius
     @arg arg6 Boolean true/false
 */
-bool opcode_01ff(const ScriptArguments& args, const ScriptPlayer player, const ScriptVehicle vehicle, ScriptVec3 radius, const ScriptBoolean arg6) {
+bool opcode_01ff(const ScriptArguments& args, const ScriptPlayer player,
+                 const ScriptVehicle vehicle, ScriptVec3 radius,
+                 const ScriptBoolean arg6) {
     RW_UNIMPLEMENTED_OPCODE(0x01ff);
     RW_UNUSED(player);
     RW_UNUSED(vehicle);
@@ -5738,7 +6340,8 @@ bool opcode_01ff(const ScriptArguments& args, const ScriptPlayer player, const S
 }
 
 /**
-    @brief   player %1d% near_car_on_foot %2d% radius %3d% %4d% %5d% unknown %6h%
+    @brief   player %1d% near_car_on_foot %2d% radius %3d% %4d% %5d% unknown
+   %6h%
 
     opcode 0200
     @arg player Player
@@ -5746,7 +6349,9 @@ bool opcode_01ff(const ScriptArguments& args, const ScriptPlayer player, const S
     @arg radius Radius
     @arg arg6 Boolean true/false
 */
-bool opcode_0200(const ScriptArguments& args, const ScriptPlayer player, const ScriptVehicle vehicle, ScriptVec3 radius, const ScriptBoolean arg6) {
+bool opcode_0200(const ScriptArguments& args, const ScriptPlayer player,
+                 const ScriptVehicle vehicle, ScriptVec3 radius,
+                 const ScriptBoolean arg6) {
     RW_UNIMPLEMENTED_OPCODE(0x0200);
     RW_UNUSED(player);
     RW_UNUSED(vehicle);
@@ -5765,7 +6370,9 @@ bool opcode_0200(const ScriptArguments& args, const ScriptPlayer player, const S
     @arg radius Radius
     @arg arg6 Boolean true/false
 */
-bool opcode_0201(const ScriptArguments& args, const ScriptPlayer player, const ScriptVehicle vehicle, ScriptVec3 radius, const ScriptBoolean arg6) {
+bool opcode_0201(const ScriptArguments& args, const ScriptPlayer player,
+                 const ScriptVehicle vehicle, ScriptVec3 radius,
+                 const ScriptBoolean arg6) {
     RW_UNIMPLEMENTED_OPCODE(0x0201);
     RW_UNUSED(player);
     RW_UNUSED(vehicle);
@@ -5784,8 +6391,11 @@ bool opcode_0201(const ScriptArguments& args, const ScriptPlayer player, const S
     @arg radius Radius
     @arg arg5 Boolean true/false
 */
-bool opcode_0202(const ScriptArguments& args, const ScriptCharacter character, const ScriptVehicle vehicle, ScriptVec2 radius, const ScriptBoolean showMarker) {
-    return script::objectInRadiusNear(args, character, vehicle, radius, showMarker);
+bool opcode_0202(const ScriptArguments& args, const ScriptCharacter character,
+                 const ScriptVehicle vehicle, ScriptVec2 radius,
+                 const ScriptBoolean showMarker) {
+    return script::objectInRadiusNear(args, character, vehicle, radius,
+                                      showMarker);
 }
 
 /**
@@ -5797,9 +6407,12 @@ bool opcode_0202(const ScriptArguments& args, const ScriptCharacter character, c
     @arg radius Radius
     @arg arg5 Boolean true/false
 */
-bool opcode_0203(const ScriptArguments& args, const ScriptCharacter character, const ScriptVehicle vehicle, ScriptVec2 radius, const ScriptBoolean showMarker) {
+bool opcode_0203(const ScriptArguments& args, const ScriptCharacter character,
+                 const ScriptVehicle vehicle, ScriptVec2 radius,
+                 const ScriptBoolean showMarker) {
     auto condition = character->getCurrentVehicle() == nullptr;
-    return script::objectInRadiusNear(args, character, vehicle, radius, showMarker, condition);
+    return script::objectInRadiusNear(args, character, vehicle, radius,
+                                      showMarker, condition);
 }
 
 /**
@@ -5811,9 +6424,12 @@ bool opcode_0203(const ScriptArguments& args, const ScriptCharacter character, c
     @arg radius Radius
     @arg arg5 Boolean true/false
 */
-bool opcode_0204(const ScriptArguments& args, const ScriptCharacter character, const ScriptVehicle vehicle, ScriptVec2 radius, const ScriptBoolean showMarker) {
+bool opcode_0204(const ScriptArguments& args, const ScriptCharacter character,
+                 const ScriptVehicle vehicle, ScriptVec2 radius,
+                 const ScriptBoolean showMarker) {
     auto condition = character->getCurrentVehicle() != nullptr;
-    return script::objectInRadiusNear(args, character, vehicle, radius, showMarker, condition);
+    return script::objectInRadiusNear(args, character, vehicle, radius,
+                                      showMarker, condition);
 }
 
 /**
@@ -5825,7 +6441,9 @@ bool opcode_0204(const ScriptArguments& args, const ScriptCharacter character, c
     @arg radius Radius
     @arg arg6 Boolean true/false
 */
-bool opcode_0205(const ScriptArguments& args, const ScriptCharacter character, const ScriptVehicle vehicle, ScriptVec3 radius, const ScriptBoolean arg6) {
+bool opcode_0205(const ScriptArguments& args, const ScriptCharacter character,
+                 const ScriptVehicle vehicle, ScriptVec3 radius,
+                 const ScriptBoolean arg6) {
     RW_UNIMPLEMENTED_OPCODE(0x0205);
     RW_UNUSED(character);
     RW_UNUSED(vehicle);
@@ -5844,7 +6462,9 @@ bool opcode_0205(const ScriptArguments& args, const ScriptCharacter character, c
     @arg radius Radius
     @arg arg6 Boolean true/false
 */
-bool opcode_0206(const ScriptArguments& args, const ScriptCharacter character, const ScriptVehicle vehicle, ScriptVec3 radius, const ScriptBoolean arg6) {
+bool opcode_0206(const ScriptArguments& args, const ScriptCharacter character,
+                 const ScriptVehicle vehicle, ScriptVec3 radius,
+                 const ScriptBoolean arg6) {
     RW_UNIMPLEMENTED_OPCODE(0x0206);
     RW_UNUSED(character);
     RW_UNUSED(vehicle);
@@ -5863,7 +6483,9 @@ bool opcode_0206(const ScriptArguments& args, const ScriptCharacter character, c
     @arg radius Radius
     @arg arg6 Boolean true/false
 */
-bool opcode_0207(const ScriptArguments& args, const ScriptCharacter character, const ScriptVehicle vehicle, ScriptVec3 radius, const ScriptBoolean arg6) {
+bool opcode_0207(const ScriptArguments& args, const ScriptCharacter character,
+                 const ScriptVehicle vehicle, ScriptVec3 radius,
+                 const ScriptBoolean arg6) {
     RW_UNIMPLEMENTED_OPCODE(0x0207);
     RW_UNUSED(character);
     RW_UNUSED(vehicle);
@@ -5881,7 +6503,8 @@ bool opcode_0207(const ScriptArguments& args, const ScriptCharacter character, c
     @arg max
     @arg result
 */
-void opcode_0208(const ScriptArguments& args, const ScriptFloat min, const ScriptFloat max, ScriptFloat& result) {
+void opcode_0208(const ScriptArguments& args, const ScriptFloat min,
+                 const ScriptFloat max, ScriptFloat& result) {
     result = args.getVM()->getRandomNumber(min, max);
 }
 
@@ -5893,7 +6516,8 @@ void opcode_0208(const ScriptArguments& args, const ScriptFloat min, const Scrip
     @arg max
     @arg result
 */
-void opcode_0209(const ScriptArguments& args, const ScriptInt min, const ScriptInt max, ScriptInt& result) {
+void opcode_0209(const ScriptArguments& args, const ScriptInt min,
+                 const ScriptInt max, ScriptInt& result) {
     result = args.getVM()->getRandomNumber(min, max);
 }
 
@@ -5902,9 +6526,10 @@ void opcode_0209(const ScriptArguments& args, const ScriptInt min, const ScriptI
 
     opcode 020a
     @arg vehicle Car/vehicle
-    @arg arg2 
+    @arg arg2
 */
-void opcode_020a(const ScriptArguments& args, const ScriptVehicle vehicle, const ScriptCarLock arg2) {
+void opcode_020a(const ScriptArguments& args, const ScriptVehicle vehicle,
+                 const ScriptCarLock arg2) {
     RW_UNIMPLEMENTED_OPCODE(0x020a);
     RW_UNUSED(vehicle);
     RW_UNUSED(arg2);
@@ -5930,7 +6555,8 @@ void opcode_020b(const ScriptArguments& args, const ScriptVehicle vehicle) {
     @arg coord Coordinates
     @arg explosionID Explosion ID
 */
-void opcode_020c(const ScriptArguments& args, ScriptVec3 coord, const ScriptExplosion explosionID) {
+void opcode_020c(const ScriptArguments& args, ScriptVec3 coord,
+                 const ScriptExplosion explosionID) {
     RW_UNIMPLEMENTED_OPCODE(0x020c);
     RW_UNUSED(coord);
     RW_UNUSED(explosionID);
@@ -5952,10 +6578,11 @@ bool opcode_020d(const ScriptArguments& args, const ScriptVehicle vehicle) {
     @brief actor %1d% look_at_actor %2d%
 
     opcode 020e
-    @arg character0 
-    @arg character1 
+    @arg character0
+    @arg character1
 */
-void opcode_020e(const ScriptArguments& args, const ScriptCharacter character0, const ScriptCharacter character1) {
+void opcode_020e(const ScriptArguments& args, const ScriptCharacter character0,
+                 const ScriptCharacter character1) {
     RW_UNUSED(args);
     const auto& pos = character1->getPosition();
     character0->setHeading(
@@ -5966,10 +6593,11 @@ void opcode_020e(const ScriptArguments& args, const ScriptCharacter character0, 
     @brief actor %1d% look_at_player %2d%
 
     opcode 020f
-    @arg character 
-    @arg player 
+    @arg character
+    @arg player
 */
-void opcode_020f(const ScriptArguments& args, const ScriptCharacter character, const ScriptPlayer player) {
+void opcode_020f(const ScriptArguments& args, const ScriptCharacter character,
+                 const ScriptPlayer player) {
     RW_UNUSED(args);
     const auto& pos = player->getCharacter()->getPosition();
     character->setHeading(
@@ -5983,7 +6611,8 @@ void opcode_020f(const ScriptArguments& args, const ScriptCharacter character, c
     @arg player Player
     @arg character Character/ped
 */
-void opcode_0210(const ScriptArguments& args, const ScriptPlayer player, const ScriptCharacter character) {
+void opcode_0210(const ScriptArguments& args, const ScriptPlayer player,
+                 const ScriptCharacter character) {
     RW_UNUSED(args);
     const auto& pos = character->getPosition();
     player->getCharacter()->setHeading(
@@ -5997,19 +6626,20 @@ void opcode_0210(const ScriptArguments& args, const ScriptPlayer player, const S
     @arg character Character/ped
     @arg coord Coordinates
 */
-void opcode_0211(const ScriptArguments& args, const ScriptCharacter character, ScriptVec2 coord) {
+void opcode_0211(const ScriptArguments& args, const ScriptCharacter character,
+                 ScriptVec2 coord) {
     /// @todo verify that this is how the game treats this
     auto target = script::getGround(args, glm::vec3(coord, -100.f));
     character->controller->skipActivity();
-    if( character->getCurrentVehicle() )
-    {
-    	// Since we just cleared the Activities, this will become current immediatley.
-    	character->controller->setNextActivity(
-                    std::make_unique<Activities::ExitVehicle>());
+    if (character->getCurrentVehicle()) {
+        // Since we just cleared the Activities, this will become current
+        // immediatley.
+        character->controller->setNextActivity(
+            std::make_unique<Activities::ExitVehicle>());
     }
 
     character->controller->setNextActivity(
-            std::make_unique<Activities::GoTo>(target));
+        std::make_unique<Activities::GoTo>(target));
 }
 
 /**
@@ -6017,12 +6647,15 @@ void opcode_0211(const ScriptArguments& args, const ScriptCharacter character, S
 
     opcode 0213
     @arg model Model ID
-    @arg pickup0 
+    @arg pickup0
     @arg coord Coordinates
     @arg pickup1 Pickup
 */
-void opcode_0213(const ScriptArguments& args, const ScriptModel model, const ScriptPickupType pickup0, ScriptVec3 coord, ScriptPickup& pickup1) {
-    pickup1 = args.getWorld()->createPickup(coord, script::getModel(args, model), pickup0);
+void opcode_0213(const ScriptArguments& args, const ScriptModel model,
+                 const ScriptPickupType pickup0, ScriptVec3 coord,
+                 ScriptPickup& pickup1) {
+    pickup1 = args.getWorld()->createPickup(
+        coord, script::getModel(args, model), pickup0);
 }
 
 /**
@@ -6059,7 +6692,8 @@ void opcode_0215(const ScriptArguments& args, const ScriptPickup pickup) {
     @arg vehicle Car/vehicle
     @arg arg2 Boolean true/false
 */
-void opcode_0216(const ScriptArguments& args, const ScriptVehicle vehicle, const ScriptBoolean arg2) {
+void opcode_0216(const ScriptArguments& args, const ScriptVehicle vehicle,
+                 const ScriptBoolean arg2) {
     RW_UNIMPLEMENTED_OPCODE(0x0216);
     RW_UNUSED(vehicle);
     RW_UNUSED(arg2);
@@ -6072,9 +6706,10 @@ void opcode_0216(const ScriptArguments& args, const ScriptVehicle vehicle, const
     opcode 0217
     @arg gxtEntry GXT entry
     @arg time Time (ms)
-    @arg arg3 
+    @arg arg3
 */
-void opcode_0217(const ScriptArguments& args, const ScriptString gxtEntry, const ScriptInt time, const ScriptInt arg3) {
+void opcode_0217(const ScriptArguments& args, const ScriptString gxtEntry,
+                 const ScriptInt time, const ScriptInt arg3) {
     RW_UNIMPLEMENTED_OPCODE(0x0217);
     RW_UNUSED(gxtEntry);
     RW_UNUSED(time);
@@ -6087,11 +6722,13 @@ void opcode_0217(const ScriptArguments& args, const ScriptString gxtEntry, const
 
     opcode 0218
     @arg gxtEntry GXT entry
-    @arg arg2 
+    @arg arg2
     @arg time Time (ms)
-    @arg arg4 
+    @arg arg4
 */
-void opcode_0218(const ScriptArguments& args, const ScriptString gxtEntry, const ScriptInt arg2, const ScriptInt time, const ScriptInt arg4) {
+void opcode_0218(const ScriptArguments& args, const ScriptString gxtEntry,
+                 const ScriptInt arg2, const ScriptInt time,
+                 const ScriptInt arg4) {
     RW_UNIMPLEMENTED_OPCODE(0x0218);
     RW_UNUSED(gxtEntry);
     RW_UNUSED(arg2);
@@ -6107,7 +6744,7 @@ void opcode_0218(const ScriptArguments& args, const ScriptString gxtEntry, const
     @arg coord0 Coordinates
     @arg coord1 Coordinates
     @arg arg7
-    @arg garage 
+    @arg garage
 */
 void opcode_0219(const ScriptArguments& args, const ScriptVec3 coord0,
                  const ScriptVec3 coord1, const ScriptGarageType type,
@@ -6119,10 +6756,11 @@ void opcode_0219(const ScriptArguments& args, const ScriptVec3 coord0,
     @brief set_garage %1d% to_accept_car %2d%
 
     opcode 021b
-    @arg garage 
+    @arg garage
     @arg vehicle Car/vehicle
 */
-void opcode_021b(const ScriptArguments& args, const ScriptGarage garage, const ScriptVehicle vehicle) {
+void opcode_021b(const ScriptArguments& args, const ScriptGarage garage,
+                 const ScriptVehicle vehicle) {
     RW_UNUSED(args);
     garage->target = vehicle.get();
 }
@@ -6131,7 +6769,7 @@ void opcode_021b(const ScriptArguments& args, const ScriptGarage garage, const S
     @brief   car_inside_garage %1d%
 
     opcode 021c
-    @arg garage 
+    @arg garage
 */
 bool opcode_021c(const ScriptArguments& args, const ScriptGarage garage) {
     RW_UNUSED(args);
@@ -6142,7 +6780,7 @@ bool opcode_021c(const ScriptArguments& args, const ScriptGarage garage) {
     @brief set_free_bomb_shop_to %1btrue/false%
 
     opcode 021d
-    @arg arg1 
+    @arg arg1
 */
 void opcode_021d(const ScriptArguments& args, const ScriptInt arg1) {
     RW_UNIMPLEMENTED_OPCODE(0x021d);
@@ -6170,7 +6808,8 @@ bool opcode_0220(const ScriptArguments& args, const ScriptVehicle vehicle) {
     @arg player Player
     @arg arg2 Boolean true/false
 */
-void opcode_0221(const ScriptArguments& args, const ScriptPlayer player, const ScriptBoolean arg2) {
+void opcode_0221(const ScriptArguments& args, const ScriptPlayer player,
+                 const ScriptBoolean arg2) {
     RW_UNIMPLEMENTED_OPCODE(0x0221);
     RW_UNUSED(player);
     RW_UNUSED(arg2);
@@ -6182,9 +6821,10 @@ void opcode_0221(const ScriptArguments& args, const ScriptPlayer player, const S
 
     opcode 0222
     @arg player Player
-    @arg health 
+    @arg health
 */
-void opcode_0222(const ScriptArguments& args, const ScriptPlayer player, const ScriptInt health) {
+void opcode_0222(const ScriptArguments& args, const ScriptPlayer player,
+                 const ScriptInt health) {
     RW_UNUSED(args);
     player->getCharacter()->getCurrentState().health = health;
 }
@@ -6194,9 +6834,10 @@ void opcode_0222(const ScriptArguments& args, const ScriptPlayer player, const S
 
     opcode 0223
     @arg character Character/ped
-    @arg health 
+    @arg health
 */
-void opcode_0223(const ScriptArguments& args, const ScriptCharacter character, const ScriptInt health) {
+void opcode_0223(const ScriptArguments& args, const ScriptCharacter character,
+                 const ScriptInt health) {
     character->getCurrentState().health = health;
     RW_UNUSED(args);
 }
@@ -6206,11 +6847,12 @@ void opcode_0223(const ScriptArguments& args, const ScriptCharacter character, c
 
     opcode 0224
     @arg vehicle Car/vehicle
-    @arg arg2 
+    @arg arg2
 */
-void opcode_0224(const ScriptArguments& args, const ScriptVehicle vehicle, const ScriptInt arg2) {
+void opcode_0224(const ScriptArguments& args, const ScriptVehicle vehicle,
+                 const ScriptInt arg2) {
     RW_UNUSED(args);
-    vehicle->setHealth(static_cast<float> (arg2));
+    vehicle->setHealth(static_cast<float>(arg2));
 }
 
 /**
@@ -6218,9 +6860,10 @@ void opcode_0224(const ScriptArguments& args, const ScriptVehicle vehicle, const
 
     opcode 0225
     @arg player Player
-    @arg health 
+    @arg health
 */
-void opcode_0225(const ScriptArguments& args, const ScriptPlayer player, ScriptInt& health) {
+void opcode_0225(const ScriptArguments& args, const ScriptPlayer player,
+                 ScriptInt& health) {
     RW_UNUSED(args);
     health = player->getCharacter()->getCurrentState().health;
 }
@@ -6230,9 +6873,10 @@ void opcode_0225(const ScriptArguments& args, const ScriptPlayer player, ScriptI
 
     opcode 0226
     @arg character Character/ped
-    @arg health 
+    @arg health
 */
-void opcode_0226(const ScriptArguments& args, const ScriptCharacter character, ScriptInt& health) {
+void opcode_0226(const ScriptArguments& args, const ScriptCharacter character,
+                 ScriptInt& health) {
     RW_UNUSED(args);
     health = character->getCurrentState().health;
 }
@@ -6242,11 +6886,12 @@ void opcode_0226(const ScriptArguments& args, const ScriptCharacter character, S
 
     opcode 0227
     @arg vehicle Car/vehicle
-    @arg arg2 
+    @arg arg2
 */
-void opcode_0227(const ScriptArguments& args, const ScriptVehicle vehicle, ScriptInt& arg2) {
+void opcode_0227(const ScriptArguments& args, const ScriptVehicle vehicle,
+                 ScriptInt& arg2) {
     RW_UNUSED(args);
-    arg2 = static_cast<int> (vehicle->getHealth());
+    arg2 = static_cast<int>(vehicle->getHealth());
 }
 
 /**
@@ -6254,9 +6899,10 @@ void opcode_0227(const ScriptArguments& args, const ScriptVehicle vehicle, Scrip
 
     opcode 0228
     @arg vehicle Car/vehicle
-    @arg arg2 
+    @arg arg2
 */
-bool opcode_0228(const ScriptArguments& args, const ScriptVehicle vehicle, const ScriptCarBomb arg2) {
+bool opcode_0228(const ScriptArguments& args, const ScriptVehicle vehicle,
+                 const ScriptCarBomb arg2) {
     RW_UNIMPLEMENTED_OPCODE(0x0228);
     RW_UNUSED(vehicle);
     RW_UNUSED(arg2);
@@ -6272,7 +6918,9 @@ bool opcode_0228(const ScriptArguments& args, const ScriptVehicle vehicle, const
     @arg carColour0 Car colour ID
     @arg carColour1 Car colour ID
 */
-void opcode_0229(const ScriptArguments& args, const ScriptVehicle vehicle, const ScriptCarColour carColour0, const ScriptCarColour carColour1) {
+void opcode_0229(const ScriptArguments& args, const ScriptVehicle vehicle,
+                 const ScriptCarColour carColour0,
+                 const ScriptCarColour carColour1) {
     auto& colours = args.getWorld()->data->vehicleColours;
     vehicle->colourPrimary = colours[carColour0];
     vehicle->colourSecondary = colours[carColour1];
@@ -6285,7 +6933,8 @@ void opcode_0229(const ScriptArguments& args, const ScriptVehicle vehicle, const
     @arg coord0 Coordinates
     @arg coord1 Coordinates
 */
-void opcode_022a(const ScriptArguments& args, ScriptVec3 coord0, ScriptVec3 coord1) {
+void opcode_022a(const ScriptArguments& args, ScriptVec3 coord0,
+                 ScriptVec3 coord1) {
     args.getWorld()->enableAIPaths(AIGraphNode::Pedestrian, coord0, coord1);
 }
 
@@ -6296,7 +6945,8 @@ void opcode_022a(const ScriptArguments& args, ScriptVec3 coord0, ScriptVec3 coor
     @arg coord0 Coordinates
     @arg coord1 Coordinates
 */
-void opcode_022b(const ScriptArguments& args, ScriptVec3 coord0, ScriptVec3 coord1) {
+void opcode_022b(const ScriptArguments& args, ScriptVec3 coord0,
+                 ScriptVec3 coord1) {
     args.getWorld()->disableAIPaths(AIGraphNode::Pedestrian, coord0, coord1);
 }
 
@@ -6304,10 +6954,11 @@ void opcode_022b(const ScriptArguments& args, ScriptVec3 coord0, ScriptVec3 coor
     @brief set_actor %1d% to_look_at_actor %2d%
 
     opcode 022c
-    @arg character0 
-    @arg character1 
+    @arg character0
+    @arg character1
 */
-void opcode_022c(const ScriptArguments& args, const ScriptCharacter character0, const ScriptCharacter character1) {
+void opcode_022c(const ScriptArguments& args, const ScriptCharacter character0,
+                 const ScriptCharacter character1) {
     RW_UNIMPLEMENTED_OPCODE(0x022c);
     RW_UNUSED(character0);
     RW_UNUSED(character1);
@@ -6318,10 +6969,11 @@ void opcode_022c(const ScriptArguments& args, const ScriptCharacter character0, 
     @brief set_actor %1d% to_look_at_player %2d%
 
     opcode 022d
-    @arg character 
-    @arg player 
+    @arg character
+    @arg player
 */
-void opcode_022d(const ScriptArguments& args, const ScriptCharacter character, const ScriptPlayer player) {
+void opcode_022d(const ScriptArguments& args, const ScriptCharacter character,
+                 const ScriptPlayer player) {
     RW_UNIMPLEMENTED_OPCODE(0x022d);
     RW_UNUSED(character);
     RW_UNUSED(player);
@@ -6332,10 +6984,11 @@ void opcode_022d(const ScriptArguments& args, const ScriptCharacter character, c
     @brief set_player %1d% to_look_at_actor %2d%
 
     opcode 022e
-    @arg player 
-    @arg character 
+    @arg player
+    @arg character
 */
-void opcode_022e(const ScriptArguments& args, const ScriptPlayer player, const ScriptCharacter character) {
+void opcode_022e(const ScriptArguments& args, const ScriptPlayer player,
+                 const ScriptCharacter character) {
     RW_UNIMPLEMENTED_OPCODE(0x022e);
     RW_UNUSED(player);
     RW_UNUSED(character);
@@ -6346,7 +6999,7 @@ void opcode_022e(const ScriptArguments& args, const ScriptPlayer player, const S
     @brief set_actor %1d% stop_looking
 
     opcode 022f
-    @arg character 
+    @arg character
 */
 void opcode_022f(const ScriptArguments& args, const ScriptCharacter character) {
     RW_UNIMPLEMENTED_OPCODE(0x022f);
@@ -6386,7 +7039,8 @@ void opcode_0231(const ScriptArguments& args, const ScriptBoolean arg1) {
     @arg model0 Model ID
     @arg model1 Model ID
 */
-void opcode_0235(const ScriptArguments& args, const ScriptGang gangID, const ScriptModelID model0, const ScriptModelID model1) {
+void opcode_0235(const ScriptArguments& args, const ScriptGang gangID,
+                 const ScriptModelID model0, const ScriptModelID model1) {
     RW_UNIMPLEMENTED_OPCODE(0x0235);
     RW_UNUSED(gangID);
     RW_UNUSED(model0);
@@ -6401,7 +7055,8 @@ void opcode_0235(const ScriptArguments& args, const ScriptGang gangID, const Scr
     @arg gangID Gang ID
     @arg model Model ID
 */
-void opcode_0236(const ScriptArguments& args, const ScriptGang gangID, const ScriptModelID model) {
+void opcode_0236(const ScriptArguments& args, const ScriptGang gangID,
+                 const ScriptModelID model) {
     RW_UNIMPLEMENTED_OPCODE(0x0236);
     RW_UNUSED(gangID);
     RW_UNUSED(model);
@@ -6416,7 +7071,9 @@ void opcode_0236(const ScriptArguments& args, const ScriptGang gangID, const Scr
     @arg weaponID0 Weapon ID
     @arg weaponID1 Weapon ID
 */
-void opcode_0237(const ScriptArguments& args, const ScriptGang gangID, const ScriptWeaponType weaponID0, const ScriptWeaponType weaponID1) {
+void opcode_0237(const ScriptArguments& args, const ScriptGang gangID,
+                 const ScriptWeaponType weaponID0,
+                 const ScriptWeaponType weaponID1) {
     RW_UNIMPLEMENTED_OPCODE(0x0237);
     RW_UNUSED(gangID);
     RW_UNUSED(weaponID0);
@@ -6431,20 +7088,22 @@ void opcode_0237(const ScriptArguments& args, const ScriptGang gangID, const Scr
     @arg character Character/ped
     @arg coord Coordinates
 */
-void opcode_0239(const ScriptArguments& args, const ScriptCharacter character, ScriptVec2 coord) {
+void opcode_0239(const ScriptArguments& args, const ScriptCharacter character,
+                 ScriptVec2 coord) {
     auto target = script::getGround(args, glm::vec3(coord, -100.f));
     character->controller->setNextActivity(
-            std::make_unique<Activities::GoTo>(target, true));
+        std::make_unique<Activities::GoTo>(target, true));
 }
 
 /**
     @brief has_player_collided_with_object %1d% %2d%
 
     opcode 023a
-    @arg player 
-    @arg object 
+    @arg player
+    @arg object
 */
-void opcode_023a(const ScriptArguments& args, const ScriptPlayer player, const ScriptObject object) {
+void opcode_023a(const ScriptArguments& args, const ScriptPlayer player,
+                 const ScriptObject object) {
     RW_UNIMPLEMENTED_OPCODE(0x023a);
     RW_UNUSED(player);
     RW_UNUSED(object);
@@ -6458,7 +7117,8 @@ void opcode_023a(const ScriptArguments& args, const ScriptPlayer player, const S
     @arg character Character/ped
     @arg object Object
 */
-void opcode_023b(const ScriptArguments& args, const ScriptCharacter character, const ScriptObject object) {
+void opcode_023b(const ScriptArguments& args, const ScriptCharacter character,
+                 const ScriptObject object) {
     RW_UNIMPLEMENTED_OPCODE(0x023b);
     RW_UNUSED(character);
     RW_UNUSED(object);
@@ -6469,10 +7129,11 @@ void opcode_023b(const ScriptArguments& args, const ScriptCharacter character, c
     @brief load_special_actor %2d% as %1d%
 
     opcode 023c
-    @arg arg1 
-    @arg arg2 
+    @arg arg1
+    @arg arg2
 */
-void opcode_023c(const ScriptArguments& args, const ScriptInt arg1, const ScriptString arg2) {
+void opcode_023c(const ScriptArguments& args, const ScriptInt arg1,
+                 const ScriptString arg2) {
     args.getWorld()->loadSpecialCharacter(arg1, arg2);
 }
 
@@ -6480,7 +7141,7 @@ void opcode_023c(const ScriptArguments& args, const ScriptInt arg1, const Script
     @brief   special_actor %1d% loaded
 
     opcode 023d
-    @arg arg1 
+    @arg arg1
 */
 bool opcode_023d(const ScriptArguments& args, const ScriptInt arg1) {
     /// @todo re-implement this when streaming is added
@@ -6504,7 +7165,8 @@ bool opcode_023d(const ScriptArguments& args, const ScriptInt arg1) {
     @arg object Object
     @arg arg2 Boolean true/false
 */
-void opcode_0240(const ScriptArguments& args, const ScriptObject object, const ScriptBoolean arg2) {
+void opcode_0240(const ScriptArguments& args, const ScriptObject object,
+                 const ScriptBoolean arg2) {
     RW_UNIMPLEMENTED_OPCODE(0x0240);
     RW_UNUSED(object);
     RW_UNUSED(arg2);
@@ -6529,9 +7191,10 @@ bool opcode_0241(const ScriptArguments& args, const ScriptPlayer player) {
 
     opcode 0242
     @arg vehicle Car/vehicle
-    @arg arg2 
+    @arg arg2
 */
-void opcode_0242(const ScriptArguments& args, const ScriptVehicle vehicle, const ScriptCarBomb arg2) {
+void opcode_0242(const ScriptArguments& args, const ScriptVehicle vehicle,
+                 const ScriptCarBomb arg2) {
     RW_UNIMPLEMENTED_OPCODE(0x0242);
     RW_UNUSED(vehicle);
     RW_UNUSED(arg2);
@@ -6543,9 +7206,10 @@ void opcode_0242(const ScriptArguments& args, const ScriptVehicle vehicle, const
 
     opcode 0243
     @arg character Character/ped
-    @arg arg2 
+    @arg arg2
 */
-void opcode_0243(const ScriptArguments& args, const ScriptCharacter character, const ScriptPedStat arg2) {
+void opcode_0243(const ScriptArguments& args, const ScriptCharacter character,
+                 const ScriptPedStat arg2) {
     RW_UNIMPLEMENTED_OPCODE(0x0243);
     RW_UNUSED(character);
     RW_UNUSED(arg2);
@@ -6560,7 +7224,7 @@ void opcode_0243(const ScriptArguments& args, const ScriptCharacter character, c
 */
 void opcode_0244(const ScriptArguments& args, ScriptVec3 coord) {
     if (args.getState()->currentCutscene) {
-    	args.getState()->currentCutscene->meta.sceneOffset = coord;
+        args.getState()->currentCutscene->meta.sceneOffset = coord;
     }
 }
 
@@ -6569,9 +7233,10 @@ void opcode_0244(const ScriptArguments& args, ScriptVec3 coord) {
 
     opcode 0245
     @arg character Character/ped
-    @arg arg2 
+    @arg arg2
 */
-void opcode_0245(const ScriptArguments& args, const ScriptCharacter character, const ScriptAnim arg2) {
+void opcode_0245(const ScriptArguments& args, const ScriptCharacter character,
+                 const ScriptAnim arg2) {
     RW_UNIMPLEMENTED_OPCODE(0x0245);
     RW_UNUSED(character);
     RW_UNUSED(arg2);
@@ -6622,7 +7287,8 @@ void opcode_0249(const ScriptArguments& args, const ScriptModel model) {
     @arg coord Coordinates
     @arg payphone Handle
 */
-void opcode_024a(const ScriptArguments& args, const ScriptVec2 coord, ScriptPayphone& payphone) {
+void opcode_024a(const ScriptArguments& args, const ScriptVec2 coord,
+                 ScriptPayphone& payphone) {
     payphone = args.getWorld()->createPayphone(coord);
 }
 
@@ -6630,10 +7296,11 @@ void opcode_024a(const ScriptArguments& args, const ScriptVec2 coord, ScriptPayp
     @brief text_payphone_repeatedly %1d% %2g%
 
     opcode 024b
-    @arg payphone 
-    @arg arg2 
+    @arg payphone
+    @arg arg2
 */
-void opcode_024b(const ScriptArguments& args, const ScriptPayphone payphone, const ScriptString arg2) {
+void opcode_024b(const ScriptArguments& args, const ScriptPayphone payphone,
+                 const ScriptString arg2) {
     RW_UNIMPLEMENTED_OPCODE(0x024b);
     RW_UNUSED(payphone);
     RW_UNUSED(arg2);
@@ -6644,10 +7311,11 @@ void opcode_024b(const ScriptArguments& args, const ScriptPayphone payphone, con
     @brief text_payphone %1d% %2g%
 
     opcode 024c
-    @arg payphone 
-    @arg text 
+    @arg payphone
+    @arg text
 */
-void opcode_024c(const ScriptArguments& args, const ScriptPayphone payphone, const ScriptString text) {
+void opcode_024c(const ScriptArguments& args, const ScriptPayphone payphone,
+                 const ScriptString text) {
     RW_UNUSED(args);
     payphone->setMessageAndStartRinging(text);
 }
@@ -6656,7 +7324,7 @@ void opcode_024c(const ScriptArguments& args, const ScriptPayphone payphone, con
     @brief   payphone_text_been_displayed %1d%
 
     opcode 024d
-    @arg payphone 
+    @arg payphone
 */
 bool opcode_024d(const ScriptArguments& args, const ScriptPayphone payphone) {
     RW_UNIMPLEMENTED_OPCODE(0x024d);
@@ -6669,7 +7337,7 @@ bool opcode_024d(const ScriptArguments& args, const ScriptPayphone payphone) {
     @brief disable_payphone %1d%
 
     opcode 024e
-    @arg payphone 
+    @arg payphone
 */
 void opcode_024e(const ScriptArguments& args, const ScriptPayphone payphone) {
     RW_UNUSED(args);
@@ -6677,16 +7345,19 @@ void opcode_024e(const ScriptArguments& args, const ScriptPayphone payphone) {
 }
 
 /**
-    @brief create_corona %4d% %5d% %6d% with_color %7d% %8d% %9d% at_point %1d% %2d% %3d%
+    @brief create_corona %4d% %5d% %6d% with_color %7d% %8d% %9d% at_point %1d%
+   %2d% %3d%
 
     opcode 024f
     @arg coord Coordinates
     @arg radius Radius
-    @arg arg5 
+    @arg arg5
     @arg arg6 Boolean true/false
     @arg colour Colour (0-255)
 */
-void opcode_024f(const ScriptArguments& args, ScriptVec3 coord, const ScriptFloat radius, const ScriptCoronaType arg5, const ScriptBoolean arg6, ScriptRGB colour) {
+void opcode_024f(const ScriptArguments& args, ScriptVec3 coord,
+                 const ScriptFloat radius, const ScriptCoronaType arg5,
+                 const ScriptBoolean arg6, ScriptRGB colour) {
     RW_UNIMPLEMENTED_OPCODE(0x024f);
     RW_UNUSED(coord);
     RW_UNUSED(radius);
@@ -6703,7 +7374,8 @@ void opcode_024f(const ScriptArguments& args, ScriptVec3 coord, const ScriptFloa
     @arg coord Coordinates
     @arg colour Colour (0-255)
 */
-void opcode_0250(const ScriptArguments& args, ScriptVec3 coord, ScriptRGB colour) {
+void opcode_0250(const ScriptArguments& args, ScriptVec3 coord,
+                 ScriptRGB colour) {
     RW_UNIMPLEMENTED_OPCODE(0x0250);
     RW_UNUSED(coord);
     RW_UNUSED(colour);
@@ -6737,7 +7409,8 @@ void opcode_0254(const ScriptArguments& args) {
     @arg coord Coordinates
     @arg angle Angle
 */
-void opcode_0255(const ScriptArguments& args, ScriptVec3 coord, const ScriptFloat heading) {
+void opcode_0255(const ScriptArguments& args, ScriptVec3 coord,
+                 const ScriptFloat heading) {
     coord = script::getGround(args, coord);
     args.getState()->overrideRestart(glm::vec4(coord, heading));
     auto player = args.getWorld()->getPlayer();
@@ -6762,7 +7435,8 @@ bool opcode_0256(const ScriptArguments& args, const ScriptPlayer player) {
     @arg character Character/ped
     @arg arg2 Boolean true/false
 */
-void opcode_0291(const ScriptArguments& args, const ScriptCharacter character, const ScriptBoolean arg2) {
+void opcode_0291(const ScriptArguments& args, const ScriptCharacter character,
+                 const ScriptBoolean arg2) {
     RW_UNIMPLEMENTED_OPCODE(0x0291);
     RW_UNUSED(character);
     RW_UNUSED(arg2);
@@ -6773,7 +7447,7 @@ void opcode_0291(const ScriptArguments& args, const ScriptCharacter character, c
     @brief %1d% = get_controller_mode
 
     opcode 0293
-    @arg arg1 
+    @arg arg1
 */
 void opcode_0293(const ScriptArguments& args, ScriptInt& arg1) {
     RW_UNUSED(args);
@@ -6789,7 +7463,8 @@ void opcode_0293(const ScriptArguments& args, ScriptInt& arg1) {
     @arg vehicle Car/vehicle
     @arg arg2 Boolean true/false
 */
-void opcode_0294(const ScriptArguments& args, const ScriptVehicle vehicle, const ScriptBoolean arg2) {
+void opcode_0294(const ScriptArguments& args, const ScriptVehicle vehicle,
+                 const ScriptBoolean arg2) {
     RW_UNIMPLEMENTED_OPCODE(0x0294);
     RW_UNUSED(vehicle);
     RW_UNUSED(arg2);
@@ -6800,7 +7475,7 @@ void opcode_0294(const ScriptArguments& args, const ScriptVehicle vehicle, const
     @brief unload_special_actor %1d%
 
     opcode 0296
-    @arg arg1 
+    @arg arg1
 */
 void opcode_0296(const ScriptArguments& args, const ScriptInt arg1) {
     RW_UNIMPLEMENTED_OPCODE(0x0296);
@@ -6825,7 +7500,8 @@ void opcode_0297(const ScriptArguments& args) {
     @arg model0 Player
     @arg model1 Model ID
 */
-void opcode_0298(const ScriptArguments& args, const ScriptModelID model0, ScriptInt& model1) {
+void opcode_0298(const ScriptArguments& args, const ScriptModelID model0,
+                 ScriptInt& model1) {
     RW_UNIMPLEMENTED_OPCODE(0x0298);
     RW_UNUSED(model0);
     RW_UNUSED(model1);
@@ -6836,7 +7512,7 @@ void opcode_0298(const ScriptArguments& args, const ScriptModelID model0, Script
     @brief activate_garage %1d%
 
     opcode 0299
-    @arg garage 
+    @arg garage
 */
 void opcode_0299(const ScriptArguments& args, const ScriptGarage garage) {
     RW_UNUSED(args);
@@ -6851,9 +7527,11 @@ void opcode_0299(const ScriptArguments& args, const ScriptGarage garage) {
     @arg coord Coordinates
     @arg object Object
 */
-void opcode_029b(const ScriptArguments& args, const ScriptModel model, ScriptVec3 coord, ScriptObject& object) {
+void opcode_029b(const ScriptArguments& args, const ScriptModel model,
+                 ScriptVec3 coord, ScriptObject& object) {
     coord = script::getGround(args, coord);
-    object = args.getWorld()->createInstance(script::getModel(args, model), coord);
+    object =
+        args.getWorld()->createInstance(script::getModel(args, model), coord);
     object->setStatic(true);
 }
 
@@ -6861,7 +7539,7 @@ void opcode_029b(const ScriptArguments& args, const ScriptModel model, ScriptVec
     @brief   is_boat %1d%
 
     opcode 029c
-    @arg vehicle 
+    @arg vehicle
 */
 bool opcode_029c(const ScriptArguments& args, const ScriptVehicle vehicle) {
     RW_UNUSED(args);
@@ -6872,7 +7550,7 @@ bool opcode_029c(const ScriptArguments& args, const ScriptVehicle vehicle) {
     @brief   player %1d% stopped
 
     opcode 029f
-    @arg player 
+    @arg player
 */
 bool opcode_029f(const ScriptArguments& args, const ScriptPlayer player) {
     RW_UNUSED(args);
@@ -6894,10 +7572,11 @@ bool opcode_02a0(const ScriptArguments& args, const ScriptCharacter character) {
     @brief skippable_wait
 
     opcode 02a1
-    @arg time 
-    @arg waitSkip 
+    @arg time
+    @arg waitSkip
 */
-void opcode_02a1(const ScriptArguments& args, const ScriptInt time, const ScriptBoolean waitSkip) {
+void opcode_02a1(const ScriptArguments& args, const ScriptInt time,
+                 const ScriptBoolean waitSkip) {
     RW_CHECK(time >= 0, "negative wait time is not supported");
     auto thread = args.getThread();
     // Scripts use wait 0 to yield
@@ -6909,13 +7588,15 @@ void opcode_02a1(const ScriptArguments& args, const ScriptInt time, const Script
     @brief create_particle %1a% %5d% at %2d% %3d% %4d%
 
     opcode 02a2
-    @arg arg1 
-    @arg arg2 
-    @arg arg3 
-    @arg arg4 
-    @arg arg5 
+    @arg arg1
+    @arg arg2
+    @arg arg3
+    @arg arg4
+    @arg arg5
 */
-void opcode_02a2(const ScriptArguments& args, const ScriptPObject arg1, const ScriptFloat arg2, const ScriptFloat arg3, const ScriptFloat arg4, const ScriptInt arg5) {
+void opcode_02a2(const ScriptArguments& args, const ScriptPObject arg1,
+                 const ScriptFloat arg2, const ScriptFloat arg3,
+                 const ScriptFloat arg4, const ScriptInt arg5) {
     RW_UNIMPLEMENTED_OPCODE(0x02a2);
     RW_UNUSED(arg1);
     RW_UNUSED(arg2);
@@ -6943,8 +7624,10 @@ void opcode_02a3(const ScriptArguments& args, const ScriptBoolean flag) {
     @arg blipSprite Blip sprite ID
     @arg blip Blip
 */
-void opcode_02a7(const ScriptArguments& args, ScriptVec3 coord, const ScriptRadarSprite blipSprite, ScriptBlip& blip) {
-    auto& data = script::createBlipSprite(args, coord, BlipData::Contact, blipSprite);
+void opcode_02a7(const ScriptArguments& args, ScriptVec3 coord,
+                 const ScriptRadarSprite blipSprite, ScriptBlip& blip) {
+    auto& data =
+        script::createBlipSprite(args, coord, BlipData::Contact, blipSprite);
     blip = &data;
     RW_UNIMPLEMENTED("Radar Blip Indicator Sphere");
 }
@@ -6957,8 +7640,10 @@ void opcode_02a7(const ScriptArguments& args, ScriptVec3 coord, const ScriptRada
     @arg blipSprite Blip sprite ID
     @arg blip Blip
 */
-void opcode_02a8(const ScriptArguments& args, ScriptVec3 coord, const ScriptRadarSprite blipSprite, ScriptBlip& blip) {
-    auto& data = script::createBlipSprite(args, coord, BlipData::Coord, blipSprite);
+void opcode_02a8(const ScriptArguments& args, ScriptVec3 coord,
+                 const ScriptRadarSprite blipSprite, ScriptBlip& blip) {
+    auto& data =
+        script::createBlipSprite(args, coord, BlipData::Coord, blipSprite);
     blip = &data;
 }
 
@@ -6969,7 +7654,8 @@ void opcode_02a8(const ScriptArguments& args, ScriptVec3 coord, const ScriptRada
     @arg character Character/ped
     @arg arg2 Boolean true/false
 */
-void opcode_02a9(const ScriptArguments& args, const ScriptCharacter character, const ScriptBoolean arg2) {
+void opcode_02a9(const ScriptArguments& args, const ScriptCharacter character,
+                 const ScriptBoolean arg2) {
     RW_UNIMPLEMENTED_OPCODE(0x02a9);
     RW_UNUSED(character);
     RW_UNUSED(arg2);
@@ -6983,7 +7669,8 @@ void opcode_02a9(const ScriptArguments& args, const ScriptCharacter character, c
     @arg vehicle Car/vehicle
     @arg arg2 Boolean true/false
 */
-void opcode_02aa(const ScriptArguments& args, const ScriptVehicle vehicle, const ScriptBoolean arg2) {
+void opcode_02aa(const ScriptArguments& args, const ScriptVehicle vehicle,
+                 const ScriptBoolean arg2) {
     RW_UNIMPLEMENTED_OPCODE(0x02aa);
     RW_UNUSED(vehicle);
     RW_UNUSED(arg2);
@@ -7001,7 +7688,10 @@ void opcode_02aa(const ScriptArguments& args, const ScriptVehicle vehicle, const
     @arg arg5 Boolean true/false
     @arg arg6 Boolean true/false
 */
-void opcode_02ab(const ScriptArguments& args, const ScriptCharacter character, const ScriptBoolean arg2, const ScriptBoolean arg3, const ScriptBoolean arg4, const ScriptBoolean arg5, const ScriptBoolean arg6) {
+void opcode_02ab(const ScriptArguments& args, const ScriptCharacter character,
+                 const ScriptBoolean arg2, const ScriptBoolean arg3,
+                 const ScriptBoolean arg4, const ScriptBoolean arg5,
+                 const ScriptBoolean arg6) {
     RW_UNIMPLEMENTED_OPCODE(0x02ab);
     RW_UNUSED(character);
     RW_UNUSED(arg2);
@@ -7023,7 +7713,10 @@ void opcode_02ab(const ScriptArguments& args, const ScriptCharacter character, c
     @arg arg5 Boolean true/false
     @arg arg6 Boolean true/false
 */
-void opcode_02ac(const ScriptArguments& args, const ScriptVehicle vehicle, const ScriptBoolean arg2, const ScriptBoolean arg3, const ScriptBoolean arg4, const ScriptBoolean arg5, const ScriptBoolean arg6) {
+void opcode_02ac(const ScriptArguments& args, const ScriptVehicle vehicle,
+                 const ScriptBoolean arg2, const ScriptBoolean arg3,
+                 const ScriptBoolean arg4, const ScriptBoolean arg5,
+                 const ScriptBoolean arg6) {
     RW_UNIMPLEMENTED_OPCODE(0x02ac);
     RW_UNUSED(vehicle);
     RW_UNUSED(arg2);
@@ -7044,7 +7737,9 @@ void opcode_02ac(const ScriptArguments& args, const ScriptVehicle vehicle, const
     @arg radius Radius
     @arg arg7 Boolean true/false
 */
-bool opcode_02ad(const ScriptArguments& args, const ScriptPlayer player, ScriptVec2 coord0, ScriptVec2 coord1, const ScriptFloat radius, const ScriptBoolean arg7) {
+bool opcode_02ad(const ScriptArguments& args, const ScriptPlayer player,
+                 ScriptVec2 coord0, ScriptVec2 coord1, const ScriptFloat radius,
+                 const ScriptBoolean arg7) {
     RW_UNIMPLEMENTED_OPCODE(0x02ad);
     RW_UNUSED(player);
     RW_UNUSED(coord0);
@@ -7056,7 +7751,8 @@ bool opcode_02ad(const ScriptArguments& args, const ScriptPlayer player, ScriptV
 }
 
 /**
-    @brief   player %1d% in_area_on_foot %2d% %3d% %4d% %5d% radius %6d% sphere %7h%
+    @brief   player %1d% in_area_on_foot %2d% %3d% %4d% %5d% radius %6d% sphere
+   %7h%
 
     opcode 02ae
     @arg player Player
@@ -7065,7 +7761,9 @@ bool opcode_02ad(const ScriptArguments& args, const ScriptPlayer player, ScriptV
     @arg radius Radius
     @arg arg7 Boolean true/false
 */
-bool opcode_02ae(const ScriptArguments& args, const ScriptPlayer player, ScriptVec2 coord0, ScriptVec2 coord1, const ScriptFloat radius, const ScriptBoolean arg7) {
+bool opcode_02ae(const ScriptArguments& args, const ScriptPlayer player,
+                 ScriptVec2 coord0, ScriptVec2 coord1, const ScriptFloat radius,
+                 const ScriptBoolean arg7) {
     RW_UNIMPLEMENTED_OPCODE(0x02ae);
     RW_UNUSED(player);
     RW_UNUSED(coord0);
@@ -7077,7 +7775,8 @@ bool opcode_02ae(const ScriptArguments& args, const ScriptPlayer player, ScriptV
 }
 
 /**
-    @brief   player %1d% in_area_in_car %2d% %3d% %4d% %5d% radius %6d% sphere %7h%
+    @brief   player %1d% in_area_in_car %2d% %3d% %4d% %5d% radius %6d% sphere
+   %7h%
 
     opcode 02af
     @arg player Player
@@ -7086,7 +7785,9 @@ bool opcode_02ae(const ScriptArguments& args, const ScriptPlayer player, ScriptV
     @arg radius Radius
     @arg arg7 Boolean true/false
 */
-bool opcode_02af(const ScriptArguments& args, const ScriptPlayer player, ScriptVec2 coord0, ScriptVec2 coord1, const ScriptFloat radius, const ScriptBoolean arg7) {
+bool opcode_02af(const ScriptArguments& args, const ScriptPlayer player,
+                 ScriptVec2 coord0, ScriptVec2 coord1, const ScriptFloat radius,
+                 const ScriptBoolean arg7) {
     RW_UNIMPLEMENTED_OPCODE(0x02af);
     RW_UNUSED(player);
     RW_UNUSED(coord0);
@@ -7098,18 +7799,22 @@ bool opcode_02af(const ScriptArguments& args, const ScriptPlayer player, ScriptV
 }
 
 /**
-    @brief   player %1d% stopped_in_area %2d% %3d% %4d% %5d% radius %6d% sphere %7h%
+    @brief   player %1d% stopped_in_area %2d% %3d% %4d% %5d% radius %6d% sphere
+   %7h%
 
     opcode 02b0
-    @arg player 
-    @arg arg2 
-    @arg arg3 
-    @arg arg4 
-    @arg arg5 
-    @arg arg6 
-    @arg arg7 
+    @arg player
+    @arg arg2
+    @arg arg3
+    @arg arg4
+    @arg arg5
+    @arg arg6
+    @arg arg7
 */
-bool opcode_02b0(const ScriptArguments& args, const ScriptPlayer player, const ScriptFloat arg2, const ScriptFloat arg3, const ScriptFloat arg4, const ScriptFloat arg5, const ScriptFloat arg6, const ScriptInt arg7) {
+bool opcode_02b0(const ScriptArguments& args, const ScriptPlayer player,
+                 const ScriptFloat arg2, const ScriptFloat arg3,
+                 const ScriptFloat arg4, const ScriptFloat arg5,
+                 const ScriptFloat arg6, const ScriptInt arg7) {
     RW_UNIMPLEMENTED_OPCODE(0x02b0);
     RW_UNUSED(player);
     RW_UNUSED(arg2);
@@ -7123,18 +7828,22 @@ bool opcode_02b0(const ScriptArguments& args, const ScriptPlayer player, const S
 }
 
 /**
-    @brief   player %1d% stopped_in_area_on_foot %2d% %3d% %4d% %5d% radius %6d% sphere %7h%
+    @brief   player %1d% stopped_in_area_on_foot %2d% %3d% %4d% %5d% radius %6d%
+   sphere %7h%
 
     opcode 02b1
-    @arg player 
-    @arg arg2 
-    @arg arg3 
-    @arg arg4 
-    @arg arg5 
-    @arg arg6 
-    @arg arg7 
+    @arg player
+    @arg arg2
+    @arg arg3
+    @arg arg4
+    @arg arg5
+    @arg arg6
+    @arg arg7
 */
-bool opcode_02b1(const ScriptArguments& args, const ScriptPlayer player, const ScriptFloat arg2, const ScriptFloat arg3, const ScriptFloat arg4, const ScriptFloat arg5, const ScriptFloat arg6, const ScriptInt arg7) {
+bool opcode_02b1(const ScriptArguments& args, const ScriptPlayer player,
+                 const ScriptFloat arg2, const ScriptFloat arg3,
+                 const ScriptFloat arg4, const ScriptFloat arg5,
+                 const ScriptFloat arg6, const ScriptInt arg7) {
     RW_UNIMPLEMENTED_OPCODE(0x02b1);
     RW_UNUSED(player);
     RW_UNUSED(arg2);
@@ -7148,18 +7857,22 @@ bool opcode_02b1(const ScriptArguments& args, const ScriptPlayer player, const S
 }
 
 /**
-    @brief   player %1d% stopped_in_area_in_car %2d% %3d% %4d% %5d% radius %6d% sphere %7h%
+    @brief   player %1d% stopped_in_area_in_car %2d% %3d% %4d% %5d% radius %6d%
+   sphere %7h%
 
     opcode 02b2
-    @arg player 
-    @arg arg2 
-    @arg arg3 
-    @arg arg4 
-    @arg arg5 
-    @arg arg6 
-    @arg arg7 
+    @arg player
+    @arg arg2
+    @arg arg3
+    @arg arg4
+    @arg arg5
+    @arg arg6
+    @arg arg7
 */
-bool opcode_02b2(const ScriptArguments& args, const ScriptPlayer player, const ScriptFloat arg2, const ScriptFloat arg3, const ScriptFloat arg4, const ScriptFloat arg5, const ScriptFloat arg6, const ScriptInt arg7) {
+bool opcode_02b2(const ScriptArguments& args, const ScriptPlayer player,
+                 const ScriptFloat arg2, const ScriptFloat arg3,
+                 const ScriptFloat arg4, const ScriptFloat arg5,
+                 const ScriptFloat arg6, const ScriptInt arg7) {
     RW_UNIMPLEMENTED_OPCODE(0x02b2);
     RW_UNUSED(player);
     RW_UNUSED(arg2);
@@ -7173,20 +7886,25 @@ bool opcode_02b2(const ScriptArguments& args, const ScriptPlayer player, const S
 }
 
 /**
-    @brief   player %1d% in_cube %2d% %3d% %4d% %5d% %6d% %7d% radius %8d% sphere %9h%
+    @brief   player %1d% in_cube %2d% %3d% %4d% %5d% %6d% %7d% radius %8d%
+   sphere %9h%
 
     opcode 02b3
-    @arg player 
-    @arg arg2 
-    @arg arg3 
-    @arg arg4 
-    @arg arg5 
-    @arg arg6 
-    @arg arg7 
-    @arg arg8 
-    @arg arg9 
+    @arg player
+    @arg arg2
+    @arg arg3
+    @arg arg4
+    @arg arg5
+    @arg arg6
+    @arg arg7
+    @arg arg8
+    @arg arg9
 */
-bool opcode_02b3(const ScriptArguments& args, const ScriptPlayer player, const ScriptFloat arg2, const ScriptFloat arg3, const ScriptFloat arg4, const ScriptFloat arg5, const ScriptFloat arg6, const ScriptFloat arg7, const ScriptFloat arg8, const ScriptInt arg9) {
+bool opcode_02b3(const ScriptArguments& args, const ScriptPlayer player,
+                 const ScriptFloat arg2, const ScriptFloat arg3,
+                 const ScriptFloat arg4, const ScriptFloat arg5,
+                 const ScriptFloat arg6, const ScriptFloat arg7,
+                 const ScriptFloat arg8, const ScriptInt arg9) {
     RW_UNIMPLEMENTED_OPCODE(0x02b3);
     RW_UNUSED(player);
     RW_UNUSED(arg2);
@@ -7202,20 +7920,25 @@ bool opcode_02b3(const ScriptArguments& args, const ScriptPlayer player, const S
 }
 
 /**
-    @brief   player %1d% in_cube_on_foot %2d% %3d% %4d% %5d% %6d% %7d% radius %8d% sphere %9h%
+    @brief   player %1d% in_cube_on_foot %2d% %3d% %4d% %5d% %6d% %7d% radius
+   %8d% sphere %9h%
 
     opcode 02b4
-    @arg player 
-    @arg arg2 
-    @arg arg3 
-    @arg arg4 
-    @arg arg5 
-    @arg arg6 
-    @arg arg7 
-    @arg arg8 
-    @arg arg9 
+    @arg player
+    @arg arg2
+    @arg arg3
+    @arg arg4
+    @arg arg5
+    @arg arg6
+    @arg arg7
+    @arg arg8
+    @arg arg9
 */
-bool opcode_02b4(const ScriptArguments& args, const ScriptPlayer player, const ScriptFloat arg2, const ScriptFloat arg3, const ScriptFloat arg4, const ScriptFloat arg5, const ScriptFloat arg6, const ScriptFloat arg7, const ScriptFloat arg8, const ScriptInt arg9) {
+bool opcode_02b4(const ScriptArguments& args, const ScriptPlayer player,
+                 const ScriptFloat arg2, const ScriptFloat arg3,
+                 const ScriptFloat arg4, const ScriptFloat arg5,
+                 const ScriptFloat arg6, const ScriptFloat arg7,
+                 const ScriptFloat arg8, const ScriptInt arg9) {
     RW_UNIMPLEMENTED_OPCODE(0x02b4);
     RW_UNUSED(player);
     RW_UNUSED(arg2);
@@ -7231,7 +7954,8 @@ bool opcode_02b4(const ScriptArguments& args, const ScriptPlayer player, const S
 }
 
 /**
-    @brief   player %1d% in_cube_in_car %2d% %3d% %4d% %5d% %6d% %7d% radius %8d% sphere %9h%
+    @brief   player %1d% in_cube_in_car %2d% %3d% %4d% %5d% %6d% %7d% radius
+   %8d% sphere %9h%
 
     opcode 02b5
     @arg player Player
@@ -7240,7 +7964,9 @@ bool opcode_02b4(const ScriptArguments& args, const ScriptPlayer player, const S
     @arg radius Radius
     @arg arg9 Boolean true/false
 */
-bool opcode_02b5(const ScriptArguments& args, const ScriptPlayer player, ScriptVec3 coord0, ScriptVec3 coord1, const ScriptFloat radius, const ScriptBoolean arg9) {
+bool opcode_02b5(const ScriptArguments& args, const ScriptPlayer player,
+                 ScriptVec3 coord0, ScriptVec3 coord1, const ScriptFloat radius,
+                 const ScriptBoolean arg9) {
     RW_UNIMPLEMENTED_OPCODE(0x02b5);
     RW_UNUSED(player);
     RW_UNUSED(coord0);
@@ -7252,20 +7978,25 @@ bool opcode_02b5(const ScriptArguments& args, const ScriptPlayer player, ScriptV
 }
 
 /**
-    @brief   player %1d% stopped_in_cube %2d% %3d% %4d% %5d% %6d% %7d% radius %8d% sphere %9h%
+    @brief   player %1d% stopped_in_cube %2d% %3d% %4d% %5d% %6d% %7d% radius
+   %8d% sphere %9h%
 
     opcode 02b6
-    @arg player 
-    @arg arg2 
-    @arg arg3 
-    @arg arg4 
-    @arg arg5 
-    @arg arg6 
-    @arg arg7 
-    @arg arg8 
-    @arg arg9 
+    @arg player
+    @arg arg2
+    @arg arg3
+    @arg arg4
+    @arg arg5
+    @arg arg6
+    @arg arg7
+    @arg arg8
+    @arg arg9
 */
-bool opcode_02b6(const ScriptArguments& args, const ScriptPlayer player, const ScriptFloat arg2, const ScriptFloat arg3, const ScriptFloat arg4, const ScriptFloat arg5, const ScriptFloat arg6, const ScriptFloat arg7, const ScriptFloat arg8, const ScriptInt arg9) {
+bool opcode_02b6(const ScriptArguments& args, const ScriptPlayer player,
+                 const ScriptFloat arg2, const ScriptFloat arg3,
+                 const ScriptFloat arg4, const ScriptFloat arg5,
+                 const ScriptFloat arg6, const ScriptFloat arg7,
+                 const ScriptFloat arg8, const ScriptInt arg9) {
     RW_UNIMPLEMENTED_OPCODE(0x02b6);
     RW_UNUSED(player);
     RW_UNUSED(arg2);
@@ -7281,20 +8012,25 @@ bool opcode_02b6(const ScriptArguments& args, const ScriptPlayer player, const S
 }
 
 /**
-    @brief   player %1d% stopped_in_cube_on_foot %2d% %3d% %4d% %5d% %6d% %7d% radius %8d% sphere %9h%
+    @brief   player %1d% stopped_in_cube_on_foot %2d% %3d% %4d% %5d% %6d% %7d%
+   radius %8d% sphere %9h%
 
     opcode 02b7
-    @arg player 
-    @arg arg2 
-    @arg arg3 
-    @arg arg4 
-    @arg arg5 
-    @arg arg6 
-    @arg arg7 
-    @arg arg8 
-    @arg arg9 
+    @arg player
+    @arg arg2
+    @arg arg3
+    @arg arg4
+    @arg arg5
+    @arg arg6
+    @arg arg7
+    @arg arg8
+    @arg arg9
 */
-bool opcode_02b7(const ScriptArguments& args, const ScriptPlayer player, const ScriptFloat arg2, const ScriptFloat arg3, const ScriptFloat arg4, const ScriptFloat arg5, const ScriptFloat arg6, const ScriptFloat arg7, const ScriptFloat arg8, const ScriptInt arg9) {
+bool opcode_02b7(const ScriptArguments& args, const ScriptPlayer player,
+                 const ScriptFloat arg2, const ScriptFloat arg3,
+                 const ScriptFloat arg4, const ScriptFloat arg5,
+                 const ScriptFloat arg6, const ScriptFloat arg7,
+                 const ScriptFloat arg8, const ScriptInt arg9) {
     RW_UNIMPLEMENTED_OPCODE(0x02b7);
     RW_UNUSED(player);
     RW_UNUSED(arg2);
@@ -7310,7 +8046,8 @@ bool opcode_02b7(const ScriptArguments& args, const ScriptPlayer player, const S
 }
 
 /**
-    @brief   player %1d% stopped_in_cube_in_car %2d% %3d% %4d% %5d% %6d% %7d% radius %8d% sphere %9h%
+    @brief   player %1d% stopped_in_cube_in_car %2d% %3d% %4d% %5d% %6d% %7d%
+   radius %8d% sphere %9h%
 
     opcode 02b8
     @arg player Player
@@ -7319,7 +8056,9 @@ bool opcode_02b7(const ScriptArguments& args, const ScriptPlayer player, const S
     @arg radius Radius
     @arg arg9 Boolean true/false
 */
-bool opcode_02b8(const ScriptArguments& args, const ScriptPlayer player, ScriptVec3 coord0, ScriptVec3 coord1, const ScriptFloat radius, const ScriptBoolean arg9) {
+bool opcode_02b8(const ScriptArguments& args, const ScriptPlayer player,
+                 ScriptVec3 coord0, ScriptVec3 coord1, const ScriptFloat radius,
+                 const ScriptBoolean arg9) {
     RW_UNIMPLEMENTED_OPCODE(0x02b8);
     RW_UNUSED(player);
     RW_UNUSED(coord0);
@@ -7334,7 +8073,7 @@ bool opcode_02b8(const ScriptArguments& args, const ScriptPlayer player, ScriptV
     @brief deactivate_garage %1d%
 
     opcode 02b9
-    @arg garage 
+    @arg garage
 */
 void opcode_02b9(const ScriptArguments& args, const ScriptGarage garage) {
     RW_UNUSED(args);
@@ -7345,7 +8084,7 @@ void opcode_02b9(const ScriptArguments& args, const ScriptGarage garage) {
     @brief set_cop_behaviour %1b:kill/arrest%
 
     opcode 02bc
-    @arg arg1 
+    @arg arg1
 */
 void opcode_02bc(const ScriptArguments& args, const ScriptInt arg1) {
     RW_UNIMPLEMENTED_OPCODE(0x02bc);
@@ -7373,8 +8112,11 @@ bool opcode_02bf(const ScriptArguments& args, const ScriptVehicle vehicle) {
     @arg yCoord Y Coord
     @arg zCoord Z Coord
 */
-void opcode_02c0(const ScriptArguments& args, ScriptVec3 coord, ScriptFloat& xCoord, ScriptFloat& yCoord, ScriptFloat& zCoord) {
-    script::getClosestNode(args, coord, AIGraphNode::NodeType::Pedestrian, xCoord, yCoord, zCoord);
+void opcode_02c0(const ScriptArguments& args, ScriptVec3 coord,
+                 ScriptFloat& xCoord, ScriptFloat& yCoord,
+                 ScriptFloat& zCoord) {
+    script::getClosestNode(args, coord, AIGraphNode::NodeType::Pedestrian,
+                           xCoord, yCoord, zCoord);
 }
 
 /**
@@ -7386,8 +8128,11 @@ void opcode_02c0(const ScriptArguments& args, ScriptVec3 coord, ScriptFloat& xCo
     @arg yCoord Y Coord
     @arg zCoord Z Coord
 */
-void opcode_02c1(const ScriptArguments& args, ScriptVec3 coord, ScriptFloat& xCoord, ScriptFloat& yCoord, ScriptFloat& zCoord) {
-    script::getClosestNode(args, coord, AIGraphNode::NodeType::Vehicle, xCoord, yCoord, zCoord);
+void opcode_02c1(const ScriptArguments& args, ScriptVec3 coord,
+                 ScriptFloat& xCoord, ScriptFloat& yCoord,
+                 ScriptFloat& zCoord) {
+    script::getClosestNode(args, coord, AIGraphNode::NodeType::Vehicle, xCoord,
+                           yCoord, zCoord);
 }
 
 /**
@@ -7397,7 +8142,8 @@ void opcode_02c1(const ScriptArguments& args, ScriptVec3 coord, ScriptFloat& xCo
     @arg vehicle Car/vehicle
     @arg coord Coordinates
 */
-void opcode_02c2(const ScriptArguments& args, const ScriptVehicle vehicle, ScriptVec3 coord) {
+void opcode_02c2(const ScriptArguments& args, const ScriptVehicle vehicle,
+                 ScriptVec3 coord) {
     RW_UNIMPLEMENTED_OPCODE(0x02c2);
     RW_UNUSED(vehicle);
     RW_UNUSED(coord);
@@ -7449,13 +8195,15 @@ void opcode_02c6(const ScriptArguments& args) {
     @brief scatter_platinum %5d% at %1d% %2d% %3d% %4d%
 
     opcode 02c7
-    @arg arg1 
-    @arg arg2 
-    @arg arg3 
-    @arg arg4 
-    @arg arg5 
+    @arg arg1
+    @arg arg2
+    @arg arg3
+    @arg arg4
+    @arg arg5
 */
-void opcode_02c7(const ScriptArguments& args, const ScriptFloat arg1, const ScriptFloat arg2, const ScriptFloat arg3, const ScriptFloat arg4, const ScriptInt arg5) {
+void opcode_02c7(const ScriptArguments& args, const ScriptFloat arg1,
+                 const ScriptFloat arg2, const ScriptFloat arg3,
+                 const ScriptFloat arg4, const ScriptInt arg5) {
     RW_UNIMPLEMENTED_OPCODE(0x02c7);
     RW_UNUSED(arg1);
     RW_UNUSED(arg2);
@@ -7469,7 +8217,7 @@ void opcode_02c7(const ScriptArguments& args, const ScriptFloat arg1, const Scri
     @brief %1d% = platinum_pieces_in_car
 
     opcode 02c8
-    @arg arg1 
+    @arg arg1
 */
 void opcode_02c8(const ScriptArguments& args, ScriptInt& arg1) {
     RW_UNIMPLEMENTED_OPCODE(0x02c8);
@@ -7488,7 +8236,7 @@ void opcode_02c9(const ScriptArguments& args) {
 }
 
 /**
-    @brief   is_car_on_screen %1d% 
+    @brief   is_car_on_screen %1d%
 
     opcode 02ca
     @arg vehicle Car/vehicle
@@ -7501,7 +8249,7 @@ bool opcode_02ca(const ScriptArguments& args, const ScriptVehicle vehicle) {
 }
 
 /**
-    @brief   is_actor_on_screen %1d% 
+    @brief   is_actor_on_screen %1d%
 
     opcode 02cb
     @arg character Character/ped
@@ -7514,7 +8262,7 @@ bool opcode_02cb(const ScriptArguments& args, const ScriptCharacter character) {
 }
 
 /**
-    @brief   is_object_on_screen %1d% 
+    @brief   is_object_on_screen %1d%
 
     opcode 02cc
     @arg object Object
@@ -7534,9 +8282,10 @@ bool opcode_02cc(const ScriptArguments& args, const ScriptObject object) {
     Branches to a subroutine
 
     @arg pc Position in the script it will jump to
-    @arg unused Not used 
+    @arg unused Not used
 */
-void opcode_02cd(const ScriptArguments& args, const ScriptLabel pc, const ScriptLabel unused) {
+void opcode_02cd(const ScriptArguments& args, const ScriptLabel pc,
+                 const ScriptLabel unused) {
     RW_UNUSED(unused);
     auto thread = args.getThread();
     thread->calls[thread->stackDepth++] = thread->programCounter;
@@ -7548,14 +8297,16 @@ void opcode_02cd(const ScriptArguments& args, const ScriptLabel pc, const Script
 
     opcode 02CE
 
-    Gets the height in the z-axis of the ground below the specified coordinates point
+    Gets the height in the z-axis of the ground below the specified coordinates
+   point
 
     @arg x X coordinate
     @arg y Y coordinate
     @arg z Z coordinate
     @arg groundZ Z ground coordinate
 */
-void opcode_02ce(const ScriptArguments& args, ScriptVec3 coord, ScriptFloat& groundZ) {
+void opcode_02ce(const ScriptArguments& args, ScriptVec3 coord,
+                 ScriptFloat& groundZ) {
     auto groundPoint = script::getGround(args, coord);
     groundZ = groundPoint.z;
 }
@@ -7565,9 +8316,10 @@ void opcode_02ce(const ScriptArguments& args, ScriptVec3 coord, ScriptFloat& gro
 
     opcode 02cf
     @arg coord Coordinates
-    @arg fire 
+    @arg fire
 */
-void opcode_02cf(const ScriptArguments& args, ScriptVec3 coord, ScriptFire& fire) {
+void opcode_02cf(const ScriptArguments& args, ScriptVec3 coord,
+                 ScriptFire& fire) {
     RW_UNIMPLEMENTED_OPCODE(0x02cf);
     RW_UNUSED(coord);
     RW_UNUSED(fire);
@@ -7606,7 +8358,8 @@ void opcode_02d1(const ScriptArguments& args, const ScriptFire fire) {
     @arg vehicle Car/vehicle
     @arg coord Coordinates
 */
-void opcode_02d3(const ScriptArguments& args, const ScriptVehicle vehicle, ScriptVec3 coord) {
+void opcode_02d3(const ScriptArguments& args, const ScriptVehicle vehicle,
+                 ScriptVec3 coord) {
     RW_UNIMPLEMENTED_OPCODE(0x02d3);
     RW_UNUSED(vehicle);
     RW_UNUSED(coord);
@@ -7629,14 +8382,17 @@ void opcode_02d4(const ScriptArguments& args, const ScriptVehicle vehicle) {
     @brief   player %1d% firing_weapons_in_rectangle %2d% %3d% %4d% %5d% %6d%
 
     opcode 02d5
-    @arg player 
-    @arg arg2 
-    @arg arg3 
-    @arg arg4 
-    @arg arg5 
-    @arg arg6 
+    @arg player
+    @arg arg2
+    @arg arg3
+    @arg arg4
+    @arg arg5
+    @arg arg6
 */
-bool opcode_02d5(const ScriptArguments& args, const ScriptPlayer player, const ScriptFloat arg2, const ScriptFloat arg3, const ScriptFloat arg4, const ScriptFloat arg5, const ScriptInt arg6) {
+bool opcode_02d5(const ScriptArguments& args, const ScriptPlayer player,
+                 const ScriptFloat arg2, const ScriptFloat arg3,
+                 const ScriptFloat arg4, const ScriptFloat arg5,
+                 const ScriptInt arg6) {
     RW_UNIMPLEMENTED_OPCODE(0x02d5);
     RW_UNUSED(player);
     RW_UNUSED(arg2);
@@ -7652,13 +8408,16 @@ bool opcode_02d5(const ScriptArguments& args, const ScriptPlayer player, const S
     @brief   player %1d% currentweapon == %2c%
 
     opcode 02d7
-    @arg player 
-    @arg weaponId 
+    @arg player
+    @arg weaponId
 */
-bool opcode_02d7(const ScriptArguments& args, const ScriptPlayer player, const ScriptWeaponType weaponId) {
+bool opcode_02d7(const ScriptArguments& args, const ScriptPlayer player,
+                 const ScriptWeaponType weaponId) {
     RW_UNUSED(args);
     auto plyChar = player->getCharacter();
-    return plyChar->getCurrentState().weapons[plyChar->getActiveItem()].weaponId == unsigned(weaponId);
+    return plyChar->getCurrentState()
+               .weapons[plyChar->getActiveItem()]
+               .weaponId == unsigned(weaponId);
 }
 
 /**
@@ -7668,9 +8427,12 @@ bool opcode_02d7(const ScriptArguments& args, const ScriptPlayer player, const S
     @arg character Character/ped
     @arg weaponID Weapon ID
 */
-bool opcode_02d8(const ScriptArguments& args, const ScriptCharacter character, const ScriptWeaponType weaponID) {
+bool opcode_02d8(const ScriptArguments& args, const ScriptCharacter character,
+                 const ScriptWeaponType weaponID) {
     RW_UNUSED(args);
-    return character->getCurrentState().weapons[character->getActiveItem()].weaponId == unsigned(weaponID);
+    return character->getCurrentState()
+               .weapons[character->getActiveItem()]
+               .weaponId == unsigned(weaponID);
 }
 
 /**
@@ -7686,10 +8448,11 @@ void opcode_02d9(const ScriptArguments& args) {
     @brief set_boat %1d% speed_to %2d%
 
     opcode 02db
-    @arg vehicle 
-    @arg arg2 
+    @arg vehicle
+    @arg arg2
 */
-void opcode_02db(const ScriptArguments& args, const ScriptVehicle vehicle, const ScriptFloat arg2) {
+void opcode_02db(const ScriptArguments& args, const ScriptVehicle vehicle,
+                 const ScriptFloat arg2) {
     RW_UNIMPLEMENTED_OPCODE(0x02db);
     RW_UNUSED(vehicle);
     RW_UNUSED(arg2);
@@ -7703,7 +8466,8 @@ void opcode_02db(const ScriptArguments& args, const ScriptVehicle vehicle, const
     @arg areaName Area name
     @arg character Character/ped
 */
-void opcode_02dd(const ScriptArguments& args, const ScriptString areaName, ScriptCharacter& character) {
+void opcode_02dd(const ScriptArguments& args, const ScriptString areaName,
+                 ScriptCharacter& character) {
     RW_UNIMPLEMENTED_OPCODE(0x02dd);
     RW_UNUSED(areaName);
     RW_UNUSED(character);
@@ -7713,14 +8477,15 @@ void opcode_02dd(const ScriptArguments& args, const ScriptString areaName, Scrip
     // Only try to find a character if this is a known zone
     auto zone = args.getWorld()->data->findZone(areaName);
     if (zone) {
-        // Create a list of candidate characters by iterating and checking if the char is in this zone
+        // Create a list of candidate characters by iterating and checking if
+        // the char is in this zone
         std::vector<std::pair<GameObjectID, GameObject*>> candidates;
         for (auto& p : args.getWorld()->pedestrianPool.objects) {
             auto character = static_cast<CharacterObject*>(p.second);
 
             // We only consider characters walking around normally
-            // @todo not sure if we are able to grab script objects or players too
-            // husho: only grab traffic objects
+            // @todo not sure if we are able to grab script objects or players
+            // too husho: only grab traffic objects
             if (character->getLifetime() != GameObject::TrafficLifetime) {
                 continue;
             }
@@ -7729,8 +8494,8 @@ void opcode_02dd(const ScriptArguments& args, const ScriptString areaName, Scrip
             auto cp = character->getPosition();
             auto& min = zone->min;
             auto& max = zone->max;
-            if (cp.x > min.x && cp.y > min.y && cp.z > min.z &&
-                cp.x < max.x && cp.y < max.y && cp.z < max.z) {
+            if (cp.x > min.x && cp.y > min.y && cp.z > min.z && cp.x < max.x &&
+                cp.y < max.y && cp.z < max.z) {
                 candidates.push_back(p);
             }
         }
@@ -7738,9 +8503,10 @@ void opcode_02dd(const ScriptArguments& args, const ScriptString areaName, Scrip
         // Only return a result if we found a character
         unsigned int candidateCount = candidates.size();
         if (candidateCount > 0) {
-            // Return the handle for any random character in this zone and use lifetime for use by script
-            // @todo verify if the lifetime is actually changed in the original game
-            // husho: lifetime is changed to mission object lifetime
+            // Return the handle for any random character in this zone and use
+            // lifetime for use by script
+            // @todo verify if the lifetime is actually changed in the original
+            // game husho: lifetime is changed to mission object lifetime
             unsigned int randomIndex = std::rand() % candidateCount;
             const auto p = candidates[randomIndex];
             auto character = static_cast<CharacterObject*>(p.second);
@@ -7761,13 +8527,13 @@ void opcode_02dd(const ScriptArguments& args, const ScriptString areaName, Scrip
     @brief   player %1d% driving_taxi_vehicle
 
     opcode 02de
-    @arg player 
+    @arg player
 */
 bool opcode_02de(const ScriptArguments& args, const ScriptPlayer player) {
     RW_UNUSED(args);
     auto vehicle = player->getCharacter()->getCurrentVehicle();
     if (!vehicle) {
-    	return false;
+        return false;
     }
     auto type = vehicle->getVehicle()->vehicleclass_;
     return (type & VehicleModelInfo::TAXI) == VehicleModelInfo::TAXI;
@@ -7777,7 +8543,7 @@ bool opcode_02de(const ScriptArguments& args, const ScriptPlayer player) {
     @brief player %1d% agressive
 
     opcode 02df
-    @arg player 
+    @arg player
 */
 void opcode_02df(const ScriptArguments& args, const ScriptPlayer player) {
     RW_UNIMPLEMENTED_OPCODE(0x02df);
@@ -7802,15 +8568,18 @@ bool opcode_02e0(const ScriptArguments& args, const ScriptCharacter character) {
     @brief %5d% = create_cash_pickup %4d% at %1d% %2d% %3d%
 
     opcode 02e1
-    @arg arg1 
-    @arg arg2 
-    @arg arg3 
-    @arg money 
-    @arg pickup 
+    @arg arg1
+    @arg arg2
+    @arg arg3
+    @arg money
+    @arg pickup
 */
-void opcode_02e1(const ScriptArguments& args, ScriptVec3 coord, const ScriptInt money, ScriptPickup& pickup) {
+void opcode_02e1(const ScriptArguments& args, ScriptVec3 coord,
+                 const ScriptInt money, ScriptPickup& pickup) {
     coord = script::getGround(args, coord);
-    PickupObject* pickupObj = args.getWorld()->createPickup(coord, args.getWorld()->data->findModelObject("Money"), PickupObject::PickupType::Money);
+    PickupObject* pickupObj = args.getWorld()->createPickup(
+        coord, args.getWorld()->data->findModelObject("Money"),
+        PickupObject::PickupType::Money);
     static_cast<MoneyPickup*>(pickupObj)->setMoney(money);
     pickup = pickupObj;
 }
@@ -7820,9 +8589,10 @@ void opcode_02e1(const ScriptArguments& args, ScriptVec3 coord, const ScriptInt 
 
     opcode 02e2
     @arg character Character/ped
-    @arg arg2 
+    @arg arg2
 */
-void opcode_02e2(const ScriptArguments& args, const ScriptCharacter character, const ScriptInt arg2) {
+void opcode_02e2(const ScriptArguments& args, const ScriptCharacter character,
+                 const ScriptInt arg2) {
     RW_UNIMPLEMENTED_OPCODE(0x02e2);
     RW_UNUSED(character);
     RW_UNUSED(arg2);
@@ -7834,19 +8604,20 @@ void opcode_02e2(const ScriptArguments& args, const ScriptCharacter character, c
 
     opcode 02e3
     @arg vehicle Car/vehicle
-    @arg arg2 
+    @arg arg2
 */
-void opcode_02e3(const ScriptArguments& args, const ScriptVehicle vehicle, ScriptFloat& arg2) {
+void opcode_02e3(const ScriptArguments& args, const ScriptVehicle vehicle,
+                 ScriptFloat& arg2) {
     RW_UNUSED(args);
     // m/s -> km/h
-    arg2 = (vehicle->getVelocity()/1000.f)*60.f*60;
+    arg2 = (vehicle->getVelocity() / 1000.f) * 60.f * 60;
 }
 
 /**
     @brief load_cutscene_data %1s%
 
     opcode 02e4
-    @arg arg1 
+    @arg arg1
 */
 void opcode_02e4(const ScriptArguments& args, const ScriptString arg1) {
     args.getWorld()->loadCutscene(arg1);
@@ -7863,7 +8634,8 @@ void opcode_02e4(const ScriptArguments& args, const ScriptString arg1) {
     @arg model Model ID
     @arg object Object
 */
-void opcode_02e5(const ScriptArguments& args, const ScriptModelID model, ScriptObject& object) {
+void opcode_02e5(const ScriptArguments& args, const ScriptModelID model,
+                 ScriptObject& object) {
     RW_UNUSED(object);
     auto cutsceneObject = args.getWorld()->createCutsceneObject(
         model, args.getState()->currentCutscene->meta.sceneOffset);
@@ -7877,21 +8649,23 @@ void opcode_02e5(const ScriptArguments& args, const ScriptModelID model, ScriptO
 
     opcode 02e6
     @arg object Player
-    @arg arg2 
+    @arg arg2
 */
-void opcode_02e6(const ScriptArguments& args, const ScriptObject object, const ScriptString arg2) {
+void opcode_02e6(const ScriptArguments& args, const ScriptObject object,
+                 const ScriptString arg2) {
     RW_UNUSED(object);
     RW_UNUSED(arg2);
     /// @todo make animation data-driven rather than oop
     auto cutscene = args.getObject<CutsceneObject>(0);
     std::string animName = arg2;
-    std::transform(animName.begin(), animName.end(), animName.begin(), ::tolower);
+    std::transform(animName.begin(), animName.end(), animName.begin(),
+                   ::tolower);
     auto anim = args.getWorld()->data->animations[animName];
-    if( anim ) {
-    	cutscene->animator->playAnimation(AnimIndexMovement, anim, 1.f, false);
-    }
-    else {
-    	args.getWorld()->logger->error("SCM", "Failed to load cutscene anim: " + animName);
+    if (anim) {
+        cutscene->animator->playAnimation(AnimIndexMovement, anim, 1.f, false);
+    } else {
+        args.getWorld()->logger->error(
+            "SCM", "Failed to load cutscene anim: " + animName);
     }
 }
 
@@ -7908,15 +8682,16 @@ void opcode_02e7(const ScriptArguments& args) {
     @brief %1d% = cutscenetime
 
     opcode 02e8
-    @arg arg1 
+    @arg arg1
 */
 void opcode_02e8(const ScriptArguments& args, ScriptInt& arg1) {
     auto cutscene = args.getState()->currentCutscene;
     if (args.getState()->skipCutscene) {
-    	arg1 = cutscene ? cutscene->tracks.duration * 1000 : 0.f;
-    }
-    else {
-    	arg1 = (args.getWorld()->getGameTime() - args.getState()->cutsceneStartTime) * 1000;
+        arg1 = cutscene ? cutscene->tracks.duration * 1000 : 0.f;
+    } else {
+        arg1 = (args.getWorld()->getGameTime() -
+                args.getState()->cutsceneStartTime) *
+               1000;
     }
 }
 
@@ -7927,11 +8702,12 @@ void opcode_02e8(const ScriptArguments& args, ScriptInt& arg1) {
 */
 bool opcode_02e9(const ScriptArguments& args) {
     if (args.getState()->currentCutscene) {
-    	if (args.getState()->skipCutscene) {
-    		return true;
-    	}
-    	auto time = (args.getWorld()->getGameTime() - args.getWorld()->state->cutsceneStartTime);
-    	return time >= args.getState()->currentCutscene->tracks.duration;
+        if (args.getState()->skipCutscene) {
+            return true;
+        }
+        auto time = (args.getWorld()->getGameTime() -
+                     args.getWorld()->state->cutsceneStartTime);
+        return time >= args.getState()->currentCutscene->tracks.duration;
     }
     return true;
 }
@@ -7967,14 +8743,16 @@ void opcode_02eb(const ScriptArguments& args) {
 */
 void opcode_02ec(const ScriptArguments& args, ScriptVec3 coord) {
     coord = script::getGround(args, coord);
-    args.getWorld()->createPickup(coord, args.getWorld()->data->findModelObject("package1"), PickupObject::PickupType::Collectable);
+    args.getWorld()->createPickup(
+        coord, args.getWorld()->data->findModelObject("package1"),
+        PickupObject::PickupType::Collectable);
 }
 
 /**
     @brief set_total_hidden_packages_to %1d%
 
     opcode 02ed
-    @arg arg1 
+    @arg arg1
 */
 void opcode_02ed(const ScriptArguments& args, const ScriptInt arg1) {
     args.getState()->playerInfo.hiddenPackageCount = arg1;
@@ -7987,7 +8765,8 @@ void opcode_02ed(const ScriptArguments& args, const ScriptInt arg1) {
     @arg coord0 Coordinates
     @arg coord1 Coordinates
 */
-bool opcode_02ee(const ScriptArguments& args, ScriptVec3 coord0, ScriptVec3 coord1) {
+bool opcode_02ee(const ScriptArguments& args, ScriptVec3 coord0,
+                 ScriptVec3 coord1) {
     RW_UNIMPLEMENTED_OPCODE(0x02ee);
     RW_UNUSED(coord0);
     RW_UNUSED(coord1);
@@ -7999,14 +8778,17 @@ bool opcode_02ee(const ScriptArguments& args, ScriptVec3 coord0, ScriptVec3 coor
     @brief destroy_projectiles_in_cube %1d% %2d% %3d% to %4d% %5d% %6d%
 
     opcode 02ef
-    @arg arg1 
-    @arg arg2 
-    @arg arg3 
-    @arg arg4 
-    @arg arg5 
-    @arg arg6 
+    @arg arg1
+    @arg arg2
+    @arg arg3
+    @arg arg4
+    @arg arg5
+    @arg arg6
 */
-void opcode_02ef(const ScriptArguments& args, const ScriptFloat arg1, const ScriptFloat arg2, const ScriptFloat arg3, const ScriptFloat arg4, const ScriptFloat arg5, const ScriptFloat arg6) {
+void opcode_02ef(const ScriptArguments& args, const ScriptFloat arg1,
+                 const ScriptFloat arg2, const ScriptFloat arg3,
+                 const ScriptFloat arg4, const ScriptFloat arg5,
+                 const ScriptFloat arg6) {
     RW_UNIMPLEMENTED_OPCODE(0x02ef);
     RW_UNUSED(arg1);
     RW_UNUSED(arg2);
@@ -8036,7 +8818,8 @@ void opcode_02f1(const ScriptArguments& args, ScriptVec3 coord) {
     @arg character Character/ped
     @arg model Model ID
 */
-bool opcode_02f2(const ScriptArguments& args, const ScriptCharacter character, const ScriptModelID model) {
+bool opcode_02f2(const ScriptArguments& args, const ScriptCharacter character,
+                 const ScriptModelID model) {
     RW_UNIMPLEMENTED_OPCODE(0x02f2);
     RW_UNUSED(character);
     RW_UNUSED(model);
@@ -8049,9 +8832,10 @@ bool opcode_02f2(const ScriptArguments& args, const ScriptCharacter character, c
 
     opcode 02f3
     @arg model Model ID
-    @arg arg2 
+    @arg arg2
 */
-void opcode_02f3(const ScriptArguments& args, const ScriptModelID model, const ScriptString arg2) {
+void opcode_02f3(const ScriptArguments& args, const ScriptModelID model,
+                 const ScriptString arg2) {
     args.getWorld()->loadSpecialModel(model, arg2);
 }
 
@@ -8059,23 +8843,26 @@ void opcode_02f3(const ScriptArguments& args, const ScriptModelID model, const S
     @brief create_cutscene_actor %3d% from_head %2o% and_body %1d%
 
     opcode 02f4
-    @arg object0 
-    @arg model 
-    @arg object1 
+    @arg object0
+    @arg model
+    @arg object1
 */
-void opcode_02f4(const ScriptArguments& args, const ScriptObject object0, const ScriptModelID model, ScriptObject& object1) {
+void opcode_02f4(const ScriptArguments& args, const ScriptObject object0,
+                 const ScriptModelID model, ScriptObject& object1) {
     RW_UNUSED(object0);
     RW_UNUSED(model);
     RW_UNUSED(object1);
     auto id = args[1].integer;
-    auto actor = static_cast<CutsceneObject*>(args.getObject<CutsceneObject>(0));
-    CutsceneObject* object = args.getWorld()->createCutsceneObject(id, args.getWorld()->state->currentCutscene->meta.sceneOffset );
+    auto actor =
+        static_cast<CutsceneObject*>(args.getObject<CutsceneObject>(0));
+    CutsceneObject* object = args.getWorld()->createCutsceneObject(
+        id, args.getWorld()->state->currentCutscene->meta.sceneOffset);
 
     auto headframe = actor->getClump()->findFrame("shead");
     for (const auto& atomic : actor->getClump()->getAtomics()) {
-    	if (atomic->getFrame().get() == headframe) {
-    	    atomic->setFlag(Atomic::ATOMIC_RENDER, false);
-    	}
+        if (atomic->getFrame().get() == headframe) {
+            atomic->setFlag(Atomic::ATOMIC_RENDER, false);
+        }
     }
     object->setParentActor(actor, headframe);
 
@@ -8086,21 +8873,23 @@ void opcode_02f4(const ScriptArguments& args, const ScriptObject object0, const 
     @brief set_head_anim %1d% %2s%
 
     opcode 02f5
-    @arg object 
-    @arg arg2 
+    @arg object
+    @arg arg2
 */
-void opcode_02f5(const ScriptArguments& args, const ScriptObject object, const ScriptString arg2) {
+void opcode_02f5(const ScriptArguments& args, const ScriptObject object,
+                 const ScriptString arg2) {
     RW_UNUSED(object);
     RW_UNUSED(arg2);
     GameObject* head = args.getObject<CutsceneObject>(0);
     std::string animName = args[1].string;
-    std::transform(animName.begin(), animName.end(), animName.begin(), ::tolower);
+    std::transform(animName.begin(), animName.end(), animName.begin(),
+                   ::tolower);
     auto anim = args.getWorld()->data->animations[animName];
-    if( anim ) {
-    	head->animator->playAnimation(AnimIndexMovement, anim, 1.f, false);
-    }
-    else {
-    	args.getWorld()->logger->error("SCM", "Failed to load cutscene anim: " + animName);
+    if (anim) {
+        head->animator->playAnimation(AnimIndexMovement, anim, 1.f, false);
+    } else {
+        args.getWorld()->logger->error(
+            "SCM", "Failed to load cutscene anim: " + animName);
     }
 }
 
@@ -8111,7 +8900,8 @@ void opcode_02f5(const ScriptArguments& args, const ScriptObject object, const S
     @arg angle Angle
     @arg xOffset X offset
 */
-void opcode_02f6(const ScriptArguments& args, const ScriptFloat angle, ScriptFloat& xOffset) {
+void opcode_02f6(const ScriptArguments& args, const ScriptFloat angle,
+                 ScriptFloat& xOffset) {
     xOffset = glm::sin(glm::radians(angle));
     RW_UNUSED(args);
 }
@@ -8123,7 +8913,8 @@ void opcode_02f6(const ScriptArguments& args, const ScriptFloat angle, ScriptFlo
     @arg angle Angle
     @arg yOffset Y offset
 */
-void opcode_02f7(const ScriptArguments& args, const ScriptFloat angle, ScriptFloat& yOffset) {
+void opcode_02f7(const ScriptArguments& args, const ScriptFloat angle,
+                 ScriptFloat& yOffset) {
     yOffset = glm::cos(glm::radians(angle));
     RW_UNUSED(args);
 }
@@ -8133,9 +8924,10 @@ void opcode_02f7(const ScriptArguments& args, const ScriptFloat angle, ScriptFlo
 
     opcode 02f8
     @arg vehicle Car/vehicle
-    @arg arg2 
+    @arg arg2
 */
-void opcode_02f8(const ScriptArguments& args, const ScriptVehicle vehicle, ScriptFloat& arg2) {
+void opcode_02f8(const ScriptArguments& args, const ScriptVehicle vehicle,
+                 ScriptFloat& arg2) {
     RW_UNIMPLEMENTED_OPCODE(0x02f8);
     RW_UNUSED(vehicle);
     RW_UNUSED(arg2);
@@ -8147,9 +8939,10 @@ void opcode_02f8(const ScriptArguments& args, const ScriptVehicle vehicle, Scrip
 
     opcode 02f9
     @arg vehicle Car/vehicle
-    @arg arg2 
+    @arg arg2
 */
-void opcode_02f9(const ScriptArguments& args, const ScriptVehicle vehicle, ScriptFloat& arg2) {
+void opcode_02f9(const ScriptArguments& args, const ScriptVehicle vehicle,
+                 ScriptFloat& arg2) {
     RW_UNIMPLEMENTED_OPCODE(0x02f9);
     RW_UNUSED(vehicle);
     RW_UNUSED(arg2);
@@ -8160,30 +8953,37 @@ void opcode_02f9(const ScriptArguments& args, const ScriptVehicle vehicle, Scrip
     @brief garage %1d% change_to_type %2d%
 
     opcode 02fa
-    @arg garage0 
-    @arg garage1 
+    @arg garage0
+    @arg garage1
 */
-void opcode_02fa(const ScriptArguments& args, const ScriptGarage garage, const ScriptGarageType garageType) {
+void opcode_02fa(const ScriptArguments& args, const ScriptGarage garage,
+                 const ScriptGarageType garageType) {
     RW_UNUSED(args);
     garage->type = garageType;
 }
 
 /**
-    @brief create_crusher_crane %1d% %2d% %3d% %4d% %5d% %6d% %7d% %8d% %9d% %10d%
+    @brief create_crusher_crane %1d% %2d% %3d% %4d% %5d% %6d% %7d% %8d% %9d%
+   %10d%
 
     opcode 02fb
-    @arg arg1 
-    @arg arg2 
-    @arg arg3 
-    @arg arg4 
-    @arg arg5 
-    @arg arg6 
-    @arg arg7 
-    @arg arg8 
-    @arg arg9 
-    @arg arg10 
+    @arg arg1
+    @arg arg2
+    @arg arg3
+    @arg arg4
+    @arg arg5
+    @arg arg6
+    @arg arg7
+    @arg arg8
+    @arg arg9
+    @arg arg10
 */
-void opcode_02fb(const ScriptArguments& args, const ScriptFloat arg1, const ScriptFloat arg2, const ScriptFloat arg3, const ScriptFloat arg4, const ScriptFloat arg5, const ScriptFloat arg6, const ScriptFloat arg7, const ScriptFloat arg8, const ScriptFloat arg9, const ScriptFloat arg10) {
+void opcode_02fb(const ScriptArguments& args, const ScriptFloat arg1,
+                 const ScriptFloat arg2, const ScriptFloat arg3,
+                 const ScriptFloat arg4, const ScriptFloat arg5,
+                 const ScriptFloat arg6, const ScriptFloat arg7,
+                 const ScriptFloat arg8, const ScriptFloat arg9,
+                 const ScriptFloat arg10) {
     RW_UNIMPLEMENTED_OPCODE(0x02fb);
     RW_UNUSED(args);
     RW_UNUSED(arg1);
@@ -8202,13 +9002,15 @@ void opcode_02fb(const ScriptArguments& args, const ScriptFloat arg1, const Scri
     @brief text_2numbers %1g% numbers %2d% %3d% duration %4d% ms flag %5d%
 
     opcode 02fc
-    @arg arg1 
-    @arg arg2 
-    @arg arg3 
-    @arg arg4 
-    @arg arg5 
+    @arg arg1
+    @arg arg2
+    @arg arg3
+    @arg arg4
+    @arg arg5
 */
-void opcode_02fc(const ScriptArguments& args, const ScriptString arg1, const ScriptInt arg2, const ScriptInt arg3, const ScriptInt arg4, const ScriptInt arg5) {
+void opcode_02fc(const ScriptArguments& args, const ScriptString arg1,
+                 const ScriptInt arg2, const ScriptInt arg3,
+                 const ScriptInt arg4, const ScriptInt arg5) {
     RW_UNIMPLEMENTED_OPCODE(0x02fc);
     RW_UNUSED(arg1);
     RW_UNUSED(arg2);
@@ -8219,16 +9021,19 @@ void opcode_02fc(const ScriptArguments& args, const ScriptString arg1, const Scr
 }
 
 /**
-    @brief text_2numbers_lowpriority %1g% numbers %2d% %3d% duration %4d% ms flag %5d%
+    @brief text_2numbers_lowpriority %1g% numbers %2d% %3d% duration %4d% ms
+   flag %5d%
 
     opcode 02fd
     @arg gxtEntry GXT entry
-    @arg arg2 
-    @arg arg3 
+    @arg arg2
+    @arg arg3
     @arg time Time (ms)
-    @arg arg5 
+    @arg arg5
 */
-void opcode_02fd(const ScriptArguments& args, const ScriptString gxtEntry, const ScriptInt arg2, const ScriptInt arg3, const ScriptInt time, const ScriptInt arg5) {
+void opcode_02fd(const ScriptArguments& args, const ScriptString gxtEntry,
+                 const ScriptInt arg2, const ScriptInt arg3,
+                 const ScriptInt time, const ScriptInt arg5) {
     RW_UNIMPLEMENTED_OPCODE(0x02fd);
     RW_UNUSED(gxtEntry);
     RW_UNUSED(arg2);
@@ -8239,16 +9044,19 @@ void opcode_02fd(const ScriptArguments& args, const ScriptString gxtEntry, const
 }
 
 /**
-    @brief text_2numbers_highpriority %1g% numbers %2d% %3d% duration %4d% ms flag %5d%
+    @brief text_2numbers_highpriority %1g% numbers %2d% %3d% duration %4d% ms
+   flag %5d%
 
     opcode 02fe
-    @arg arg1 
-    @arg arg2 
-    @arg arg3 
-    @arg arg4 
-    @arg arg5 
+    @arg arg1
+    @arg arg2
+    @arg arg3
+    @arg arg4
+    @arg arg5
 */
-void opcode_02fe(const ScriptArguments& args, const ScriptString arg1, const ScriptInt arg2, const ScriptInt arg3, const ScriptInt arg4, const ScriptInt arg5) {
+void opcode_02fe(const ScriptArguments& args, const ScriptString arg1,
+                 const ScriptInt arg2, const ScriptInt arg3,
+                 const ScriptInt arg4, const ScriptInt arg5) {
     RW_UNIMPLEMENTED_OPCODE(0x02fe);
     RW_UNUSED(arg1);
     RW_UNUSED(arg2);
@@ -8263,13 +9071,16 @@ void opcode_02fe(const ScriptArguments& args, const ScriptString arg1, const Scr
 
     opcode 02ff
     @arg gxtEntry GXT entry
-    @arg arg2 
-    @arg arg3 
-    @arg arg4 
+    @arg arg2
+    @arg arg3
+    @arg arg4
     @arg time Time (ms)
-    @arg arg6 
+    @arg arg6
 */
-void opcode_02ff(const ScriptArguments& args, const ScriptString gxtEntry, const ScriptInt arg2, const ScriptInt arg3, const ScriptInt arg4, const ScriptInt time, const ScriptInt arg6) {
+void opcode_02ff(const ScriptArguments& args, const ScriptString gxtEntry,
+                 const ScriptInt arg2, const ScriptInt arg3,
+                 const ScriptInt arg4, const ScriptInt time,
+                 const ScriptInt arg6) {
     RW_UNIMPLEMENTED_OPCODE(0x02ff);
     RW_UNUSED(gxtEntry);
     RW_UNUSED(arg2);
@@ -8281,17 +9092,21 @@ void opcode_02ff(const ScriptArguments& args, const ScriptString gxtEntry, const
 }
 
 /**
-    @brief text_3numbers_highpriority %1g% numbers %2d% %3d% %4d% duration %5d% ms flag %6h%
+    @brief text_3numbers_highpriority %1g% numbers %2d% %3d% %4d% duration %5d%
+   ms flag %6h%
 
     opcode 0300
     @arg gxtEntry GXT entry
-    @arg arg2 
-    @arg arg3 
-    @arg arg4 
+    @arg arg2
+    @arg arg3
+    @arg arg4
     @arg time Time (ms)
-    @arg arg6 
+    @arg arg6
 */
-void opcode_0300(const ScriptArguments& args, const ScriptString gxtEntry, const ScriptInt arg2, const ScriptInt arg3, const ScriptInt arg4, const ScriptInt time, const ScriptInt arg6) {
+void opcode_0300(const ScriptArguments& args, const ScriptString gxtEntry,
+                 const ScriptInt arg2, const ScriptInt arg3,
+                 const ScriptInt arg4, const ScriptInt time,
+                 const ScriptInt arg6) {
     RW_UNIMPLEMENTED_OPCODE(0x0300);
     RW_UNUSED(gxtEntry);
     RW_UNUSED(arg2);
@@ -8303,17 +9118,21 @@ void opcode_0300(const ScriptArguments& args, const ScriptString gxtEntry, const
 }
 
 /**
-    @brief text_3numbers_lowpriority %1g% numbers %2d% %3d% %4d% duration %5d% ms flag %6h%
+    @brief text_3numbers_lowpriority %1g% numbers %2d% %3d% %4d% duration %5d%
+   ms flag %6h%
 
     opcode 0301
     @arg gxtEntry GXT entry
-    @arg arg2 
-    @arg arg3 
-    @arg arg4 
+    @arg arg2
+    @arg arg3
+    @arg arg4
     @arg time Time (ms)
-    @arg arg6 
+    @arg arg6
 */
-void opcode_0301(const ScriptArguments& args, const ScriptString gxtEntry, const ScriptInt arg2, const ScriptInt arg3, const ScriptInt arg4, const ScriptInt time, const ScriptInt arg6) {
+void opcode_0301(const ScriptArguments& args, const ScriptString gxtEntry,
+                 const ScriptInt arg2, const ScriptInt arg3,
+                 const ScriptInt arg4, const ScriptInt time,
+                 const ScriptInt arg6) {
     RW_UNIMPLEMENTED_OPCODE(0x0301);
     RW_UNUSED(gxtEntry);
     RW_UNUSED(arg2);
@@ -8325,18 +9144,22 @@ void opcode_0301(const ScriptArguments& args, const ScriptString gxtEntry, const
 }
 
 /**
-    @brief text_4numbers %1g% numbers %2d% %3d% %4d% %5d% duration %6d% ms flag %7d%
+    @brief text_4numbers %1g% numbers %2d% %3d% %4d% %5d% duration %6d% ms flag
+   %7d%
 
     opcode 0302
     @arg gxtEntry GXT entry
-    @arg arg2 
-    @arg arg3 
-    @arg arg4 
-    @arg arg5 
+    @arg arg2
+    @arg arg3
+    @arg arg4
+    @arg arg5
     @arg time Time (ms)
-    @arg arg7 
+    @arg arg7
 */
-void opcode_0302(const ScriptArguments& args, const ScriptString gxtEntry, const ScriptInt arg2, const ScriptInt arg3, const ScriptInt arg4, const ScriptInt arg5, const ScriptInt time, const ScriptInt arg7) {
+void opcode_0302(const ScriptArguments& args, const ScriptString gxtEntry,
+                 const ScriptInt arg2, const ScriptInt arg3,
+                 const ScriptInt arg4, const ScriptInt arg5,
+                 const ScriptInt time, const ScriptInt arg7) {
     RW_UNIMPLEMENTED_OPCODE(0x0302);
     RW_UNUSED(gxtEntry);
     RW_UNUSED(arg2);
@@ -8349,18 +9172,22 @@ void opcode_0302(const ScriptArguments& args, const ScriptString gxtEntry, const
 }
 
 /**
-    @brief text_4numbers_highpriority %1g% numbers %2d% %3d% %4d% %5d% duration %6d% ms flag %7d%
+    @brief text_4numbers_highpriority %1g% numbers %2d% %3d% %4d% %5d% duration
+   %6d% ms flag %7d%
 
     opcode 0303
     @arg gxtEntry GXT entry
-    @arg arg2 
-    @arg arg3 
-    @arg arg4 
-    @arg arg5 
+    @arg arg2
+    @arg arg3
+    @arg arg4
+    @arg arg5
     @arg time Time (ms)
-    @arg arg7 
+    @arg arg7
 */
-void opcode_0303(const ScriptArguments& args, const ScriptString gxtEntry, const ScriptInt arg2, const ScriptInt arg3, const ScriptInt arg4, const ScriptInt arg5, const ScriptInt time, const ScriptInt arg7) {
+void opcode_0303(const ScriptArguments& args, const ScriptString gxtEntry,
+                 const ScriptInt arg2, const ScriptInt arg3,
+                 const ScriptInt arg4, const ScriptInt arg5,
+                 const ScriptInt time, const ScriptInt arg7) {
     RW_UNIMPLEMENTED_OPCODE(0x0303);
     RW_UNUSED(gxtEntry);
     RW_UNUSED(arg2);
@@ -8373,18 +9200,22 @@ void opcode_0303(const ScriptArguments& args, const ScriptString gxtEntry, const
 }
 
 /**
-    @brief text_4numbers_lowpriority %1g% numbers %2d% %3d% %4d% %5d% duration %6d% ms flag %7d%
+    @brief text_4numbers_lowpriority %1g% numbers %2d% %3d% %4d% %5d% duration
+   %6d% ms flag %7d%
 
     opcode 0304
     @arg gxtEntry GXT entry
-    @arg arg2 
-    @arg arg3 
-    @arg arg4 
-    @arg arg5 
+    @arg arg2
+    @arg arg3
+    @arg arg4
+    @arg arg5
     @arg time Time (ms)
-    @arg arg7 
+    @arg arg7
 */
-void opcode_0304(const ScriptArguments& args, const ScriptString gxtEntry, const ScriptInt arg2, const ScriptInt arg3, const ScriptInt arg4, const ScriptInt arg5, const ScriptInt time, const ScriptInt arg7) {
+void opcode_0304(const ScriptArguments& args, const ScriptString gxtEntry,
+                 const ScriptInt arg2, const ScriptInt arg3,
+                 const ScriptInt arg4, const ScriptInt arg5,
+                 const ScriptInt time, const ScriptInt arg7) {
     RW_UNIMPLEMENTED_OPCODE(0x0304);
     RW_UNUSED(gxtEntry);
     RW_UNUSED(arg2);
@@ -8397,19 +9228,24 @@ void opcode_0304(const ScriptArguments& args, const ScriptString gxtEntry, const
 }
 
 /**
-    @brief text_5numbers %1g% numbers %2d% %3d% %4d% %5d% %6d% duration %7d% ms flag %8d%
+    @brief text_5numbers %1g% numbers %2d% %3d% %4d% %5d% %6d% duration %7d% ms
+   flag %8d%
 
     opcode 0305
     @arg gxtEntry GXT entry
-    @arg arg2 
-    @arg arg3 
-    @arg arg4 
-    @arg arg5 
-    @arg arg6 
+    @arg arg2
+    @arg arg3
+    @arg arg4
+    @arg arg5
+    @arg arg6
     @arg time Time (ms)
-    @arg arg8 
+    @arg arg8
 */
-void opcode_0305(const ScriptArguments& args, const ScriptString gxtEntry, const ScriptInt arg2, const ScriptInt arg3, const ScriptInt arg4, const ScriptInt arg5, const ScriptInt arg6, const ScriptInt time, const ScriptInt arg8) {
+void opcode_0305(const ScriptArguments& args, const ScriptString gxtEntry,
+                 const ScriptInt arg2, const ScriptInt arg3,
+                 const ScriptInt arg4, const ScriptInt arg5,
+                 const ScriptInt arg6, const ScriptInt time,
+                 const ScriptInt arg8) {
     RW_UNIMPLEMENTED_OPCODE(0x0305);
     RW_UNUSED(gxtEntry);
     RW_UNUSED(arg2);
@@ -8423,19 +9259,24 @@ void opcode_0305(const ScriptArguments& args, const ScriptString gxtEntry, const
 }
 
 /**
-    @brief text_5numbers_highpriority %1g% numbers %2d% %3d% %4d% %5d% %6d% duration %7d% ms flag %8d%
+    @brief text_5numbers_highpriority %1g% numbers %2d% %3d% %4d% %5d% %6d%
+   duration %7d% ms flag %8d%
 
     opcode 0306
     @arg gxtEntry GXT entry
-    @arg arg2 
-    @arg arg3 
-    @arg arg4 
-    @arg arg5 
-    @arg arg6 
+    @arg arg2
+    @arg arg3
+    @arg arg4
+    @arg arg5
+    @arg arg6
     @arg time Time (ms)
-    @arg arg8 
+    @arg arg8
 */
-void opcode_0306(const ScriptArguments& args, const ScriptString gxtEntry, const ScriptInt arg2, const ScriptInt arg3, const ScriptInt arg4, const ScriptInt arg5, const ScriptInt arg6, const ScriptInt time, const ScriptInt arg8) {
+void opcode_0306(const ScriptArguments& args, const ScriptString gxtEntry,
+                 const ScriptInt arg2, const ScriptInt arg3,
+                 const ScriptInt arg4, const ScriptInt arg5,
+                 const ScriptInt arg6, const ScriptInt time,
+                 const ScriptInt arg8) {
     RW_UNIMPLEMENTED_OPCODE(0x0306);
     RW_UNUSED(gxtEntry);
     RW_UNUSED(arg2);
@@ -8449,19 +9290,24 @@ void opcode_0306(const ScriptArguments& args, const ScriptString gxtEntry, const
 }
 
 /**
-    @brief text_5numbers_lowpriority %1g% numbers %2d% %3d% %4d% %5d% %6d% duration %7d% ms flag %8d%
+    @brief text_5numbers_lowpriority %1g% numbers %2d% %3d% %4d% %5d% %6d%
+   duration %7d% ms flag %8d%
 
     opcode 0307
     @arg gxtEntry GXT entry
-    @arg arg2 
-    @arg arg3 
-    @arg arg4 
-    @arg arg5 
-    @arg arg6 
+    @arg arg2
+    @arg arg3
+    @arg arg4
+    @arg arg5
+    @arg arg6
     @arg time Time (ms)
-    @arg arg8 
+    @arg arg8
 */
-void opcode_0307(const ScriptArguments& args, const ScriptString gxtEntry, const ScriptInt arg2, const ScriptInt arg3, const ScriptInt arg4, const ScriptInt arg5, const ScriptInt arg6, const ScriptInt time, const ScriptInt arg8) {
+void opcode_0307(const ScriptArguments& args, const ScriptString gxtEntry,
+                 const ScriptInt arg2, const ScriptInt arg3,
+                 const ScriptInt arg4, const ScriptInt arg5,
+                 const ScriptInt arg6, const ScriptInt time,
+                 const ScriptInt arg8) {
     RW_UNIMPLEMENTED_OPCODE(0x0307);
     RW_UNUSED(gxtEntry);
     RW_UNUSED(arg2);
@@ -8475,20 +9321,25 @@ void opcode_0307(const ScriptArguments& args, const ScriptString gxtEntry, const
 }
 
 /**
-    @brief text_6numbers %1g% numbers %2d% %3d% %4d% %5d% %6d% %7d% duration %8d% ms flag %9d%
+    @brief text_6numbers %1g% numbers %2d% %3d% %4d% %5d% %6d% %7d% duration
+   %8d% ms flag %9d%
 
     opcode 0308
     @arg gxtEntry GXT entry
-    @arg arg2 
-    @arg arg3 
-    @arg arg4 
-    @arg arg5 
-    @arg arg6 
-    @arg arg7 
+    @arg arg2
+    @arg arg3
+    @arg arg4
+    @arg arg5
+    @arg arg6
+    @arg arg7
     @arg time Time (ms)
-    @arg arg9 
+    @arg arg9
 */
-void opcode_0308(const ScriptArguments& args, const ScriptString gxtEntry, const ScriptInt arg2, const ScriptInt arg3, const ScriptInt arg4, const ScriptInt arg5, const ScriptInt arg6, const ScriptInt arg7, const ScriptInt time, const ScriptInt arg9) {
+void opcode_0308(const ScriptArguments& args, const ScriptString gxtEntry,
+                 const ScriptInt arg2, const ScriptInt arg3,
+                 const ScriptInt arg4, const ScriptInt arg5,
+                 const ScriptInt arg6, const ScriptInt arg7,
+                 const ScriptInt time, const ScriptInt arg9) {
     RW_UNIMPLEMENTED_OPCODE(0x0308);
     RW_UNUSED(gxtEntry);
     RW_UNUSED(arg2);
@@ -8503,20 +9354,25 @@ void opcode_0308(const ScriptArguments& args, const ScriptString gxtEntry, const
 }
 
 /**
-    @brief text_6numbers_highpriority %1g% numbers %2d% %3d% %4d% %5d% %6d% %7d% duration %8d% ms flag %9d%
+    @brief text_6numbers_highpriority %1g% numbers %2d% %3d% %4d% %5d% %6d% %7d%
+   duration %8d% ms flag %9d%
 
     opcode 0309
     @arg gxtEntry GXT entry
-    @arg arg2 
-    @arg arg3 
-    @arg arg4 
-    @arg arg5 
-    @arg arg6 
-    @arg arg7 
+    @arg arg2
+    @arg arg3
+    @arg arg4
+    @arg arg5
+    @arg arg6
+    @arg arg7
     @arg time Time (ms)
-    @arg arg9 
+    @arg arg9
 */
-void opcode_0309(const ScriptArguments& args, const ScriptString gxtEntry, const ScriptInt arg2, const ScriptInt arg3, const ScriptInt arg4, const ScriptInt arg5, const ScriptInt arg6, const ScriptInt arg7, const ScriptInt time, const ScriptInt arg9) {
+void opcode_0309(const ScriptArguments& args, const ScriptString gxtEntry,
+                 const ScriptInt arg2, const ScriptInt arg3,
+                 const ScriptInt arg4, const ScriptInt arg5,
+                 const ScriptInt arg6, const ScriptInt arg7,
+                 const ScriptInt time, const ScriptInt arg9) {
     RW_UNIMPLEMENTED_OPCODE(0x0309);
     RW_UNUSED(gxtEntry);
     RW_UNUSED(arg2);
@@ -8531,20 +9387,25 @@ void opcode_0309(const ScriptArguments& args, const ScriptString gxtEntry, const
 }
 
 /**
-    @brief text_6numbers_lowpriority %1g% numbers %2d% %3d% %4d% %5d% %6d% %7d% duration %8d% ms flag %9d%
+    @brief text_6numbers_lowpriority %1g% numbers %2d% %3d% %4d% %5d% %6d% %7d%
+   duration %8d% ms flag %9d%
 
     opcode 030a
-    @arg arg1 
-    @arg arg2 
-    @arg arg3 
-    @arg arg4 
-    @arg arg5 
-    @arg arg6 
-    @arg arg7 
-    @arg arg8 
-    @arg arg9 
+    @arg arg1
+    @arg arg2
+    @arg arg3
+    @arg arg4
+    @arg arg5
+    @arg arg6
+    @arg arg7
+    @arg arg8
+    @arg arg9
 */
-void opcode_030a(const ScriptArguments& args, const ScriptString arg1, const ScriptInt arg2, const ScriptInt arg3, const ScriptInt arg4, const ScriptInt arg5, const ScriptInt arg6, const ScriptInt arg7, const ScriptInt arg8, const ScriptInt arg9) {
+void opcode_030a(const ScriptArguments& args, const ScriptString arg1,
+                 const ScriptInt arg2, const ScriptInt arg3,
+                 const ScriptInt arg4, const ScriptInt arg5,
+                 const ScriptInt arg6, const ScriptInt arg7,
+                 const ScriptInt arg8, const ScriptInt arg9) {
     RW_UNIMPLEMENTED_OPCODE(0x030a);
     RW_UNUSED(arg1);
     RW_UNUSED(arg2);
@@ -8562,7 +9423,7 @@ void opcode_030a(const ScriptArguments& args, const ScriptString arg1, const Scr
     @brief set_mission_points += %1d%
 
     opcode 030c
-    @arg progress 
+    @arg progress
 */
 void opcode_030c(const ScriptArguments& args, const ScriptInt progress) {
     args.getState()->currentProgress += progress;
@@ -8572,7 +9433,7 @@ void opcode_030c(const ScriptArguments& args, const ScriptInt progress) {
     @brief set_total_mission_points_to %1d%
 
     opcode 030d
-    @arg progress 
+    @arg progress
 */
 void opcode_030d(const ScriptArguments& args, const ScriptInt progress) {
     args.getState()->maxProgress = progress;
@@ -8582,7 +9443,7 @@ void opcode_030d(const ScriptArguments& args, const ScriptInt progress) {
     @brief save_jump_distance %1d%
 
     opcode 030e
-    @arg distance 
+    @arg distance
 */
 void opcode_030e(const ScriptArguments& args, const ScriptFloat distance) {
     if (args.getWorld()->state->gameStats.insaneJumpMaxDistance < distance) {
@@ -8594,7 +9455,7 @@ void opcode_030e(const ScriptArguments& args, const ScriptFloat distance) {
     @brief save_jump_height %1d%
 
     opcode 030f
-    @arg height 
+    @arg height
 */
 void opcode_030f(const ScriptArguments& args, const ScriptFloat height) {
     if (args.getWorld()->state->gameStats.insaneJumpMaxHeight < height) {
@@ -8606,7 +9467,7 @@ void opcode_030f(const ScriptArguments& args, const ScriptFloat height) {
     @brief save_jump_flips %1d%
 
     opcode 0310
-    @arg flips 
+    @arg flips
 */
 void opcode_0310(const ScriptArguments& args, const ScriptInt flips) {
     if (args.getWorld()->state->gameStats.insaneJumpMaxFlips < flips) {
@@ -8618,7 +9479,7 @@ void opcode_0310(const ScriptArguments& args, const ScriptInt flips) {
     @brief save_jump_rotation %1d%
 
     opcode 0311
-    @arg rotation 
+    @arg rotation
 */
 void opcode_0311(const ScriptArguments& args, const ScriptInt rotation) {
     if (args.getWorld()->state->gameStats.insaneJumpMaxRotation < rotation) {
@@ -8630,7 +9491,7 @@ void opcode_0311(const ScriptArguments& args, const ScriptInt rotation) {
     @brief save_jump_type %1d%
 
     opcode 0312
-    @arg best 
+    @arg best
 */
 void opcode_0312(const ScriptArguments& args, const ScriptInt best) {
     if (args.getWorld()->state->gameStats.bestStunt < best) {
@@ -8651,7 +9512,7 @@ void opcode_0313(const ScriptArguments& args) {
     @brief set_total_unique_jumps_to %1d%
 
     opcode 0314
-    @arg stunts 
+    @arg stunts
 */
 void opcode_0314(const ScriptArguments& args, const ScriptInt stunts) {
     args.getState()->gameStats.uniqueStuntsTotal = stunts;
@@ -8670,7 +9531,7 @@ void opcode_0315(const ScriptArguments& args) {
     @brief save_taxi_earnings_from %1d%
 
     opcode 0316
-    @arg money 
+    @arg money
 */
 void opcode_0316(const ScriptArguments& args, const ScriptInt money) {
     args.getState()->gameStats.taxiRevenue += money;
@@ -8702,7 +9563,8 @@ void opcode_0318(const ScriptArguments& args, const ScriptString gxtEntry) {
     @arg character Character/ped
     @arg arg2 Boolean true/false
 */
-void opcode_0319(const ScriptArguments& args, const ScriptCharacter character, const ScriptBoolean arg2) {
+void opcode_0319(const ScriptArguments& args, const ScriptCharacter character,
+                 const ScriptBoolean arg2) {
     character->setRunning(arg2);
     RW_UNUSED(args);
 }
@@ -8724,7 +9586,8 @@ void opcode_031a(const ScriptArguments& args) {
     @arg character Character/ped
     @arg weaponID Weapon ID
 */
-bool opcode_031d(const ScriptArguments& args, const ScriptCharacter character, const ScriptWeaponType weaponID) {
+bool opcode_031d(const ScriptArguments& args, const ScriptCharacter character,
+                 const ScriptWeaponType weaponID) {
     RW_UNIMPLEMENTED_OPCODE(0x031d);
     RW_UNUSED(character);
     RW_UNUSED(weaponID);
@@ -8739,7 +9602,8 @@ bool opcode_031d(const ScriptArguments& args, const ScriptCharacter character, c
     @arg vehicle Car/vehicle
     @arg weaponID Weapon ID
 */
-bool opcode_031e(const ScriptArguments& args, const ScriptVehicle vehicle, const ScriptWeaponType weaponID) {
+bool opcode_031e(const ScriptArguments& args, const ScriptVehicle vehicle,
+                 const ScriptWeaponType weaponID) {
     RW_UNIMPLEMENTED_OPCODE(0x031e);
     RW_UNUSED(vehicle);
     RW_UNUSED(weaponID);
@@ -8754,7 +9618,8 @@ bool opcode_031e(const ScriptArguments& args, const ScriptVehicle vehicle, const
     @arg character0 Character/ped
     @arg character1 Character/ped
 */
-bool opcode_031f(const ScriptArguments& args, const ScriptCharacter character0, const ScriptCharacter character1) {
+bool opcode_031f(const ScriptArguments& args, const ScriptCharacter character0,
+                 const ScriptCharacter character1) {
     RW_UNIMPLEMENTED_OPCODE(0x031f);
     RW_UNUSED(character0);
     RW_UNUSED(character1);
@@ -8769,9 +9634,11 @@ bool opcode_031f(const ScriptArguments& args, const ScriptCharacter character0, 
     @arg character Character/ped
     @arg player Player
 */
-bool opcode_0320(const ScriptArguments& args, const ScriptCharacter character, const ScriptPlayer player) {
+bool opcode_0320(const ScriptArguments& args, const ScriptCharacter character,
+                 const ScriptPlayer player) {
     RW_UNUSED(args);
-    return character->controller->getTargetCharacter() == player->getCharacter();
+    return character->controller->getTargetCharacter() ==
+           player->getCharacter();
 }
 
 /**
@@ -8802,10 +9669,11 @@ void opcode_0322(const ScriptArguments& args, const ScriptPlayer player) {
     @brief enable_boat %1d% anchor %2d%
 
     opcode 0323
-    @arg vehicle 
+    @arg vehicle
     @arg arg2 Boolean true/false
 */
-void opcode_0323(const ScriptArguments& args, const ScriptVehicle vehicle, const ScriptBoolean arg2) {
+void opcode_0323(const ScriptArguments& args, const ScriptVehicle vehicle,
+                 const ScriptBoolean arg2) {
     RW_UNIMPLEMENTED_OPCODE(0x0323);
     RW_UNUSED(vehicle);
     RW_UNUSED(arg2);
@@ -8816,26 +9684,23 @@ void opcode_0323(const ScriptArguments& args, const ScriptVehicle vehicle, const
     @brief set_zone_pedgroup_info %1z% %2b:day/night% %3u%
 
     opcode 0324
-    @arg arg1 
+    @arg arg1
     @arg arg2 Boolean true/false
-    @arg arg3 
+    @arg arg3
 */
-void opcode_0324(const ScriptArguments& args, const ScriptString arg1, const ScriptBoolean arg2, const ScriptPedGrp arg3) {
+void opcode_0324(const ScriptArguments& args, const ScriptString arg1,
+                 const ScriptBoolean arg2, const ScriptPedGrp arg3) {
     RW_UNUSED(arg1);
     RW_UNUSED(arg2);
     RW_UNUSED(arg3);
     auto zone = args.getWorld()->data->findZone(arg1);
-    if (zone)
-    {
-    	auto day = args[1].integer == 1;
-    	if( day )
-    	{
-    		zone->pedGroupDay = args[2].integer;
-    	}
-    	else
-    	{
-    		zone->pedGroupNight = args[2].integer;
-    	}
+    if (zone) {
+        auto day = args[1].integer == 1;
+        if (day) {
+            zone->pedGroupDay = args[2].integer;
+        } else {
+            zone->pedGroupNight = args[2].integer;
+        }
     }
 }
 
@@ -8846,7 +9711,8 @@ void opcode_0324(const ScriptArguments& args, const ScriptString arg1, const Scr
     @arg vehicle Car/vehicle
     @arg fire Fire
 */
-void opcode_0325(const ScriptArguments& args, const ScriptVehicle vehicle, ScriptFire& fire) {
+void opcode_0325(const ScriptArguments& args, const ScriptVehicle vehicle,
+                 ScriptFire& fire) {
     RW_UNIMPLEMENTED_OPCODE(0x0325);
     RW_UNUSED(vehicle);
     RW_UNUSED(fire);
@@ -8860,7 +9726,8 @@ void opcode_0325(const ScriptArguments& args, const ScriptVehicle vehicle, Scrip
     @arg character Character/ped
     @arg fire Fire
 */
-void opcode_0326(const ScriptArguments& args, const ScriptCharacter character, ScriptFire& fire) {
+void opcode_0326(const ScriptArguments& args, const ScriptCharacter character,
+                 ScriptFire& fire) {
     RW_UNIMPLEMENTED_OPCODE(0x0326);
     RW_UNUSED(character);
     RW_UNUSED(fire);
@@ -8876,7 +9743,9 @@ void opcode_0326(const ScriptArguments& args, const ScriptCharacter character, S
     @arg model Model ID
     @arg vehicle Car/vehicle
 */
-void opcode_0327(const ScriptArguments& args, ScriptVec2 coord0, ScriptVec2 coord1, const ScriptModelID model, ScriptVehicle& vehicle) {
+void opcode_0327(const ScriptArguments& args, ScriptVec2 coord0,
+                 ScriptVec2 coord1, const ScriptModelID model,
+                 ScriptVehicle& vehicle) {
     RW_UNIMPLEMENTED_OPCODE(0x0327);
     RW_UNUSED(coord0);
     RW_UNUSED(coord1);
@@ -8900,7 +9769,7 @@ bool opcode_0329(const ScriptArguments& args, const ScriptGarage garage) {
     @brief set_behind_camera_mode_to %1h%
 
     opcode 032a
-    @arg arg1 
+    @arg arg1
 */
 void opcode_032a(const ScriptArguments& args, const ScriptCamZoom arg1) {
     RW_UNIMPLEMENTED_OPCODE(0x032a);
@@ -8909,16 +9778,19 @@ void opcode_032a(const ScriptArguments& args, const ScriptCamZoom arg1) {
 }
 
 /**
-    @brief %7d% = create_weapon_pickup %1o% type %2d% ammo %3d% at %4d% %5d% %6d%
+    @brief %7d% = create_weapon_pickup %1o% type %2d% ammo %3d% at %4d% %5d%
+   %6d%
 
     opcode 032b
     @arg model Model ID
     @arg pickup0 Weapon ID
-    @arg arg3 
+    @arg arg3
     @arg coord Coordinates
     @arg pickup1 Player
 */
-void opcode_032b(const ScriptArguments& args, const ScriptModel model, const ScriptPickupType pickup0, const ScriptInt arg3, ScriptVec3 coord, ScriptPickup& pickup1) {
+void opcode_032b(const ScriptArguments& args, const ScriptModel model,
+                 const ScriptPickupType pickup0, const ScriptInt arg3,
+                 ScriptVec3 coord, ScriptPickup& pickup1) {
     RW_UNUSED(arg3);
     RW_UNIMPLEMENTED("ammo count");
     RW_CHECK(model >= 0, "Must look up model");
@@ -8933,7 +9805,8 @@ void opcode_032b(const ScriptArguments& args, const ScriptModel model, const Scr
     @arg vehicle0 Car/vehicle
     @arg vehicle1 Car/vehicle
 */
-void opcode_032c(const ScriptArguments& args, const ScriptVehicle vehicle0, const ScriptVehicle vehicle1) {
+void opcode_032c(const ScriptArguments& args, const ScriptVehicle vehicle0,
+                 const ScriptVehicle vehicle1) {
     RW_UNIMPLEMENTED_OPCODE(0x032c);
     RW_UNUSED(vehicle0);
     RW_UNUSED(vehicle1);
@@ -8944,10 +9817,11 @@ void opcode_032c(const ScriptArguments& args, const ScriptVehicle vehicle0, cons
     @brief car %1d% block %2d%
 
     opcode 032d
-    @arg vehicle0 
-    @arg vehicle1 
+    @arg vehicle0
+    @arg vehicle1
 */
-void opcode_032d(const ScriptArguments& args, const ScriptVehicle vehicle0, const ScriptVehicle vehicle1) {
+void opcode_032d(const ScriptArguments& args, const ScriptVehicle vehicle0,
+                 const ScriptVehicle vehicle1) {
     RW_UNIMPLEMENTED_OPCODE(0x032d);
     RW_UNUSED(vehicle0);
     RW_UNUSED(vehicle1);
@@ -8961,7 +9835,8 @@ void opcode_032d(const ScriptArguments& args, const ScriptVehicle vehicle0, cons
     @arg player Player
     @arg arg2 Boolean true/false
 */
-void opcode_0330(const ScriptArguments& args, const ScriptPlayer player, const ScriptBoolean arg2) {
+void opcode_0330(const ScriptArguments& args, const ScriptPlayer player,
+                 const ScriptBoolean arg2) {
     RW_UNIMPLEMENTED_OPCODE(0x0330);
     RW_UNUSED(player);
     RW_UNUSED(arg2);
@@ -8975,7 +9850,8 @@ void opcode_0330(const ScriptArguments& args, const ScriptPlayer player, const S
     @arg player Player
     @arg arg2 Boolean true/false
 */
-void opcode_0331(const ScriptArguments& args, const ScriptPlayer player, const ScriptBoolean arg2) {
+void opcode_0331(const ScriptArguments& args, const ScriptPlayer player,
+                 const ScriptBoolean arg2) {
     RW_UNIMPLEMENTED_OPCODE(0x0331);
     RW_UNUSED(player);
     RW_UNUSED(arg2);
@@ -8989,7 +9865,8 @@ void opcode_0331(const ScriptArguments& args, const ScriptPlayer player, const S
     @arg character Character/ped
     @arg arg2 Boolean true/false
 */
-void opcode_0332(const ScriptArguments& args, const ScriptCharacter character, const ScriptBoolean arg2) {
+void opcode_0332(const ScriptArguments& args, const ScriptCharacter character,
+                 const ScriptBoolean arg2) {
     RW_UNIMPLEMENTED_OPCODE(0x0332);
     RW_UNUSED(character);
     RW_UNUSED(arg2);
@@ -9015,7 +9892,8 @@ void opcode_0335(const ScriptArguments& args, const ScriptBoolean arg1) {
     @arg player Player
     @arg arg2 Boolean true/false
 */
-void opcode_0336(const ScriptArguments& args, const ScriptPlayer player, const ScriptBoolean arg2) {
+void opcode_0336(const ScriptArguments& args, const ScriptPlayer player,
+                 const ScriptBoolean arg2) {
     RW_UNUSED(args);
     player->getCharacter()->visible = arg2;
 }
@@ -9027,13 +9905,15 @@ void opcode_0336(const ScriptArguments& args, const ScriptPlayer player, const S
     @arg character Character/ped
     @arg arg2 Boolean true/false
 */
-void opcode_0337(const ScriptArguments& args, const ScriptCharacter character, const ScriptBoolean arg2) {
+void opcode_0337(const ScriptArguments& args, const ScriptCharacter character,
+                 const ScriptBoolean arg2) {
     RW_UNUSED(args);
     character->visible = arg2;
 }
 
 /**
-    @brief   objects_in_cube %1d% %2d% %3d% to %4d% %5d% %6d% flags %7d% %8d% %9d% %10d% %11d%
+    @brief   objects_in_cube %1d% %2d% %3d% to %4d% %5d% %6d% flags %7d% %8d%
+   %9d% %10d% %11d%
 
     opcode 0339
     @arg coord0 Coordinates
@@ -9044,34 +9924,37 @@ void opcode_0337(const ScriptArguments& args, const ScriptCharacter character, c
     @arg arg10 Boolean true/false
     @arg arg11 Boolean true/false
 */
-bool opcode_0339(const ScriptArguments& args, ScriptVec3 coord0, ScriptVec3 coord1, const ScriptBoolean solids, const ScriptBoolean cars, const ScriptBoolean actors, const ScriptBoolean objects, const ScriptBoolean particles) {
+bool opcode_0339(const ScriptArguments& args, ScriptVec3 coord0,
+                 ScriptVec3 coord1, const ScriptBoolean solids,
+                 const ScriptBoolean cars, const ScriptBoolean actors,
+                 const ScriptBoolean objects, const ScriptBoolean particles) {
     RW_UNUSED(particles);
     if (solids) {
-    	RW_UNIMPLEMENTED("0x339: solid flag");
+        RW_UNIMPLEMENTED("0x339: solid flag");
     }
     if (actors) {
-    	auto& actors = args.getWorld()->pedestrianPool.objects;
-    	for (const auto& o : actors) {
-    		if (script::objectInBounds(o.second, coord0, coord1)) {
-    			return true;
-    		}
-    	}
+        auto& actors = args.getWorld()->pedestrianPool.objects;
+        for (const auto& o : actors) {
+            if (script::objectInBounds(o.second, coord0, coord1)) {
+                return true;
+            }
+        }
     }
     if (cars) {
-    	auto& cars = args.getWorld()->vehiclePool.objects;
-    	for (const auto& o : cars) {
-    		if (script::objectInBounds(o.second, coord0, coord1)) {
-    			return true;
-    		}
-    	}
+        auto& cars = args.getWorld()->vehiclePool.objects;
+        for (const auto& o : cars) {
+            if (script::objectInBounds(o.second, coord0, coord1)) {
+                return true;
+            }
+        }
     }
     if (objects) {
-    	auto& objects = args.getWorld()->instancePool.objects;
-    	for (const auto& o : objects) {
-    		if (script::objectInBounds(o.second, coord0, coord1)) {
-    			return true;
-    		}
-    	}
+        auto& objects = args.getWorld()->instancePool.objects;
+        for (const auto& o : objects) {
+            if (script::objectInBounds(o.second, coord0, coord1)) {
+                return true;
+            }
+        }
     }
     return false;
 }
@@ -9116,7 +9999,8 @@ bool opcode_033c(const ScriptArguments& args) {
     @arg pixelY 2D pixel Y
     @arg gxtEntry GXT entry
 */
-void opcode_033e(const ScriptArguments& args, const ScriptFloat pixelX, const ScriptFloat pixelY, const ScriptString gxtEntry) {
+void opcode_033e(const ScriptArguments& args, const ScriptFloat pixelX,
+                 const ScriptFloat pixelY, const ScriptString gxtEntry) {
     auto str = script::gxt(args, gxtEntry);
     args.getState()->nextText.text = str;
     args.getState()->nextText.position = glm::vec2(pixelX, pixelY);
@@ -9127,10 +10011,11 @@ void opcode_033e(const ScriptArguments& args, const ScriptFloat pixelX, const Sc
     @brief set_text_draw_letter_width_height %1d% %2d%
 
     opcode 033f
-    @arg arg1 
-    @arg arg2 
+    @arg arg1
+    @arg arg2
 */
-void opcode_033f(const ScriptArguments& args, const ScriptFloat arg1, const ScriptFloat arg2) {
+void opcode_033f(const ScriptArguments& args, const ScriptFloat arg1,
+                 const ScriptFloat arg2) {
     RW_UNIMPLEMENTED_OPCODE(0x033f);
     RW_UNUSED(arg1);
     RW_UNUSED(arg2);
@@ -9191,7 +10076,7 @@ void opcode_0343(const ScriptArguments& args, const ScriptFloat pixelX) {
     @brief set_text_draw_linewidth %1d% for_centered_text
 
     opcode 0344
-    @arg arg1 
+    @arg arg1
 */
 void opcode_0344(const ScriptArguments& args, const ScriptFloat arg1) {
     RW_UNIMPLEMENTED_OPCODE(0x0344);
@@ -9241,7 +10126,7 @@ void opcode_0348(const ScriptArguments& args, const ScriptBoolean arg1) {
     @brief text_draw_style = %1d%
 
     opcode 0349
-    @arg arg1 
+    @arg arg1
 */
 void opcode_0349(const ScriptArguments& args, const ScriptFont arg1) {
     RW_UNIMPLEMENTED_OPCODE(0x0349);
@@ -9285,30 +10170,35 @@ void opcode_034c(const ScriptArguments& args) {
     @arg angle1 Angle
     @arg arg4 Boolean true/false
 */
-bool opcode_034d(const ScriptArguments& args, const ScriptObject object, const ScriptFloat angle0, const ScriptFloat angle1, const ScriptBoolean arg4) {
+bool opcode_034d(const ScriptArguments& args, const ScriptObject object,
+                 const ScriptFloat angle0, const ScriptFloat angle1,
+                 const ScriptBoolean arg4) {
     RW_UNUSED(angle0);
     RW_UNUSED(arg4);
-    if( object )
-    {
-    	/// @todo INTERPOLATE instead of just setting the heading.
-    	object->setHeading(angle1);
+    if (object) {
+        /// @todo INTERPOLATE instead of just setting the heading.
+        object->setHeading(angle1);
     }
     RW_UNUSED(args);
     return true;
 }
 
 /**
-    @brief move_object %1d% to %2d% %3d% %4d% speed %5d% %6d% %7d% collision_check %8d%
+    @brief move_object %1d% to %2d% %3d% %4d% speed %5d% %6d% %7d%
+   collision_check %8d%
 
     opcode 034e
     @arg object Object
     @arg coord Coordinates
-    @arg arg5 
-    @arg arg6 
-    @arg arg7 
+    @arg arg5
+    @arg arg6
+    @arg arg7
     @arg arg8 Boolean true/false
 */
-bool opcode_034e(const ScriptArguments& args, const ScriptObject object, ScriptVec3 coord, const ScriptFloat arg5, const ScriptFloat arg6, const ScriptFloat arg7, const ScriptBoolean arg8) {
+bool opcode_034e(const ScriptArguments& args, const ScriptObject object,
+                 ScriptVec3 coord, const ScriptFloat arg5,
+                 const ScriptFloat arg6, const ScriptFloat arg7,
+                 const ScriptBoolean arg8) {
     RW_UNIMPLEMENTED_OPCODE(0x034e);
     RW_UNUSED(object);
     RW_UNUSED(coord);
@@ -9341,7 +10231,8 @@ void opcode_034f(const ScriptArguments& args, const ScriptCharacter character) {
     @arg character Character/ped
     @arg arg2 Boolean true/false
 */
-void opcode_0350(const ScriptArguments& args, const ScriptCharacter character, const ScriptBoolean arg2) {
+void opcode_0350(const ScriptArguments& args, const ScriptCharacter character,
+                 const ScriptBoolean arg2) {
     RW_UNIMPLEMENTED_OPCODE(0x0350);
     RW_UNUSED(character);
     RW_UNUSED(arg2);
@@ -9364,9 +10255,10 @@ bool opcode_0351(const ScriptArguments& args) {
 
     opcode 0352
     @arg character Character/ped
-    @arg arg2 
+    @arg arg2
 */
-void opcode_0352(const ScriptArguments& args, const ScriptCharacter character, const ScriptString arg2) {
+void opcode_0352(const ScriptArguments& args, const ScriptCharacter character,
+                 const ScriptString arg2) {
     RW_UNUSED(args);
     character->changeCharacterModel(arg2);
 }
@@ -9387,37 +10279,38 @@ void opcode_0353(const ScriptArguments& args, const ScriptCharacter character) {
     @brief set_up_chase_scene %1d%
 
     opcode 0354
-    @arg arg1 
+    @arg arg1
 */
 void opcode_0354(const ScriptArguments& args, const ScriptFloat arg1) {
     RW_UNUSED(arg1);
     // Hardcoded list of vehicles, put this somewhere else.
 
-#define CHASE_VEHICLE(model, x, y, z, hdg, c1, c2, path) \
-    { \
-    	auto vehicle0 = args.getWorld()->createVehicle( \
-    				model, \
-    				glm::vec3(x, y, z), \
-    				glm::angleAxis(glm::radians(hdg), glm::vec3(0.f, 0.f, 1.f))); \
-    	vehicle0->setPrimaryColour(c1);\
-    	vehicle0->setSecondaryColour(c2);\
-    	args.getWorld()->chase.addChaseVehicle(vehicle0, path,\
-    				args.getWorld()->data->getDataPath().string()+"/data/paths/CHASE" #path ".DAT");\
+#define CHASE_VEHICLE(model, x, y, z, hdg, c1, c2, path)                       \
+    {                                                                          \
+        auto vehicle0 = args.getWorld()->createVehicle(                        \
+            model, glm::vec3(x, y, z),                                         \
+            glm::angleAxis(glm::radians(hdg), glm::vec3(0.f, 0.f, 1.f)));      \
+        vehicle0->setPrimaryColour(c1);                                        \
+        vehicle0->setSecondaryColour(c2);                                      \
+        args.getWorld()->chase.addChaseVehicle(                                \
+            vehicle0, path,                                                    \
+            args.getWorld()->data->getDataPath().string() +                    \
+                "/data/paths/CHASE" #path ".DAT");                             \
     }
 
-    CHASE_VEHICLE(116,   273.5422f,  -1167.1907f,   24.9906f, 64.f,    2, 1,  0);
-    CHASE_VEHICLE(117,   231.1783f,  -1388.832f,    25.9782f, 90.0f,   2, 1,  1);
-    CHASE_VEHICLE(130,  -28.9762f,   -1031.3367f,   25.9781f, 242.0f,  1, 75, 2);
-    CHASE_VEHICLE(96,    114.1564f,  -796.6938f,    24.9782f, 180.0f,  0, 0,  3);
-    CHASE_VEHICLE(110,   184.3156f,  -1473.251f,    25.9782f, 0.0f,    6, 6,  4);
-    CHASE_VEHICLE(105,   173.8868f,  -1377.6514f,   25.9782f, 0.0f,    4, 5,  6);
-    CHASE_VEHICLE(92,    102.5946f,  -943.9363f,    25.9781f, 270.0f,  53,53, 7);
-    CHASE_VEHICLE(105,   177.7157f,  -862.1865f,    25.9782f, 155.0f,  41, 1, 10);
-    CHASE_VEHICLE(92,    170.5698f,  -889.0236f,    25.9782f, 154.0f,  10, 10,11);
-    CHASE_VEHICLE(111,   402.6081f,  -917.4963f,    37.381f,  90.0f,   34, 1, 14);
-    CHASE_VEHICLE(110,  -33.4962f,   -938.4563f,    25.9781f, 266.0f,  6,  6, 16);
-    CHASE_VEHICLE(111,   49.3631f,   -987.605f,     25.9781f, 0.0f,    51, 1, 18);
-    CHASE_VEHICLE(110,   179.0049f,  -1154.6686f,   25.9781f, 0.0f,    6, 76, 19);
+    CHASE_VEHICLE(116, 273.5422f, -1167.1907f, 24.9906f, 64.f, 2, 1, 0);
+    CHASE_VEHICLE(117, 231.1783f, -1388.832f, 25.9782f, 90.0f, 2, 1, 1);
+    CHASE_VEHICLE(130, -28.9762f, -1031.3367f, 25.9781f, 242.0f, 1, 75, 2);
+    CHASE_VEHICLE(96, 114.1564f, -796.6938f, 24.9782f, 180.0f, 0, 0, 3);
+    CHASE_VEHICLE(110, 184.3156f, -1473.251f, 25.9782f, 0.0f, 6, 6, 4);
+    CHASE_VEHICLE(105, 173.8868f, -1377.6514f, 25.9782f, 0.0f, 4, 5, 6);
+    CHASE_VEHICLE(92, 102.5946f, -943.9363f, 25.9781f, 270.0f, 53, 53, 7);
+    CHASE_VEHICLE(105, 177.7157f, -862.1865f, 25.9782f, 155.0f, 41, 1, 10);
+    CHASE_VEHICLE(92, 170.5698f, -889.0236f, 25.9782f, 154.0f, 10, 10, 11);
+    CHASE_VEHICLE(111, 402.6081f, -917.4963f, 37.381f, 90.0f, 34, 1, 14);
+    CHASE_VEHICLE(110, -33.4962f, -938.4563f, 25.9781f, 266.0f, 6, 6, 16);
+    CHASE_VEHICLE(111, 49.3631f, -987.605f, 25.9781f, 0.0f, 51, 1, 18);
+    CHASE_VEHICLE(110, 179.0049f, -1154.6686f, 25.9781f, 0.0f, 6, 76, 19);
 
     args.getWorld()->chase.start();
 }
@@ -9439,7 +10332,8 @@ void opcode_0355(const ScriptArguments& args) {
     @arg coord0 Coordinates
     @arg coord1 Coordinates
 */
-bool opcode_0356(const ScriptArguments& args, const ScriptExplosion explosionID, ScriptVec3 coord0, ScriptVec3 coord1) {
+bool opcode_0356(const ScriptArguments& args, const ScriptExplosion explosionID,
+                 ScriptVec3 coord0, ScriptVec3 coord1) {
     RW_UNIMPLEMENTED_OPCODE(0x0356);
     RW_UNUSED(explosionID);
     RW_UNUSED(coord0);
@@ -9455,7 +10349,8 @@ bool opcode_0356(const ScriptArguments& args, const ScriptExplosion explosionID,
     @arg explosionID Explosion ID
     @arg areaName Area name
 */
-void opcode_0357(const ScriptArguments& args, const ScriptExplosion explosionID, const ScriptString areaName) {
+void opcode_0357(const ScriptArguments& args, const ScriptExplosion explosionID,
+                 const ScriptString areaName) {
     RW_UNIMPLEMENTED_OPCODE(0x0357);
     RW_UNUSED(explosionID);
     RW_UNUSED(areaName);
@@ -9487,11 +10382,12 @@ bool opcode_0359(const ScriptArguments& args) {
     @brief find_drop_off_plane_coords %1d% %2d% %3d%
 
     opcode 035a
-    @arg arg1 
-    @arg arg2 
-    @arg arg3 
+    @arg arg1
+    @arg arg2
+    @arg arg3
 */
-void opcode_035a(const ScriptArguments& args, ScriptFloat& arg1, ScriptFloat& arg2, ScriptFloat& arg3) {
+void opcode_035a(const ScriptArguments& args, ScriptFloat& arg1,
+                 ScriptFloat& arg2, ScriptFloat& arg3) {
     RW_UNIMPLEMENTED_OPCODE(0x035a);
     RW_UNUSED(arg1);
     RW_UNUSED(arg2);
@@ -9503,14 +10399,17 @@ void opcode_035a(const ScriptArguments& args, ScriptFloat& arg1, ScriptFloat& ar
     @brief %4d% = create_drop_off_package %1d% %2d% %3d%
 
     opcode 035b
-    @arg arg1 
-    @arg arg2 
-    @arg arg3 
-    @arg pickup 
+    @arg arg1
+    @arg arg2
+    @arg arg3
+    @arg pickup
 */
-void opcode_035b(const ScriptArguments& args, ScriptVec3 coord, ScriptPickup& pickup) {
+void opcode_035b(const ScriptArguments& args, ScriptVec3 coord,
+                 ScriptPickup& pickup) {
     coord = script::getGround(args, coord);
-    pickup = args.getWorld()->createPickup(coord, args.getWorld()->data->findModelObject("floatpackge1"), PickupObject::PickupType::FloatingPackage);
+    pickup = args.getWorld()->createPickup(
+        coord, args.getWorld()->data->findModelObject("floatpackge1"),
+        PickupObject::PickupType::FloatingPackage);
 }
 
 /**
@@ -9521,7 +10420,8 @@ void opcode_035b(const ScriptArguments& args, ScriptVec3 coord, ScriptPickup& pi
     @arg vehicle Car/vehicle
     @arg offset Offset
 */
-void opcode_035c(const ScriptArguments& args, const ScriptObject object, const ScriptVehicle vehicle, ScriptVec3 offset) {
+void opcode_035c(const ScriptArguments& args, const ScriptObject object,
+                 const ScriptVehicle vehicle, ScriptVec3 offset) {
     RW_UNIMPLEMENTED_OPCODE(0x035c);
     RW_UNUSED(object);
     RW_UNUSED(vehicle);
@@ -9546,9 +10446,10 @@ void opcode_035d(const ScriptArguments& args, const ScriptObject object) {
 
     opcode 035e
     @arg player Player
-    @arg arg2 
+    @arg arg2
 */
-void opcode_035e(const ScriptArguments& args, const ScriptPlayer player, const ScriptInt arg2) {
+void opcode_035e(const ScriptArguments& args, const ScriptPlayer player,
+                 const ScriptInt arg2) {
     RW_UNUSED(args);
     player->getCharacter()->getCurrentState().armour = arg2;
 }
@@ -9558,9 +10459,10 @@ void opcode_035e(const ScriptArguments& args, const ScriptPlayer player, const S
 
     opcode 035f
     @arg character Character/ped
-    @arg arg2 
+    @arg arg2
 */
-void opcode_035f(const ScriptArguments& args, const ScriptCharacter character, const ScriptInt arg2) {
+void opcode_035f(const ScriptArguments& args, const ScriptCharacter character,
+                 const ScriptInt arg2) {
     RW_UNUSED(args);
     character->getCurrentState().armour = arg2;
 }
@@ -9569,7 +10471,7 @@ void opcode_035f(const ScriptArguments& args, const ScriptCharacter character, c
     @brief open_garage %1d%
 
     opcode 0360
-    @arg garage 
+    @arg garage
 */
 void opcode_0360(const ScriptArguments& args, const ScriptGarage garage) {
     RW_UNUSED(args);
@@ -9580,7 +10482,7 @@ void opcode_0360(const ScriptArguments& args, const ScriptGarage garage) {
     @brief close_garage %1d%
 
     opcode 0361
-    @arg garage 
+    @arg garage
 */
 void opcode_0361(const ScriptArguments& args, const ScriptGarage garage) {
     RW_UNUSED(args);
@@ -9610,34 +10512,38 @@ void opcode_0362(const ScriptArguments& args, const ScriptCharacter character,
     @arg model Model ID
     @arg visible Boolean true/false
 */
-void opcode_0363(const ScriptArguments& args, ScriptVec3 coord, const ScriptFloat radius, const ScriptModel model, const ScriptBoolean visible) {
+void opcode_0363(const ScriptArguments& args, ScriptVec3 coord,
+                 const ScriptFloat radius, const ScriptModel model,
+                 const ScriptBoolean visible) {
     auto& models = args.getVM()->getFile()->getModels();
     auto& modelName = models[-model];
 
     // Attempt to find the closest object
     InstanceObject* closestObject = nullptr;
     float closestDistance = radius;
-    for(auto& i : args.getWorld()->instancePool.objects) {
-    	InstanceObject* object = static_cast<InstanceObject*>(i.second);
+    for (auto& i : args.getWorld()->instancePool.objects) {
+        InstanceObject* object = static_cast<InstanceObject*>(i.second);
 
-    	// Check if this instance has the correct model id, early out if it isn't
-    	auto modelinfo = object->getModelInfo<BaseModelInfo>();
-    	if (!boost::iequals(modelinfo->name, modelName)) {
-    		continue;
-    	}
+        // Check if this instance has the correct model id, early out if it
+        // isn't
+        auto modelinfo = object->getModelInfo<BaseModelInfo>();
+        if (!boost::iequals(modelinfo->name, modelName)) {
+            continue;
+        }
 
-    	// Calculate distance and check if this is the new closest object
-    	// @todo will this somehow respect the objects centre of mass / bounding box or something?
-    	float distance = glm::length(object->position - coord);
-    	if (distance <= closestDistance) {
-    		closestObject = object;
-    		closestDistance = distance;
-    	}
+        // Calculate distance and check if this is the new closest object
+        // @todo will this somehow respect the objects centre of mass / bounding
+        // box or something?
+        float distance = glm::length(object->position - coord);
+        if (distance <= closestDistance) {
+            closestObject = object;
+            closestDistance = distance;
+        }
     }
 
     // If an object was found, set its visibility
     if (closestObject) {
-    closestObject->setVisible(visible);
+        closestObject->setVisible(visible);
     }
 }
 
@@ -9667,20 +10573,25 @@ bool opcode_0366(const ScriptArguments& args, const ScriptObject object) {
 }
 
 /**
-    @brief init_headshot_rampage %1g% weapon %2d% time %3d% %4d% targets %5o% %6o% %7o% %8o% flag %9d%
+    @brief init_headshot_rampage %1g% weapon %2d% time %3d% %4d% targets %5o%
+   %6o% %7o% %8o% flag %9d%
 
     opcode 0367
     @arg gxtEntry GXT entry
-    @arg arg2 
-    @arg arg3 
-    @arg arg4 
+    @arg arg2
+    @arg arg3
+    @arg arg4
     @arg model0 Model ID
     @arg model1 Model ID
     @arg model2 Model ID
     @arg model3 Model ID
     @arg arg9 Boolean true/false
 */
-void opcode_0367(const ScriptArguments& args, const ScriptString gxtEntry, const ScriptWeaponType arg2, const ScriptInt arg3, const ScriptInt arg4, const ScriptModelID model0, const ScriptModelID model1, const ScriptModelID model2, const ScriptModelID model3, const ScriptBoolean arg9) {
+void opcode_0367(const ScriptArguments& args, const ScriptString gxtEntry,
+                 const ScriptWeaponType arg2, const ScriptInt arg3,
+                 const ScriptInt arg4, const ScriptModelID model0,
+                 const ScriptModelID model1, const ScriptModelID model2,
+                 const ScriptModelID model3, const ScriptBoolean arg9) {
     RW_UNIMPLEMENTED_OPCODE(0x0367);
     RW_UNUSED(gxtEntry);
     RW_UNUSED(arg2);
@@ -9702,10 +10613,12 @@ void opcode_0367(const ScriptArguments& args, const ScriptString gxtEntry, const
     @arg coord1 Coordinates
     @arg coord2 Coordinates
     @arg coord3 Coordinates
-    @arg arg9 
-    @arg arg10 
+    @arg arg9
+    @arg arg10
 */
-void opcode_0368(const ScriptArguments& args, ScriptVec2 coord0, ScriptVec2 coord1, ScriptVec2 coord2, ScriptVec2 coord3, const ScriptFloat arg9, const ScriptFloat arg10) {
+void opcode_0368(const ScriptArguments& args, ScriptVec2 coord0,
+                 ScriptVec2 coord1, ScriptVec2 coord2, ScriptVec2 coord3,
+                 const ScriptFloat arg9, const ScriptFloat arg10) {
     RW_UNIMPLEMENTED_OPCODE(0x0368);
     RW_UNUSED(coord0);
     RW_UNUSED(coord1);
@@ -9723,7 +10636,8 @@ void opcode_0368(const ScriptArguments& args, ScriptVec2 coord0, ScriptVec2 coor
     @arg player Player
     @arg vehicle Car/vehicle
 */
-void opcode_0369(const ScriptArguments& args, const ScriptPlayer player, const ScriptVehicle vehicle) {
+void opcode_0369(const ScriptArguments& args, const ScriptPlayer player,
+                 const ScriptVehicle vehicle) {
     RW_UNUSED(args);
     auto plyChar = player->getCharacter();
     vehicle->setOccupant(0, plyChar);
@@ -9737,7 +10651,8 @@ void opcode_0369(const ScriptArguments& args, const ScriptPlayer player, const S
     @arg character Character/ped
     @arg vehicle Car/vehicle
 */
-void opcode_036a(const ScriptArguments& args, const ScriptCharacter character, const ScriptVehicle vehicle) {
+void opcode_036a(const ScriptArguments& args, const ScriptCharacter character,
+                 const ScriptVehicle vehicle) {
     RW_UNUSED(args);
     //@TODO check the seat is empty
     vehicle->setOccupant(0, character);
@@ -9745,42 +10660,49 @@ void opcode_036a(const ScriptArguments& args, const ScriptCharacter character, c
 }
 
 /**
-    @brief text_2numbers_styled %1g% numbers %2d% %3d% duration %4d% ms style %5d%
+    @brief text_2numbers_styled %1g% numbers %2d% %3d% duration %4d% ms style
+   %5d%
 
     opcode 036d
     @arg gxtEntry GXT entry
-    @arg arg2 
-    @arg arg3 
+    @arg arg2
+    @arg arg3
     @arg time Time (ms)
-    @arg arg5 
+    @arg arg5
 */
-void opcode_036d(const ScriptArguments& args, const ScriptString gxtEntry, const ScriptInt arg2, const ScriptInt arg3, const ScriptInt time, const ScriptInt arg5) {
+void opcode_036d(const ScriptArguments& args, const ScriptString gxtEntry,
+                 const ScriptInt arg2, const ScriptInt arg3,
+                 const ScriptInt time, const ScriptInt arg5) {
     RW_UNUSED(arg5);
     auto world = args.getWorld();
 
     unsigned short style = args[4].integerValue();
 
-    auto str =
-        ScreenText::format(script::gxt(args, gxtEntry),
-                           GameStringUtil::fromString(std::to_string(arg2), FONT_PRICEDOWN),
-                           GameStringUtil::fromString(std::to_string(arg3), FONT_PRICEDOWN));
+    auto str = ScreenText::format(
+        script::gxt(args, gxtEntry),
+        GameStringUtil::fromString(std::to_string(arg2), FONT_PRICEDOWN),
+        GameStringUtil::fromString(std::to_string(arg3), FONT_PRICEDOWN));
 
     auto textEntry = ScreenTextEntry::makeBig(gxtEntry, str, style, time);
     world->state->text.addText<ScreenTextType::Big>(textEntry);
 }
 
 /**
-    @brief text_3numbers_styled %1g% numbers %2d% %3d% %4d% duration %5d% ms style %6d%
+    @brief text_3numbers_styled %1g% numbers %2d% %3d% %4d% duration %5d% ms
+   style %6d%
 
     opcode 036e
-    @arg arg1 
-    @arg arg2 
-    @arg arg3 
-    @arg arg4 
-    @arg arg5 
-    @arg arg6 
+    @arg arg1
+    @arg arg2
+    @arg arg3
+    @arg arg4
+    @arg arg5
+    @arg arg6
 */
-void opcode_036e(const ScriptArguments& args, const ScriptString arg1, const ScriptInt arg2, const ScriptInt arg3, const ScriptInt arg4, const ScriptInt arg5, const ScriptInt arg6) {
+void opcode_036e(const ScriptArguments& args, const ScriptString arg1,
+                 const ScriptInt arg2, const ScriptInt arg3,
+                 const ScriptInt arg4, const ScriptInt arg5,
+                 const ScriptInt arg6) {
     RW_UNIMPLEMENTED_OPCODE(0x036e);
     RW_UNUSED(arg1);
     RW_UNUSED(arg2);
@@ -9792,18 +10714,22 @@ void opcode_036e(const ScriptArguments& args, const ScriptString arg1, const Scr
 }
 
 /**
-    @brief text_4numbers_styled %1g% numbers %2d% %3d% %4d% %5d% duration %6d% ms flag %7d%
+    @brief text_4numbers_styled %1g% numbers %2d% %3d% %4d% %5d% duration %6d%
+   ms flag %7d%
 
     opcode 036f
-    @arg arg1 
-    @arg arg2 
-    @arg arg3 
-    @arg arg4 
-    @arg arg5 
-    @arg arg6 
-    @arg arg7 
+    @arg arg1
+    @arg arg2
+    @arg arg3
+    @arg arg4
+    @arg arg5
+    @arg arg6
+    @arg arg7
 */
-void opcode_036f(const ScriptArguments& args, const ScriptString arg1, const ScriptInt arg2, const ScriptInt arg3, const ScriptInt arg4, const ScriptInt arg5, const ScriptInt arg6, const ScriptInt arg7) {
+void opcode_036f(const ScriptArguments& args, const ScriptString arg1,
+                 const ScriptInt arg2, const ScriptInt arg3,
+                 const ScriptInt arg4, const ScriptInt arg5,
+                 const ScriptInt arg6, const ScriptInt arg7) {
     RW_UNIMPLEMENTED_OPCODE(0x036f);
     RW_UNUSED(arg1);
     RW_UNUSED(arg2);
@@ -9816,19 +10742,24 @@ void opcode_036f(const ScriptArguments& args, const ScriptString arg1, const Scr
 }
 
 /**
-    @brief text_5numbers_styled %1g% numbers %2d% %3d% %4d% %5d% %6d% duration %7d% ms flag %8d%
+    @brief text_5numbers_styled %1g% numbers %2d% %3d% %4d% %5d% %6d% duration
+   %7d% ms flag %8d%
 
     opcode 0370
     @arg gxtEntry GXT entry
-    @arg arg2 
-    @arg arg3 
-    @arg arg4 
-    @arg arg5 
-    @arg arg6 
+    @arg arg2
+    @arg arg3
+    @arg arg4
+    @arg arg5
+    @arg arg6
     @arg time Time (ms)
-    @arg arg8 
+    @arg arg8
 */
-void opcode_0370(const ScriptArguments& args, const ScriptString gxtEntry, const ScriptInt arg2, const ScriptInt arg3, const ScriptInt arg4, const ScriptInt arg5, const ScriptInt arg6, const ScriptInt time, const ScriptInt arg8) {
+void opcode_0370(const ScriptArguments& args, const ScriptString gxtEntry,
+                 const ScriptInt arg2, const ScriptInt arg3,
+                 const ScriptInt arg4, const ScriptInt arg5,
+                 const ScriptInt arg6, const ScriptInt time,
+                 const ScriptInt arg8) {
     RW_UNIMPLEMENTED_OPCODE(0x0370);
     RW_UNUSED(gxtEntry);
     RW_UNUSED(arg2);
@@ -9842,20 +10773,25 @@ void opcode_0370(const ScriptArguments& args, const ScriptString gxtEntry, const
 }
 
 /**
-    @brief text_6numbers_styled %1g% numbers %2d% %3d% %4d% %5d% %6d% %7d% duration %8d% ms flag %9d%
+    @brief text_6numbers_styled %1g% numbers %2d% %3d% %4d% %5d% %6d% %7d%
+   duration %8d% ms flag %9d%
 
     opcode 0371
     @arg gxtEntry GXT entry
-    @arg arg2 
-    @arg arg3 
-    @arg arg4 
-    @arg arg5 
-    @arg arg6 
-    @arg arg7 
+    @arg arg2
+    @arg arg3
+    @arg arg4
+    @arg arg5
+    @arg arg6
+    @arg arg7
     @arg time Time (ms)
-    @arg arg9 
+    @arg arg9
 */
-void opcode_0371(const ScriptArguments& args, const ScriptString gxtEntry, const ScriptInt arg2, const ScriptInt arg3, const ScriptInt arg4, const ScriptInt arg5, const ScriptInt arg6, const ScriptInt arg7, const ScriptInt time, const ScriptInt arg9) {
+void opcode_0371(const ScriptArguments& args, const ScriptString gxtEntry,
+                 const ScriptInt arg2, const ScriptInt arg3,
+                 const ScriptInt arg4, const ScriptInt arg5,
+                 const ScriptInt arg6, const ScriptInt arg7,
+                 const ScriptInt time, const ScriptInt arg9) {
     RW_UNIMPLEMENTED_OPCODE(0x0371);
     RW_UNUSED(gxtEntry);
     RW_UNUSED(arg2);
@@ -9874,10 +10810,11 @@ void opcode_0371(const ScriptArguments& args, const ScriptString gxtEntry, const
 
     opcode 0372
     @arg character Character/ped
-    @arg arg2 
+    @arg arg2
     @arg time Time (ms)
 */
-void opcode_0372(const ScriptArguments& args, const ScriptCharacter character, const ScriptWaitState arg2, const ScriptInt time) {
+void opcode_0372(const ScriptArguments& args, const ScriptCharacter character,
+                 const ScriptWaitState arg2, const ScriptInt time) {
     RW_UNIMPLEMENTED_OPCODE(0x0372);
     RW_UNUSED(character);
     RW_UNUSED(arg2);
@@ -9900,7 +10837,7 @@ void opcode_0373(const ScriptArguments& args) {
     @brief set_motion_blur %1d%
 
     opcode 0374
-    @arg arg1 
+    @arg arg1
 */
 void opcode_0374(const ScriptArguments& args, const ScriptMotionBlur arg1) {
     RW_UNIMPLEMENTED_OPCODE(0x0374);
@@ -9915,9 +10852,11 @@ void opcode_0374(const ScriptArguments& args, const ScriptMotionBlur arg1) {
     @arg gxtEntry0 GXT entry
     @arg gxtEntry1 GXT entry
     @arg time Time (ms)
-    @arg arg4 
+    @arg arg4
 */
-void opcode_0375(const ScriptArguments& args, const ScriptString gxtEntry0, const ScriptString gxtEntry1, const ScriptInt time, const ScriptInt arg4) {
+void opcode_0375(const ScriptArguments& args, const ScriptString gxtEntry0,
+                 const ScriptString gxtEntry1, const ScriptInt time,
+                 const ScriptInt arg4) {
     RW_UNIMPLEMENTED_OPCODE(0x0375);
     RW_UNUSED(gxtEntry0);
     RW_UNUSED(gxtEntry1);
@@ -9964,14 +10903,15 @@ void opcode_0377(const ScriptArguments& args, const ScriptCharacter character) {
 }
 
 /**
-    @brief text_payphone_1string_repeatedly %1d% %2g% %3g%  
+    @brief text_payphone_1string_repeatedly %1d% %2g% %3g%
 
     opcode 0378
-    @arg payphone 
-    @arg arg2 
-    @arg arg3 
+    @arg payphone
+    @arg arg2
+    @arg arg3
 */
-void opcode_0378(const ScriptArguments& args, const ScriptPayphone payphone, const ScriptString arg2, const ScriptString arg3) {
+void opcode_0378(const ScriptArguments& args, const ScriptPayphone payphone,
+                 const ScriptString arg2, const ScriptString arg3) {
     RW_UNIMPLEMENTED_OPCODE(0x0378);
     RW_UNUSED(payphone);
     RW_UNUSED(arg2);
@@ -9980,14 +10920,15 @@ void opcode_0378(const ScriptArguments& args, const ScriptPayphone payphone, con
 }
 
 /**
-    @brief text_payphone_1string %1d% %2g% %3g%  
+    @brief text_payphone_1string %1d% %2g% %3g%
 
     opcode 0379
-    @arg payphone 
-    @arg arg2 
-    @arg arg3 
+    @arg payphone
+    @arg arg2
+    @arg arg3
 */
-void opcode_0379(const ScriptArguments& args, const ScriptPayphone payphone, const ScriptString arg2, const ScriptString arg3) {
+void opcode_0379(const ScriptArguments& args, const ScriptPayphone payphone,
+                 const ScriptString arg2, const ScriptString arg3) {
     RW_UNIMPLEMENTED_OPCODE(0x0379);
     RW_UNUSED(payphone);
     RW_UNUSED(arg2);
@@ -9996,15 +10937,17 @@ void opcode_0379(const ScriptArguments& args, const ScriptPayphone payphone, con
 }
 
 /**
-    @brief text_payphone_2strings_repeatedly %1d% %2g% %3g% %4g%  
+    @brief text_payphone_2strings_repeatedly %1d% %2g% %3g% %4g%
 
     opcode 037a
-    @arg payphone 
-    @arg arg2 
-    @arg arg3 
-    @arg arg4 
+    @arg payphone
+    @arg arg2
+    @arg arg3
+    @arg arg4
 */
-void opcode_037a(const ScriptArguments& args, const ScriptPayphone payphone, const ScriptString arg2, const ScriptString arg3, const ScriptString arg4) {
+void opcode_037a(const ScriptArguments& args, const ScriptPayphone payphone,
+                 const ScriptString arg2, const ScriptString arg3,
+                 const ScriptString arg4) {
     RW_UNIMPLEMENTED_OPCODE(0x037a);
     RW_UNUSED(payphone);
     RW_UNUSED(arg2);
@@ -10014,15 +10957,17 @@ void opcode_037a(const ScriptArguments& args, const ScriptPayphone payphone, con
 }
 
 /**
-    @brief text_payphone_2strings %1d% %2g% %3g% %4g%  
+    @brief text_payphone_2strings %1d% %2g% %3g% %4g%
 
     opcode 037b
-    @arg payphone 
-    @arg arg2 
-    @arg arg3 
-    @arg arg4 
+    @arg payphone
+    @arg arg2
+    @arg arg3
+    @arg arg4
 */
-void opcode_037b(const ScriptArguments& args, const ScriptPayphone payphone, const ScriptString arg2, const ScriptString arg3, const ScriptString arg4) {
+void opcode_037b(const ScriptArguments& args, const ScriptPayphone payphone,
+                 const ScriptString arg2, const ScriptString arg3,
+                 const ScriptString arg4) {
     RW_UNIMPLEMENTED_OPCODE(0x037b);
     RW_UNUSED(payphone);
     RW_UNUSED(arg2);
@@ -10032,16 +10977,18 @@ void opcode_037b(const ScriptArguments& args, const ScriptPayphone payphone, con
 }
 
 /**
-    @brief text_payphone_3strings_repeatedly %1d% %2g% %3g% %4g% %5g%  
+    @brief text_payphone_3strings_repeatedly %1d% %2g% %3g% %4g% %5g%
 
     opcode 037c
-    @arg payphone 
-    @arg arg2 
-    @arg arg3 
-    @arg arg4 
-    @arg arg5 
+    @arg payphone
+    @arg arg2
+    @arg arg3
+    @arg arg4
+    @arg arg5
 */
-void opcode_037c(const ScriptArguments& args, const ScriptPayphone payphone, const ScriptString arg2, const ScriptString arg3, const ScriptString arg4, const ScriptString arg5) {
+void opcode_037c(const ScriptArguments& args, const ScriptPayphone payphone,
+                 const ScriptString arg2, const ScriptString arg3,
+                 const ScriptString arg4, const ScriptString arg5) {
     RW_UNIMPLEMENTED_OPCODE(0x037c);
     RW_UNUSED(payphone);
     RW_UNUSED(arg2);
@@ -10052,16 +10999,18 @@ void opcode_037c(const ScriptArguments& args, const ScriptPayphone payphone, con
 }
 
 /**
-    @brief text_payphone_3strings %1d% %2g% %3g% %4g% %5g%  
+    @brief text_payphone_3strings %1d% %2g% %3g% %4g% %5g%
 
     opcode 037d
-    @arg payphone 
-    @arg arg2 
-    @arg arg3 
-    @arg arg4 
-    @arg arg5 
+    @arg payphone
+    @arg arg2
+    @arg arg3
+    @arg arg4
+    @arg arg5
 */
-void opcode_037d(const ScriptArguments& args, const ScriptPayphone payphone, const ScriptString arg2, const ScriptString arg3, const ScriptString arg4, const ScriptString arg5) {
+void opcode_037d(const ScriptArguments& args, const ScriptPayphone payphone,
+                 const ScriptString arg2, const ScriptString arg3,
+                 const ScriptString arg4, const ScriptString arg5) {
     RW_UNIMPLEMENTED_OPCODE(0x037d);
     RW_UNUSED(payphone);
     RW_UNUSED(arg2);
@@ -10078,7 +11027,8 @@ void opcode_037d(const ScriptArguments& args, const ScriptPayphone payphone, con
     @arg coord0 Coordinates
     @arg coord1 Coordinates
 */
-bool opcode_037e(const ScriptArguments& args, ScriptVec3 coord0, ScriptVec3 coord1) {
+bool opcode_037e(const ScriptArguments& args, ScriptVec3 coord0,
+                 ScriptVec3 coord1) {
     RW_UNIMPLEMENTED_OPCODE(0x037e);
     RW_UNUSED(coord0);
     RW_UNUSED(coord1);
@@ -10103,7 +11053,8 @@ void opcode_037f(const ScriptArguments& args) {
     @arg object Object
     @arg offset Offset
 */
-void opcode_0381(const ScriptArguments& args, const ScriptObject object, ScriptVec3 offset) {
+void opcode_0381(const ScriptArguments& args, const ScriptObject object,
+                 ScriptVec3 offset) {
     RW_UNIMPLEMENTED_OPCODE(0x0381);
     RW_UNUSED(object);
     RW_UNUSED(offset);
@@ -10117,7 +11068,8 @@ void opcode_0381(const ScriptArguments& args, const ScriptObject object, ScriptV
     @arg object Object
     @arg arg2 Boolean true/false
 */
-void opcode_0382(const ScriptArguments& args, const ScriptObject object, const ScriptBoolean arg2) {
+void opcode_0382(const ScriptArguments& args, const ScriptObject object,
+                 const ScriptBoolean arg2) {
     RW_UNIMPLEMENTED_OPCODE(0x0382);
     RW_UNUSED(object);
     RW_UNUSED(arg2);
@@ -10144,9 +11096,11 @@ bool opcode_0383(const ScriptArguments& args, const ScriptVehicle vehicle) {
     @arg gxtEntry0 GXT entry
     @arg gxtEntry1 GXT entry
     @arg time Time (ms)
-    @arg arg4 
+    @arg arg4
 */
-void opcode_0384(const ScriptArguments& args, const ScriptString gxtEntry0, const ScriptString gxtEntry1, const ScriptInt time, const ScriptInt arg4) {
+void opcode_0384(const ScriptArguments& args, const ScriptString gxtEntry0,
+                 const ScriptString gxtEntry1, const ScriptInt time,
+                 const ScriptInt arg4) {
     RW_UNIMPLEMENTED_OPCODE(0x0384);
     RW_UNUSED(gxtEntry0);
     RW_UNUSED(gxtEntry1);
@@ -10162,9 +11116,11 @@ void opcode_0384(const ScriptArguments& args, const ScriptString gxtEntry0, cons
     @arg gxtEntry0 GXT entry
     @arg gxtEntry1 GXT entry
     @arg time Time (ms)
-    @arg arg4 
+    @arg arg4
 */
-void opcode_0385(const ScriptArguments& args, const ScriptString gxtEntry0, const ScriptString gxtEntry1, const ScriptInt time, const ScriptInt arg4) {
+void opcode_0385(const ScriptArguments& args, const ScriptString gxtEntry0,
+                 const ScriptString gxtEntry1, const ScriptInt time,
+                 const ScriptInt arg4) {
     RW_UNIMPLEMENTED_OPCODE(0x0385);
     RW_UNUSED(gxtEntry0);
     RW_UNUSED(gxtEntry1);
@@ -10174,17 +11130,20 @@ void opcode_0385(const ScriptArguments& args, const ScriptString gxtEntry0, cons
 }
 
 /**
-    @brief text_payphone_4strings_repeatedly %1d% %2g% %3g% %4g% %5g% %6g%  
+    @brief text_payphone_4strings_repeatedly %1d% %2g% %3g% %4g% %5g% %6g%
 
     opcode 0386
-    @arg payphone 
-    @arg arg2 
-    @arg arg3 
-    @arg arg4 
-    @arg arg5 
-    @arg arg6 
+    @arg payphone
+    @arg arg2
+    @arg arg3
+    @arg arg4
+    @arg arg5
+    @arg arg6
 */
-void opcode_0386(const ScriptArguments& args, const ScriptPayphone payphone, const ScriptString arg2, const ScriptString arg3, const ScriptString arg4, const ScriptString arg5, const ScriptString arg6) {
+void opcode_0386(const ScriptArguments& args, const ScriptPayphone payphone,
+                 const ScriptString arg2, const ScriptString arg3,
+                 const ScriptString arg4, const ScriptString arg5,
+                 const ScriptString arg6) {
     RW_UNIMPLEMENTED_OPCODE(0x0386);
     RW_UNUSED(payphone);
     RW_UNUSED(arg2);
@@ -10196,17 +11155,20 @@ void opcode_0386(const ScriptArguments& args, const ScriptPayphone payphone, con
 }
 
 /**
-    @brief text_payphone_4strings %1d% %2g% %3g% %4g% %5g% %6g%  
+    @brief text_payphone_4strings %1d% %2g% %3g% %4g% %5g% %6g%
 
     opcode 0387
-    @arg payphone 
-    @arg arg2 
-    @arg arg3 
-    @arg arg4 
-    @arg arg5 
-    @arg arg6 
+    @arg payphone
+    @arg arg2
+    @arg arg3
+    @arg arg4
+    @arg arg5
+    @arg arg6
 */
-void opcode_0387(const ScriptArguments& args, const ScriptPayphone payphone, const ScriptString arg2, const ScriptString arg3, const ScriptString arg4, const ScriptString arg5, const ScriptString arg6) {
+void opcode_0387(const ScriptArguments& args, const ScriptPayphone payphone,
+                 const ScriptString arg2, const ScriptString arg3,
+                 const ScriptString arg4, const ScriptString arg5,
+                 const ScriptString arg6) {
     RW_UNIMPLEMENTED_OPCODE(0x0387);
     RW_UNUSED(payphone);
     RW_UNUSED(arg2);
@@ -10218,18 +11180,21 @@ void opcode_0387(const ScriptArguments& args, const ScriptPayphone payphone, con
 }
 
 /**
-    @brief text_payphone_5strings_repeatedly %1d% %2g% %3g% %4g% %5g% %6g% %7g%  
+    @brief text_payphone_5strings_repeatedly %1d% %2g% %3g% %4g% %5g% %6g% %7g%
 
     opcode 0388
-    @arg payphone 
-    @arg arg2 
-    @arg arg3 
-    @arg arg4 
-    @arg arg5 
-    @arg arg6 
-    @arg arg7 
+    @arg payphone
+    @arg arg2
+    @arg arg3
+    @arg arg4
+    @arg arg5
+    @arg arg6
+    @arg arg7
 */
-void opcode_0388(const ScriptArguments& args, const ScriptPayphone payphone, const ScriptString arg2, const ScriptString arg3, const ScriptString arg4, const ScriptString arg5, const ScriptString arg6, const ScriptString arg7) {
+void opcode_0388(const ScriptArguments& args, const ScriptPayphone payphone,
+                 const ScriptString arg2, const ScriptString arg3,
+                 const ScriptString arg4, const ScriptString arg5,
+                 const ScriptString arg6, const ScriptString arg7) {
     RW_UNIMPLEMENTED_OPCODE(0x0388);
     RW_UNUSED(payphone);
     RW_UNUSED(arg2);
@@ -10242,18 +11207,21 @@ void opcode_0388(const ScriptArguments& args, const ScriptPayphone payphone, con
 }
 
 /**
-    @brief text_payphone_5strings %1d% %2g% %3g% %4g% %5g% %6g% %7g%  
+    @brief text_payphone_5strings %1d% %2g% %3g% %4g% %5g% %6g% %7g%
 
     opcode 0389
-    @arg payphone 
-    @arg arg2 
-    @arg arg3 
-    @arg arg4 
-    @arg arg5 
-    @arg arg6 
-    @arg arg7 
+    @arg payphone
+    @arg arg2
+    @arg arg3
+    @arg arg4
+    @arg arg5
+    @arg arg6
+    @arg arg7
 */
-void opcode_0389(const ScriptArguments& args, const ScriptPayphone payphone, const ScriptString arg2, const ScriptString arg3, const ScriptString arg4, const ScriptString arg5, const ScriptString arg6, const ScriptString arg7) {
+void opcode_0389(const ScriptArguments& args, const ScriptPayphone payphone,
+                 const ScriptString arg2, const ScriptString arg3,
+                 const ScriptString arg4, const ScriptString arg5,
+                 const ScriptString arg6, const ScriptString arg7) {
     RW_UNIMPLEMENTED_OPCODE(0x0389);
     RW_UNUSED(payphone);
     RW_UNUSED(arg2);
@@ -10272,7 +11240,8 @@ void opcode_0389(const ScriptArguments& args, const ScriptPayphone payphone, con
     @arg coord Coordinates
     @arg radius Radius
 */
-bool opcode_038a(const ScriptArguments& args, ScriptVec3 coord, ScriptVec3 radius) {
+bool opcode_038a(const ScriptArguments& args, ScriptVec3 coord,
+                 ScriptVec3 radius) {
     RW_UNIMPLEMENTED_OPCODE(0x038a);
     RW_UNUSED(coord);
     RW_UNUSED(radius);
@@ -10297,7 +11266,8 @@ void opcode_038b(const ScriptArguments& args) {
     @arg object Object
     @arg offset Offset
 */
-void opcode_038c(const ScriptArguments& args, const ScriptObject object, ScriptVec3 offset) {
+void opcode_038c(const ScriptArguments& args, const ScriptObject object,
+                 ScriptVec3 offset) {
     RW_UNIMPLEMENTED_OPCODE(0x038c);
     RW_UNUSED(object);
     RW_UNUSED(offset);
@@ -10305,17 +11275,21 @@ void opcode_038c(const ScriptArguments& args, const ScriptObject object, ScriptV
 }
 
 /**
-    @brief draw_texture %1h% position %2d% %3d% size %4d% %5d% RGBA %6d% %7d% %8d% %9d% 
+    @brief draw_texture %1h% position %2d% %3d% size %4d% %5d% RGBA %6d% %7d%
+   %8d% %9d%
 
     opcode 038d
-    @arg arg1 
+    @arg arg1
     @arg pixelX 2D pixel X
     @arg pixelY 2D pixel Y
-    @arg arg4 
-    @arg arg5 
+    @arg arg4
+    @arg arg5
     @arg colour Colour (0-255)
 */
-void opcode_038d(const ScriptArguments& args, const ScriptInt arg1, const ScriptFloat pixelX, const ScriptFloat pixelY, const ScriptFloat arg4, const ScriptFloat arg5, ScriptRGBA colour) {
+void opcode_038d(const ScriptArguments& args, const ScriptInt arg1,
+                 const ScriptFloat pixelX, const ScriptFloat pixelY,
+                 const ScriptFloat arg4, const ScriptFloat arg5,
+                 ScriptRGBA colour) {
     RW_UNIMPLEMENTED_OPCODE(0x038d);
     RW_UNUSED(arg1);
     RW_UNUSED(pixelX);
@@ -10327,13 +11301,14 @@ void opcode_038d(const ScriptArguments& args, const ScriptInt arg1, const Script
 }
 
 /**
-    @brief load_texture %2h% as %1d%  
+    @brief load_texture %2h% as %1d%
 
     opcode 038f
-    @arg arg1 
-    @arg arg2 
+    @arg arg1
+    @arg arg2
 */
-void opcode_038f(const ScriptArguments& args, const ScriptInt arg1, const ScriptString arg2) {
+void opcode_038f(const ScriptArguments& args, const ScriptInt arg1,
+                 const ScriptString arg2) {
     RW_UNIMPLEMENTED_OPCODE(0x038f);
     RW_UNUSED(arg1);
     RW_UNUSED(arg2);
@@ -10341,10 +11316,10 @@ void opcode_038f(const ScriptArguments& args, const ScriptInt arg1, const Script
 }
 
 /**
-    @brief load_txd_dictionary %1h% 
+    @brief load_txd_dictionary %1h%
 
     opcode 0390
-    @arg arg1 
+    @arg arg1
 */
 void opcode_0390(const ScriptArguments& args, const ScriptString arg1) {
     RW_UNIMPLEMENTED_OPCODE(0x0390);
@@ -10369,7 +11344,8 @@ void opcode_0391(const ScriptArguments& args) {
     @arg object Object
     @arg dynamic Boolean true/false
 */
-void opcode_0392(const ScriptArguments& args, const ScriptObject object, const ScriptBoolean dynamic) {
+void opcode_0392(const ScriptArguments& args, const ScriptObject object,
+                 const ScriptBoolean dynamic) {
     RW_UNUSED(args);
     object->setStatic(!dynamic);
 }
@@ -10378,7 +11354,7 @@ void opcode_0392(const ScriptArguments& args, const ScriptObject object, const S
     @brief play_mission_passed_music %1d%
 
     opcode 0394
-    @arg arg1 
+    @arg arg1
 */
 void opcode_0394(const ScriptArguments& args, const ScriptInt arg1) {
     RW_UNUSED(arg1);
@@ -10387,14 +11363,11 @@ void opcode_0394(const ScriptArguments& args, const ScriptInt arg1) {
     std::string name = "Miscom";
 
     // TODO play anything other than Miscom.wav
-    if (! gw->data->loadAudioClip( name, name + ".wav" ))
-    {
-    	args.getWorld()->logger->error("SCM", "Error loading audio " + name);
-    	return;
-    }
-    else if (args.getWorld()->missionAudio.length() > 0)
-    {
-    	args.getWorld()->sound.playSound(args.getWorld()->missionAudio);
+    if (!gw->data->loadAudioClip(name, name + ".wav")) {
+        args.getWorld()->logger->error("SCM", "Error loading audio " + name);
+        return;
+    } else if (args.getWorld()->missionAudio.length() > 0) {
+        args.getWorld()->sound.playSound(args.getWorld()->missionAudio);
     }
 }
 
@@ -10406,7 +11379,8 @@ void opcode_0394(const ScriptArguments& args, const ScriptInt arg1) {
     @arg radius Radius
     @arg clearParticles Boolean true/false
 */
-void opcode_0395(const ScriptArguments& args, ScriptVec3 coord, const ScriptFloat radius, const ScriptBoolean clearParticles) {
+void opcode_0395(const ScriptArguments& args, ScriptVec3 coord,
+                 const ScriptFloat radius, const ScriptBoolean clearParticles) {
     coord = script::getGround(args, coord);
     args.getWorld()->clearObjectsWithinArea(coord, radius, clearParticles);
 }
@@ -10428,7 +11402,8 @@ void opcode_0396(const ScriptArguments& args, const ScriptBoolean paused) {
     @arg vehicle Car/vehicle
     @arg arg2 Boolean true/false
 */
-void opcode_0397(const ScriptArguments& args, const ScriptVehicle vehicle, const ScriptBoolean arg2) {
+void opcode_0397(const ScriptArguments& args, const ScriptVehicle vehicle,
+                 const ScriptBoolean arg2) {
     RW_UNIMPLEMENTED_OPCODE(0x0397);
     RW_UNUSED(vehicle);
     RW_UNUSED(arg2);
@@ -10436,18 +11411,22 @@ void opcode_0397(const ScriptArguments& args, const ScriptVehicle vehicle, const
 }
 
 /**
-    @brief remove_forbidden_for_peds_angled_cube %1d% %2d% %3d% to %4d% %5d% %6d% angle %7d%
+    @brief remove_forbidden_for_peds_angled_cube %1d% %2d% %3d% to %4d% %5d%
+   %6d% angle %7d%
 
     opcode 0398
-    @arg arg1 
-    @arg arg2 
-    @arg arg3 
-    @arg arg4 
-    @arg arg5 
-    @arg arg6 
-    @arg arg7 
+    @arg arg1
+    @arg arg2
+    @arg arg3
+    @arg arg4
+    @arg arg5
+    @arg arg6
+    @arg arg7
 */
-void opcode_0398(const ScriptArguments& args, const ScriptFloat arg1, const ScriptFloat arg2, const ScriptFloat arg3, const ScriptFloat arg4, const ScriptFloat arg5, const ScriptFloat arg6, const ScriptFloat arg7) {
+void opcode_0398(const ScriptArguments& args, const ScriptFloat arg1,
+                 const ScriptFloat arg2, const ScriptFloat arg3,
+                 const ScriptFloat arg4, const ScriptFloat arg5,
+                 const ScriptFloat arg6, const ScriptFloat arg7) {
     RW_UNIMPLEMENTED_OPCODE(0x0398);
     RW_UNUSED(arg1);
     RW_UNUSED(arg2);
@@ -10460,18 +11439,22 @@ void opcode_0398(const ScriptArguments& args, const ScriptFloat arg1, const Scri
 }
 
 /**
-    @brief create_forbidden_for_peds_angled_cube %1d% %2d% %3d% to %4d% %5d% %6d% angle %7d%
+    @brief create_forbidden_for_peds_angled_cube %1d% %2d% %3d% to %4d% %5d%
+   %6d% angle %7d%
 
     opcode 0399
-    @arg arg1 
-    @arg arg2 
-    @arg arg3 
-    @arg arg4 
-    @arg arg5 
-    @arg arg6 
-    @arg arg7 
+    @arg arg1
+    @arg arg2
+    @arg arg3
+    @arg arg4
+    @arg arg5
+    @arg arg6
+    @arg arg7
 */
-void opcode_0399(const ScriptArguments& args, const ScriptFloat arg1, const ScriptFloat arg2, const ScriptFloat arg3, const ScriptFloat arg4, const ScriptFloat arg5, const ScriptFloat arg6, const ScriptFloat arg7) {
+void opcode_0399(const ScriptArguments& args, const ScriptFloat arg1,
+                 const ScriptFloat arg2, const ScriptFloat arg3,
+                 const ScriptFloat arg4, const ScriptFloat arg5,
+                 const ScriptFloat arg6, const ScriptFloat arg7) {
     RW_UNIMPLEMENTED_OPCODE(0x0399);
     RW_UNUSED(arg1);
     RW_UNUSED(arg2);
@@ -10484,18 +11467,22 @@ void opcode_0399(const ScriptArguments& args, const ScriptFloat arg1, const Scri
 }
 
 /**
-    @brief remove_forbidden_for_cars_angled_cube %1d% %2d% %3d% to %4d% %5d% %6d% angle %7d%
+    @brief remove_forbidden_for_cars_angled_cube %1d% %2d% %3d% to %4d% %5d%
+   %6d% angle %7d%
 
     opcode 039a
-    @arg arg1 
-    @arg arg2 
-    @arg arg3 
-    @arg arg4 
-    @arg arg5 
-    @arg arg6 
-    @arg arg7 
+    @arg arg1
+    @arg arg2
+    @arg arg3
+    @arg arg4
+    @arg arg5
+    @arg arg6
+    @arg arg7
 */
-void opcode_039a(const ScriptArguments& args, const ScriptFloat arg1, const ScriptFloat arg2, const ScriptFloat arg3, const ScriptFloat arg4, const ScriptFloat arg5, const ScriptFloat arg6, const ScriptFloat arg7) {
+void opcode_039a(const ScriptArguments& args, const ScriptFloat arg1,
+                 const ScriptFloat arg2, const ScriptFloat arg3,
+                 const ScriptFloat arg4, const ScriptFloat arg5,
+                 const ScriptFloat arg6, const ScriptFloat arg7) {
     RW_UNIMPLEMENTED_OPCODE(0x039a);
     RW_UNUSED(arg1);
     RW_UNUSED(arg2);
@@ -10508,18 +11495,22 @@ void opcode_039a(const ScriptArguments& args, const ScriptFloat arg1, const Scri
 }
 
 /**
-    @brief create_forbidden_for_cars_angled_cube %1d% %2d% %3d% to %4d% %5d% %6d% angle %7d%
+    @brief create_forbidden_for_cars_angled_cube %1d% %2d% %3d% to %4d% %5d%
+   %6d% angle %7d%
 
     opcode 039b
-    @arg arg1 
-    @arg arg2 
-    @arg arg3 
-    @arg arg4 
-    @arg arg5 
-    @arg arg6 
-    @arg arg7 
+    @arg arg1
+    @arg arg2
+    @arg arg3
+    @arg arg4
+    @arg arg5
+    @arg arg6
+    @arg arg7
 */
-void opcode_039b(const ScriptArguments& args, const ScriptFloat arg1, const ScriptFloat arg2, const ScriptFloat arg3, const ScriptFloat arg4, const ScriptFloat arg5, const ScriptFloat arg6, const ScriptFloat arg7) {
+void opcode_039b(const ScriptArguments& args, const ScriptFloat arg1,
+                 const ScriptFloat arg2, const ScriptFloat arg3,
+                 const ScriptFloat arg4, const ScriptFloat arg5,
+                 const ScriptFloat arg6, const ScriptFloat arg7) {
     RW_UNIMPLEMENTED_OPCODE(0x039b);
     RW_UNUSED(arg1);
     RW_UNUSED(arg2);
@@ -10538,7 +11529,8 @@ void opcode_039b(const ScriptArguments& args, const ScriptFloat arg1, const Scri
     @arg vehicle Car/vehicle
     @arg arg2 Boolean true/false
 */
-void opcode_039c(const ScriptArguments& args, const ScriptVehicle vehicle, const ScriptBoolean arg2) {
+void opcode_039c(const ScriptArguments& args, const ScriptVehicle vehicle,
+                 const ScriptBoolean arg2) {
     RW_UNIMPLEMENTED_OPCODE(0x039c);
     RW_UNUSED(vehicle);
     RW_UNUSED(arg2);
@@ -10546,23 +11538,30 @@ void opcode_039c(const ScriptArguments& args, const ScriptVehicle vehicle, const
 }
 
 /**
-    @brief scatter_particles type %1a% %8d% %9d% %10d% %11d% %12d% from %2d% %3d% %4d% to %5d% %6d% %7d%
+    @brief scatter_particles type %1a% %8d% %9d% %10d% %11d% %12d% from %2d%
+   %3d% %4d% to %5d% %6d% %7d%
 
     opcode 039d
-    @arg arg1 
-    @arg arg2 
-    @arg arg3 
-    @arg arg4 
-    @arg arg5 
-    @arg arg6 
-    @arg arg7 
-    @arg arg8 
-    @arg arg9 
-    @arg arg10 
-    @arg arg11 
-    @arg arg12 
+    @arg arg1
+    @arg arg2
+    @arg arg3
+    @arg arg4
+    @arg arg5
+    @arg arg6
+    @arg arg7
+    @arg arg8
+    @arg arg9
+    @arg arg10
+    @arg arg11
+    @arg arg12
 */
-void opcode_039d(const ScriptArguments& args, const ScriptPObject arg1, const ScriptFloat arg2, const ScriptFloat arg3, const ScriptFloat arg4, const ScriptFloat arg5, const ScriptFloat arg6, const ScriptFloat arg7, const ScriptFloat arg8, const ScriptInt arg9, const ScriptInt arg10, const ScriptInt arg11, const ScriptInt arg12) {
+void opcode_039d(const ScriptArguments& args, const ScriptPObject arg1,
+                 const ScriptFloat arg2, const ScriptFloat arg3,
+                 const ScriptFloat arg4, const ScriptFloat arg5,
+                 const ScriptFloat arg6, const ScriptFloat arg7,
+                 const ScriptFloat arg8, const ScriptInt arg9,
+                 const ScriptInt arg10, const ScriptInt arg11,
+                 const ScriptInt arg12) {
     RW_UNIMPLEMENTED_OPCODE(0x039d);
     RW_UNUSED(arg1);
     RW_UNUSED(arg2);
@@ -10586,7 +11585,8 @@ void opcode_039d(const ScriptArguments& args, const ScriptPObject arg1, const Sc
     @arg character Character/ped
     @arg arg2 Boolean true/false
 */
-void opcode_039e(const ScriptArguments& args, const ScriptCharacter character, const ScriptBoolean arg2) {
+void opcode_039e(const ScriptArguments& args, const ScriptCharacter character,
+                 const ScriptBoolean arg2) {
     RW_UNIMPLEMENTED_OPCODE(0x039e);
     RW_UNUSED(character);
     RW_UNUSED(arg2);
@@ -10611,11 +11611,12 @@ void opcode_039f(const ScriptArguments& args, const ScriptVehicle vehicle,
     @brief   car %3d% picked_up_by_crane %1d% %2d%
 
     opcode 03a0
-    @arg arg1 
-    @arg arg2 
-    @arg vehicle 
+    @arg arg1
+    @arg arg2
+    @arg vehicle
 */
-bool opcode_03a0(const ScriptArguments& args, const ScriptFloat arg1, const ScriptFloat arg2, const ScriptVehicle vehicle) {
+bool opcode_03a0(const ScriptArguments& args, const ScriptFloat arg1,
+                 const ScriptFloat arg2, const ScriptVehicle vehicle) {
     RW_UNIMPLEMENTED_OPCODE(0x03a0);
     RW_UNUSED(arg1);
     RW_UNUSED(arg2);
@@ -10631,7 +11632,8 @@ bool opcode_03a0(const ScriptArguments& args, const ScriptFloat arg1, const Scri
     @arg coord Coordinates
     @arg radius Radius
 */
-void opcode_03a1(const ScriptArguments& args, ScriptVec3 coord, const ScriptFloat radius) {
+void opcode_03a1(const ScriptArguments& args, ScriptVec3 coord,
+                 const ScriptFloat radius) {
     RW_UNIMPLEMENTED_OPCODE(0x03a1);
     RW_UNUSED(coord);
     RW_UNUSED(radius);
@@ -10643,9 +11645,10 @@ void opcode_03a1(const ScriptArguments& args, ScriptVec3 coord, const ScriptFloa
 
     opcode 03a2
     @arg vehicle Car/vehicle
-    @arg arg2 
+    @arg arg2
 */
-void opcode_03a2(const ScriptArguments& args, const ScriptVehicle vehicle, const ScriptStatus arg2) {
+void opcode_03a2(const ScriptArguments& args, const ScriptVehicle vehicle,
+                 const ScriptStatus arg2) {
     RW_UNIMPLEMENTED_OPCODE(0x03a2);
     RW_UNUSED(vehicle);
     RW_UNUSED(arg2);
@@ -10680,11 +11683,12 @@ void opcode_03a4(const ScriptArguments& args, const ScriptString name) {
     @brief set_garage %1d% type_to %2d% %3d%
 
     opcode 03a5
-    @arg garage0 
-    @arg garage1 
-    @arg model 
+    @arg garage0
+    @arg garage1
+    @arg model
 */
-void opcode_03a5(const ScriptArguments& args, const ScriptGarage garage, const ScriptGarageType garageType, const ScriptModelID model) {
+void opcode_03a5(const ScriptArguments& args, const ScriptGarage garage,
+                 const ScriptGarageType garageType, const ScriptModelID model) {
     RW_UNUSED(args);
     garage->type = garageType;
     garage->targetModel = model;
@@ -10695,11 +11699,12 @@ void opcode_03a5(const ScriptArguments& args, const ScriptGarage garage, const S
     @brief get_drug_plane_coords %1d% %2d% %3d%
 
     opcode 03a6
-    @arg arg1 
-    @arg arg2 
-    @arg arg3 
+    @arg arg1
+    @arg arg2
+    @arg arg3
 */
-void opcode_03a6(const ScriptArguments& args, ScriptFloat& arg1, ScriptFloat& arg2, ScriptFloat& arg3) {
+void opcode_03a6(const ScriptArguments& args, ScriptFloat& arg1,
+                 ScriptFloat& arg2, ScriptFloat& arg3) {
     RW_UNIMPLEMENTED_OPCODE(0x03a6);
     RW_UNUSED(arg1);
     RW_UNUSED(arg2);
@@ -10726,7 +11731,8 @@ void opcode_03aa(const ScriptArguments& args, ScriptVec3 coord) {
     @arg vehicle Car/vehicle
     @arg arg2 Boolean true/false
 */
-void opcode_03ab(const ScriptArguments& args, const ScriptVehicle vehicle, const ScriptBoolean arg2) {
+void opcode_03ab(const ScriptArguments& args, const ScriptVehicle vehicle,
+                 const ScriptBoolean arg2) {
     RW_UNIMPLEMENTED_OPCODE(0x03ab);
     RW_UNUSED(vehicle);
     RW_UNUSED(arg2);
@@ -10737,7 +11743,7 @@ void opcode_03ab(const ScriptArguments& args, const ScriptVehicle vehicle, const
     @brief clear_route %1d%
 
     opcode 03ac
-    @arg arg1 
+    @arg arg1
 */
 void opcode_03ac(const ScriptArguments& args, const ScriptInt arg1) {
     RW_UNIMPLEMENTED_OPCODE(0x03ac);
@@ -10761,14 +11767,17 @@ void opcode_03ad(const ScriptArguments& args, const ScriptBoolean arg1) {
     @brief remove_objects_from_cube %1d% %2d% %3d% to %4d% %5d% %6d%
 
     opcode 03ae
-    @arg arg1 
-    @arg arg2 
-    @arg arg3 
-    @arg arg4 
-    @arg arg5 
-    @arg arg6 
+    @arg arg1
+    @arg arg2
+    @arg arg3
+    @arg arg4
+    @arg arg5
+    @arg arg6
 */
-void opcode_03ae(const ScriptArguments& args, const ScriptFloat arg1, const ScriptFloat arg2, const ScriptFloat arg3, const ScriptFloat arg4, const ScriptFloat arg5, const ScriptFloat arg6) {
+void opcode_03ae(const ScriptArguments& args, const ScriptFloat arg1,
+                 const ScriptFloat arg2, const ScriptFloat arg3,
+                 const ScriptFloat arg4, const ScriptFloat arg5,
+                 const ScriptFloat arg6) {
     RW_UNIMPLEMENTED_OPCODE(0x03ae);
     RW_UNUSED(arg1);
     RW_UNUSED(arg2);
@@ -10795,7 +11804,7 @@ void opcode_03af(const ScriptArguments& args, const ScriptBoolean arg1) {
     @brief   garage %1d% door_open
 
     opcode 03b0
-    @arg garage 
+    @arg garage
 */
 bool opcode_03b0(const ScriptArguments& args, const ScriptGarage garage) {
     RW_UNIMPLEMENTED_OPCODE(0x03b0);
@@ -10808,7 +11817,7 @@ bool opcode_03b0(const ScriptArguments& args, const ScriptGarage garage) {
     @brief   garage %1d% door_closed
 
     opcode 03b1
-    @arg garage 
+    @arg garage
 */
 bool opcode_03b1(const ScriptArguments& args, const ScriptGarage garage) {
     RW_UNUSED(args);
@@ -10865,10 +11874,12 @@ bool opcode_03b5(const ScriptArguments& args) {
     @arg model0 Model ID
     @arg model1 Model ID
 */
-void opcode_03b6(const ScriptArguments& args, ScriptVec3 coord, const ScriptFloat radius, const ScriptModel model0, const ScriptModel model1) {
-    if( std::abs(model0) > 178 || std::abs(model1) > 178 ) {
-    	/// @todo implement this path, move model code into ScriptArguments
-    	return;
+void opcode_03b6(const ScriptArguments& args, ScriptVec3 coord,
+                 const ScriptFloat radius, const ScriptModel model0,
+                 const ScriptModel model1) {
+    if (std::abs(model0) > 178 || std::abs(model1) > 178) {
+        /// @todo implement this path, move model code into ScriptArguments
+        return;
     }
 
     int name0 = std::abs(model0);
@@ -10876,21 +11887,26 @@ void opcode_03b6(const ScriptArguments& args, ScriptVec3 coord, const ScriptFloa
 
     auto oldmodel = args.getVM()->getFile()->getModels()[name0];
     auto newmodel = args.getVM()->getFile()->getModels()[name1];
-    std::transform(newmodel.begin(), newmodel.end(), newmodel.begin(), ::tolower);
-    std::transform(oldmodel.begin(), oldmodel.end(), oldmodel.begin(), ::tolower);
+    std::transform(newmodel.begin(), newmodel.end(), newmodel.begin(),
+                   ::tolower);
+    std::transform(oldmodel.begin(), oldmodel.end(), oldmodel.begin(),
+                   ::tolower);
 
     auto newobjectid = args.getWorld()->data->findModelObject(newmodel);
-    auto nobj = args.getWorld()->data->findModelInfo<SimpleModelInfo>(newobjectid);
+    auto nobj =
+        args.getWorld()->data->findModelInfo<SimpleModelInfo>(newobjectid);
 
-    for(auto p : args.getWorld()->instancePool.objects) {
-    	auto o = p.second;
-    	if( !o->getModel() ) continue;
-    	if( o->getModelInfo<BaseModelInfo>()->name != oldmodel ) continue;
-    	float d = glm::distance(coord, o->getPosition());
-    	if( d < radius ) {
-    		InstanceObject* inst = static_cast<InstanceObject*>(o);
-    		inst->changeModel(nobj);
-    	}
+    for (auto p : args.getWorld()->instancePool.objects) {
+        auto o = p.second;
+        if (!o->getModel())
+            continue;
+        if (o->getModelInfo<BaseModelInfo>()->name != oldmodel)
+            continue;
+        float d = glm::distance(coord, o->getPosition());
+        if (d < radius) {
+            InstanceObject* inst = static_cast<InstanceObject*>(o);
+            inst->changeModel(nobj);
+        }
     }
 }
 
@@ -10910,7 +11926,7 @@ void opcode_03b7(const ScriptArguments& args, const ScriptBoolean arg1) {
     @brief clear_weapons_from_player %1d%
 
     opcode 03b8
-    @arg player 
+    @arg player
 */
 void opcode_03b8(const ScriptArguments& args, const ScriptPlayer player) {
     RW_UNUSED(args);
@@ -10921,7 +11937,7 @@ void opcode_03b8(const ScriptArguments& args, const ScriptPlayer player) {
     @brief create_catalinas_chopper %1d%
 
     opcode 03b9
-    @arg vehicle 
+    @arg vehicle
 */
 void opcode_03b9(const ScriptArguments& args, ScriptVehicle& vehicle) {
     RW_UNIMPLEMENTED_OPCODE(0x03b9);
@@ -10936,7 +11952,8 @@ void opcode_03b9(const ScriptArguments& args, ScriptVehicle& vehicle) {
     @arg coord0 Coordinates
     @arg coord1 Coordinates
 */
-void opcode_03ba(const ScriptArguments& args, ScriptVec3 coord0, ScriptVec3 coord1) {
+void opcode_03ba(const ScriptArguments& args, ScriptVec3 coord0,
+                 ScriptVec3 coord1) {
     RW_UNIMPLEMENTED_OPCODE(0x03ba);
     RW_UNUSED(coord0);
     RW_UNUSED(coord1);
@@ -10962,7 +11979,8 @@ void opcode_03bb(const ScriptArguments& args, const ScriptGarage garage) {
     @arg radius Radius
     @arg sphere Handle
 */
-void opcode_03bc(const ScriptArguments& args, ScriptVec3 coord, const ScriptFloat radius, ScriptSphere& sphere) {
+void opcode_03bc(const ScriptArguments& args, ScriptVec3 coord,
+                 const ScriptFloat radius, ScriptSphere& sphere) {
     RW_UNIMPLEMENTED_OPCODE(0x03bc);
     RW_UNUSED(coord);
     RW_UNUSED(radius);
@@ -10999,7 +12017,8 @@ void opcode_03be(const ScriptArguments& args) {
     @arg player Player
     @arg arg2 Boolean true/false
 */
-void opcode_03bf(const ScriptArguments& args, const ScriptPlayer player, const ScriptBoolean arg2) {
+void opcode_03bf(const ScriptArguments& args, const ScriptPlayer player,
+                 const ScriptBoolean arg2) {
     RW_UNIMPLEMENTED_OPCODE(0x03bf);
     RW_UNUSED(player);
     RW_UNUSED(arg2);
@@ -11013,7 +12032,8 @@ void opcode_03bf(const ScriptArguments& args, const ScriptPlayer player, const S
     @arg character Character/ped
     @arg vehicle Car/vehicle
 */
-void opcode_03c0(const ScriptArguments& args, const ScriptCharacter character, ScriptVehicle& vehicle) {
+void opcode_03c0(const ScriptArguments& args, const ScriptCharacter character,
+                 ScriptVehicle& vehicle) {
     RW_UNIMPLEMENTED_OPCODE(0x03c0);
     RW_UNUSED(character);
     RW_UNUSED(vehicle);
@@ -11024,10 +12044,11 @@ void opcode_03c0(const ScriptArguments& args, const ScriptCharacter character, S
     @brief %2d% = player %1d% car_no_save
 
     opcode 03c1
-    @arg player 
-    @arg vehicle 
+    @arg player
+    @arg vehicle
 */
-void opcode_03c1(const ScriptArguments& args, const ScriptPlayer player, ScriptVehicle& vehicle) {
+void opcode_03c1(const ScriptArguments& args, const ScriptPlayer player,
+                 ScriptVehicle& vehicle) {
     vehicle = player->getCharacter()->getCurrentVehicle();
     RW_UNUSED(args);
 }
@@ -11036,7 +12057,7 @@ void opcode_03c1(const ScriptArguments& args, const ScriptPlayer player, ScriptV
     @brief   payphone %1d% answered
 
     opcode 03c2
-    @arg payphone 
+    @arg payphone
 */
 bool opcode_03c2(const ScriptArguments& args, const ScriptPayphone payphone) {
     RW_UNUSED(args);
@@ -11048,10 +12069,11 @@ bool opcode_03c2(const ScriptArguments& args, const ScriptPayphone payphone) {
 
     opcode 03c3
     @arg arg1G Global timer storage
-    @arg arg2 
+    @arg arg2
     @arg gxtEntry GXT entry
 */
-void opcode_03c3(const ScriptArguments& args, ScriptInt& arg1G, const ScriptTimer arg2, const ScriptString gxtEntry) {
+void opcode_03c3(const ScriptArguments& args, ScriptInt& arg1G,
+                 const ScriptTimer arg2, const ScriptString gxtEntry) {
     RW_UNIMPLEMENTED_OPCODE(0x03c3);
     RW_UNUSED(arg1G);
     RW_UNUSED(arg2);
@@ -11063,11 +12085,12 @@ void opcode_03c3(const ScriptArguments& args, ScriptInt& arg1G, const ScriptTime
     @brief set_status_text_to %1d% %2b:bar/number% %3g%
 
     opcode 03c4
-    @arg arg1G 
+    @arg arg1G
     @arg arg2 Boolean true/false
     @arg gxtEntry GXT entry
 */
-void opcode_03c4(const ScriptArguments& args, ScriptInt& arg1G, const ScriptBoolean arg2, const ScriptString gxtEntry) {
+void opcode_03c4(const ScriptArguments& args, ScriptInt& arg1G,
+                 const ScriptBoolean arg2, const ScriptString gxtEntry) {
     RW_UNIMPLEMENTED_OPCODE(0x03c4);
     RW_UNUSED(arg1G);
     RW_UNUSED(arg2);
@@ -11082,7 +12105,8 @@ void opcode_03c4(const ScriptArguments& args, ScriptInt& arg1G, const ScriptBool
     @arg coord Coordinates
     @arg angle Angle
 */
-void opcode_03c5(const ScriptArguments& args, ScriptVec3 coord, const ScriptFloat angle) {
+void opcode_03c5(const ScriptArguments& args, ScriptVec3 coord,
+                 const ScriptFloat angle) {
     RW_UNIMPLEMENTED_OPCODE(0x03c5);
     RW_UNUSED(coord);
     RW_UNUSED(angle);
@@ -11109,7 +12133,7 @@ bool opcode_03c6(const ScriptArguments& args, const ScriptLevel island) {
     @brief set_sensitivity_to_crime_to %1d%
 
     opcode 03c7
-    @arg arg1 
+    @arg arg1
 */
 void opcode_03c7(const ScriptArguments& args, const ScriptFloat arg1) {
     RW_UNIMPLEMENTED_OPCODE(0x03c7);
@@ -11173,7 +12197,8 @@ void opcode_03cb(const ScriptArguments& args, ScriptVec3 coord) {
     @arg radius Radius
     @arg time Time (ms)
 */
-void opcode_03cc(const ScriptArguments& args, const ScriptVehicle vehicle, const ScriptFloat radius, const ScriptInt time) {
+void opcode_03cc(const ScriptArguments& args, const ScriptVehicle vehicle,
+                 const ScriptFloat radius, const ScriptInt time) {
     RW_UNIMPLEMENTED_OPCODE(0x03cc);
     RW_UNUSED(vehicle);
     RW_UNUSED(radius);
@@ -11215,10 +12240,11 @@ bool opcode_03ce(const ScriptArguments& args, const ScriptVehicle vehicle) {
 void opcode_03cf(const ScriptArguments& args, const ScriptString soundID) {
     auto name = std::string(soundID);
     std::transform(name.begin(), name.end(), name.begin(), ::tolower);
-    if (! args.getWorld()->data->loadAudioClip(name, name + ".wav")) {
-    	if (! args.getWorld()->data->loadAudioClip(name, name + ".mp3")) {
-    		args.getWorld()->logger->error("SCM", "Failed to load audio: " + name);
-    	}
+    if (!args.getWorld()->data->loadAudioClip(name, name + ".wav")) {
+        if (!args.getWorld()->data->loadAudioClip(name, name + ".mp3")) {
+            args.getWorld()->logger->error("SCM",
+                                           "Failed to load audio: " + name);
+        }
     }
 }
 
@@ -11240,7 +12266,7 @@ bool opcode_03d0(const ScriptArguments& args) {
 void opcode_03d1(const ScriptArguments& args) {
     auto world = args.getWorld();
     if (world->missionAudio.length() > 0) {
-    	world->sound.playSound(world->missionAudio);
+        world->sound.playSound(world->missionAudio);
     }
 }
 
@@ -11251,17 +12277,18 @@ void opcode_03d1(const ScriptArguments& args) {
 */
 bool opcode_03d2(const ScriptArguments& args) {
     auto world = args.getWorld();
-    bool isFinished = ! world->sound.isPlaying(world->missionAudio);
+    bool isFinished = !world->sound.isPlaying(world->missionAudio);
 
     if (isFinished) {
-    	world->missionAudio = "";
+        world->missionAudio = "";
     }
 
     return isFinished;
 }
 
 /**
-    @brief get_closest_car_node_at %1d% %2d% %3d% store_to %4d% %5d% %6d% heading %7d%
+    @brief get_closest_car_node_at %1d% %2d% %3d% store_to %4d% %5d% %6d%
+   heading %7d%
 
     opcode 03d3
     @arg coord Coordinates
@@ -11270,9 +12297,12 @@ bool opcode_03d2(const ScriptArguments& args) {
     @arg zCoord Z Coord
     @arg angle Angle
 */
-void opcode_03d3(const ScriptArguments& args, ScriptVec3 coord, ScriptFloat& xCoord, ScriptFloat& yCoord, ScriptFloat& zCoord, ScriptFloat& angle) {
+void opcode_03d3(const ScriptArguments& args, ScriptVec3 coord,
+                 ScriptFloat& xCoord, ScriptFloat& yCoord, ScriptFloat& zCoord,
+                 ScriptFloat& angle) {
     RW_UNIMPLEMENTED_OPCODE(0x03d3);
-    script::getClosestNode(args, coord, AIGraphNode::NodeType::Vehicle, xCoord, yCoord, zCoord);
+    script::getClosestNode(args, coord, AIGraphNode::NodeType::Vehicle, xCoord,
+                           yCoord, zCoord);
     // @todo calculate angle based on node connections
     angle = 0.f;
 }
@@ -11282,9 +12312,10 @@ void opcode_03d3(const ScriptArguments& args, ScriptVec3 coord, ScriptFloat& xCo
 
     opcode 03d4
     @arg garage Handle
-    @arg arg2 
+    @arg arg2
 */
-bool opcode_03d4(const ScriptArguments& args, const ScriptGarage garage, const ScriptInt index) {
+bool opcode_03d4(const ScriptArguments& args, const ScriptGarage garage,
+                 const ScriptInt index) {
     int entryIndex = index;
     RW_CHECK(entryIndex >= 0, "Entry index too low");
     RW_CHECK(entryIndex < 32, "Entry index too high");
@@ -11374,7 +12405,8 @@ void opcode_03da(const ScriptArguments& args, const ScriptGarage garage) {
     @arg pickup Player
     @arg blip Blip
 */
-void opcode_03dc(const ScriptArguments& args, const ScriptPickup pickup, ScriptBlip& blip) {
+void opcode_03dc(const ScriptArguments& args, const ScriptPickup pickup,
+                 ScriptBlip& blip) {
     auto& data = script::createObjectBlip(args, pickup);
     blip = &data;
 }
@@ -11387,7 +12419,8 @@ void opcode_03dc(const ScriptArguments& args, const ScriptPickup pickup, ScriptB
     @arg blipSprite Blip sprite
     @arg blip Blip
 */
-void opcode_03dd(const ScriptArguments& args, const ScriptPickup pickup, const ScriptRadarSprite blipSprite, ScriptBlip& blip) {
+void opcode_03dd(const ScriptArguments& args, const ScriptPickup pickup,
+                 const ScriptRadarSprite blipSprite, ScriptBlip& blip) {
     auto data = script::createObjectBlipSprite(args, pickup, blipSprite);
     blip = &data;
 }
@@ -11396,7 +12429,7 @@ void opcode_03dd(const ScriptArguments& args, const ScriptPickup pickup, const S
     @brief set_ped_density_multiplier %1d%
 
     opcode 03de
-    @arg arg1 
+    @arg arg1
 */
 void opcode_03de(const ScriptArguments& args, const ScriptFloat arg1) {
     RW_UNIMPLEMENTED_OPCODE(0x03de);
@@ -11432,7 +12465,7 @@ void opcode_03e0(const ScriptArguments& args, const ScriptBoolean arg1) {
     @brief %1d% = packages_found
 
     opcode 03e1
-    @arg arg1 
+    @arg arg1
 */
 void opcode_03e1(const ScriptArguments& args, ScriptInt& arg1) {
     arg1 = args.getState()->playerInfo.hiddenPackagesCollected;
@@ -11442,7 +12475,7 @@ void opcode_03e1(const ScriptArguments& args, ScriptInt& arg1) {
     @brief save_turismo_time %1d%
 
     opcode 03e2
-    @arg time 
+    @arg time
 */
 void opcode_03e2(const ScriptArguments& args, const ScriptInt time) {
     if (args.getState()->gameStats.bestTurismoTime > time) {
@@ -11499,7 +12532,7 @@ void opcode_03e6(const ScriptArguments& args) {
     @brief flash_hud %1d%
 
     opcode 03e7
-    @arg arg1 
+    @arg arg1
 */
 void opcode_03e7(const ScriptArguments& args, const ScriptHudFlash arg1) {
     args.getState()->hudFlash = static_cast<HudFlash>(arg1);
@@ -11545,7 +12578,8 @@ bool opcode_03ec(const ScriptArguments& args) {
     @arg vehicle Car/vehicle
     @arg arg2 Boolean true/false
 */
-void opcode_03ed(const ScriptArguments& args, const ScriptVehicle vehicle, const ScriptBoolean arg2) {
+void opcode_03ed(const ScriptArguments& args, const ScriptVehicle vehicle,
+                 const ScriptBoolean arg2) {
     RW_UNIMPLEMENTED_OPCODE(0x03ed);
     RW_UNUSED(vehicle);
     RW_UNUSED(arg2);
@@ -11580,7 +12614,7 @@ void opcode_03ef(const ScriptArguments& args, const ScriptPlayer player) {
     @brief enable_text_draw %1d%
 
     opcode 03f0
-    @arg arg1 
+    @arg arg1
 */
 void opcode_03f0(const ScriptArguments& args, const ScriptInt arg1) {
     RW_UNIMPLEMENTED_OPCODE(0x03f0);
@@ -11592,10 +12626,11 @@ void opcode_03f0(const ScriptArguments& args, const ScriptInt arg1) {
     @brief pedtype %1e% add_threat %2e%
 
     opcode 03f1
-    @arg pedType 
-    @arg arg2 
+    @arg pedType
+    @arg arg2
 */
-void opcode_03f1(const ScriptArguments& args, const ScriptPedType pedType, const ScriptThreat arg2) {
+void opcode_03f1(const ScriptArguments& args, const ScriptPedType pedType,
+                 const ScriptThreat arg2) {
     RW_UNIMPLEMENTED_OPCODE(0x03f1);
     RW_UNUSED(pedType);
     RW_UNUSED(arg2);
@@ -11606,10 +12641,11 @@ void opcode_03f1(const ScriptArguments& args, const ScriptPedType pedType, const
     @brief pedgroup %1e% remove_threat %2e%
 
     opcode 03f2
-    @arg pedType 
-    @arg arg2 
+    @arg pedType
+    @arg arg2
 */
-void opcode_03f2(const ScriptArguments& args, const ScriptPedType pedType, const ScriptThreat arg2) {
+void opcode_03f2(const ScriptArguments& args, const ScriptPedType pedType,
+                 const ScriptThreat arg2) {
     RW_UNIMPLEMENTED_OPCODE(0x03f2);
     RW_UNUSED(pedType);
     RW_UNUSED(arg2);
@@ -11624,7 +12660,8 @@ void opcode_03f2(const ScriptArguments& args, const ScriptPedType pedType, const
     @arg carColour0 Car colour ID
     @arg carColour1 Car colour ID
 */
-void opcode_03f3(const ScriptArguments& args, const ScriptVehicle vehicle, ScriptInt& carColour0, ScriptInt& carColour1) {
+void opcode_03f3(const ScriptArguments& args, const ScriptVehicle vehicle,
+                 ScriptInt& carColour0, ScriptInt& carColour1) {
     RW_UNIMPLEMENTED_OPCODE(0x03f3);
     RW_UNUSED(vehicle);
     RW_UNUSED(carColour0);
@@ -11654,7 +12691,8 @@ void opcode_03f4(const ScriptArguments& args, const ScriptBoolean arg1) {
     @arg vehicle Car/vehicle
     @arg arg2 Boolean true/false
 */
-void opcode_03f5(const ScriptArguments& args, const ScriptVehicle vehicle, const ScriptBoolean arg2) {
+void opcode_03f5(const ScriptArguments& args, const ScriptVehicle vehicle,
+                 const ScriptBoolean arg2) {
     RW_UNIMPLEMENTED_OPCODE(0x03f5);
     RW_UNUSED(vehicle);
     RW_UNUSED(arg2);
@@ -11665,7 +12703,7 @@ void opcode_03f5(const ScriptArguments& args, const ScriptVehicle vehicle, const
     @brief load_island_data %1d%
 
     opcode 03f7
-    @arg arg1 
+    @arg arg1
 */
 void opcode_03f7(const ScriptArguments& args, const ScriptLevel arg1) {
     RW_UNIMPLEMENTED_OPCODE(0x03f7);
@@ -11677,7 +12715,7 @@ void opcode_03f7(const ScriptArguments& args, const ScriptLevel arg1) {
     @brief get_body_cast_health %1d%
 
     opcode 03f8
-    @arg arg1 
+    @arg arg1
 */
 void opcode_03f8(const ScriptArguments& args, ScriptInt& arg1) {
     RW_UNIMPLEMENTED_OPCODE(0x03f8);
@@ -11689,11 +12727,12 @@ void opcode_03f8(const ScriptArguments& args, ScriptInt& arg1) {
     @brief make_actors %1d% %2d% converse_in %3d% ms
 
     opcode 03f9
-    @arg character0 
-    @arg character1 
-    @arg arg3 
+    @arg character0
+    @arg character1
+    @arg arg3
 */
-void opcode_03f9(const ScriptArguments& args, const ScriptCharacter character0, const ScriptCharacter character1, const ScriptInt arg3) {
+void opcode_03f9(const ScriptArguments& args, const ScriptCharacter character0,
+                 const ScriptCharacter character1, const ScriptInt arg3) {
     RW_UNIMPLEMENTED_OPCODE(0x03f9);
     RW_UNUSED(character0);
     RW_UNUSED(character1);
@@ -11705,10 +12744,11 @@ void opcode_03f9(const ScriptArguments& args, const ScriptCharacter character0, 
     @brief set_car %1d% stays_on_current_island %2d%
 
     opcode 03fb
-    @arg vehicle 
-    @arg arg2 
+    @arg vehicle
+    @arg arg2
 */
-void opcode_03fb(const ScriptArguments& args, const ScriptVehicle vehicle, const ScriptInt arg2) {
+void opcode_03fb(const ScriptArguments& args, const ScriptVehicle vehicle,
+                 const ScriptInt arg2) {
     RW_UNIMPLEMENTED_OPCODE(0x03fb);
     RW_UNUSED(vehicle);
     RW_UNUSED(arg2);
@@ -11719,10 +12759,11 @@ void opcode_03fb(const ScriptArguments& args, const ScriptVehicle vehicle, const
     @brief set_actor %1d% stays_on_current_island %2d%
 
     opcode 03fc
-    @arg character 
-    @arg arg2 
+    @arg character
+    @arg arg2
 */
-void opcode_03fc(const ScriptArguments& args, const ScriptCharacter character, const ScriptInt arg2) {
+void opcode_03fc(const ScriptArguments& args, const ScriptCharacter character,
+                 const ScriptInt arg2) {
     RW_UNIMPLEMENTED_OPCODE(0x03fc);
     RW_UNUSED(character);
     RW_UNUSED(arg2);
@@ -11733,7 +12774,7 @@ void opcode_03fc(const ScriptArguments& args, const ScriptCharacter character, c
     @brief save_offroad_time %1d%
 
     opcode 03fd
-    @arg newTime 
+    @arg newTime
 */
 void opcode_03fd(const ScriptArguments& args, const ScriptInt newTime) {
     if (args.getState()->gameStats.patriotPlaygroundTime > newTime) {
@@ -11745,7 +12786,7 @@ void opcode_03fd(const ScriptArguments& args, const ScriptInt newTime) {
     @brief save_offroadII_time %1d%
 
     opcode 03fe
-    @arg newTime 
+    @arg newTime
 */
 void opcode_03fe(const ScriptArguments& args, const ScriptInt newTime) {
     if (args.getState()->gameStats.aRideInTheParkTime > newTime) {
@@ -11757,7 +12798,7 @@ void opcode_03fe(const ScriptArguments& args, const ScriptInt newTime) {
     @brief save_offroadIII_time %1d%
 
     opcode 03ff
-    @arg newTime 
+    @arg newTime
 */
 void opcode_03ff(const ScriptArguments& args, const ScriptInt newTime) {
     if (args.getState()->gameStats.grippedTime > newTime) {
@@ -11799,7 +12840,7 @@ void opcode_0402(const ScriptArguments& args) {
     @brief save_highest_ambulance_level %1d%
 
     opcode 0403
-    @arg level 
+    @arg level
 */
 void opcode_0403(const ScriptArguments& args, const ScriptInt level) {
     if (args.getState()->gameStats.highestParamedicLevel < level) {
@@ -11831,7 +12872,7 @@ void opcode_0405(const ScriptArguments& args, const ScriptPayphone payphone) {
     @brief save_dodo_flight_time %1d%
 
     opcode 0406
-    @arg newTime 
+    @arg newTime
 */
 void opcode_0406(const ScriptArguments& args, const ScriptInt newTime) {
     if (args.getState()->gameStats.longestDodoFlight < newTime) {
@@ -11855,7 +12896,7 @@ void opcode_0407(const ScriptArguments& args, const ScriptInt newTime) {
     @brief set_total_rampages_to %1d%
 
     opcode 0408
-    @arg total 
+    @arg total
 */
 void opcode_0408(const ScriptArguments& args, const ScriptInt total) {
     args.getState()->gameStats.totalRampages = total;
@@ -11875,12 +12916,13 @@ void opcode_0409(const ScriptArguments& args) {
     @brief remove_car_from_chase %1d%
 
     opcode 040a
-    @arg arg1 
+    @arg arg1
 */
 void opcode_040a(const ScriptArguments& args, const ScriptInt arg1) {
     GameObject* car = args.getWorld()->chase.getChaseVehicle(arg1);
     RW_CHECK(car != nullptr, "Tried to remove null car from chase");
-    if (car == nullptr) return;
+    if (car == nullptr)
+        return;
     args.getWorld()->chase.removeChaseVehicle(arg1);
     args.getWorld()->destroyObject(car);
 }
@@ -11921,7 +12963,7 @@ void opcode_040d(const ScriptArguments& args) {
     @brief %1b:set/clear% FadeInAfterNextArrest
 
     opcode 040e
-    @arg arg1 
+    @arg arg1
 */
 void opcode_040e(const ScriptArguments& args, const ScriptInt arg1) {
     RW_UNIMPLEMENTED_OPCODE(0x040e);
@@ -11933,7 +12975,7 @@ void opcode_040e(const ScriptArguments& args, const ScriptInt arg1) {
     @brief %1b:set/clear% FadeInAfterNextDeath
 
     opcode 040f
-    @arg arg1 
+    @arg arg1
 */
 void opcode_040f(const ScriptArguments& args, const ScriptInt arg1) {
     RW_UNIMPLEMENTED_OPCODE(0x040f);
@@ -11945,10 +12987,11 @@ void opcode_040f(const ScriptArguments& args, const ScriptInt arg1) {
     @brief override_gang_model %1d% %2d%
 
     opcode 0410
-    @arg arg1 
+    @arg arg1
     @arg model Model ID
 */
-void opcode_0410(const ScriptArguments& args, const ScriptGang arg1, const ScriptInt model) {
+void opcode_0410(const ScriptArguments& args, const ScriptGang arg1,
+                 const ScriptInt model) {
     RW_UNIMPLEMENTED_OPCODE(0x0410);
     RW_UNUSED(arg1);
     RW_UNUSED(model);
@@ -11962,7 +13005,8 @@ void opcode_0410(const ScriptArguments& args, const ScriptGang arg1, const Scrip
     @arg character Character/ped
     @arg arg2 Boolean true/false
 */
-void opcode_0411(const ScriptArguments& args, const ScriptCharacter character, const ScriptBoolean arg2) {
+void opcode_0411(const ScriptArguments& args, const ScriptCharacter character,
+                 const ScriptBoolean arg2) {
     RW_UNIMPLEMENTED_OPCODE(0x0411);
     RW_UNUSED(character);
     RW_UNUSED(arg2);
@@ -11970,13 +13014,14 @@ void opcode_0411(const ScriptArguments& args, const ScriptCharacter character, c
 }
 
 /**
-    @brief 
+    @brief
 
     opcode 0412
-    @arg vehicle 
-    @arg arg2 
+    @arg vehicle
+    @arg arg2
 */
-void opcode_0412(const ScriptArguments& args, const ScriptVehicle vehicle, const ScriptInt arg2) {
+void opcode_0412(const ScriptArguments& args, const ScriptVehicle vehicle,
+                 const ScriptInt arg2) {
     RW_UNIMPLEMENTED_OPCODE(0x0412);
     RW_UNUSED(vehicle);
     RW_UNUSED(arg2);
@@ -11990,7 +13035,8 @@ void opcode_0412(const ScriptArguments& args, const ScriptVehicle vehicle, const
     @arg player Player
     @arg arg2 Boolean true/false
 */
-void opcode_0413(const ScriptArguments& args, const ScriptPlayer player, const ScriptBoolean arg2) {
+void opcode_0413(const ScriptArguments& args, const ScriptPlayer player,
+                 const ScriptBoolean arg2) {
     // @todo support multiple players?
     RW_UNUSED(player);
     args.getState()->playerInfo.thaneOfLibertyCity = arg2;
@@ -12003,20 +13049,22 @@ void opcode_0413(const ScriptArguments& args, const ScriptPlayer player, const S
     @arg player Player
     @arg arg2 Boolean true/false
 */
-void opcode_0414(const ScriptArguments& args, const ScriptPlayer player, const ScriptBoolean arg2) {
+void opcode_0414(const ScriptArguments& args, const ScriptPlayer player,
+                 const ScriptBoolean arg2) {
     // @todo support multiple players?
     RW_UNUSED(player);
     args.getState()->playerInfo.singlePayerHealthcare = arg2;
 }
 
 /**
-    @brief 
+    @brief
 
     opcode 0415
-    @arg vehicle 
-    @arg arg2 
+    @arg vehicle
+    @arg arg2
 */
-void opcode_0415(const ScriptArguments& args, const ScriptVehicle vehicle, const ScriptDoor arg2) {
+void opcode_0415(const ScriptArguments& args, const ScriptVehicle vehicle,
+                 const ScriptDoor arg2) {
     RW_UNIMPLEMENTED_OPCODE(0x0415);
     RW_UNUSED(vehicle);
     RW_UNUSED(arg2);
@@ -12027,7 +13075,7 @@ void opcode_0415(const ScriptArguments& args, const ScriptVehicle vehicle, const
     @brief start_mission %1d%
 
     opcode 0417
-    @arg arg1 
+    @arg arg1
 */
 void opcode_0417(const ScriptArguments& args, const ScriptInt arg1) {
     auto offset = args.getVM()->getFile()->getMissionOffsets()[arg1];
@@ -12041,7 +13089,8 @@ void opcode_0417(const ScriptArguments& args, const ScriptInt arg1) {
     @arg object Object
     @arg arg2 Boolean true/false
 */
-void opcode_0418(const ScriptArguments& args, const ScriptObject object, const ScriptBoolean arg2) {
+void opcode_0418(const ScriptArguments& args, const ScriptObject object,
+                 const ScriptBoolean arg2) {
     RW_UNIMPLEMENTED_OPCODE(0x0418);
     RW_UNUSED(object);
     RW_UNUSED(arg2);
@@ -12054,9 +13103,10 @@ void opcode_0418(const ScriptArguments& args, const ScriptObject object, const S
     opcode 0419
     @arg player0 Weapon ID
     @arg player1 Player
-    @arg arg3 
+    @arg arg3
 */
-void opcode_0419(const ScriptArguments& args, const ScriptPlayer player0, const ScriptWeaponType player1, ScriptInt& arg3) {
+void opcode_0419(const ScriptArguments& args, const ScriptPlayer player0,
+                 const ScriptWeaponType player1, ScriptInt& arg3) {
     RW_UNIMPLEMENTED_OPCODE(0x0419);
     RW_UNUSED(player0);
     RW_UNUSED(player1);
@@ -12070,9 +13120,10 @@ void opcode_0419(const ScriptArguments& args, const ScriptPlayer player0, const 
     opcode 041a
     @arg character0 Weapon ID
     @arg character1 Character/ped
-    @arg arg3 
+    @arg arg3
 */
-void opcode_041a(const ScriptArguments& args, const ScriptCharacter character0, const ScriptWeaponType character1, ScriptInt& arg3) {
+void opcode_041a(const ScriptArguments& args, const ScriptCharacter character0,
+                 const ScriptWeaponType character1, ScriptInt& arg3) {
     RW_UNIMPLEMENTED_OPCODE(0x041a);
     RW_UNUSED(character0);
     RW_UNUSED(character1);
@@ -12084,10 +13135,11 @@ void opcode_041a(const ScriptArguments& args, const ScriptCharacter character0, 
     @brief make_actor %1d% say %2d%
 
     opcode 041c
-    @arg character 
-    @arg sound 
+    @arg character
+    @arg sound
 */
-void opcode_041c(const ScriptArguments& args, const ScriptCharacter character, const ScriptSoundType sound) {
+void opcode_041c(const ScriptArguments& args, const ScriptCharacter character,
+                 const ScriptSoundType sound) {
     RW_UNIMPLEMENTED_OPCODE(0x041c);
     RW_UNUSED(character);
     RW_UNUSED(sound);
@@ -12098,7 +13150,7 @@ void opcode_041c(const ScriptArguments& args, const ScriptCharacter character, c
     @brief set_camera_near_clip %1d%
 
     opcode 041d
-    @arg arg1 
+    @arg arg1
 */
 void opcode_041d(const ScriptArguments& args, const ScriptFloat arg1) {
     args.getState()->cameraNear = arg1;
@@ -12108,10 +13160,11 @@ void opcode_041d(const ScriptArguments& args, const ScriptFloat arg1) {
     @brief set_radio_station %1d% %2d%
 
     opcode 041e
-    @arg arg1 
-    @arg arg2 
+    @arg arg1
+    @arg arg2
 */
-void opcode_041e(const ScriptArguments& args, const ScriptRadio arg1, const ScriptInt arg2) {
+void opcode_041e(const ScriptArguments& args, const ScriptRadio arg1,
+                 const ScriptInt arg2) {
     RW_UNIMPLEMENTED_OPCODE(0x041e);
     RW_UNUSED(arg1);
     RW_UNUSED(arg2);
@@ -12122,7 +13175,7 @@ void opcode_041e(const ScriptArguments& args, const ScriptRadio arg1, const Scri
     @brief override_hospital %1d%
 
     opcode 041f
-    @arg arg1 
+    @arg arg1
 */
 void opcode_041f(const ScriptArguments& args, const ScriptLevel arg1) {
     args.getState()->hospitalIslandOverride = arg1;
@@ -12132,7 +13185,7 @@ void opcode_041f(const ScriptArguments& args, const ScriptLevel arg1) {
     @brief override_police_station %1d%
 
     opcode 0420
-    @arg arg1 
+    @arg arg1
 */
 void opcode_0420(const ScriptArguments& args, const ScriptLevel arg1) {
     args.getState()->policeIslandOverride = arg1;
@@ -12157,7 +13210,8 @@ void opcode_0421(const ScriptArguments& args, const ScriptBoolean arg1) {
     @arg garage Handle
     @arg vehicle Car/vehicle
 */
-bool opcode_0422(const ScriptArguments& args, const ScriptGarage garage, const ScriptVehicle vehicle) {
+bool opcode_0422(const ScriptArguments& args, const ScriptGarage garage,
+                 const ScriptVehicle vehicle) {
     RW_UNUSED(args);
     return garage->isObjectInsideGarage(vehicle.get());
 }
@@ -12167,9 +13221,10 @@ bool opcode_0422(const ScriptArguments& args, const ScriptGarage garage, const S
 
     opcode 0423
     @arg vehicle Car/vehicle
-    @arg arg2 
+    @arg arg2
 */
-void opcode_0423(const ScriptArguments& args, const ScriptVehicle vehicle, const ScriptFloat arg2) {
+void opcode_0423(const ScriptArguments& args, const ScriptVehicle vehicle,
+                 const ScriptFloat arg2) {
     RW_UNIMPLEMENTED_OPCODE(0x0423);
     RW_UNUSED(vehicle);
     RW_UNUSED(arg2);
@@ -12188,13 +13243,14 @@ bool opcode_0424(const ScriptArguments& args) {
 }
 
 /**
-    @brief %2d% = meters_to_feet %1d% 
+    @brief %2d% = meters_to_feet %1d%
 
     opcode 0425
-    @arg arg1 
-    @arg arg2 
+    @arg arg1
+    @arg arg2
 */
-void opcode_0425(const ScriptArguments& args, const ScriptFloat arg1, ScriptFloat& arg2) {
+void opcode_0425(const ScriptArguments& args, const ScriptFloat arg1,
+                 ScriptFloat& arg2) {
     arg2 = arg1 * 3.333333f;
     RW_UNUSED(args);
 }
@@ -12206,7 +13262,8 @@ void opcode_0425(const ScriptArguments& args, const ScriptFloat arg1, ScriptFloa
     @arg coord0 Coordinates
     @arg coord1 Coordinates
 */
-void opcode_0426(const ScriptArguments& args, ScriptVec3 coord0, ScriptVec3 coord1) {
+void opcode_0426(const ScriptArguments& args, ScriptVec3 coord0,
+                 ScriptVec3 coord1) {
     RW_UNIMPLEMENTED_OPCODE(0x0426);
     RW_UNUSED(coord0);
     RW_UNUSED(coord1);
@@ -12220,7 +13277,8 @@ void opcode_0426(const ScriptArguments& args, ScriptVec3 coord0, ScriptVec3 coor
     @arg coord0 Coordinates
     @arg coord1 Coordinates
 */
-void opcode_0427(const ScriptArguments& args, ScriptVec3 coord0, ScriptVec3 coord1) {
+void opcode_0427(const ScriptArguments& args, ScriptVec3 coord0,
+                 ScriptVec3 coord1) {
     RW_UNIMPLEMENTED_OPCODE(0x0427);
     RW_UNUSED(coord0);
     RW_UNUSED(coord1);
@@ -12234,7 +13292,8 @@ void opcode_0427(const ScriptArguments& args, ScriptVec3 coord0, ScriptVec3 coor
     @arg vehicle Car/vehicle
     @arg arg2 Boolean true/false
 */
-void opcode_0428(const ScriptArguments& args, const ScriptVehicle vehicle, const ScriptBoolean arg2) {
+void opcode_0428(const ScriptArguments& args, const ScriptVehicle vehicle,
+                 const ScriptBoolean arg2) {
     RW_UNIMPLEMENTED_OPCODE(0x0428);
     RW_UNUSED(vehicle);
     RW_UNUSED(arg2);
@@ -12245,10 +13304,11 @@ void opcode_0428(const ScriptArguments& args, const ScriptVehicle vehicle, const
     @brief   ped_threat_exists %1u% %2u%
 
     opcode 042a
-    @arg pedType 
-    @arg arg2 
+    @arg pedType
+    @arg arg2
 */
-bool opcode_042a(const ScriptArguments& args, const ScriptPedType pedType, const ScriptThreat arg2) {
+bool opcode_042a(const ScriptArguments& args, const ScriptPedType pedType,
+                 const ScriptThreat arg2) {
     RW_UNIMPLEMENTED_OPCODE(0x042a);
     RW_UNUSED(pedType);
     RW_UNUSED(arg2);
@@ -12263,7 +13323,8 @@ bool opcode_042a(const ScriptArguments& args, const ScriptPedType pedType, const
     @arg coord0 Coordinates
     @arg coord1 Coordinates
 */
-void opcode_042b(const ScriptArguments& args, ScriptVec3 coord0, ScriptVec3 coord1) {
+void opcode_042b(const ScriptArguments& args, ScriptVec3 coord0,
+                 ScriptVec3 coord1) {
     RW_UNIMPLEMENTED_OPCODE(0x042b);
     RW_UNUSED(coord0);
     RW_UNUSED(coord1);
@@ -12274,7 +13335,7 @@ void opcode_042b(const ScriptArguments& args, ScriptVec3 coord0, ScriptVec3 coor
     @brief set_total_missions_to %1d%
 
     opcode 042c
-    @arg arg1 
+    @arg arg1
 */
 void opcode_042c(const ScriptArguments& args, const ScriptInt arg1) {
     auto state = args.getWorld()->state;
@@ -12282,14 +13343,16 @@ void opcode_042c(const ScriptArguments& args, const ScriptInt arg1) {
 }
 
 /**
-    @brief %2d% = round(meters_to_feet(%1d%)) 
+    @brief %2d% = round(meters_to_feet(%1d%))
 
     opcode 042d
-    @arg arg1 
-    @arg arg2 
+    @arg arg1
+    @arg arg2
 */
-void opcode_042d(const ScriptArguments& args, const ScriptInt arg1, ScriptInt& arg2) {
-    arg2 = static_cast<ScriptInt>(std::floor(static_cast<ScriptFloat>(arg1) * 3.3333334f));
+void opcode_042d(const ScriptArguments& args, const ScriptInt arg1,
+                 ScriptInt& arg2) {
+    arg2 = static_cast<ScriptInt>(
+        std::floor(static_cast<ScriptFloat>(arg1) * 3.3333334f));
     RW_UNUSED(args);
 }
 
@@ -12298,9 +13361,10 @@ void opcode_042d(const ScriptArguments& args, const ScriptInt arg1, ScriptInt& a
 
     opcode 042e
     @arg statID Stat ID
-    @arg arg2 
+    @arg arg2
 */
-void opcode_042e(const ScriptArguments& args, const ScriptInt statID, const ScriptInt arg2) {
+void opcode_042e(const ScriptArguments& args, const ScriptInt statID,
+                 const ScriptInt arg2) {
     RW_UNIMPLEMENTED_OPCODE(0x042e);
     RW_UNUSED(statID);
     RW_UNUSED(arg2);
@@ -12312,9 +13376,10 @@ void opcode_042e(const ScriptArguments& args, const ScriptInt statID, const Scri
 
     opcode 042f
     @arg statID Stat ID
-    @arg value 
+    @arg value
 */
-void opcode_042f(const ScriptArguments& args, const ScriptInt statID, const ScriptInt value) {
+void opcode_042f(const ScriptArguments& args, const ScriptInt statID,
+                 const ScriptInt value) {
     if (args.getState()->gameStats.highestScore[statID] < value) {
         args.getState()->gameStats.highestScore[statID] = value;
     }
@@ -12325,9 +13390,10 @@ void opcode_042f(const ScriptArguments& args, const ScriptInt statID, const Scri
 
     opcode 0431
     @arg vehicle Car/vehicle
-    @arg arg2 
+    @arg arg2
 */
-bool opcode_0431(const ScriptArguments& args, const ScriptVehicle vehicle, const ScriptInt arg2) {
+bool opcode_0431(const ScriptArguments& args, const ScriptVehicle vehicle,
+                 const ScriptInt arg2) {
     RW_UNUSED(args);
     return !vehicle->getOccupant(arg2);
 }
@@ -12337,10 +13403,11 @@ bool opcode_0431(const ScriptArguments& args, const ScriptVehicle vehicle, const
 
     opcode 0432
     @arg vehicle Car/vehicle
-    @arg arg2 
+    @arg arg2
     @arg character Character/ped
 */
-void opcode_0432(const ScriptArguments& args, const ScriptVehicle vehicle, const ScriptInt arg2, ScriptCharacter& character) {
+void opcode_0432(const ScriptArguments& args, const ScriptVehicle vehicle,
+                 const ScriptInt arg2, ScriptCharacter& character) {
     RW_UNIMPLEMENTED_OPCODE(0x0432);
     RW_UNUSED(vehicle);
     RW_UNUSED(arg2);
@@ -12355,7 +13422,8 @@ void opcode_0432(const ScriptArguments& args, const ScriptVehicle vehicle, const
     @arg character Character/ped
     @arg arg2 Boolean true/false
 */
-void opcode_0433(const ScriptArguments& args, const ScriptCharacter character, const ScriptBoolean arg2) {
+void opcode_0433(const ScriptArguments& args, const ScriptCharacter character,
+                 const ScriptBoolean arg2) {
     RW_UNIMPLEMENTED_OPCODE(0x0433);
     RW_UNUSED(character);
     RW_UNUSED(arg2);
@@ -12397,16 +13465,20 @@ bool opcode_0436(const ScriptArguments& args) {
     @brief scatter_particle %1a% %8d% at %2d% %3d% %4d% to %5d% %6d% %7d%
 
     opcode 0437
-    @arg arg1 
-    @arg arg2 
-    @arg arg3 
-    @arg arg4 
-    @arg arg5 
-    @arg arg6 
-    @arg arg7 
-    @arg arg8 
+    @arg arg1
+    @arg arg2
+    @arg arg3
+    @arg arg4
+    @arg arg5
+    @arg arg6
+    @arg arg7
+    @arg arg8
 */
-void opcode_0437(const ScriptArguments& args, const ScriptParticle arg1, const ScriptFloat arg2, const ScriptFloat arg3, const ScriptFloat arg4, const ScriptFloat arg5, const ScriptFloat arg6, const ScriptFloat arg7, const ScriptFloat arg8) {
+void opcode_0437(const ScriptArguments& args, const ScriptParticle arg1,
+                 const ScriptFloat arg2, const ScriptFloat arg3,
+                 const ScriptFloat arg4, const ScriptFloat arg5,
+                 const ScriptFloat arg6, const ScriptFloat arg7,
+                 const ScriptFloat arg8) {
     RW_UNIMPLEMENTED_OPCODE(0x0437);
     RW_UNUSED(arg1);
     RW_UNUSED(arg2);
@@ -12426,7 +13498,8 @@ void opcode_0437(const ScriptArguments& args, const ScriptParticle arg1, const S
     @arg character Character/ped
     @arg arg2 Boolean true/false
 */
-void opcode_0438(const ScriptArguments& args, const ScriptCharacter character, const ScriptBoolean arg2) {
+void opcode_0438(const ScriptArguments& args, const ScriptCharacter character,
+                 const ScriptBoolean arg2) {
     RW_UNIMPLEMENTED_OPCODE(0x0438);
     RW_UNUSED(character);
     RW_UNUSED(arg2);
@@ -12447,7 +13520,7 @@ void opcode_043a(const ScriptArguments& args) {
     @brief update_boat %1d% foam_animation
 
     opcode 043b
-    @arg object 
+    @arg object
 */
 void opcode_043b(const ScriptArguments& args, const ScriptObject object) {
     RW_UNIMPLEMENTED_OPCODE(0x043b);
@@ -12469,7 +13542,7 @@ void opcode_043c(const ScriptArguments& args, const ScriptBoolean arg1) {
     @brief set_intro_is_playing %1d%
 
     opcode 043d
-    @arg arg1 
+    @arg arg1
 */
 void opcode_043d(const ScriptArguments& args, const ScriptInt arg1) {
     args.getState()->isIntroPlaying = arg1;
@@ -12502,7 +13575,8 @@ void opcode_0440(const ScriptArguments& args) {
     @arg vehicle Car/vehicle
     @arg model Model ID
 */
-void opcode_0441(const ScriptArguments& args, const ScriptVehicle vehicle, ScriptInt& model) {
+void opcode_0441(const ScriptArguments& args, const ScriptVehicle vehicle,
+                 ScriptInt& model) {
     RW_UNIMPLEMENTED_OPCODE(0x0441);
     RW_UNUSED(vehicle);
     RW_UNUSED(model);
@@ -12516,7 +13590,8 @@ void opcode_0441(const ScriptArguments& args, const ScriptVehicle vehicle, Scrip
     @arg player Player
     @arg vehicle Car/vehicle
 */
-bool opcode_0442(const ScriptArguments& args, const ScriptPlayer player, const ScriptVehicle vehicle) {
+bool opcode_0442(const ScriptArguments& args, const ScriptPlayer player,
+                 const ScriptVehicle vehicle) {
     RW_UNUSED(args);
     return player->getCharacter()->getCurrentVehicle() == vehicle;
 }
@@ -12539,7 +13614,8 @@ bool opcode_0443(const ScriptArguments& args, const ScriptPlayer player) {
     @arg fire Handle
     @arg arg2 Boolean true/false
 */
-void opcode_0444(const ScriptArguments& args, const ScriptFire fire, const ScriptBoolean arg2) {
+void opcode_0444(const ScriptArguments& args, const ScriptFire fire,
+                 const ScriptBoolean arg2) {
     RW_UNIMPLEMENTED_OPCODE(0x0444);
     RW_UNUSED(fire);
     RW_UNUSED(arg2);
@@ -12564,7 +13640,8 @@ bool opcode_0445(const ScriptArguments& args) {
     @arg character Character/ped
     @arg arg2 Boolean true/false
 */
-void opcode_0446(const ScriptArguments& args, const ScriptCharacter character, const ScriptBoolean arg2) {
+void opcode_0446(const ScriptArguments& args, const ScriptCharacter character,
+                 const ScriptBoolean arg2) {
     RW_UNIMPLEMENTED_OPCODE(0x0446);
     RW_UNUSED(character);
     RW_UNUSED(arg2);
@@ -12590,7 +13667,8 @@ bool opcode_0447(const ScriptArguments& args, const ScriptPlayer player) {
     @arg character Character/ped
     @arg vehicle Car/vehicle
 */
-bool opcode_0448(const ScriptArguments& args, const ScriptCharacter character, const ScriptVehicle vehicle) {
+bool opcode_0448(const ScriptArguments& args, const ScriptCharacter character,
+                 const ScriptVehicle vehicle) {
     RW_UNUSED(args);
     return character->getCurrentVehicle() == vehicle;
 }
@@ -12632,7 +13710,7 @@ bool opcode_044b(const ScriptArguments& args, const ScriptCharacter character) {
     @brief change_to_island %1d%
 
     opcode 044c
-    @arg arg1 
+    @arg arg1
 */
 void opcode_044c(const ScriptArguments& args, const ScriptLevel arg1) {
     RW_UNIMPLEMENTED_OPCODE(0x044c);
@@ -12644,7 +13722,7 @@ void opcode_044c(const ScriptArguments& args, const ScriptLevel arg1) {
     @brief load_splash %1x%
 
     opcode 044d
-    @arg arg1 
+    @arg arg1
 */
 void opcode_044d(const ScriptArguments& args, const ScriptString arg1) {
     args.getWorld()->data->loadSplash(arg1);
@@ -12654,10 +13732,11 @@ void opcode_044d(const ScriptArguments& args, const ScriptString arg1) {
     @brief car %1d% level %2b:set_from_position/clear%
 
     opcode 044e
-    @arg vehicle 
-    @arg arg2 
+    @arg vehicle
+    @arg arg2
 */
-void opcode_044e(const ScriptArguments& args, const ScriptVehicle vehicle, const ScriptInt arg2) {
+void opcode_044e(const ScriptArguments& args, const ScriptVehicle vehicle,
+                 const ScriptInt arg2) {
     RW_UNIMPLEMENTED_OPCODE(0x044e);
     RW_UNUSED(vehicle);
     RW_UNUSED(arg2);
@@ -12668,10 +13747,11 @@ void opcode_044e(const ScriptArguments& args, const ScriptVehicle vehicle, const
     @brief make_craigs_car_a_bit_stronger %1d% %2d%
 
     opcode 044f
-    @arg vehicle 
-    @arg arg2 
+    @arg vehicle
+    @arg arg2
 */
-void opcode_044f(const ScriptArguments& args, const ScriptVehicle vehicle, const ScriptInt arg2) {
+void opcode_044f(const ScriptArguments& args, const ScriptVehicle vehicle,
+                 const ScriptInt arg2) {
     RW_UNIMPLEMENTED_OPCODE(0x044f);
     RW_UNUSED(vehicle);
     RW_UNUSED(arg2);
@@ -12718,7 +13798,8 @@ void opcode_0452(const ScriptArguments& args) {
     @arg rotation Rotation
     @arg angle Angle
 */
-void opcode_0453(const ScriptArguments& args, const ScriptObject object, ScriptVec2 rotation, const ScriptFloat angle) {
+void opcode_0453(const ScriptArguments& args, const ScriptObject object,
+                 ScriptVec2 rotation, const ScriptFloat angle) {
     RW_UNIMPLEMENTED_OPCODE(0x0453);
     RW_UNUSED(object);
     RW_UNUSED(rotation);
@@ -12734,7 +13815,8 @@ void opcode_0453(const ScriptArguments& args, const ScriptObject object, ScriptV
     @arg yCoord Y Coord
     @arg zCoord Z Coord
 */
-void opcode_0454(const ScriptArguments& args, ScriptFloat& xCoord, ScriptFloat& yCoord, ScriptFloat& zCoord) {
+void opcode_0454(const ScriptArguments& args, ScriptFloat& xCoord,
+                 ScriptFloat& yCoord, ScriptFloat& zCoord) {
     RW_UNIMPLEMENTED_OPCODE(0x0454);
     RW_UNUSED(xCoord);
     RW_UNUSED(yCoord);
@@ -12743,14 +13825,15 @@ void opcode_0454(const ScriptArguments& args, ScriptFloat& xCoord, ScriptFloat& 
 }
 
 /**
-    @brief 
+    @brief
 
     opcode 0455
-    @arg arg1 
-    @arg arg2 
-    @arg arg3 
+    @arg arg1
+    @arg arg2
+    @arg arg3
 */
-void opcode_0455(const ScriptArguments& args, ScriptFloat& arg1, ScriptFloat& arg2, ScriptFloat& arg3) {
+void opcode_0455(const ScriptArguments& args, ScriptFloat& arg1,
+                 ScriptFloat& arg2, ScriptFloat& arg3) {
     RW_UNIMPLEMENTED_OPCODE(0x0455);
     RW_UNUSED(arg1);
     RW_UNUSED(arg2);
@@ -12778,7 +13861,8 @@ bool opcode_0456(const ScriptArguments& args, const ScriptPlayer player) {
     @arg player Player index
     @arg ped Ped
 */
-bool opcode_0457(const ScriptArguments& args, const ScriptPlayer player, const ScriptCharacter character) {
+bool opcode_0457(const ScriptArguments& args, const ScriptPlayer player,
+                 const ScriptCharacter character) {
     RW_UNIMPLEMENTED_OPCODE(0x0457);
     RW_UNUSED(player);
     RW_UNUSED(character);
@@ -12793,7 +13877,8 @@ bool opcode_0457(const ScriptArguments& args, const ScriptPlayer player, const S
     @arg player Player index
     @arg object Object
 */
-bool opcode_0458(const ScriptArguments& args, const ScriptPlayer player, const ScriptObject object) {
+bool opcode_0458(const ScriptArguments& args, const ScriptPlayer player,
+                 const ScriptObject object) {
     RW_UNIMPLEMENTED_OPCODE(0x0458);
     RW_UNUSED(player);
     RW_UNUSED(object);
@@ -12806,7 +13891,7 @@ bool opcode_0458(const ScriptArguments& args, const ScriptPlayer player, const S
     @brief end_threads_named %1s%
 
     opcode 0459
-    @arg arg1 
+    @arg arg1
 */
 void opcode_0459(const ScriptArguments& args, const ScriptString arg1) {
     RW_UNIMPLEMENTED_OPCODE(0x0459);
@@ -12815,16 +13900,18 @@ void opcode_0459(const ScriptArguments& args, const ScriptString arg1) {
 }
 
 /**
-    @brief text_draw_2numbers %3g% numbers %4d% %5d% at %1d% %2d% 
+    @brief text_draw_2numbers %3g% numbers %4d% %5d% at %1d% %2d%
 
     opcode 045b
     @arg pixelX 2D pixel X
     @arg pixelY 2D pixel Y
     @arg gxtEntry GXT entry
-    @arg arg4 
-    @arg arg5 
+    @arg arg4
+    @arg arg5
 */
-void opcode_045b(const ScriptArguments& args, const ScriptFloat pixelX, const ScriptFloat pixelY, const ScriptString gxtEntry, const ScriptInt arg4, const ScriptInt arg5) {
+void opcode_045b(const ScriptArguments& args, const ScriptFloat pixelX,
+                 const ScriptFloat pixelY, const ScriptString gxtEntry,
+                 const ScriptInt arg4, const ScriptInt arg5) {
     RW_UNIMPLEMENTED_OPCODE(0x045b);
     RW_UNUSED(pixelX);
     RW_UNUSED(pixelY);
@@ -12842,7 +13929,8 @@ void opcode_045b(const ScriptArguments& args, const ScriptFloat pixelX, const Sc
     @arg yCoord Y Coord
     @arg zCoord Z Coord
 */
-void opcode_0463(const ScriptArguments& args, ScriptFloat& xCoord, ScriptFloat& yCoord, ScriptFloat& zCoord) {
+void opcode_0463(const ScriptArguments& args, ScriptFloat& xCoord,
+                 ScriptFloat& yCoord, ScriptFloat& zCoord) {
     RW_UNIMPLEMENTED_OPCODE(0x0463);
     RW_UNUSED(xCoord);
     RW_UNUSED(yCoord);
@@ -12858,7 +13946,8 @@ void opcode_0463(const ScriptArguments& args, ScriptFloat& xCoord, ScriptFloat& 
     @arg vehicleActionID Vehicle action ID
     @arg time Time (ms)
 */
-void opcode_0477(const ScriptArguments& args, const ScriptVehicle vehicle, const ScriptTempact vehicleActionID, const ScriptInt time) {
+void opcode_0477(const ScriptArguments& args, const ScriptVehicle vehicle,
+                 const ScriptTempact vehicleActionID, const ScriptInt time) {
     RW_UNIMPLEMENTED_OPCODE(0x0477);
     RW_UNUSED(vehicle);
     RW_UNUSED(vehicleActionID);
@@ -12875,4 +13964,3 @@ void opcode_0494(const ScriptArguments& args) {
     RW_UNIMPLEMENTED_OPCODE(0x0494);
     RW_UNUSED(args);
 }
-

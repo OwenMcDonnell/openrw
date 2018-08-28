@@ -29,7 +29,7 @@ void AIGraph::createPathNodes(const glm::vec3& position,
         glm::vec3 nodePosition = position + (rotation * node.position);
 
         if (node.type == PathNode::EXTERNAL) {
-            for (auto &realNode : externalNodes) {
+            for (auto& realNode : externalNodes) {
                 auto d = glm::distance2(realNode->position, nodePosition);
                 if (d < 1.f) {
                     pathNodes.push_back(realNode);
@@ -69,7 +69,7 @@ void AIGraph::createPathNodes(const glm::vec3& position,
                     gridcoord.x >= WORLD_GRID_WIDTH ||
                     gridcoord.y >= WORLD_GRID_WIDTH) {
                     RW_MESSAGE("Warning: Node outside of grid at coord "
-                            << gridcoord.x << " " << gridcoord.y);
+                               << gridcoord.x << " " << gridcoord.y);
                 }
                 auto index = (gridcoord.x * WORLD_GRID_WIDTH) + gridcoord.y;
                 gridNodes[index].push_back(ainode);

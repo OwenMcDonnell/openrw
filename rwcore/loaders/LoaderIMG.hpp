@@ -25,7 +25,7 @@ public:
     /// Multiple versions of .IMG files
     enum Version {
         GTAIIIVC,  ///< GTA III and GTA VC archives -- only this one is
-                   ///implemented
+                   /// implemented
         GTASA,
         GTAIV
     };
@@ -59,9 +59,9 @@ public:
     }
 
 private:
-    Version m_version;     ///< Version of this IMG archive
+    Version m_version;      ///< Version of this IMG archive
     uint32_t m_assetCount;  ///< Number of assets in the current archive
-    rwfs::path m_archive;  ///< Path to the archive being used (no extension)
+    rwfs::path m_archive;   ///< Path to the archive being used (no extension)
 
     std::vector<LoaderIMGFile> m_assets;  ///< Asset info of the archive
 };

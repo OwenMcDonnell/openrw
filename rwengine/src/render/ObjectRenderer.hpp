@@ -60,7 +60,8 @@ public:
      * @param worldtransform
      * @param object
      */
-    void renderAtomic(Atomic* atomic, const glm::mat4& worldtransform, GameObject* object, RenderList& render);
+    void renderAtomic(Atomic* atomic, const glm::mat4& worldtransform,
+                      GameObject* object, RenderList& render);
 
     /**
      * @brief renderClump Renders all visible atomics in the clump
@@ -68,7 +69,8 @@ public:
      * @param worldtransform
      * @param render
      */
-    void renderClump(Clump* model, const glm::mat4& worldtransform, GameObject* object, RenderList& render);
+    void renderClump(Clump* model, const glm::mat4& worldtransform,
+                     GameObject* object, RenderList& render);
 
 private:
     GameWorld* m_world;

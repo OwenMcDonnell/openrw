@@ -1,15 +1,15 @@
 #include "render/GameRenderer.hpp"
 
 #include <algorithm>
-#include <cstdint>
 #include <cmath>
+#include <cstdint>
 #include <string>
 #include <vector>
 
 #include <glm/gtc/constants.hpp>
-#include <glm/gtc/type_ptr.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/quaternion.hpp>
+#include <glm/gtc/type_ptr.hpp>
 
 #include <gl/TextureData.hpp>
 #include <rw/types.hpp>
@@ -21,8 +21,8 @@
 #include "engine/GameWorld.hpp"
 #include "loaders/WeatherLoader.hpp"
 #include "objects/GameObject.hpp"
-#include "render/ObjectRenderer.hpp"
 #include "render/GameShaders.hpp"
+#include "render/ObjectRenderer.hpp"
 #include "render/VisualFX.hpp"
 
 const size_t skydomeSegments = 8, skydomeRows = 10;
@@ -46,11 +46,7 @@ struct ParticleVert {
 };
 
 GameRenderer::GameRenderer(Logger* log, GameData* _data)
-    : data(_data)
-    , logger(log)
-    , map(renderer, _data)
-    , water(this)
-    , text(this) {
+    : data(_data), logger(log), map(renderer, _data), water(this), text(this) {
     logger->info("Renderer", renderer->getIDString());
 
     worldProg =
@@ -167,7 +163,8 @@ GameRenderer::GameRenderer(Logger* log, GameData* _data)
     particleDraw.addGeometry(&particleGeom);
     particleDraw.setFaceType(GL_TRIANGLE_STRIP);
 
-    ssRectGeom.uploadVertices<VertexP2>({{-1.f, -1.f}, {1.f, -1.f}, {-1.f, 1.f}, {1.f, 1.f}});
+    ssRectGeom.uploadVertices<VertexP2>(
+        {{-1.f, -1.f}, {1.f, -1.f}, {-1.f, 1.f}, {1.f, 1.f}});
     ssRectDraw.addGeometry(&ssRectGeom);
     ssRectDraw.setFaceType(GL_TRIANGLE_STRIP);
 
@@ -208,14 +205,14 @@ void GameRenderer::renderWorld(GameWorld* world, const ViewCamera& camera,
     const auto currentWeather = WeatherCondition(state->basic.nextWeather);
     const auto lastWeather = WeatherCondition(state->basic.lastWeather);
     const auto weatherTransition = state->basic.weatherInterpolation;
-    auto weather = world->data->weather.interpolate(lastWeather,
-                                                    currentWeather,
-                                                    weatherTransition,
-                                                    tod);
+    auto weather = world->data->weather.interpolate(lastWeather, currentWeather,
+                                                    weatherTransition, tod);
 
     float theta = (tod / (60.f * 24.f) - 0.5f) * 2.f * glm::pi<float>();
     glm::vec3 sunDirection{
-        sin(theta), 0.0, cos(theta),
+        sin(theta),
+        0.0,
+        cos(theta),
     };
     sunDirection = glm::normalize(sunDirection);
 
@@ -308,7 +305,8 @@ void GameRenderer::renderWorld(GameWorld* world, const ViewCamera& camera,
                                glm::vec3(0.f, 0.f, 2.5f + glm::sin(a) * 0.5f));
         model = glm::rotate(model, a, glm::vec3(0.f, 0.f, 1.f));
         model = glm::scale(model, glm::vec3(1.5f, 1.5f, 1.5f));
-        objectRenderer.renderClump(arrowModel.get(), model, nullptr, renderList);
+        objectRenderer.renderClump(arrowModel.get(), model, nullptr,
+                                   renderList);
     }
 
     RW_PROFILE_END();
@@ -322,9 +320,13 @@ void GameRenderer::renderWorld(GameWorld* world, const ViewCamera& camera,
     std::sort(renderList.begin(), renderList.end(),
               [](const Renderer::RenderInstruction& a,
                  const Renderer::RenderInstruction& b) {
-                    if (a.drawInfo.blendMode==BlendMode::BLEND_NONE && b.drawInfo.blendMode!=BlendMode::BLEND_NONE) return true;
-                    if (a.drawInfo.blendMode!=BlendMode::BLEND_NONE && b.drawInfo.blendMode==BlendMode::BLEND_NONE) return false;
-                    return (a.sortKey > b.sortKey);
+                  if (a.drawInfo.blendMode == BlendMode::BLEND_NONE &&
+                      b.drawInfo.blendMode != BlendMode::BLEND_NONE)
+                      return true;
+                  if (a.drawInfo.blendMode != BlendMode::BLEND_NONE &&
+                      b.drawInfo.blendMode == BlendMode::BLEND_NONE)
+                      return false;
+                  return (a.sortKey > b.sortKey);
               });
     RW_PROFILE_END();
     RW_PROFILE_BEGIN("Draw");
@@ -369,7 +371,8 @@ void GameRenderer::renderWorld(GameWorld* world, const ViewCamera& camera,
     GLuint splashTexName = 0;
     const auto fc = world->state->fadeColour;
     if ((fc.r + fc.g + fc.b) == 0 && !world->state->currentSplash.empty()) {
-        auto splash = world->data->findSlotTexture("generic", world->state->currentSplash);
+        auto splash = world->data->findSlotTexture("generic",
+                                                   world->state->currentSplash);
         if (splash) {
             splashTexName = splash->getName();
         }
@@ -392,7 +395,8 @@ void GameRenderer::renderWorld(GameWorld* world, const ViewCamera& camera,
     renderPostProcess();
 }
 
-void GameRenderer::renderSplash(GameWorld* world, GLuint splashTexName, glm::u16vec3 fc) {
+void GameRenderer::renderSplash(GameWorld* world, GLuint splashTexName,
+                                glm::u16vec3 fc) {
     float fadeTimer = world->getGameTime() - world->state->fadeStart;
 
     if (splashTexName != 0) {
@@ -459,7 +463,8 @@ void GameRenderer::renderEffects(GameWorld* world) {
 
     for (auto& fx : effects) {
         // Other effects not implemented yet
-        if (fx->getType() != Particle) continue;
+        if (fx->getType() != Particle)
+            continue;
         auto particle = static_cast<ParticleFX*>(fx.get());
 
         auto& p = particle->position;
@@ -478,13 +483,12 @@ void GameRenderer::renderEffects(GameWorld* world) {
 
         glm::mat4 transformMat(1.f);
 
-        glm::mat4 lookMat = glm::lookAt(
-            glm::vec3(0.0f,0.0f,0.0f),
-            ptc,
-            glm::vec3(0.0f,0.0f,1.0f));
+        glm::mat4 lookMat = glm::lookAt(glm::vec3(0.0f, 0.0f, 0.0f), ptc,
+                                        glm::vec3(0.0f, 0.0f, 1.0f));
 
-        transformMat = glm::scale(glm::translate(transformMat,p),
-            glm::vec3(particle->size,1.0f)) * glm::inverse(lookMat);
+        transformMat = glm::scale(glm::translate(transformMat, p),
+                                  glm::vec3(particle->size, 1.0f)) *
+                       glm::inverse(lookMat);
 
         Renderer::DrawParameters dp;
         dp.textures = {particle->texture->getName()};
@@ -507,7 +511,8 @@ void GameRenderer::drawColour(const glm::vec4& colour, glm::vec4 extents) {
     drawRect(colour, nullptr, extents);
 }
 
-void GameRenderer::drawRect(const glm::vec4& colour, TextureData* texture, glm::vec4& extents) {
+void GameRenderer::drawRect(const glm::vec4& colour, TextureData* texture,
+                            glm::vec4& extents) {
     // Move into NDC
     extents.x /= renderer->getViewport().x;
     extents.y /= renderer->getViewport().y;
@@ -521,8 +526,10 @@ void GameRenderer::drawRect(const glm::vec4& colour, TextureData* texture, glm::
 
     renderer->useProgram(ssRectProg.get());
     renderer->setUniform(ssRectProg.get(), "colour", colour);
-    renderer->setUniform(ssRectProg.get(), "size", glm::vec2{extents.z, extents.w});
-    renderer->setUniform(ssRectProg.get(), "offset", glm::vec2{extents.x, extents.y});
+    renderer->setUniform(ssRectProg.get(), "size",
+                         glm::vec2{extents.z, extents.w});
+    renderer->setUniform(ssRectProg.get(), "offset",
+                         glm::vec2{extents.x, extents.y});
 
     Renderer::DrawParameters wdp;
     wdp.depthMode = DepthMode::OFF;
@@ -536,9 +543,13 @@ void GameRenderer::drawRect(const glm::vec4& colour, TextureData* texture, glm::
 void GameRenderer::renderLetterbox() {
     constexpr float cinematicExperienceSize = 0.15f;
     renderer->useProgram(ssRectProg.get());
-    renderer->setUniform(ssRectProg.get(), "colour", glm::vec4{0.f, 0.f, 0.f, 1.f});
-    renderer->setUniform(ssRectProg.get(), "size", glm::vec2{1.f, cinematicExperienceSize});
-    renderer->setUniform(ssRectProg.get(), "offset", glm::vec2{0.f,-1.f * (1.f - cinematicExperienceSize)});
+    renderer->setUniform(ssRectProg.get(), "colour",
+                         glm::vec4{0.f, 0.f, 0.f, 1.f});
+    renderer->setUniform(ssRectProg.get(), "size",
+                         glm::vec2{1.f, cinematicExperienceSize});
+    renderer->setUniform(
+        ssRectProg.get(), "offset",
+        glm::vec2{0.f, -1.f * (1.f - cinematicExperienceSize)});
     Renderer::DrawParameters wdp;
     wdp.depthMode = DepthMode::OFF;
     wdp.blendMode = BlendMode::BLEND_NONE;
@@ -546,7 +557,8 @@ void GameRenderer::renderLetterbox() {
     wdp.textures = {0};
 
     renderer->drawArrays(glm::mat4(1.0f), &ssRectDraw, wdp);
-    renderer->setUniform(ssRectProg.get(), "offset", glm::vec2{0.f, 1.f * (1.f - cinematicExperienceSize)});
+    renderer->setUniform(ssRectProg.get(), "offset",
+                         glm::vec2{0.f, 1.f * (1.f - cinematicExperienceSize)});
     renderer->drawArrays(glm::mat4(1.0f), &ssRectDraw, wdp);
 }
 

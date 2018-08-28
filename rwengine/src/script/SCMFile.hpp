@@ -28,7 +28,7 @@ public:
         return _data;
     }
 
-    template <class T>
+    template<class T>
     T read(unsigned int offset) const {
         return bit_cast<T>(*(_data + offset));
     }

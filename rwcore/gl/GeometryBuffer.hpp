@@ -42,7 +42,7 @@ class GeometryBuffer {
 
 public:
     GeometryBuffer();
-    template <class T>
+    template<class T>
     GeometryBuffer(const std::vector<T>& data) : vbo(0), num(0) {
         uploadVertices(data);
     }
@@ -63,7 +63,7 @@ public:
      * vertex_attributes() is assumed to exist so that vertex types
      * can implicitly declare the strides and offsets for their data.
      */
-    template <class T>
+    template<class T>
     void uploadVertices(const std::vector<T>& data) {
         uploadVertices(data.size(), data.size() * sizeof(T), data.data());
         // Assume T has a static method for attributes;

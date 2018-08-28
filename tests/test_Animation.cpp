@@ -1,8 +1,8 @@
 #include <boost/test/unit_test.hpp>
 #include <data/Clump.hpp>
 #include <engine/Animator.hpp>
-#include <loaders/LoaderIFP.hpp>
 #include <glm/gtx/string_cast.hpp>
+#include <loaders/LoaderIFP.hpp>
 #include "test_Globals.hpp"
 
 BOOST_AUTO_TEST_SUITE(AnimationTests)
@@ -20,16 +20,17 @@ BOOST_AUTO_TEST_CASE(test_matrix) {
 
         animation->duration = 1.f;
         animation->bones["player"] = new AnimationBone{
-                "player",
-                0,
-                0,
-                1.0f,
-                AnimationBone::RT0,
-                {
-                    {glm::quat{1.0f,0.0f,0.0f,0.0f}, glm::vec3(0.f, 0.f, 0.f), glm::vec3(), 0.f, 0},
-                    {glm::quat{1.0f,0.0f,0.0f,0.0f}, glm::vec3(0.f, 1.f, 0.f), glm::vec3(), 1.0f, 1},
-                }
-            };
+            "player",
+            0,
+            0,
+            1.0f,
+            AnimationBone::RT0,
+            {
+                {glm::quat{1.0f, 0.0f, 0.0f, 0.0f}, glm::vec3(0.f, 0.f, 0.f),
+                 glm::vec3(), 0.f, 0},
+                {glm::quat{1.0f, 0.0f, 0.0f, 0.0f}, glm::vec3(0.f, 1.f, 0.f),
+                 glm::vec3(), 1.0f, 1},
+            }};
 
         animator.playAnimation(0, animation, 1.f, false);
 
